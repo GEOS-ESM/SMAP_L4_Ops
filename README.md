@@ -1,1 +1,1 @@
-# geos-template-repo
+SMAP Level-4 Operational Software
