@@ -1,0 +1,13 @@
+20211001 * -rf 3600 -export -define MIN_CRID=R17000
+
+20220509 20230701 -define L4_SM_PRECIP_version=CPCUFLK_IMERGLateV06c_fp_v1 -define L4_SM_PRECIP_changeLog="IMERG Late Version Changed to V06C"
+
+20230702 20231106 -define L4_SM_PRECIP_version=CPCUFLK_IMERGLateV06d_fp_v1 -define L4_SM_PRECIP_changeLog="IMERG Late Version Changed to V06D"
+
+20231107 * -define L4_SM_PRECIP_version=CPCUFLK_IMERGLateV06e_fp_v1 -define L4_SM_PRECIP_changeLog="IMERG Late Version Changed to V06E"
+
+20220919 20221025 -f
+
+20221117 20221119 -f
+
+20230526 20230527 -f

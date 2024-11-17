@@ -1,0 +1,5 @@
+[ob]
+root_tmpl=/discover/nobackup/projects/gmao/smap/SMAP_L4/L4_SM/<expver>/obs
+tree_tmpl=Ydate(@Y)/Mdate(@m)/Ddate(@d)
+file_tmpl=SPL4SM_<expver>.Tb.date(@Y@m@d)_date(@H)00z.ods
+archive_type=filesystem

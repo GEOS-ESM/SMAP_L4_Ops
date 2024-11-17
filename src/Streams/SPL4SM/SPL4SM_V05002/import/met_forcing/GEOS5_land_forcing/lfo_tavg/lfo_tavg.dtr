@@ -1,0 +1,31 @@
+PDR_NAME       = LFO_TAVG.%Y%m%dT%H%M%S.PDR
+PDR_SHORT_NAME = LFO_TAVG;
+PDR_LONG_NAME  = Land Forcing (Time Average);
+
+CLOCK_METHOD   = iso_time;
+START_TIME     = 1800;
+END_TIME       = 84600
+INC_SEC        = 3600;
+MIN_FILE_COUNT = 24;
+WAIT_TIME      = 259200;
+
+L4_SM_MET_PATH = <DTR_DIR_ID>/..;
+L4_SM_MET_TAG = d591_rpit1_jan00__precCPCUG5RPFPITv1;
+
+L4_SM_LFO_TAVG_IN_DIR   = <L4_SM_LFO_directoryID>/diag/Y%Y/M%m/D%d;
+L4_SM_LFO_TAVG_OUT_DIR  = <DTR_DIR_ID>/../<L4_SM_LFO_version>/diag/Y%Y/M%m
+L4_SM_LFO_TAVG_fileName = d591_rpit1_jan00.tavg1_2d_lfo_Nx.%Y%m%d_%H%Mz.nc4
+
+OBJECT = FILE_GROUP;
+
+  DATA_TYPE = LFOTAVG;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_LFO_TAVG_IN_DIR>;
+    FILE_ID = <L4_SM_LFO_TAVG_fileName>;
+    FILE_TYPE = NetCDF4;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_SM_LFO_TAVG_OUT_DIR>;
+  END_OBJECT = FILE_SPEC;
+
+END_OBJECT = FILE_GROUP;

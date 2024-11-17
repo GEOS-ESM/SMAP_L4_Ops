@@ -1,0 +1,43 @@
+PDR_NAME       = ancillary.PDR;
+PDR_SHORT_NAME = ANC;
+PDR_LONG_NAME  = Ancillary Data Files;
+
+CLOCK_METHOD   = timeless;
+MIN_FILE_COUNT = 1;
+WAIT_TIME      = 120;
+
+L4_C_PFT_fileName = SMAP_L4_C_PFT.bin;
+L4_C_ANC_fileName = SMAP_L4_C_Ancillary_v<L4_C_ANC_version>.h5;
+L4_C_BPLUT_fileName = SMAP_BPLUT_2014-02-11.csv;
+
+L4_C_ANC_OUTPUT_DIR = <DTR_DIR_ID>/data;
+
+OBJECT = FILE_GROUP;
+
+  DATA_TYPE = ANC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_C_PFT_directoryID>;
+    FILE_ID = <L4_C_PFT_fileName>;
+    FILE_TYPE = BIN;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_C_ANC_OUTPUT_DIR>;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_C_ANC_directoryID>;
+    FILE_ID = <L4_C_ANC_fileName>;
+    FILE_TYPE = HDF5;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_C_ANC_OUTPUT_DIR>;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_C_BPLUT_directoryID>;
+    FILE_ID = <L4_C_BPLUT_fileName>;
+    FILE_TYPE = CSV;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_C_ANC_OUTPUT_DIR>;
+  END_OBJECT = FILE_SPEC;
+
+END_OBJECT = FILE_GROUP;

@@ -1,0 +1,402 @@
+! 
+! namelist of EnKF inputs
+!
+! reichle, 23 Mar 2004
+! reichle, 10 May 2005
+!
+! --------------------------------------------------------------------
+				      				      	
+&ens_prop_inputs			
+
+! --------------------------------------------------------------------
+!
+! ensemble size and ID's (integer IDs: first_ens_id:1:first_ens_id+N_ens-1)
+
+N_ens = 1
+
+first_ens_id = 0
+
+! ------------------------------------------------------------------
+!
+! all time steps in *seconds*
+!
+! all time steps MUST obey MOD(86400,dtstep)=0 and 0<=dtstep<=86400
+!
+! *_pert_dtstep inputs must also be compatible with model_dtstep, force_dtstep
+! and out_dtstep  (see subroutine check_pert_dtstep())
+!
+!  1200 = 20 min
+!  3600 =  1 h
+!  7200 =  2 h
+! 10800 =  3 h
+! 14400 =  4 h
+! 21600 =  6 h
+! 43200 = 12 h
+! 86400 = 24 h
+
+progn_pert_dtstep = 10800   ! time step for prognostics perturbations in seconds
+
+force_pert_dtstep = 10800   ! time step for forcing perturbations in seconds
+
+! ---------------------------------------------------------------------
+!
+! forcing error (or forcing perturbation) parameters
+!
+! the mean is computed according to "typ" for unbiased perturbations
+!  and not specified here
+!
+! NOTE units only meaningful if errors are additive
+
+! string that describes the kind of forcing perturbations
+
+descr_force_pert%%pcp     = 'pcp'     
+descr_force_pert%%sw      = 'sw'      
+descr_force_pert%%lw      = 'lw'      
+descr_force_pert%%tmp2m   = 'tmp2m'   
+descr_force_pert%%dpt2m   = 'dpt2m'   
+descr_force_pert%%wnd     = 'wnd' 
+
+! specify whether forcing perturbations are additive or multiplicative
+!
+! additive:                     typ = 0.
+! multiplicative and lognormal: typ = 1.
+!
+! real numbers are used so that "assemble_force()" can 
+!  be used to assemble the forcing perturbation parameters
+  
+typ_force_pert%%pcp   = 1.
+typ_force_pert%%sw    = 1.
+typ_force_pert%%lw    = 0.
+typ_force_pert%%tmp2m = 0.
+typ_force_pert%%dpt2m = 0.
+typ_force_pert%%wnd   = 1.
+
+! (default) homogeneous standard deviation for perturbations (used unless 
+! heterogeneous standard deviations are read from file)
+
+std_force_pert%%pcp       = 0.    ! .1    ! [mm] per time step [?]
+std_force_pert%%sw        = 0.    ! .1    ! [W/m^2]
+std_force_pert%%lw        = 0.    ! 15.   ! [W/m^2]
+std_force_pert%%tmp2m     = 0.    ! [K]
+std_force_pert%%dpt2m     = 0.    ! [K]
+std_force_pert%%wnd       = 0.    ! [m/s]
+
+! enforce zero mean across ensemble? 
+
+zeromean_force_pert%%pcp   = .true.
+zeromean_force_pert%%sw    = .true.
+zeromean_force_pert%%lw    = .true.
+zeromean_force_pert%%tmp2m = .true.
+zeromean_force_pert%%dpt2m = .true.
+zeromean_force_pert%%wnd   = .true.
+
+! allow perturbations to be computed on coarsened grid?
+
+coarsen_force_pert%%pcp   = .false.
+coarsen_force_pert%%sw    = .false.
+coarsen_force_pert%%lw    = .false.
+coarsen_force_pert%%tmp2m = .false.
+coarsen_force_pert%%dpt2m = .false.
+coarsen_force_pert%%wnd   = .false.
+
+! max perturbation relative to standard normal
+! (limits on range of random numbers: specify max absolute value
+!  allowed to be drawn from a standard normal distribution)
+
+std_normal_max_force_pert%%pcp   = 2.5
+std_normal_max_force_pert%%sw    = 2.5
+std_normal_max_force_pert%%lw    = 2.5
+std_normal_max_force_pert%%tmp2m = 2.5
+std_normal_max_force_pert%%dpt2m = 2.5
+std_normal_max_force_pert%%wnd   = 2.5
+  
+! spatial correlation of forcing perturbations
+  
+xcorr_force_pert%%pcp    = 0.          ! [deg] 
+xcorr_force_pert%%sw     = 0.          ! [deg] 
+xcorr_force_pert%%lw     = 0.          ! [deg] 
+xcorr_force_pert%%tmp2m  = 0.          ! [deg] 
+xcorr_force_pert%%dpt2m  = 0.          ! [deg] 
+xcorr_force_pert%%wnd    = 0.          ! [deg] 
+
+ycorr_force_pert%%pcp    = 0.          ! [deg] 
+ycorr_force_pert%%sw     = 0.          ! [deg] 
+ycorr_force_pert%%lw     = 0.          ! [deg] 
+ycorr_force_pert%%tmp2m  = 0.          ! [deg] 
+ycorr_force_pert%%dpt2m  = 0.          ! [deg] 
+ycorr_force_pert%%wnd    = 0.          ! [deg] 
+
+! temporal correlation of forcing perturbations
+  
+tcorr_force_pert%%pcp   = 86400.    ! [s]
+tcorr_force_pert%%sw    = 86400.    ! [s]
+tcorr_force_pert%%lw    = 86400.    ! [s]
+tcorr_force_pert%%tmp2m = 86400.    ! [s]
+tcorr_force_pert%%dpt2m = 86400.    ! [s]
+tcorr_force_pert%%wnd   = 86400.    ! [s]
+  
+! correlation coefficients -1 <= rho <= 1     
+!
+! specify only essential information, the other side of off-diagonals and
+! the diagonal will be filled in later (subroutines read_ens_prop_inputs
+! and get_force_pert_inputs)
+ 
+ccorr_force_pert%%pcp%%sw      = 0.    !-.8
+ccorr_force_pert%%pcp%%lw      = 0.    ! .5
+ccorr_force_pert%%pcp%%tmp2m   = 0.
+ccorr_force_pert%%pcp%%dpt2m   = 0.
+ccorr_force_pert%%pcp%%wnd     = 0.
+ 
+ccorr_force_pert%%sw%%lw       = 0.    ! -.6   ! -.5
+ccorr_force_pert%%sw%%tmp2m    = 0.    ! .4   ! .8
+ccorr_force_pert%%sw%%dpt2m    = 0.
+ccorr_force_pert%%sw%%wnd      = 0.
+
+ccorr_force_pert%%lw%%tmp2m    = 0     ! .4   ! .8
+ccorr_force_pert%%lw%%dpt2m    = 0.
+ccorr_force_pert%%lw%%wnd      = 0.
+
+ccorr_force_pert%%tmp2m%%dpt2m = 0.    ! .9
+ccorr_force_pert%%tmp2m%%wnd   = 0.
+
+ccorr_force_pert%%dpt2m%%wnd   = 0.
+
+
+    
+! ---------------------------------------------------------------------
+!		
+! model error (or progn_pert) parameters 
+!
+! the mean is computed according to "typ" for unbiased perturbations
+!  and not specified here
+!
+! all states with nonzero model error standard deviation will be 
+!  included in the model error
+!
+! specify homogeneous model error standard deviations here
+! (the code is set up to handle heterogenous model error means & std's,
+!  if this is desired, change subroutine get_mean_and_std_progn_pert() so
+!  that it reads the mean values and std's from a file)
+
+! string that describes the prognostics to be perturbed
+! (see subroutine apply_progn_pert() for details)
+
+descr_progn_pert%%catdef   = 'catdef'  
+descr_progn_pert%%rzexc    = 'rzexc'  
+descr_progn_pert%%srfexc   = 'srfexc'  
+descr_progn_pert%%snow     = 'snow'   
+descr_progn_pert%%tc       = 'tc'     
+descr_progn_pert%%ght(1)   = 'ght1'  
+descr_progn_pert%%ght(2)   = 'ght2'  
+descr_progn_pert%%ght(3)   = 'ght3'  
+descr_progn_pert%%ght(4)   = 'ght4'  
+descr_progn_pert%%ght(5)   = 'ght5'  
+descr_progn_pert%%ght(6)   = 'ght6'  
+
+  
+! specify whether model error is additive or multiplicative
+!
+! additive:                     typ = 0.     
+! multiplicative and lognormal: typ = 1.     
+!
+! real numbers are used so that "assemble_state()" can 
+!  be used to assemble the model error parameters
+
+typ_progn_pert%%catdef   = 0.
+typ_progn_pert%%rzexc    = 0.
+typ_progn_pert%%srfexc   = 0.
+typ_progn_pert%%snow     = 1.    
+typ_progn_pert%%tc       = 0.    
+typ_progn_pert%%ght(1)   = 0.    
+typ_progn_pert%%ght(2)   = 0.    
+typ_progn_pert%%ght(3)   = 0.    
+typ_progn_pert%%ght(4)   = 0.    
+typ_progn_pert%%ght(5)   = 0.    
+typ_progn_pert%%ght(6)   = 0.    
+
+
+! (default) homogeneous standard deviation for perturbations (used unless 
+! heterogeneous standard deviations are read from file)
+
+! ght perturbations:
+!	  
+! for non-frozen conditions, ght(i) ~ 2.e6*dzgt(i)*tp(i) [deg C]
+
+std_progn_pert%%catdef   = 0.  !  [mm]
+std_progn_pert%%rzexc    = 0.  !  [mm]
+std_progn_pert%%srfexc   = 0.  !  [mm]
+std_progn_pert%%snow     = 0.    
+std_progn_pert%%tc       = 0.    
+std_progn_pert%%ght(1)   = 0.  ! =   50000.  ! translates into ~0.2 K
+std_progn_pert%%ght(2)   = 0.  ! =  100000.  ! translates into ~0.2 K
+std_progn_pert%%ght(3)   = 0.  ! =  200000.  ! translates into ~0.2 K
+std_progn_pert%%ght(4)   = 0.  ! =  400000.  ! translates into ~0.2 K
+std_progn_pert%%ght(5)   = 0.  ! =  800000.  ! translates into ~0.2 K
+std_progn_pert%%ght(6)   = 0.  ! = 5000000.  ! translates into ~0.2 K
+
+
+! enforce zero mean across ensemble? 
+
+zeromean_progn_pert%%catdef   = .true.    
+zeromean_progn_pert%%rzexc    = .true.    
+zeromean_progn_pert%%srfexc   = .true.
+zeromean_progn_pert%%snow     = .true.
+zeromean_progn_pert%%tc       = .true.
+zeromean_progn_pert%%ght(1)   = .true.    
+zeromean_progn_pert%%ght(2)   = .true.    
+zeromean_progn_pert%%ght(3)   = .true.    
+zeromean_progn_pert%%ght(4)   = .true.    
+zeromean_progn_pert%%ght(5)   = .true.    
+zeromean_progn_pert%%ght(6)   = .true.    
+
+
+! allow perturbations to be computed on coarsened grid?
+
+coarsen_progn_pert%%catdef   = .false.    
+coarsen_progn_pert%%rzexc    = .false.    
+coarsen_progn_pert%%srfexc   = .false.    
+coarsen_progn_pert%%snow     = .false.    
+coarsen_progn_pert%%tc       = .false.    
+coarsen_progn_pert%%ght(1)   = .false.    
+coarsen_progn_pert%%ght(2)   = .false.    
+coarsen_progn_pert%%ght(3)   = .false.
+coarsen_progn_pert%%ght(4)   = .false.
+coarsen_progn_pert%%ght(5)   = .false.
+coarsen_progn_pert%%ght(6)   = .false.    
+
+
+! max perturbation relative to standard normal
+! (limits on range of random numbers: specify max absolute value
+!  allowed to be drawn from a standard normal distribution)
+
+std_normal_max_progn_pert%%catdef   = 2.5    
+std_normal_max_progn_pert%%rzexc    = 2.5    
+std_normal_max_progn_pert%%srfexc   = 2.5    
+std_normal_max_progn_pert%%snow     = 2.5    
+std_normal_max_progn_pert%%tc       = 2.5    
+std_normal_max_progn_pert%%ght(1)   = 2.5    
+std_normal_max_progn_pert%%ght(2)   = 2.5    
+std_normal_max_progn_pert%%ght(3)   = 2.5
+std_normal_max_progn_pert%%ght(4)   = 2.5
+std_normal_max_progn_pert%%ght(5)   = 2.5
+std_normal_max_progn_pert%%ght(6)   = 2.5    
+  
+  
+! model error spatial correlation [deg]
+! (x runs east-west, y runs north-south)
+  
+xcorr_progn_pert%%catdef   = 0.    
+xcorr_progn_pert%%rzexc    = 0.    
+xcorr_progn_pert%%srfexc   = 0.    
+xcorr_progn_pert%%snow     = 0.    
+xcorr_progn_pert%%tc       = 0.    
+xcorr_progn_pert%%ght(1)   = 0.    
+xcorr_progn_pert%%ght(2)   = 0.    
+xcorr_progn_pert%%ght(3)   = 0.
+xcorr_progn_pert%%ght(4)   = 0.
+xcorr_progn_pert%%ght(5)   = 0.
+xcorr_progn_pert%%ght(6)   = 0.    
+			  
+ycorr_progn_pert%%catdef   = 0.    
+ycorr_progn_pert%%rzexc    = 0.    
+ycorr_progn_pert%%srfexc   = 0.    
+ycorr_progn_pert%%snow     = 0.    
+ycorr_progn_pert%%tc       = 0.    
+ycorr_progn_pert%%ght(1)   = 0.    
+ycorr_progn_pert%%ght(2)   = 0.    
+ycorr_progn_pert%%ght(3)   = 0.
+ycorr_progn_pert%%ght(4)   = 0.
+ycorr_progn_pert%%ght(5)   = 0.
+ycorr_progn_pert%%ght(6)   = 0.    
+
+! model error temporal correlation [s]
+  
+tcorr_progn_pert%%catdef   = 10800.    
+tcorr_progn_pert%%rzexc    = 10800.    
+tcorr_progn_pert%%srfexc   = 10800.    
+tcorr_progn_pert%%snow     = 10800.    
+tcorr_progn_pert%%tc       = 10800.    
+tcorr_progn_pert%%ght(1)   = 10800.    
+tcorr_progn_pert%%ght(2)   = 10800.    
+tcorr_progn_pert%%ght(3)   = 10800. 
+tcorr_progn_pert%%ght(4)   = 10800. 
+tcorr_progn_pert%%ght(5)   = 10800. 
+tcorr_progn_pert%%ght(6)   = 10800.    
+
+! correlation coefficients -1 <= rho <= 1     
+!
+! specify only essential information, the other side of off-diagonals and
+! the diagonal will be filled in later (subroutines read_ens_prop_inputs
+! and get_force_pert_inputs)
+!
+! (the default input list below was put together with matlab 
+!  script create_ccorr_cat_progn_default.m)
+   
+ccorr_progn_pert%%catdef%%rzexc  = 0.
+ccorr_progn_pert%%catdef%%srfexc = 0.
+ccorr_progn_pert%%catdef%%snow   = 0.
+ccorr_progn_pert%%catdef%%tc     = 0.
+ccorr_progn_pert%%catdef%%ght(1) = 0.
+ccorr_progn_pert%%catdef%%ght(2) = 0.
+ccorr_progn_pert%%catdef%%ght(3) = 0.
+ccorr_progn_pert%%catdef%%ght(4) = 0.
+ccorr_progn_pert%%catdef%%ght(5) = 0.
+ccorr_progn_pert%%catdef%%ght(6) = 0.
+
+ccorr_progn_pert%%rzexc%%srfexc  = 0.
+ccorr_progn_pert%%rzexc%%snow    = 0.
+ccorr_progn_pert%%rzexc%%tc      = 0.
+ccorr_progn_pert%%rzexc%%ght(1)  = 0.
+ccorr_progn_pert%%rzexc%%ght(2)  = 0.
+ccorr_progn_pert%%rzexc%%ght(3)  = 0.
+ccorr_progn_pert%%rzexc%%ght(4)  = 0.
+ccorr_progn_pert%%rzexc%%ght(5)  = 0.
+ccorr_progn_pert%%rzexc%%ght(6)  = 0.
+
+ccorr_progn_pert%%srfexc%%snow   = 0.
+ccorr_progn_pert%%srfexc%%tc     = 0.
+ccorr_progn_pert%%srfexc%%ght(1) = 0.
+ccorr_progn_pert%%srfexc%%ght(2) = 0.
+ccorr_progn_pert%%srfexc%%ght(3) = 0.
+ccorr_progn_pert%%srfexc%%ght(4) = 0.
+ccorr_progn_pert%%srfexc%%ght(5) = 0.
+ccorr_progn_pert%%srfexc%%ght(6) = 0.
+
+ccorr_progn_pert%%snow%%tc       = 0.
+ccorr_progn_pert%%snow%%ght(1)   = 0.
+ccorr_progn_pert%%snow%%ght(2)   = 0.
+ccorr_progn_pert%%snow%%ght(3)   = 0.
+ccorr_progn_pert%%snow%%ght(4)   = 0.
+ccorr_progn_pert%%snow%%ght(5)   = 0.
+ccorr_progn_pert%%snow%%ght(6)   = 0.
+
+ccorr_progn_pert%%tc%%ght(1)     = 0.
+ccorr_progn_pert%%tc%%ght(2)     = 0.
+ccorr_progn_pert%%tc%%ght(3)     = 0.
+ccorr_progn_pert%%tc%%ght(4)     = 0.
+ccorr_progn_pert%%tc%%ght(5)     = 0.
+ccorr_progn_pert%%tc%%ght(6)     = 0.
+
+ccorr_progn_pert%%ght(1)%%ght(2) = 0.
+ccorr_progn_pert%%ght(1)%%ght(3) = 0.
+ccorr_progn_pert%%ght(1)%%ght(4) = 0.
+ccorr_progn_pert%%ght(1)%%ght(5) = 0.
+ccorr_progn_pert%%ght(1)%%ght(6) = 0.
+
+ccorr_progn_pert%%ght(2)%%ght(3) = 0.
+ccorr_progn_pert%%ght(2)%%ght(4) = 0.
+ccorr_progn_pert%%ght(2)%%ght(5) = 0.
+ccorr_progn_pert%%ght(2)%%ght(6) = 0.
+
+ccorr_progn_pert%%ght(3)%%ght(4) = 0.
+ccorr_progn_pert%%ght(3)%%ght(5) = 0.
+ccorr_progn_pert%%ght(3)%%ght(6) = 0.
+
+ccorr_progn_pert%%ght(4)%%ght(5) = 0.
+ccorr_progn_pert%%ght(4)%%ght(6) = 0.
+
+ccorr_progn_pert%%ght(5)%%ght(6) = 0.
+                                        
+/
+
+! =========================== EOF =======================================

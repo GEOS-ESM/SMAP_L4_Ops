@@ -1,0 +1,14 @@
+#                JPL TEST Data Stream for Acquiring SMAP L1-3
+#
+# This stream does not have report/response activity. The parameters are listed
+# below as comments for reference.
+
+#REPORT_NAME = SMAP_L1_L3_transfer_report_to_GMAO_<SDATE>_<EDATE>.txt;
+#REPORT_LONG_NAME = SMAP SDS-JPL Report to SDS-GMAO;
+#REPORT_REMOTE_LOGIN = scp://gsfcxfer@smap-sds-pgw.jpl.nasa.gov;
+#REPORT_REMOTE_DIR = /home/gsfc/test/reports;
+
+#RESPONSE_NAME = SMAP_L1_L3_transfer_report_to_JPL_<SDATE>_<EDATE>.txt;
+#RESPONSE_LONG_NAME = SMAP SDS-GMAO Report to SDS-JPL;
+#RESPONSE_REMOTE_LOGIN = scp://gsfcxfer@smap-sds-pgw.jpl.nasa.gov;
+#RESPONSE_REMOTE_DIR = /home/gsfc/test/reports;

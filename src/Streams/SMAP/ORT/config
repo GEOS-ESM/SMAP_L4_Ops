@@ -1,0 +1,3 @@
+# Acquisition related parameter settings go in here.
+
+DATA_VERSION = 001;

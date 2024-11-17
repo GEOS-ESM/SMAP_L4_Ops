@@ -1,0 +1,56 @@
+# Dataset Identification Metadata
+# ===============================
+
+  PCORR_VersionID = CPCUG5FPv1
+  PCORR_CompositeReleaseID = <PCORR_VersionID>_001
+
+  PCORR_STREAM_version = <PCORR_VersionID>
+  PCORR_STREAM_description  = TBD
+  PCORR_STREAM_directoryID  = <L4_OPS_directoryID>/<PCORR_STREAM_version>
+  PCORR_STREAM_changeLog = Initial version
+
+  PCORR_version = <PCORR_VersionID>
+  PCORR_directoryID = <L4_DATA_directoryID>/PRECIP
+  PCORR_description = CPCU Corrected Precipitation
+  PCORR_changeLog = Initial version
+
+# Series Identification Metadata
+# ==============================
+
+  PCORR_title = GEOS5,2d,1-Hourly,Time-Averaged,Single-Level
+  PCORR_history = File written in Fortran 90
+  PCORR_convention = COARDS
+  PCORR_institution = NASA Global Modeling and Assimilation Office'
+  PCORR_contact = Rolf Reichle/Qing Liu
+  PCORR_references = unknown
+  PCORR_source = unknown
+  PCORR_comment = Corrected Fields based on CPC Global Unified Daily analysis V1.0 product
+
+# Process Step Lineage Metadata
+# =============================
+
+  PCORR_SWVersionID = TBD
+  PCORR_softwareDate = 2014-04-19
+  PCORR_algorithmVersionID = CPCU_FP_001
+
+# Land Forcing Input Data
+# =======================
+
+  PCORR_LFO_version =
+  PCORR_LFO_description = GEOS-5 Forward Processing
+  PCORR_LFO_directoryID = <L4_DATA_directoryID>/GEOS-5/FP
+  PCORR_LFO_changeLog = Initial version
+
+# CPCU Input Data
+# ===============
+
+  PCORR_CPCU_version = 1.0
+  PCORR_CPCU_description = Climate Prediction Center Unified Precipitation
+  PCORR_CPCU_directoryID = <L4_DATA_directoryID>/CPCU/v<PCORR_CPCU_version>
+  PCORR_CPCU_changeLog = 
+
+# Precipitation Correction
+# Run Time Input Parmeters
+# ========================
+
+  PCORR_NAMELIST_version = GEOSFP-CPCU

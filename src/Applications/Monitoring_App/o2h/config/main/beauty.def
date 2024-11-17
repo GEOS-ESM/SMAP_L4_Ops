@@ -1,0 +1,18 @@
+[title]
+all_data = All SMAP Data
+L1C-Tbh_A = SMAP L1C Tbh A
+L1C-Tbh_D = SMAP L1C Tbh D
+L1C-Tbv_A = SMAP L1C Tbv A
+L1C-Tbv_D = SMAP L1C Tbv D
+L2AP Tbh_A = SMAP L2AP Tbh A
+L2AP Tbh_D = SMAP L2AP Tbh D
+L2AP Tbv_A = SMAP L2AP Tbv A
+L2AP Tbv_D = SMAP L2AP Tbv D
+
+# variables
+omf = (O-F)
+oma = (O-A)
+
+[legend]
+omf = (O-F)
+oma = (O-A)

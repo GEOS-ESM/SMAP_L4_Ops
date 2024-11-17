@@ -1,0 +1,117 @@
+# l4c_MET.rip
+# version: 5.0.1
+# revised: 2014-07-31T18:35:00-07:00
+# author : Joe Glassy, Univ. Montana
+#
+# notes  : RIP (runtime-input-parameter) file syntax supports use of '#' in first 
+#          column to indicate comment lines, and blank lines are ignored. 
+#          Each line in a RIP file consists of a recognized keyword, followed
+#          by a delimiter (which can be a space,comma,tab, or equal-sign symbol), followed by
+#          a single 'value' argument string.
+# notes  : Typical 'name-value-pairs' associate one keyword with one value. 
+#          The RIP parser(s) however allow a single keyword to be repeated K
+#          times, to facilitate 'multi-valued' keywords such as used below
+#          to represent a collection of different filepaths all bound
+#          to a single keyword.
+
+# Univ Montana L4C subsystem release (cert of interoperability) identifier
+L4C_SUBSYSTEM_RELEASE	= L4C_SUBSYSTEM-v5-2014-07-31T1835:00
+
+# Science Version ID (following Rolf's new L4_SM) product counter 001
+
+L4C_SCIENCE_VERSION_ID      = <L4_C_VersionID>
+L4C_CRID                    = <L4_C_CompositeReleaseID>
+L4C_MET_SOFTWARE_VERSION    = 5.0.1
+L4C_MET_TASK_LABEL          = L4C_MET_EVAL-for-ORR-Task-2014-10-21T11:58:00-07:00
+L4C_MET_TASK_UUID           = 30588d14-176f-11e4-87f7-c32e4f594366
+
+# run mode: {production|development}
+L4C_MET_RUN_MODE  = development
+
+L4C_MODEL_YEARDAY       =  %j
+L4C_MODEL_YEAR      = %Y
+
+# ANCILLARY -- standard set of ancillary symbols
+#  PFT mask 9km image and friends
+L4C_ANC_DATASET_PFT_MASK_9KM =  MCD12Q1_M09_lc_mask_uint8
+L4C_ANC_DATASET_LATITUDE_9KM_COORD  = SMAP_L4_C_LAT_1624_x_3856_M09_flt32
+L4C_ANC_DATASET_LONGITUDE_9KM_COORD = SMAP_L4_C_LON_1624_x_3856_M09_flt32
+L4C_ANC_DATASET_PFT_M09_MASK     = MCD12Q1_M09_lc_mask_uint8
+L4C_ANC_DATASET_TILE_ROW_M01     = tile_r_M01_1km_ease2_template_int16
+L4C_ANC_DATASET_TILE_COL_M01     = tile_c_M01_1km_ease2_template_int16
+L4C_ANC_DATASET_TILE_HORI_HH_M01 = tile_h_M01_1km_ease2_template_uint8
+L4C_ANC_DATASET_TILE_VERT_VV_M01 = tile_v_M01_1km_ease2_template_uint8
+
+# 1D indirection indices for 9km row,col
+L4C_ANC_DATASET_M09LAND_ROW_INDEX = MCD12Q1_M09land_col_uint16
+L4C_ANC_DATASET_M09LAND_COL_INDEX = MCD12Q1_M09land_row_uint16
+
+# Establish fully qualified names of datasets where the F/T information resides
+L4C_MET_DATASET_L3_SM_A_TSURF_FT     = /Soil_Moisture_Retrieval_Data/surface_flag
+L4C_MET_DATASET_L3_SM_A_RADAR_FT	 = /Soil_Moisture_Retrieval_Data/surface_flag
+L4C_MET_DATASET_L3_SM_A_RADAR_FT_QC  = /Soil_Moisture_Retrieval_Data/retrieval_qual_flag
+# Document which bit the bitflags above reside in within the dataset named
+L4C_MET_BIT_L3_SM_A_RADAR_FT_QC  = 4
+L4C_MET_BIT_L3_SM_A_RADAR_FT     = 7
+L4C_MET_BIT_L3_SM_A_TSURF_FT     = 8
+
+# Establish generic root directory of all l4c_MET processor inputs
+L4C_MET_INPUT_ANCILLARY_ROOTDIR = <L4C_MET_INPUT_ANCILLARY_ROOTDIR>
+
+# INPUT directories, allow to exist in different sub-trees
+L4C_MET_INPUT_L4_SM_ROOTDIR     = <L4C_MET_INPUT_L4_SM_ROOTDIR>
+L4C_MET_INPUT_FP_ROOTDIR        = <L4C_MET_INPUT_FP_ROOTDIR>
+L4C_MET_INPUT_L3_SM_A_ROOTDIR   = <L4C_MET_INPUT_L3_SM_A_ROOTDIR>
+L4C_MET_INPUT_SOC_ROOTDIR       = <L4C_MET_INPUT_SOC_ROOTDIR>
+
+# The output of L4_MET (e.g. SMAP_L4_C_MET.h5) is an input for l4c_DAILY
+L4C_MET_OUTPUT_ROOTDIR    = <L4C_MET_OUTPUT_ROOTDIR>
+
+# Basenames of input files (_ROOTDIRs if present, will be pre-pended)
+L4C_MET_INPUT_ANCILLARY_PATH   = <L4C_MET_INPUT_ANCILLARY_PATH>
+L4C_MET_INPUT_SOC_PATH         = <L4C_MET_INPUT_SOC_PATH>
+L4C_MET_OUTPUT_PATH            = <L4C_MET_OUTPUT_PATH>
+
+# Define the (1) daily L3_SM_A granule, for times: daily
+L4C_MET_INPUT_L3_SM_A_PATH = <L4C_MET_INPUT_L3_SM_A_PATH>
+
+# <JMG> 7/23/2014, new, Lists of input variables, by file, used
+L4C_MET_INPUT_VARLIST_FP      =  QV2M
+L4C_MET_INPUT_VARLIST_FP      =  T2M
+
+L4C_MET_INPUT_VARLIST_L4_SM   = sm_surface_wetness 
+L4C_MET_INPUT_VARLIST_L4_SM   = sm_rootzone_wetness 
+L4C_MET_INPUT_VARLIST_L4_SM   = radiation_shortwave_downward_flux
+L4C_MET_INPUT_VARLIST_L4_SM   = soil_temp_layer1
+L4C_MET_INPUT_VARLIST_L4_SM   = surface_pressure
+L4C_MET_INPUT_VARLIST_L3_SM_A = surface_flag
+L4C_MET_INPUT_VARLIST_L3_SM_A = retrieval_qual_flag
+
+# Dataset Properties CSV 'packed' format of 6 to 8 properties, 6 at minimum!
+# L4C_MET_OUTPUT_DATASET_name = {GROUP}/{DsName},float32,units,fillvalue,valid_min,valid_max,{rank=2},{dim1,dim2}
+
+# NOTE: must supply 6 (of 8) tokens at minimum.  If "rank,dims" at end are omitted, defaults are supplied
+L4C_MET_OUTPUT_DATASET_QV2M_M09_AVG           = /QV2M_M09_AVG,float32,Kg/Kg,-9999.0,min,max
+L4C_MET_OUTPUT_DATASET_RADIATION_SHORTWAVE_DOWNWARD_FLUX = /RADIATION_SHORTWAVE_DOWNWARD_FLUX,float32,W/m^2,-9999.0,min,max
+L4C_MET_OUTPUT_DATASET_SM_ROOTZONE_WETNESS    = /SM_ROOTZONE_WETNESS,float32,dimensionless,-9999.0,min,max
+L4C_MET_OUTPUT_DATASET_SM_SURFACE_WETNESS     = /SM_SURFACE_WETNESS,float32,dimensionless,-9999.0,min,max
+L4C_MET_OUTPUT_DATASET_SOIL_TEMP_LAYER1       = /SOIL_TEMP_LAYER1,float32,K,-9999.0,min,max
+L4C_MET_OUTPUT_DATASET_SURFACE_PRESSURE       = /SURFACE_PRESSURE,float32,Pa,-9999.0,min,max
+L4C_MET_OUTPUT_DATASET_T2M_M09_AVG            = /T2M_M09_AVG,float32,K,-9999.0,min,max
+L4C_MET_OUTPUT_DATASET_T2M_M09_MAX            = /T2M_M09_MAX,float32,K,-9999.0,min,max
+L4C_MET_OUTPUT_DATASET_2M_M09_MIN             = /T2M_M09_MIN,float32,K,-9999.0,min,max
+L4C_MET_OUTPUT_DATASET_VPD_M09                = /VPD_M09,float32,Pa,-9999.0,min,max
+L4C_MET_OUTPUT_DATASET_SURFACE_FLAG_M03       = /SURFACE_FLAG_M03,float32,dimensionless,65534,min,max,2,4872,11568
+
+# Verify: not needed now, as these stay intact in SOC file.
+L4C_MET_OUTPUT_DATASET_FT_ROLLING_M03         = /FT_ROLLING_M03,uint8,dimensionless,254,min,max
+L4C_MET_OUTPUT_DATASET_FT_ROLLING_AGE_M03     = /FT_ROLLING_AGE_M03,uint8,dimensionless,254,min,max
+
+# Define collection of (24) hourly GEOS-5 FP granules for this model yearday
+# TARGET-CONTEXT: ORT July 2014, DATE: 24 granules for Jan 1 2014
+L4C_MET_INPUT_FP_PATH = <L4C_MET_INPUT_FP_PATH>
+
+# define (8) 3-hourly L4_SM granules, for times: 0130,0430,0730,1030,1330,1630,1930,2230
+# DATE: Jan 1, 2014
+L4C_MET_INPUT_L4_SM_PATH =  <L4C_MET_INPUT_L4_SM_PATH>
+# complete

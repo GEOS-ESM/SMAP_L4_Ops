@@ -1,0 +1,109 @@
+ &file
+   title = 'GMAO SMAP Nature Run v03 (inst1h) Data Granule'
+   history = 'File written by ldas2daac.x'
+   source = '<L4_SM_SWVersionID>'
+   contact = 'http://gmao.gsfc.nasa.gov'
+   conventions = 'CF'
+   institution = 'NASA Global Modeling and Assimilation Office'
+   references = 'see SMAP L4_SM Product Specification Documentation'
+   comment = 'HDF-5' /
+
+ &group
+   name = '/'
+   num_elements = 7 /
+
+ &element
+   name = 'time'
+   long_name = 'Time' /
+
+ &element
+   name = 'y'
+   real_size = 64
+   long_name = 'Y coordinate of cell center in EASE 2.0 global projection'
+   standard_name = 'projection_y_coordinate'
+   units = 'm'
+   axis = 'Y'
+   valid_min = '-7.31004e+06'
+   valid_max = '7.31004e+06' /
+
+ &element
+   name = 'x'
+   real_size = 64
+   long_name = 'X coordinate of cell center in EASE 2.0 global projection'
+   standard_name = 'projection_x_coordinate'
+   units = 'm'
+   axis = 'X'
+   valid_min = '-1.7363e+07'
+   valid_max = '1.7363e+07' /
+
+ &element
+   name = 'cell_lat'
+   long_name = 'The geodetic latitude of the center of each cell in the cylindrical 9 km Earth-fixed EASE-Grid 2.0. Zero latitude represents the Equator. Positive latitudes represent locations North of the Equator. Negative latitudes represent locations South of the Equator.'
+   units = 'degrees'
+   valid_min = '-90'
+   valid_max = '90' /
+
+ &element
+   name = 'cell_lon'
+   long_name = 'The longitude of the center of each cell in the cylindrical 9 km Earth-fixed EASE-Grid 2.0. Zero longitude represents the Prime Meridian. Positive longitudes represent locations to the East of the Prime Meridian. Negative longitudes represent locations to the West of the Prime Meridian.'
+   units = 'degrees'
+   valid_min = '-180'
+   valid_max = '179.999' /
+
+ &element
+   name = 'cell_row'
+   uint_size = 32
+   long_name = 'The row index of each cell in the cylindrical 9 km Earth-fixed EASE-Grid 2.0. Type is Unsigned32.'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'dimensionless'
+   valid_min = '0'
+   valid_max = '1623' /
+
+ &element
+   name = 'cell_column'
+   uint_size = 32
+   long_name = 'The column index of each cell in the cylindrical 9 km Earth-fixed EASE-Grid 2.0. Type is Unsigned32.'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'dimensionless'
+   valid_min = '0'
+   valid_max = '3855' /
+
+ &group
+   name = 'Geophysical_Data'
+   num_elements = 5
+   shave_bits = 12 /
+
+ &element
+   name = 'surface_temp'
+   long_name = 'Mean land surface temperature (incl. snow-covered land area)'
+   units = 'K'
+   valid_min = '180'
+   valid_max = '350' /
+
+ &element
+   name = 'soil_temp_layer1'
+   long_name = 'Soil temperature in layer 1 of soil heat diffusion model'
+   units = 'K'
+   valid_min = '210'
+   valid_max = '340' /
+
+ &element
+   name = 'snow_temp_layer1'
+   long_name = 'Snow surface (layer 1) temperature'
+   units = 'K'
+   valid_min = '180'
+   valid_max = '273.2' /
+
+ &element
+   name = 'tb_h'
+   long_name = 'H-pol brightness temperature (1.41 GHz, 40 deg incidence angle)'
+   units = 'K'
+   valid_min = '100'
+   valid_max = '350' /
+
+ &element
+   name = 'tb_v'
+   long_name = 'V-pol brightness temperature (1.41 GHz, 40 deg incidence angle)'
+   units = 'K'
+   valid_min = '100'
+   valid_max = '350' /

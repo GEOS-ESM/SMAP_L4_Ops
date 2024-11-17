@@ -1,0 +1,17 @@
+#                JPL OPS Data Stream for Acquiring SMAP L1-3
+#
+# This stream has report/response activity. The following parameters are
+# required. JPL will send daily and weekly reports. A response must be issued
+# for each report. See the Level-4 dashboard command for more information:
+#
+# L4.pl -respond -st SMAP -sn OPS -task acquire -date 20150108
+
+REPORT_NAME = SMAP_L4_<SDATE>_<EEDATE>.txt;
+REPORT_LONG_NAME = SMAP SDS-JPL Report to SDS-GMAO;
+REPORT_REMOTE_LOGIN = scp://gsfcxfer@smap-sds-pgw.jpl.nasa.gov;
+REPORT_REMOTE_DIR = /home/gsfc/ops/reports;
+
+RESPONSE_NAME = SMAP_L1_L3_transfer_report_to_JPL_<SDATE>_<EEDATE>.txt;
+RESPONSE_LONG_NAME = SMAP SDS-GMAO Report to SDS-JPL;
+RESPONSE_REMOTE_LOGIN = scp://gsfcxfer@smap-sds-pgw.jpl.nasa.gov;
+RESPONSE_REMOTE_DIR = /home/gsfc/ops/reports/response;

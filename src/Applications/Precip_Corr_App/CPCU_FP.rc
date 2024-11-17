@@ -1,0 +1,65 @@
+ &corrector
+
+   in_file = '/discover/nobackup/projects/gmao/smap/SMAP_L4/GEOS-5/FP/diag/Y%Y/M%m/D%d/GEOS.fp.asm.tavg1_2d_lfo_Nx.%Y%m%d_%H30.V01.nc4'
+!  in_file = '/gpfsm/dnb51/projects/p14/pub/e5130_fp/das/Y%Y/M%m/D%d/GEOS.fp.asm.tavg1_2d_lfo_Nx.%Y%m%d_%H30.V01.nc4'
+
+   out_file = '/discover/nobackup/projects/gmao/smap/SMAP_L4/PRECIP/CPCUG5FPv2/diag/Y%Y/M%m/D%d/GEOS.fp.asm.tavg1_2d_lfo_Nx_corr.%Y%m%d_%H30.V01.nc4'
+
+   cpcu_file = '/discover/nobackup/projects/gmao/smap/SMAP_L4/CPCU/v1.0/Y%Y/M%m/PRCP_CU_GAUGE_V1.0GLB_0.50deg.lnx.%Y%m%d.RT'
+!  cpcu_file = '/discover/nobackup/qliu/merra_land/obs_precip_data/CPC_UNI_PRCP/GAUGE_GLB/RT/%Y/PRCP_CU_GAUGE_V1.0GLB_0.50deg.lnx.%Y%m%d.RT'
+
+   cpcu_scale_file = '/discover/nobackup/projects/gmao/smap/SMAP_L4/PRECIP/etc/clim_scale_factor_r8_GPCP2.2_CPCU_1979-2013.bin'
+
+   eod_file = '/discover/nobackup/projects/gmao/smap/SMAP_L4/CPCU/v1.0/PRCP_CU_GAUGE_V1.0GLB_0.50deg_EOD.lnx'
+
+   mask_file = '/discover/nobackup/projects/gmao/smap/SMAP_L4/PRECIP/etc/Africa_G5FP_mask.dat'
+
+   exclude_africa = .true.
+
+   latitude_tapering = .true.
+
+   maskout = .false.
+
+   exchange_dlon = 0.0625
+
+   exchange_dlat = 0.125 /
+
+ &VarInfoNamelist
+
+   varInfo(1)%vname = 'PRECLS'
+   varInfo(1)%vTitle = 'total_precipitation'
+   varInfo(1)%standardName = 'total_precipitation'
+   varInfo(1)%vUnits = 'kg m-2 s-1'
+   varInfo(1)%amiss = 1.0e+15
+   varInfo(1)%scaleFactor = 1.0
+   varInfo(1)%addOffSet = 0.0
+   varInfo(1)%validRange = -1.0e+15,1.0e+15
+
+   varInfo(2)%vname = 'PRECSNO'
+   varInfo(2)%vTitle = 'snowfall'
+   varInfo(2)%standardName = 'snowfall'
+   varInfo(2)%vUnits = 'kg m-2 s-1'
+   varInfo(2)%amiss = 1.0e+15
+   varInfo(2)%scaleFactor = 1.0
+   varInfo(2)%addOffSet = 0.0
+   varInfo(2)%validRange = -1.0e+15,1.0e+15
+
+   varInfo(3)%vname = 'PRECCU'
+   varInfo(3)%vTitle = 'Surface Conv. rain flux needed by land'
+   varInfo(3)%standardName = 'Surface Conv. rain flux needed by land'
+   varInfo(3)%vUnits = 'kg m-2 s-1'
+   varInfo(3)%amiss = 1.0e+15
+   varInfo(3)%scaleFactor = 1.0
+   varInfo(3)%addOffSet = 0.0
+   varInfo(3)%validRange = -1.0e+15,1.0e+15 /
+
+ &GlobalAttrNamelist
+
+   globalAttr%title = 'GEOS5,2d,1-Hourly,Time-Averaged,Single-Level'
+   globalAttr%history = 'File written in Fortran 90'
+   globalAttr%convention = 'COARDS'
+   globalAttr%institution = 'NASA Global Modeling and Assimilation Office'
+   globalAttr%contact = 'Rolf Reichle/Qing Liu'
+   globalAttr%references = 'Technical Report Series on Global Modeling and Data Assimilation, Volume 35 Randal D. Koster, Editor: Observation-Corrected Precipitation Estimates in GEOS-5'
+   globalAttr%source = 'CPCUG5FPv2'
+   globalAttr%comment = 'Corrected Fields Using CPCU Method-A with GPCPv2.2 Scaling, Latitude Tapering (Africa Excluded)' /

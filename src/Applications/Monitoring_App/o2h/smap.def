@@ -1,0 +1,35 @@
+[all_data]
+kt = 40
+kx = 640,641,642,643,644,645,646,647
+
+[L1C-Tbh_A]
+kt = 40
+kx = 640
+
+[L1C-Tbh_D]
+kt = 40
+kx = 641
+
+[L1C-Tbv_A]
+kt = 40
+kx = 642
+
+[L1C-Tbv_D]
+kt = 40
+kx = 643
+
+#[L2AP Tbh_A]
+#kt = 40
+#kx = 644
+
+#[L2AP Tbh_D]
+#kt = 40
+#kx = 645
+
+#[L2AP Tbv_A]
+#kt = 40
+#kx = 646
+
+#[L2AP Tbv_D]
+#kt = 40
+#kx = 647

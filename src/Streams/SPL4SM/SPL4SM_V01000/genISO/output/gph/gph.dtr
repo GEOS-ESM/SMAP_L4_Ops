@@ -1,0 +1,41 @@
+PDR_NAME       = GPH.%Y%m%dT%H%M00.PDR
+PDR_SHORT_NAME = GPH;
+PDR_LONG_NAME  = LDAS Geophysical Data Collection;
+
+CLOCK_METHOD   = iso_time;
+START_TIME     = 5400;
+END_TIME       = 81000;
+INC_SEC        = 10800;
+
+MIN_FILE_COUNT = 8;
+WAIT_TIME      = 120000;
+
+ORIGINATING_SYSTEM = SMAP_L4;
+TOTAL_FILE_COUNT = 8;
+
+L4_SM_OUTPUT = <L4_SM_STREAM_directoryID>/genISO/output/Y%Y/M%m/D%d;
+L4_SM_MODEL_DIR = <L4_SM_STREAM_directoryID>/runModel/output;
+
+OBJECT = FILE_GROUP;
+
+  DATA_TYPE = SPL4SMGP;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_OUTPUT>;
+    FILE_ID = SMAP_L4_SM_gph_%Y%m%dT%H%M00_<L4_SM_VersionID>_<PRODUCT_COUNTER>.h5;
+    FILE_TYPE = HDF;
+    FILE_SIZE =
+    FILE_CKSUM_TYPE = MD5;
+    FILE_CKSUM_VALUE =
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_MODEL_DIR>/SMAP_EASEv2_M09_GLOBAL/cat/ens_avg/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.ens_avg.ldas_tile_xhourly_out.%Y%m%d_%H%Mz.qa;
+    FILE_TYPE = QA;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_SM_OUTPUT>;
+    FILE_LOCAL_NAME = SMAP_L4_SM_gph_%Y%m%dT%H%M00_<L4_SM_VersionID>_<PRODUCT_COUNTER>.qa;
+  END_OBJECT = FILE_SPEC;
+
+END_OBJECT = FILE_GROUP;

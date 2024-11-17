@@ -1,0 +1,45 @@
+#!/bin/sh
+
+
+# Only run applications in current run group
+# ==========================================
+  echo '====> '$runGroup $applicationGroup
+
+  if [ -n "$runGroup" -a "$runGroup" != "$applicationGroup" ]; then exit 0; fi
+
+  application=$1
+
+# Check for standalone executable
+# ===============================
+
+  which $application > /dev/null 2>&1
+
+  if [ $? -eq 0 ]; then
+
+    shift 1
+    $application $*
+
+    exit $?
+
+  fi
+
+# Check for GrADS script
+# ======================
+
+  dir=`dirname $application`
+  grScript=`basename $application ".gs"`
+  grScript=`find $dir $GASCRP -name "$grScript.gs" -print`
+
+  if [ -n "$grScript" ]; then
+
+#   grads -lbcx "run $*"
+    gradshdf -lbcx "run $*"
+#   /discover/nobackup/projects/gmao/share/dasilva/opengrads/Contents/gradsdap -lbcx "run $*"
+
+    exit $?
+
+  fi
+
+  echo "$0: Cannot locate application: \"$application\""
+  
+exit 1

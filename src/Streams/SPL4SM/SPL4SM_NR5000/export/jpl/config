@@ -1,0 +1,12 @@
+DATA_DIR = <L4_DATA_directoryID>/L4_SM/NR5000;
+#DATA_DIR = /css/smapl4/public/Model-Only/SoilMoisture/NR5000;
+PDR_EXPORT_DIR = <L4_EXPORT_directoryID>/smapjpl/data_out/<CompositeStreamID>/PDR;
+PAN_EXPORT_DIR = <L4_EXPORT_directoryID>/smapjpl/a/data_in/<CompositeStreamID>/PAN;
+PDRD_EXPORT_DIR = <L4_EXPORT_directoryID>/smapjpl/a/data_in/<CompositeStreamID>/PDRD;
+L4_SM_CLIENT_DIR = /dpstage01/smaplevel4/smapjpl/data_out/<CompositeStreamID>/data;
+
+REPORT_directoryID = <L4_EXPORT_directoryID>/smapjpl/data_out/<CompositeStreamID>/report;
+REPORT_fileID = SMAP_GMAO_JPL_SDATE_EDATE.txt;
+REPORT_summaryFileID = GMAO-SDS_OPS_Weekly_Summary_Report_to_JPL-SDS_SDATE_EDATE.txt
+
+REPORT_title = GMAO SMAP Report to JPL;

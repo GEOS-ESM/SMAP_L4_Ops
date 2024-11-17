@@ -1,0 +1,9 @@
+#BEGIN GET_FILES processing for VIIRS NPP VI
+
+FILE_TYPES  = VVI
+
+FILE_VVI_REMOTE = anonymous@ladsweb.nascom.nasa.gov:/allData/3001/NPP_D16VI1KM_L3D/%y4/%j3/NPP_D16VI1KM_L3D.A%y4%j3.*03001.*hdf
+FILE_VVI_LOCAL  = /discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/VI/3001/Y%y4/M%m2/D%d2
+FILE_VVI_ARCHIVE = /archive/u/dao_ops/SMAP_L4/VIIRS/VI/3001/Y%y4/M%m2/D%d2
+
+#END GET_FILES processing

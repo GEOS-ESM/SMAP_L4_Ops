@@ -1,0 +1,115 @@
+# ----------------------------------------------------------------------
+# file         : l4c_MODIS_New500m.rip
+# purpose      : Provides runtime inputs for a 8-day MODIS preprocessor run
+# revised      : v7.4.0, 2021-11-17 to support VIIRS fPAR
+# revised      : v7.1.0-2017-03-20T17:26:00 add support for 500m res (2400x2400) and test on Yearday 337
+#                MODIS Collection 6 500m resolution FPAR tiles.
+# history      : Currently on v7.1 where Collection 6 500m is now supported
+# release_mode : production
+# platform     : ntsgcompute22017.ntsg.umt.edu
+# author       : Joe Glassy, K. Arthur Endsley
+# notes        : n/a
+# ------------- STANZA: ALL Baseline Run (Daily) RELATED INPUTS --------
+
+# Univ Montana L4C subsystem release (cert of interoperability) identifier
+L4C_SUBSYSTEM_RELEASE       = <L4C_MODIS_SUBSYSTEM_RELEASE>
+L4C_SCIENCE_VERSION_ID      = <L4_C_VersionID>
+L4C_CRID                    = <L4_C_CompositeReleaseID>
+
+L4CMOD_SOFTWARE_VERSION  = <L4C_MODIS_SOFTWARE_VERSION>
+L4CMOD_SW_VERSION  = <L4C_MODIS_SOFTWARE_VERSION>
+L4CMOD_DATASET_VERSION   = <L4C_MODIS_DATASET_VERSION>
+
+# Define ATBD and Product Spec Document governing this run
+#   which are written into /Metadata/Config group
+L4C_ATBD_VERSION  = "<L4_C_ATBDVersion>"
+L4C_ATBD_DATE     = "<L4_C_ATBDDate>"
+# L4_SM uses 'edition' for version and 'publication date' for date
+L4C_PSD_EDITION   = "<L4_C_PSDEdition>"
+L4C_PSD_PUBDATE   = "<L4_C_PSDPublicationDate>"
+
+L4C_MODIS_TASK_LABEL  = <L4C_MODIS_TASK_LABEL>
+L4C_MODIS_TASK_UUID   = <L4C_MODIS_TASK_UUID>
+
+# DOI for L4CMDL is all we have for now if and until another is issued
+L4_C_MOD_DOI = <L4_C_identifier_product_DOI>
+
+# Run mode key to be supported in future, with values:{development|production}
+L4CMOD_RUN_MODE  = delivery_cert
+
+L4CMOD_MODEL_YEAR = %Y
+# Define the current model day of year index {1..366} inclusive
+L4CMOD_MODEL_YEARDAY = %j
+L4CMOD_MODEL_PERIOD = <L4C_MODEL_PERIOD>
+
+# WARNING: this MUST be changed for 1km vs. 500
+# <KAE> 2021-11-17 Note that this is the *input* fPAR resolution; if
+#   it is 500 meters it will be resampled to 1 km
+L4CMOD_FPAR_RESOLUTION_METERS = 500
+
+# Choices for instrument: {MODIS|VIIRS}; note that *GRID_NAME must also
+#   change to match MOD15A2H or VNP15A2H granules:
+# VIIRS grid is : VNP_Grid_VNP15A2H
+# MODIS grid is : MOD_Grid_MOD15A2H
+L4CMOD_INSTRUMENT = <L4CMOD_INSTRUMENT>
+L4CMOD_GRID_NAME = <L4CMOD_GRID_NAME>
+
+########################
+# Ancillary data paths #
+########################
+
+L4CMOD_INPUT_ANCILLARY_ROOTDIR = <L4C_INPUT_MODIS_ANCILLARY_ROOTDIR>
+L4CMOD_INPUT_ANCILLARY_PATH = <L4C_INPUT_MODIS_ANCILLARY_PATH>
+
+# ANCILLARY -- PFT mask 9km image and friends
+L4C_ANC_DATASET_PFT_M09_MASK =  MCD12Q1_M09_lc_mask_uint8
+L4C_ANC_DATASET_LATITUDE_1KM_COORD  = SMAP_L4_C_LAT_14616_x_34704_M01_flt32
+L4C_ANC_DATASET_LONGITUDE_1KM_COORD = SMAP_L4_C_LON_14616_x_34704_M01_flt32
+L4C_ANC_DATASET_TILE_ROW_M01     = tile_r_M01_1km_ease2_template_int16
+L4C_ANC_DATASET_TILE_COL_M01     = tile_c_M01_1km_ease2_template_int16
+L4C_ANC_DATASET_TILE_HORI_HH_M01 = tile_h_M01_1km_ease2_template_uint8
+L4C_ANC_DATASET_TILE_VERT_VV_M01 = tile_v_M01_1km_ease2_template_uint8
+
+# Names of 1D-Sparse vector instance of indirection indices
+#   in the SMAP_L4_C_Ancillary.h5 file, for 9km (row, col) lookups
+L4C_ANC_DATASET_M09LAND_ROW_INDEX = MCD12Q1_M09land_col_uint16
+L4C_ANC_DATASET_M09LAND_COL_INDEX = MCD12Q1_M09land_row_uint16
+
+############################
+# Input datasets and names #
+############################
+
+# <KAE> 2021-11-17 Original, static (scalar) input dataset names; NOTE
+#  that VIIRS main fPAR dataset is "Fpar" but for MODIS it is "Fpar_500m"
+L4CMOD_INPUT_DATASET_FPAR          = <L4C_INPUT_DATASET_MODIS_FPAR>
+L4CMOD_INPUT_DATASET_FPAR_QC       = FparLai_QC
+L4CMOD_INPUT_DATASET_FPAR_QC_EXTRA = FparExtra_QC
+
+L4CMOD_INPUT_ROOTDIR = <L4C_INPUT_MODIS_ROOTDIR>
+
+################
+# Output paths #
+################
+
+# Remember: fPAR output is an INPUT for l4c_DAILY so put it there..
+L4CMOD_OUTPUT_ROOTDIR = <L4C_OUTPUT_MODIS_ROOTDIR>
+L4CMOD_OUTPUT_LOG_ROOTDIR = <L4C_OUTPUT_LOG_ROOTDIR>
+
+# Define l4c_MODIS.ex's primary OUTPUT file. Note that if
+#   L4C_OUTPUT_MODIS_ROOTDIR is defined, it is prepended
+#   ahead of L4C_OUTPUT_MODIS_PATH. Also note that if requested, the code
+#   will append a dayofyear {DDD=1..366} or a composite period index
+#   {PP=1..46} to this path name, just ahead of the .h5 extension.
+L4CMOD_OUTPUT_PATH = <L4C_OUTPUT_MODIS_PATH>
+
+# Equivalent OUTPUT EASEGRID 1k global mosaic output dataset names
+L4CMOD_OUTPUT_DATASET_FPAR          = fpar_M01
+L4CMOD_OUTPUT_DATASET_FPAR_QC       = fpar_qc_M01
+# Pending: extra_qc not yet fully implemented
+L4CMOD_OUTPUT_DATASET_FPAR_QC_EXTRA = fpar_extra_qc_M01
+
+# Define the 286 (or n. available) Sinusoidal FPAR 8-day tiles
+#   corresponding to this model year and model day-of-year
+L4CMOD_INPUT_GRANULE_NAME = <L4C_INPUT_MODIS_FPAR_GRANULE>
+
+# done

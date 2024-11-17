@@ -1,0 +1,29 @@
+PDR_NAME       = LFO_CORR.%Y%m%dT%H%M%S.PDR
+PDR_SHORT_NAME = LFO_CORR;
+PDR_LONG_NAME  = GEOS-5 Land Forcing Corrected Precipitation;
+
+CLOCK_METHOD   = iso_time;
+START_TIME     = 23400;
+END_TIME       = 106200;
+INC_SEC        = 3600;
+MIN_FILE_COUNT = 24;
+WAIT_TIME      = 259200;
+
+ORIGINATING_SYSTEM = SMAP_L4;
+TOTAL_FILE_COUNT = 1;
+
+PCORR_DIR = <PCORR_directoryID>/<PCORR_STREAM_version>/diag/Y%Y/M%m/D%d;
+PCORR_fileName = GEOS.fp.asm.tavg1_2d_lfo_Nx_corr.%Y%m%d_%H%M.V01.nc4;
+
+OBJECT = FILE_GROUP;
+
+  DATA_TYPE = LFOCORR;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <PCORR_DIR>;
+    FILE_ID = <PCORR_fileName>;
+    FILE_TYPE = NetCDF4;
+    FILE_SIZE =
+  END_OBJECT = FILE_SPEC;
+
+END_OBJECT = FILE_GROUP;

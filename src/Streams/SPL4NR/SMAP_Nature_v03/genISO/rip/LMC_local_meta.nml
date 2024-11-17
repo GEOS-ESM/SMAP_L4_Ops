@@ -1,0 +1,291 @@
+ &file
+   title = 'SMAP L4_SM Land-Model-Constants (LMC) Data Granule'
+   history = 'File written by ldas2daac.x'
+   source = 'LDASsa_m2-SMAP_L4_SM_D00400_p1'
+   contact = 'http://gmao.gsfc.nasa.gov'
+   conventions = 'CF'
+   institution = 'NASA Global Modeling and Assimilation Office'
+   references = 'see SMAP L4_SM Product Specification Documentation'
+   comment = 'HDF-5' /
+
+ &group
+   name = '/'
+   num_elements = 5 /
+
+ &element
+   name = 'time'
+   long_name = 'Time' /
+
+ &element
+   name = 'latitude'
+   long_name = 'Grid cell latitude'
+   units = 'degrees_north'
+   valid_min = '-90'
+   valid_max = '90' /
+
+ &element
+   name = 'longitude'
+   long_name = 'Grid cell longitude'
+   units = 'degrees_east'
+   valid_min = '-180'
+   valid_max = '180' /
+
+ &element
+   name = 'cell_row'
+   uint_size = 32
+   long_name = 'Zero-based row index of EASE2 M09km grid'
+   units = '1'
+   valid_min = '0'
+   valid_max = '1623' /
+
+ &element
+   name = 'cell_column'
+   uint_size = 32
+   long_name = 'Zero-based column index of EASE2 M09km grid'
+   units = '1'
+   valid_min = '0'
+   valid_max = '3855' /
+
+ &group
+   name = 'LandModelConstants_Data'
+   num_elements = 34 /
+
+ &element
+   name = 'cell_land_fraction'
+   long_name = 'Area fraction of land within each grid cell.'
+   units = 'dimensionless'
+   valid_min = '0'
+   valid_max = '1' /
+
+ &element
+   name = 'cell_elevation'
+   long_name = 'Mean elevation above sea level of land within each grid cell.'
+   units = 'm'
+   valid_min = '-500'
+   valid_max = '6000.0' /
+
+ &element
+   name = 'clsm_dzsf'
+   long_name = 'Catchment model: Thickness of surface soil moisture layer'
+   units = 'm'
+   valid_min = '0.05'
+   valid_max = '0.05' /
+
+ &element
+   name = 'clsm_dzrz'
+   long_name = 'Catchment model: Thickness of root zone soil moisture layer'
+   units = 'm'
+   valid_min = '1'
+   valid_max = '1' /
+
+ &element
+   name = 'clsm_dzpr'
+   long_name = 'Catchment model: Thickness of profile soil moisture layer ("depth-to-bedrock" in the Catchment model)'
+   units = 'm'
+   valid_min = '1.33'
+   valid_max = '10.0' /
+
+ &element
+   name = 'clsm_dztsurf'
+   long_name = 'Catchment model: Thickness of soil layer associated with surface_temp'
+   units = 'm'
+   valid_min = '0.0'
+   valid_max = '0.05' /
+
+ &element
+   name = 'clsm_dzgt1'
+   long_name = 'Catchment model: Thickness of soil heat diffusion model layer 1'
+   units = 'm'
+   valid_min = '0.0988'
+   valid_max = '0.0988' /
+
+ &element
+   name = 'clsm_dzgt2'
+   long_name = 'Catchment model: Thickness of soil heat diffusion model layer 2'
+   units = 'm'
+   valid_min = '0.1952'
+   valid_max = '0.1952' /
+
+ &element
+   name = 'clsm_dzgt3'
+   long_name = 'Catchment model: Thickness of soil heat diffusion model layer 3'
+   units = 'm'
+   valid_min = '0.3859'
+   valid_max = '0.3859' /
+
+ &element
+   name = 'clsm_dzgt4'
+   long_name = 'Catchment model: Thickness of soil heat diffusion model layer 4'
+   units = 'm'
+   valid_min = '0.7626'
+   valid_max = '0.7626' /
+
+ &element
+   name = 'clsm_dzgt5'
+   long_name = 'Catchment model: Thickness of soil heat diffusion model layer 5'
+   units = 'm'
+   valid_min = '1.5071'
+   valid_max = '1.5071' /
+
+ &element
+   name = 'clsm_dzgt6'
+   long_name = 'Catchment model: Thickness of soil heat diffusion model layer 6'
+   units = 'm'
+   valid_min = '10'
+   valid_max = '10' /
+
+ &element
+   name = 'clsm_poros'
+   long_name = 'Catchment model: Soil porosity'
+   units = 'm3 m-3'
+   valid_min = '0.3'
+   valid_max = '0.9' /
+
+ &element
+   name = 'clsm_wpwet'
+   long_name = 'Catchment model: Soil wilting point (wetness units)'
+   units = 'dimensionless'
+   valid_min = '0'
+   valid_max = '1' /
+
+ &element
+   name = 'clsm_cdcr1'
+   long_name = 'Catchment model: Catchment deficit at which baseflow ceases'
+   units = 'kg m-2'
+   valid_min = '30.0'
+   valid_max = '3000.0' /
+
+ &element
+   name = 'clsm_cdcr2'
+   long_name = 'Catchment model: Maximum water holding capacity of land element'
+   units = 'kg m-2'
+   valid_min = '200.0'
+   valid_max = '6000.0' /
+
+ &element
+   name = 'mwrtm_vegcls'
+   uint_size = 32
+   long_name = 'Microwave radiative transfer model: Vegetation class.  Type is Uint32.'
+   units = 'dimensionless'
+   valid_min = '1'
+   valid_max = '16' /
+
+ &element
+   name = 'mwrtm_soilcls'
+   uint_size = 32
+   long_name = 'Microwave radiative transfer model: Soil class'
+   units = 'dimensionless'
+   valid_min = '1'
+   valid_max = '253' /
+
+ &element
+   name = 'mwrtm_sand'
+   long_name = 'Microwave radiative transfer model: Sand fraction'
+   units = 'dimensionless'
+   valid_min = '0.0'
+   valid_max = '1.0' /
+
+ &element
+   name = 'mwrtm_clay'
+   long_name = 'Microwave radiative transfer model: Clay fraction'
+   units = 'dimensionless'
+   valid_min = '0.0'
+   valid_max = '1.0' /
+
+ &element
+   name = 'mwrtm_poros'
+   long_name = 'Microwave radiative transfer model: Porosity'
+   units = 'm3 m-3'
+   valid_min = '0.3'
+   valid_max = '0.9' /
+
+ &element
+   name = 'mwrtm_wangwt'
+   long_name = 'Microwave radiative transfer model: Wang dielectric model transition soil moisture'
+   units = 'm3 m-3'
+   valid_min = '0.1'
+   valid_max = '0.4' /
+
+ &element
+   name = 'mwrtm_wangwp'
+   long_name = 'Microwave radiative transfer model: Wang dielectric mode wilting point soil moisture'
+   units = 'm3 m-3'
+   valid_min = '0'
+   valid_max = '0.4' /
+
+ &element
+   name = 'mwrtm_rghhmin'
+   long_name = 'Microwave radiative transfer model: Minimum microwave roughness parameter'
+   units = 'dimensionless'
+   valid_min = '0.0'
+   valid_max = '0.2' /
+
+ &element
+   name = 'mwrtm_rghhmax'
+   long_name = 'Microwave radiative transfer model: Maximum microwave roughness parameter'
+   units = 'dimensionless'
+   valid_min = '0.0'
+   valid_max = '3.0' /
+
+ &element
+   name = 'mwrtm_rghwmin'
+   long_name = 'Microwave radiative transfer model: Soil moisture transition point below which maximum microwave roughness parameter is used'
+   units = 'm3 m-3'
+   valid_min = '0.1'
+   valid_max = '0.4' /
+
+ &element
+   name = 'mwrtm_rghwmax'
+   long_name = 'Microwave radiative transfer model: Soil moisture transition point above which minimum microwave roughness parameter is used'
+   units = 'm3 m-3'
+   valid_min = '0.3'
+   valid_max = '0.9' /
+
+ &element
+   name = 'mwrtm_rghnrh'
+   long_name = 'Microwave radiative transfer model: H-pol. exponent for incidence angle parameterization'
+   units = 'dimensionless'
+   valid_min = '0.0'
+   valid_max = '1.75' /
+
+ &element
+   name = 'mwrtm_rghnrv'
+   long_name = 'Microwave radiative transfer model: V-pol. exponent for incidence angle parameterization'
+   units = 'dimensionless'
+   valid_min = '-1.0'
+   valid_max = '2.0' /
+
+ &element
+   name = 'mwrtm_rghpolmix'
+   long_name = 'Microwave radiative transfer model: Polarization mixing parameter'
+   units = 'dimensionless'
+   valid_min = '0.0'
+   valid_max = '0.0' /
+
+ &element
+   name = 'mwrtm_omega'
+   long_name = 'Microwave radiative transfer model: Single scattering albedo'
+   units = 'dimensionless'
+   valid_min = '0.0'
+   valid_max = '0.3' /
+
+ &element
+   name = 'mwrtm_bh'
+   long_name = 'Microwave radiative transfer model: H-pol. vegetation b parameter'
+   units = 'dimensionless'
+   valid_min = '0.0'
+   valid_max = '0.7' /
+
+ &element
+   name = 'mwrtm_bv'
+   long_name = 'Microwave radiative transfer model: H-pol. vegetation b parameter'
+   units = 'dimensionless'
+   valid_min = '-0.15'
+   valid_max = '0.85' /
+
+ &element
+   name = 'mwrtm_lewt'
+   long_name = 'Microwave radiative transfer model: Parameter to transform leaf area index into vegetation water content'
+   units = 'kg m-2'
+   valid_min = '0.0'
+   valid_max = '1.0' /

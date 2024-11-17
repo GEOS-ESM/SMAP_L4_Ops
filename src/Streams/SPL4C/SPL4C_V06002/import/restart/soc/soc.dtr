@@ -1,0 +1,21 @@
+PDR_NAME       = SOC.PDR;
+PDR_SHORT_NAME = SOC;
+PDR_LONG_NAME  = Soil Organic Carbon File;
+
+CLOCK_METHOD   = timeless;
+MIN_FILE_COUNT = 1;
+WAIT_TIME      = 120;
+
+OBJECT = FILE_GROUP;
+
+  DATA_TYPE = SOC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_C_SOC_directoryID>;
+    FILE_ID = SMAP_L4_C_SOC_<L4_C_SOC_version>.h5;
+    FILE_TYPE = HDF5;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_C_STREAM_directoryID>/run_DAILY/restart;
+  END_OBJECT = FILE_SPEC;
+
+END_OBJECT = FILE_GROUP;

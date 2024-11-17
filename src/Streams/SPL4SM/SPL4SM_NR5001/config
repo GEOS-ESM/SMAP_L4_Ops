@@ -1,0 +1,163 @@
+  ORIGINATING_SYSTEM = SMAP_GMAO
+  ECSVersionID       = 777
+  CompositeStreamID  = fp
+
+  L4_OPERATIONAL_version = GEOSldas-SMAP_L4_OPS-R17_3s+opt
+  L4_OPERATIONAL_description = SMAP Level-4 Operational System
+  L4_OPERATIONAL_changeLog = Initial version
+
+  L4_SM_METADATA_version = jardizzo-SMAP_L4_SM-meta_R003
+  L4_SM_METADATA_description = SMAP Level-4 Soil Moisture Metadata Version
+  L4_SM_METADATA_changeLog = Initial version
+
+# Dataset Identification Metadata
+# ===============================
+
+  L4_SM_VersionID = NR5001
+  L4_SM_ECSVersionID = <ECSVersionID>
+  L4_SM_CompositeReleaseID = <L4_SM_VersionID>0001
+
+  L4_SM_STREAM_version      = SPL4SM_<L4_SM_VersionID>
+  L4_SM_STREAM_description  = <CompositeStreamID>
+  L4_SM_STREAM_directoryID  = <L4_OPS_directoryID>/SPL4SM/<L4_SM_STREAM_version>
+
+# Series Identification Metadata
+# ==============================
+
+  L4_SM_revisionDate = 2022-04-11
+  L4_SM_maintenanceDate = 2023-04-11
+  L4_SM_PSDPublicationDate = 2018-05-31
+  L4_SM_PSDEdition = 1.5
+  L4_SM_gph_identifier_product_DOI = 10.5067/9LNYIYOBNBR5
+  L4_SM_aup_identifier_product_DOI = 10.5067/0D8JT6S27BS9
+  L4_SM_lmc_identifier_product_DOI = 10.5067/5C36BVQZW28K
+
+# Process Step Lineage Metadata
+# =============================
+
+  L4_SM_SWVersionID = v17.11.0
+  L4_SM_softwareDate = 2022-04-11
+  L4_SM_algorithmVersionID = v17.11.0
+  L4_SM_ATBDDate = 2014-12-09
+  L4_SM_ATBDVersion = Revision-A
+  L4_SM_documentation = Soil Moisture Active Passive (SMAP) Level 4 Surface and Root Zone Soil Moisture (L4_SM) Algorithm Theoretical Basis Document (ATBD)
+
+# The following variables refer to
+# software documents and default to the
+# ATBD in the absence of another document.
+# ========================================
+
+  L4_SM_documentDate = <L4_SM_ATBDDate>
+  L4_SM_documentVersion = <L4_SM_ATBDVersion>
+
+# L4_SM Land Forcing Input Data
+# =============================
+
+  L4_SM_LFO_version = GEOS.fp.asm
+  L4_SM_LFO_description = GEOS Forward Processing
+  L4_SM_LFO_directoryID = <L4_DATA_directoryID>/GEOS/FP/<L4_SM_LFO_version>/diag
+  L4_SM_LFO_DOI         = TBD
+  L4_SM_LFO_changeLog   = Initial version
+
+# Changed to FLK on data-day 8/1/2020
+
+  L4_SM_PRECIP_version  = CPCUFLKG5FPv3
+  L4_SM_PRECIP_description = CPCU Corrected Precipitation
+  L4_SM_PRECIP_directoryID = <L4_DATA_directoryID>/GEOS/FP/precip_corr_<L4_SM_PRECIP_version>/<L4_SM_LFO_version>/diag
+  L4_SM_PRECIP_DOI         = TBD
+  L4_SM_PRECIP_changeLog = Precipitation correction changed to first-look mode.
+
+  L4_SM_MET_TAG = <L4_SM_LFO_version>__prec<L4_SM_PRECIP_version>
+  L4_SM_MET_PATH = <L4_DATA_directoryID>/GEOS/FP
+
+# L4_SM Boundary Conditions
+# =========================
+
+  L4_SM_BCS_CLSM_version = Icarus-NLv4_EASE
+  L4_SM_BCS_CLSM_description = TBD
+  L4_SM_BCS_CLSM_directoryID = <L4_DATA_directoryID>/L4_SM/bcs/CLSM_params/<L4_SM_BCS_CLSM_version>;
+  L4_SM_BCS_CLSM_changeLog = Initial version
+
+  L4_SM_BCS_RTM_version = RTMParam_SMAP_L4SM_v003
+  L4_SM_BCS_RTM_description = TBD
+  L4_SM_BCS_RTM_directoryID = <L4_DATA_directoryID>/L4_SM/bcs/RTM_params/<L4_SM_BCS_RTM_version>;
+  L4_SM_BCS_RTM_changeLog = Initial version
+
+  L4_SM_SCALING_SPL1CTB_version = L4SM_v010
+  L4_SM_SCALING_SPL1CTB_description = TBD
+  L4_SM_SCALING_SPL1CTB_directoryID = <L4_DATA_directoryID>/L4_SM/scaling/SMAP_L1C_Tb_pentad/<L4_SM_SCALING_SPL1CTB_version>
+  L4_SM_SCALING_SPL1CTB_changeLog = Initial version
+
+
+# L4_SM Restart Directory
+# =======================
+
+  L4_SM_MODEL_OUTPUT_DIR = <L4_SM_STREAM_directoryID>/runModel/output/SMAP_EASEv2_M09_GLOBAL;
+  L4_SM_RST_DIR = <L4_SM_MODEL_OUTPUT_DIR>/rs;
+
+# L4_SM Pentad Climatology
+# ========================
+
+  L4_SM_CLIM_version = L4SM_v008
+  L4_SM_CLIM_description = Pentad climatology used for percentile calculation
+  L4_SM_CLIM_directoryID = <L4_DATA_directoryID>/L4_SM/climatology/<L4_SM_CLIM_version>
+  L4_SM_CLIM_changeLog = Initial version
+
+# L4_SM Run Time Input Parmeters
+# ==============================
+
+  L4_SM_DRIVER_version = R005
+  L4_SM_DRIVER_description = LDAS Main Driver Inputs
+  L4_SM_DRIVER_directoryID = <L4_SM_STREAM_directoryID>/runModel/rip
+  L4_SM_DRIVER_changeLog = Initial version
+
+  L4_SM_ENSPROP_version = R004
+  L4_SM_ENSPROP_description = EnKF Inputs
+  L4_SM_ENSPROP_directoryID = <L4_SM_STREAM_directoryID>/runModel/rip
+  L4_SM_ENSPROP_changeLog = Initial version
+
+  L4_SM_ENSUPD_version = R009
+  L4_SM_ENSUPD_description = EnKF Inputs for Land EnKF Update
+  L4_SM_ENSUPD_directoryID = <L4_SM_STREAM_directoryID>/runModel/rip
+  L4_SM_ENSUPD_changeLog = Initial version
+
+  L4_SM_CATBIAS_version = R001
+  L4_SM_CATBIAS_description = Catchment Bias Inputs
+  L4_SM_CATBIAS_directoryID = <L4_SM_STREAM_directoryID>/runModel/rip
+  L4_SM_CATBIAS_changeLog = Initial version
+
+  L4_SM_BATCH_JOB_version = R004
+  L4_SM_BATCH_JOB_description = Batch Job
+  L4_SM_BATCH_JOB_directoryID = <L4_SM_STREAM_directoryID>/runModel/rip
+  L4_SM_BATCH_JOB_changeLog = Initial version
+
+# Directory settings for monitoring output
+# Set to null (nothing after the equal
+# sign - no blanks) to turn off.
+# ========================================
+
+  L4_SM_BROWSE_directoryID = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/browse;
+
+  L4_SM_QUADS_directoryID = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/quads;
+
+  L4_SM_ODS_directoryID = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/obs;
+
+  L4_SM_OBS2HTML_directoryID = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/obs2html;
+
+
+# Export settings for monitoring output
+# Set to null (nothing after the equal
+# sign - no blanks) to turn off.
+# ========================================
+
+  L4_BROWSE_directoryID = <L4_SM_BROWSE_directoryID>;
+  L4_BROWSE_EXPORT_LOGIN = scp://dao_ops@polar.gsfc.nasa.gov;
+  L4_BROWSE_EXPORT_DIR = /san_extranet/collab/SMAP/browse/l4sm/<L4_SM_VersionID>;
+
+  L4_QUADS_directoryID = <L4_SM_QUADS_directoryID>;
+  L4_QUADS_EXPORT_LOGIN = scp://dao_ops@polar.gsfc.nasa.gov;
+  L4_QUADS_EXPORT_DIR = /san_extranet/collab/SMAP/monitoring/l4sm_quads/<L4_SM_VersionID>;
+
+  L4_OBS2HTML_directoryID = <L4_SM_OBS2HTML_directoryID>;
+  L4_OBS2HTML_EXPORT_LOGIN = scp://dao_ops@polar.gsfc.nasa.gov;
+  L4_OBS2HTML_EXPORT_DIR = /san_extranet/collab/SMAP/monitoring/l4sm_ods/<L4_SM_VersionID>;

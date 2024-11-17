@@ -1,0 +1,10 @@
+
+* 20170220 -f
+
+* * -rf 3600 -define MIN_CRID=R14010
+
+20170124 20170124 -define CROSS_STREAM=f516_fp
+
+20170125 *  -define L4_SM_LFO_version=f516_fp -define L4_SM_LFO_changeLog="GEOS-5 FP stream changed to f516_fp"
+
+20170305 20170305 -f

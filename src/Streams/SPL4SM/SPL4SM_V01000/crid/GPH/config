@@ -1,0 +1,2 @@
+GEOS5_lfo_version = h5dump -a VersionID <GEOS5_lfo_FILE> | <L4_SM_LFO_version>
+L4_SM_PRECIP_version = <L4_SM_PRECIP_version>

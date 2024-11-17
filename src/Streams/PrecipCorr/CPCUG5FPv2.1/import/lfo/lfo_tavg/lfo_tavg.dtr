@@ -1,0 +1,29 @@
+PDR_NAME       = <PCORR_LFO_version>.tavg1_2d_lfo.%Y%m%dT%H%M%S.PDR
+PDR_SHORT_NAME = LFO_TAVG;
+PDR_LONG_NAME  = Land Forcing (Time Average);
+
+CLOCK_METHOD   = iso_time;
+START_TIME     = -63000;
+END_TIME       = 192600;
+INC_SEC        = 3600;
+MIN_FILE_COUNT = 72;
+WAIT_TIME      = 259200;
+
+ORIGINATING_SYSTEM = SMAP_L4;
+TOTAL_FILE_COUNT = 1;
+
+PCORR_LFO_TAVG_IN_DIR   = <PCORR_LFO_directoryID>/diag/Y%Y/M%m/D%d;
+PCORR_LFO_TAVG_fileName = <PCORR_LFO_version>.tavg1_2d_lfo_Nx.%Y%m%d_%H%Mz.nc4;
+
+OBJECT = FILE_GROUP;
+
+  DATA_TYPE = LFOTAVG;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <PCORR_LFO_TAVG_IN_DIR>;
+    FILE_ID = <PCORR_LFO_TAVG_fileName>;
+    FILE_TYPE = NetCDF4;
+    FILE_SIZE =
+  END_OBJECT = FILE_SPEC;
+
+END_OBJECT = FILE_GROUP;

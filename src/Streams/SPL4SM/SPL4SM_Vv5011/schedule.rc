@@ -1,0 +1,3 @@
+20200401 * -pause
+
+20150331 * -rf 300 -f -noHDF -noPost -define MIN_CRID=T16516 -define MAX_CRID=T16700

@@ -1,0 +1,196 @@
+2014-07-02 06:19:51Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL1CTB"
+2014-07-02 06:19:51Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL2SMA"
+2014-07-02 06:19:51Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL2SMAP"
+2014-07-02 06:24:57Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL1CTB"
+2014-07-02 06:24:57Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL2SMA"
+2014-07-02 06:24:57Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL2SMAP"
+2014-07-02 06:29:58Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL1CTB"
+2014-07-02 06:29:58Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL2SMA"
+2014-07-02 06:29:58Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL2SMAP"
+2014-07-02 06:35:04Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL1CTB"
+2014-07-02 06:35:04Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL2SMA"
+2014-07-02 06:35:04Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL2SMAP"
+2014-07-02 06:40:08Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL1CTB"
+2014-07-02 06:40:09Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL2SMA"
+2014-07-02 06:40:09Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL2SMAP"
+2014-07-02 06:45:14Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL1CTB"
+2014-07-02 06:45:14Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL2SMA"
+2014-07-02 06:45:14Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL2SMAP"
+2014-07-02 06:50:15Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL1CTB"
+2014-07-02 06:50:15Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL2SMA"
+2014-07-02 06:50:15Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL2SMAP"
+2014-07-02 06:55:21Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL1CTB"
+2014-07-02 06:55:21Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL2SMA"
+2014-07-02 06:55:21Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL2SMAP"
+2014-07-02 07:00:22Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL1CTB"
+2014-07-02 07:00:22Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL2SMA"
+2014-07-02 07:00:22Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL2SMAP"
+2014-07-02 07:05:28Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL1CTB"
+2014-07-02 07:05:28Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL2SMA"
+2014-07-02 07:05:28Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Waiting for data type: "SPL2SMAP"
+2014-07-02 07:10:32Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Time has expired for type: "SPL1CTB"
+2014-07-02 07:10:32Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Time has expired for type: "SPL2SMA"
+2014-07-02 07:10:33Z|module|DMGR|mexecute|2014-01-05 00:00:00Z|Time has expired for type: "SPL2SMAP"
+2014-07-02 07:10:33Z|SMAP_L4_OPS|L4_SM|runModel|2014-01-05 00:00:00Z|@W|5|No data available for type "SPL1CTB"
+2014-07-02 07:10:33Z|SMAP_L4_OPS|L4_SM|runModel|2014-01-05 00:00:00Z|@W|5|No data available for type "SPL2SMA"
+2014-07-02 07:10:33Z|SMAP_L4_OPS|L4_SM|runModel|2014-01-05 00:00:00Z|@W|5|No data available for type "SPL2SMAP"
+2014-07-02 07:10:33Z|SMAP_L4_OPS|L4_SM|runModel|2014-01-05 00:00:00Z|@C|0|Submitting the model batch job
+2014-07-02 07:15:35Z|SMAP_L4_OPS|L4_SM|runModel|2014-01-05 00:00:00Z|@C|0|Waiting for LDAS to complete
+2014-07-02 07:20:37Z|SMAP_L4_OPS|L4_SM|runModel|2014-01-05 00:00:00Z|@C|0|Waiting for LDAS to complete
+2014-07-02 07:25:39Z|SMAP_L4_OPS|L4_SM|runModel|2014-01-05 00:00:00Z|@C|0|Waiting for LDAS to complete
+2014-07-02 07:30:40Z|SMAP_L4_OPS|L4_SM|runModel|2014-01-05 00:00:00Z|@C|0|Waiting for LDAS to complete
+2014-07-02 07:35:42Z|SMAP_L4_OPS|L4_SM|runModel|2014-01-05 00:00:00Z|@C|0|Waiting for LDAS to complete
+2014-07-02 07:40:44Z|SMAP_L4_OPS|L4_SM|runModel|2014-01-05 00:00:00Z|@C|0|Model successfully completed
+2014-07-02 07:40:44Z|SMAP_L4_OPS|L4_SM_genISO|main|2014-01-05 00:00:00Z|@C|0|Begin Generation of SMAP Granules
+2014-07-02 07:40:44Z|SMAP_L4_OPS|L4_SM_genISO|getTileCoordFile|2014-01-05 00:00:00Z|@C|0|Retrieving tile coordinate information
+2014-07-02 07:40:44Z|SMAP_L4_OPS|L4_SM_genISO|genDAAC|2014-01-05 00:00:00Z|@C|0|Generating DAAC granules
+2014-07-02 07:40:44Z|SMAP_L4_OPS|L4_SM_genISO|genGPH|2014-01-05 00:00:00Z|@C|0|Generating GPH granules for 2014-01-05T01:30:00
+2014-07-02 07:40:44Z|SMAP_L4_OPS|L4_SM_genISO|getLFOInfo|2014-01-05 00:00:00Z|@C|0|Retrieving LFO information for 2014-01-05T01:30:00
+2014-07-02 07:40:51Z|SMAP_L4_OPS|L4_SM_genISO|genHDF|2014-01-05 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = GPH, Time = 2014-01-05T01:30:00
+2014-07-02 07:40:55Z|SMAP_L4_OPS|L4_SM_genISO|genQA|2014-01-05 00:00:00Z|@C|0|Generating the QA file: Collection = GPH, Time = 2014-01-05T01:30:00
+2014-07-02 07:41:11Z|SMAP_L4_OPS|L4_SM_genISO|getGPHInfo|2014-01-05 00:00:00Z|@C|0|Retrieving GPH information for 2014-01-05T01:30:00
+2014-07-02 07:41:11Z|SMAP_L4_OPS|L4_SM_genISO|insertGroupMeta|2014-01-05 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = GPH, Time = 2014-01-05T01:30:00
+2014-07-02 07:41:12Z|SMAP_L4_OPS|L4_SM_genISO|compressHDF|2014-01-05 00:00:00Z|@C|0|Compressing the HDF5 file: Collection = GPH, Time = 2014-01-05T01:30:00
+2014-07-02 07:41:36Z|SMAP_L4_OPS|L4_SM_genISO|insertXMLMeta|2014-01-05 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = GPH, Time = 2014-01-05T01:30:00
+2014-07-02 07:41:39Z|SMAP_L4_OPS|L4_SM_genISO|insertSeriesXML|2014-01-05 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = GPH, Time = 2014-01-05T01:30:00
+2014-07-02 07:41:39Z|SMAP_L4_OPS|L4_SM_genISO|genAUP|2014-01-05 00:00:00Z|@C|0|Generating AUP granules for 2014-01-05T03:00:00
+2014-07-02 07:41:39Z|SMAP_L4_OPS|L4_SM_genISO|getOBSInfo|2014-01-05 00:00:00Z|@C|0|Retrieving observation information for 2014-01-05T03:00:00
+2014-07-02 07:41:41Z|SMAP_L4_OPS|L4_SM_genISO|genHDF|2014-01-05 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = AUP, Time = 2014-01-05T03:00:00
+2014-07-02 07:41:45Z|SMAP_L4_OPS|L4_SM_genISO|genQA|2014-01-05 00:00:00Z|@C|0|Generating the QA file: Collection = AUP, Time = 2014-01-05T03:00:00
+2014-07-02 07:43:01Z|SMAP_L4_OPS|L4_SM_genISO|getAUPInfo|2014-01-05 00:00:00Z|@C|0|Retrieving AUP information for 2014-01-05T03:00:00
+2014-07-02 07:43:01Z|SMAP_L4_OPS|L4_SM_genISO|insertGroupMeta|2014-01-05 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = AUP, Time = 2014-01-05T03:00:00
+2014-07-02 07:43:01Z|SMAP_L4_OPS|L4_SM_genISO|compressHDF|2014-01-05 00:00:00Z|@C|0|Compressing the HDF5 file: Collection = AUP, Time = 2014-01-05T03:00:00
+2014-07-02 07:43:21Z|SMAP_L4_OPS|L4_SM_genISO|insertXMLMeta|2014-01-05 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = AUP, Time = 2014-01-05T03:00:00
+2014-07-02 07:43:24Z|SMAP_L4_OPS|L4_SM_genISO|insertSeriesXML|2014-01-05 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = AUP, Time = 2014-01-05T03:00:00
+2014-07-02 07:43:24Z|SMAP_L4_OPS|L4_SM_genISO|genGPH|2014-01-05 00:00:00Z|@C|0|Generating GPH granules for 2014-01-05T04:30:00
+2014-07-02 07:43:24Z|SMAP_L4_OPS|L4_SM_genISO|getLFOInfo|2014-01-05 00:00:00Z|@C|0|Retrieving LFO information for 2014-01-05T04:30:00
+2014-07-02 07:43:30Z|SMAP_L4_OPS|L4_SM_genISO|genHDF|2014-01-05 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = GPH, Time = 2014-01-05T04:30:00
+2014-07-02 07:43:34Z|SMAP_L4_OPS|L4_SM_genISO|genQA|2014-01-05 00:00:00Z|@C|0|Generating the QA file: Collection = GPH, Time = 2014-01-05T04:30:00
+2014-07-02 07:43:49Z|SMAP_L4_OPS|L4_SM_genISO|getGPHInfo|2014-01-05 00:00:00Z|@C|0|Retrieving GPH information for 2014-01-05T04:30:00
+2014-07-02 07:43:49Z|SMAP_L4_OPS|L4_SM_genISO|insertGroupMeta|2014-01-05 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = GPH, Time = 2014-01-05T04:30:00
+2014-07-02 07:43:50Z|SMAP_L4_OPS|L4_SM_genISO|compressHDF|2014-01-05 00:00:00Z|@C|0|Compressing the HDF5 file: Collection = GPH, Time = 2014-01-05T04:30:00
+2014-07-02 07:44:14Z|SMAP_L4_OPS|L4_SM_genISO|insertXMLMeta|2014-01-05 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = GPH, Time = 2014-01-05T04:30:00
+2014-07-02 07:44:17Z|SMAP_L4_OPS|L4_SM_genISO|insertSeriesXML|2014-01-05 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = GPH, Time = 2014-01-05T04:30:00
+2014-07-02 07:44:17Z|SMAP_L4_OPS|L4_SM_genISO|genAUP|2014-01-05 00:00:00Z|@C|0|Generating AUP granules for 2014-01-05T06:00:00
+2014-07-02 07:44:17Z|SMAP_L4_OPS|L4_SM_genISO|getOBSInfo|2014-01-05 00:00:00Z|@C|0|Retrieving observation information for 2014-01-05T06:00:00
+2014-07-02 07:44:19Z|SMAP_L4_OPS|L4_SM_genISO|genHDF|2014-01-05 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = AUP, Time = 2014-01-05T06:00:00
+2014-07-02 07:44:23Z|SMAP_L4_OPS|L4_SM_genISO|genQA|2014-01-05 00:00:00Z|@C|0|Generating the QA file: Collection = AUP, Time = 2014-01-05T06:00:00
+2014-07-02 07:45:42Z|SMAP_L4_OPS|L4_SM_genISO|getAUPInfo|2014-01-05 00:00:00Z|@C|0|Retrieving AUP information for 2014-01-05T06:00:00
+2014-07-02 07:45:42Z|SMAP_L4_OPS|L4_SM_genISO|insertGroupMeta|2014-01-05 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = AUP, Time = 2014-01-05T06:00:00
+2014-07-02 07:45:42Z|SMAP_L4_OPS|L4_SM_genISO|compressHDF|2014-01-05 00:00:00Z|@C|0|Compressing the HDF5 file: Collection = AUP, Time = 2014-01-05T06:00:00
+2014-07-02 07:46:02Z|SMAP_L4_OPS|L4_SM_genISO|insertXMLMeta|2014-01-05 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = AUP, Time = 2014-01-05T06:00:00
+2014-07-02 07:46:05Z|SMAP_L4_OPS|L4_SM_genISO|insertSeriesXML|2014-01-05 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = AUP, Time = 2014-01-05T06:00:00
+2014-07-02 07:46:05Z|SMAP_L4_OPS|L4_SM_genISO|genGPH|2014-01-05 00:00:00Z|@C|0|Generating GPH granules for 2014-01-05T07:30:00
+2014-07-02 07:46:05Z|SMAP_L4_OPS|L4_SM_genISO|getLFOInfo|2014-01-05 00:00:00Z|@C|0|Retrieving LFO information for 2014-01-05T07:30:00
+2014-07-02 07:46:10Z|SMAP_L4_OPS|L4_SM_genISO|genHDF|2014-01-05 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = GPH, Time = 2014-01-05T07:30:00
+2014-07-02 07:46:13Z|SMAP_L4_OPS|L4_SM_genISO|genQA|2014-01-05 00:00:00Z|@C|0|Generating the QA file: Collection = GPH, Time = 2014-01-05T07:30:00
+2014-07-02 07:46:27Z|SMAP_L4_OPS|L4_SM_genISO|getGPHInfo|2014-01-05 00:00:00Z|@C|0|Retrieving GPH information for 2014-01-05T07:30:00
+2014-07-02 07:46:27Z|SMAP_L4_OPS|L4_SM_genISO|insertGroupMeta|2014-01-05 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = GPH, Time = 2014-01-05T07:30:00
+2014-07-02 07:46:27Z|SMAP_L4_OPS|L4_SM_genISO|compressHDF|2014-01-05 00:00:00Z|@C|0|Compressing the HDF5 file: Collection = GPH, Time = 2014-01-05T07:30:00
+2014-07-02 07:46:52Z|SMAP_L4_OPS|L4_SM_genISO|insertXMLMeta|2014-01-05 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = GPH, Time = 2014-01-05T07:30:00
+2014-07-02 07:46:54Z|SMAP_L4_OPS|L4_SM_genISO|insertSeriesXML|2014-01-05 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = GPH, Time = 2014-01-05T07:30:00
+2014-07-02 07:46:54Z|SMAP_L4_OPS|L4_SM_genISO|genAUP|2014-01-05 00:00:00Z|@C|0|Generating AUP granules for 2014-01-05T09:00:00
+2014-07-02 07:46:54Z|SMAP_L4_OPS|L4_SM_genISO|getOBSInfo|2014-01-05 00:00:00Z|@C|0|Retrieving observation information for 2014-01-05T09:00:00
+2014-07-02 07:46:55Z|SMAP_L4_OPS|L4_SM_genISO|genHDF|2014-01-05 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = AUP, Time = 2014-01-05T09:00:00
+2014-07-02 07:46:59Z|SMAP_L4_OPS|L4_SM_genISO|genQA|2014-01-05 00:00:00Z|@C|0|Generating the QA file: Collection = AUP, Time = 2014-01-05T09:00:00
+2014-07-02 07:48:18Z|SMAP_L4_OPS|L4_SM_genISO|getAUPInfo|2014-01-05 00:00:00Z|@C|0|Retrieving AUP information for 2014-01-05T09:00:00
+2014-07-02 07:48:18Z|SMAP_L4_OPS|L4_SM_genISO|insertGroupMeta|2014-01-05 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = AUP, Time = 2014-01-05T09:00:00
+2014-07-02 07:48:18Z|SMAP_L4_OPS|L4_SM_genISO|compressHDF|2014-01-05 00:00:00Z|@C|0|Compressing the HDF5 file: Collection = AUP, Time = 2014-01-05T09:00:00
+2014-07-02 07:48:37Z|SMAP_L4_OPS|L4_SM_genISO|insertXMLMeta|2014-01-05 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = AUP, Time = 2014-01-05T09:00:00
+2014-07-02 07:48:39Z|SMAP_L4_OPS|L4_SM_genISO|insertSeriesXML|2014-01-05 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = AUP, Time = 2014-01-05T09:00:00
+2014-07-02 07:48:39Z|SMAP_L4_OPS|L4_SM_genISO|genGPH|2014-01-05 00:00:00Z|@C|0|Generating GPH granules for 2014-01-05T10:30:00
+2014-07-02 07:48:39Z|SMAP_L4_OPS|L4_SM_genISO|getLFOInfo|2014-01-05 00:00:00Z|@C|0|Retrieving LFO information for 2014-01-05T10:30:00
+2014-07-02 07:48:40Z|SMAP_L4_OPS|L4_SM_genISO|genHDF|2014-01-05 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = GPH, Time = 2014-01-05T10:30:00
+2014-07-02 07:48:44Z|SMAP_L4_OPS|L4_SM_genISO|genQA|2014-01-05 00:00:00Z|@C|0|Generating the QA file: Collection = GPH, Time = 2014-01-05T10:30:00
+2014-07-02 07:48:57Z|SMAP_L4_OPS|L4_SM_genISO|getGPHInfo|2014-01-05 00:00:00Z|@C|0|Retrieving GPH information for 2014-01-05T10:30:00
+2014-07-02 07:48:57Z|SMAP_L4_OPS|L4_SM_genISO|insertGroupMeta|2014-01-05 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = GPH, Time = 2014-01-05T10:30:00
+2014-07-02 07:48:58Z|SMAP_L4_OPS|L4_SM_genISO|compressHDF|2014-01-05 00:00:00Z|@C|0|Compressing the HDF5 file: Collection = GPH, Time = 2014-01-05T10:30:00
+2014-07-02 07:49:22Z|SMAP_L4_OPS|L4_SM_genISO|insertXMLMeta|2014-01-05 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = GPH, Time = 2014-01-05T10:30:00
+2014-07-02 07:49:25Z|SMAP_L4_OPS|L4_SM_genISO|insertSeriesXML|2014-01-05 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = GPH, Time = 2014-01-05T10:30:00
+2014-07-02 07:49:25Z|SMAP_L4_OPS|L4_SM_genISO|genAUP|2014-01-05 00:00:00Z|@C|0|Generating AUP granules for 2014-01-05T12:00:00
+2014-07-02 07:49:25Z|SMAP_L4_OPS|L4_SM_genISO|getOBSInfo|2014-01-05 00:00:00Z|@C|0|Retrieving observation information for 2014-01-05T12:00:00
+2014-07-02 07:49:26Z|SMAP_L4_OPS|L4_SM_genISO|genHDF|2014-01-05 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = AUP, Time = 2014-01-05T12:00:00
+2014-07-02 07:49:30Z|SMAP_L4_OPS|L4_SM_genISO|genQA|2014-01-05 00:00:00Z|@C|0|Generating the QA file: Collection = AUP, Time = 2014-01-05T12:00:00
+2014-07-02 07:50:49Z|SMAP_L4_OPS|L4_SM_genISO|getAUPInfo|2014-01-05 00:00:00Z|@C|0|Retrieving AUP information for 2014-01-05T12:00:00
+2014-07-02 07:50:49Z|SMAP_L4_OPS|L4_SM_genISO|insertGroupMeta|2014-01-05 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = AUP, Time = 2014-01-05T12:00:00
+2014-07-02 07:50:50Z|SMAP_L4_OPS|L4_SM_genISO|compressHDF|2014-01-05 00:00:00Z|@C|0|Compressing the HDF5 file: Collection = AUP, Time = 2014-01-05T12:00:00
+2014-07-02 07:51:09Z|SMAP_L4_OPS|L4_SM_genISO|insertXMLMeta|2014-01-05 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = AUP, Time = 2014-01-05T12:00:00
+2014-07-02 07:51:11Z|SMAP_L4_OPS|L4_SM_genISO|insertSeriesXML|2014-01-05 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = AUP, Time = 2014-01-05T12:00:00
+2014-07-02 07:51:11Z|SMAP_L4_OPS|L4_SM_genISO|genGPH|2014-01-05 00:00:00Z|@C|0|Generating GPH granules for 2014-01-05T13:30:00
+2014-07-02 07:51:11Z|SMAP_L4_OPS|L4_SM_genISO|getLFOInfo|2014-01-05 00:00:00Z|@C|0|Retrieving LFO information for 2014-01-05T13:30:00
+2014-07-02 07:51:13Z|SMAP_L4_OPS|L4_SM_genISO|genHDF|2014-01-05 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = GPH, Time = 2014-01-05T13:30:00
+2014-07-02 07:51:16Z|SMAP_L4_OPS|L4_SM_genISO|genQA|2014-01-05 00:00:00Z|@C|0|Generating the QA file: Collection = GPH, Time = 2014-01-05T13:30:00
+2014-07-02 07:51:30Z|SMAP_L4_OPS|L4_SM_genISO|getGPHInfo|2014-01-05 00:00:00Z|@C|0|Retrieving GPH information for 2014-01-05T13:30:00
+2014-07-02 07:51:30Z|SMAP_L4_OPS|L4_SM_genISO|insertGroupMeta|2014-01-05 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = GPH, Time = 2014-01-05T13:30:00
+2014-07-02 07:51:30Z|SMAP_L4_OPS|L4_SM_genISO|compressHDF|2014-01-05 00:00:00Z|@C|0|Compressing the HDF5 file: Collection = GPH, Time = 2014-01-05T13:30:00
+2014-07-02 07:51:55Z|SMAP_L4_OPS|L4_SM_genISO|insertXMLMeta|2014-01-05 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = GPH, Time = 2014-01-05T13:30:00
+2014-07-02 07:51:57Z|SMAP_L4_OPS|L4_SM_genISO|insertSeriesXML|2014-01-05 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = GPH, Time = 2014-01-05T13:30:00
+2014-07-02 07:51:57Z|SMAP_L4_OPS|L4_SM_genISO|genAUP|2014-01-05 00:00:00Z|@C|0|Generating AUP granules for 2014-01-05T15:00:00
+2014-07-02 07:51:57Z|SMAP_L4_OPS|L4_SM_genISO|getOBSInfo|2014-01-05 00:00:00Z|@C|0|Retrieving observation information for 2014-01-05T15:00:00
+2014-07-02 07:51:59Z|SMAP_L4_OPS|L4_SM_genISO|genHDF|2014-01-05 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = AUP, Time = 2014-01-05T15:00:00
+2014-07-02 07:52:02Z|SMAP_L4_OPS|L4_SM_genISO|genQA|2014-01-05 00:00:00Z|@C|0|Generating the QA file: Collection = AUP, Time = 2014-01-05T15:00:00
+2014-07-02 07:53:18Z|SMAP_L4_OPS|L4_SM_genISO|getAUPInfo|2014-01-05 00:00:00Z|@C|0|Retrieving AUP information for 2014-01-05T15:00:00
+2014-07-02 07:53:18Z|SMAP_L4_OPS|L4_SM_genISO|insertGroupMeta|2014-01-05 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = AUP, Time = 2014-01-05T15:00:00
+2014-07-02 07:53:21Z|SMAP_L4_OPS|L4_SM_genISO|compressHDF|2014-01-05 00:00:00Z|@C|0|Compressing the HDF5 file: Collection = AUP, Time = 2014-01-05T15:00:00
+2014-07-02 07:53:41Z|SMAP_L4_OPS|L4_SM_genISO|insertXMLMeta|2014-01-05 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = AUP, Time = 2014-01-05T15:00:00
+2014-07-02 07:53:44Z|SMAP_L4_OPS|L4_SM_genISO|insertSeriesXML|2014-01-05 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = AUP, Time = 2014-01-05T15:00:00
+2014-07-02 07:53:45Z|SMAP_L4_OPS|L4_SM_genISO|genGPH|2014-01-05 00:00:00Z|@C|0|Generating GPH granules for 2014-01-05T16:30:00
+2014-07-02 07:53:45Z|SMAP_L4_OPS|L4_SM_genISO|getLFOInfo|2014-01-05 00:00:00Z|@C|0|Retrieving LFO information for 2014-01-05T16:30:00
+2014-07-02 07:53:50Z|SMAP_L4_OPS|L4_SM_genISO|genHDF|2014-01-05 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = GPH, Time = 2014-01-05T16:30:00
+2014-07-02 07:53:54Z|SMAP_L4_OPS|L4_SM_genISO|genQA|2014-01-05 00:00:00Z|@C|0|Generating the QA file: Collection = GPH, Time = 2014-01-05T16:30:00
+2014-07-02 07:54:09Z|SMAP_L4_OPS|L4_SM_genISO|getGPHInfo|2014-01-05 00:00:00Z|@C|0|Retrieving GPH information for 2014-01-05T16:30:00
+2014-07-02 07:54:09Z|SMAP_L4_OPS|L4_SM_genISO|insertGroupMeta|2014-01-05 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = GPH, Time = 2014-01-05T16:30:00
+2014-07-02 07:54:10Z|SMAP_L4_OPS|L4_SM_genISO|compressHDF|2014-01-05 00:00:00Z|@C|0|Compressing the HDF5 file: Collection = GPH, Time = 2014-01-05T16:30:00
+2014-07-02 07:54:35Z|SMAP_L4_OPS|L4_SM_genISO|insertXMLMeta|2014-01-05 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = GPH, Time = 2014-01-05T16:30:00
+2014-07-02 07:54:38Z|SMAP_L4_OPS|L4_SM_genISO|insertSeriesXML|2014-01-05 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = GPH, Time = 2014-01-05T16:30:00
+2014-07-02 07:54:38Z|SMAP_L4_OPS|L4_SM_genISO|genAUP|2014-01-05 00:00:00Z|@C|0|Generating AUP granules for 2014-01-05T18:00:00
+2014-07-02 07:54:38Z|SMAP_L4_OPS|L4_SM_genISO|getOBSInfo|2014-01-05 00:00:00Z|@C|0|Retrieving observation information for 2014-01-05T18:00:00
+2014-07-02 07:54:40Z|SMAP_L4_OPS|L4_SM_genISO|genHDF|2014-01-05 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = AUP, Time = 2014-01-05T18:00:00
+2014-07-02 07:54:44Z|SMAP_L4_OPS|L4_SM_genISO|genQA|2014-01-05 00:00:00Z|@C|0|Generating the QA file: Collection = AUP, Time = 2014-01-05T18:00:00
+2014-07-02 07:56:02Z|SMAP_L4_OPS|L4_SM_genISO|getAUPInfo|2014-01-05 00:00:00Z|@C|0|Retrieving AUP information for 2014-01-05T18:00:00
+2014-07-02 07:56:02Z|SMAP_L4_OPS|L4_SM_genISO|insertGroupMeta|2014-01-05 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = AUP, Time = 2014-01-05T18:00:00
+2014-07-02 07:56:02Z|SMAP_L4_OPS|L4_SM_genISO|compressHDF|2014-01-05 00:00:00Z|@C|0|Compressing the HDF5 file: Collection = AUP, Time = 2014-01-05T18:00:00
+2014-07-02 07:56:22Z|SMAP_L4_OPS|L4_SM_genISO|insertXMLMeta|2014-01-05 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = AUP, Time = 2014-01-05T18:00:00
+2014-07-02 07:56:25Z|SMAP_L4_OPS|L4_SM_genISO|insertSeriesXML|2014-01-05 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = AUP, Time = 2014-01-05T18:00:00
+2014-07-02 07:56:25Z|SMAP_L4_OPS|L4_SM_genISO|genGPH|2014-01-05 00:00:00Z|@C|0|Generating GPH granules for 2014-01-05T19:30:00
+2014-07-02 07:56:25Z|SMAP_L4_OPS|L4_SM_genISO|getLFOInfo|2014-01-05 00:00:00Z|@C|0|Retrieving LFO information for 2014-01-05T19:30:00
+2014-07-02 07:56:30Z|SMAP_L4_OPS|L4_SM_genISO|genHDF|2014-01-05 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = GPH, Time = 2014-01-05T19:30:00
+2014-07-02 07:56:33Z|SMAP_L4_OPS|L4_SM_genISO|genQA|2014-01-05 00:00:00Z|@C|0|Generating the QA file: Collection = GPH, Time = 2014-01-05T19:30:00
+2014-07-02 07:56:46Z|SMAP_L4_OPS|L4_SM_genISO|getGPHInfo|2014-01-05 00:00:00Z|@C|0|Retrieving GPH information for 2014-01-05T19:30:00
+2014-07-02 07:56:46Z|SMAP_L4_OPS|L4_SM_genISO|insertGroupMeta|2014-01-05 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = GPH, Time = 2014-01-05T19:30:00
+2014-07-02 07:56:47Z|SMAP_L4_OPS|L4_SM_genISO|compressHDF|2014-01-05 00:00:00Z|@C|0|Compressing the HDF5 file: Collection = GPH, Time = 2014-01-05T19:30:00
+2014-07-02 07:57:10Z|SMAP_L4_OPS|L4_SM_genISO|insertXMLMeta|2014-01-05 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = GPH, Time = 2014-01-05T19:30:00
+2014-07-02 07:57:13Z|SMAP_L4_OPS|L4_SM_genISO|insertSeriesXML|2014-01-05 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = GPH, Time = 2014-01-05T19:30:00
+2014-07-02 07:57:13Z|SMAP_L4_OPS|L4_SM_genISO|genAUP|2014-01-05 00:00:00Z|@C|0|Generating AUP granules for 2014-01-05T21:00:00
+2014-07-02 07:57:13Z|SMAP_L4_OPS|L4_SM_genISO|getOBSInfo|2014-01-05 00:00:00Z|@C|0|Retrieving observation information for 2014-01-05T21:00:00
+2014-07-02 07:57:14Z|SMAP_L4_OPS|L4_SM_genISO|genHDF|2014-01-05 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = AUP, Time = 2014-01-05T21:00:00
+2014-07-02 07:57:18Z|SMAP_L4_OPS|L4_SM_genISO|genQA|2014-01-05 00:00:00Z|@C|0|Generating the QA file: Collection = AUP, Time = 2014-01-05T21:00:00
+2014-07-02 07:58:35Z|SMAP_L4_OPS|L4_SM_genISO|getAUPInfo|2014-01-05 00:00:00Z|@C|0|Retrieving AUP information for 2014-01-05T21:00:00
+2014-07-02 07:58:35Z|SMAP_L4_OPS|L4_SM_genISO|insertGroupMeta|2014-01-05 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = AUP, Time = 2014-01-05T21:00:00
+2014-07-02 07:58:35Z|SMAP_L4_OPS|L4_SM_genISO|compressHDF|2014-01-05 00:00:00Z|@C|0|Compressing the HDF5 file: Collection = AUP, Time = 2014-01-05T21:00:00
+2014-07-02 07:58:54Z|SMAP_L4_OPS|L4_SM_genISO|insertXMLMeta|2014-01-05 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = AUP, Time = 2014-01-05T21:00:00
+2014-07-02 07:58:56Z|SMAP_L4_OPS|L4_SM_genISO|insertSeriesXML|2014-01-05 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = AUP, Time = 2014-01-05T21:00:00
+2014-07-02 07:58:56Z|SMAP_L4_OPS|L4_SM_genISO|genGPH|2014-01-05 00:00:00Z|@C|0|Generating GPH granules for 2014-01-05T22:30:00
+2014-07-02 07:58:56Z|SMAP_L4_OPS|L4_SM_genISO|getLFOInfo|2014-01-05 00:00:00Z|@C|0|Retrieving LFO information for 2014-01-05T22:30:00
+2014-07-02 07:58:57Z|SMAP_L4_OPS|L4_SM_genISO|genHDF|2014-01-05 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = GPH, Time = 2014-01-05T22:30:00
+2014-07-02 07:59:01Z|SMAP_L4_OPS|L4_SM_genISO|genQA|2014-01-05 00:00:00Z|@C|0|Generating the QA file: Collection = GPH, Time = 2014-01-05T22:30:00
+2014-07-02 07:59:14Z|SMAP_L4_OPS|L4_SM_genISO|getGPHInfo|2014-01-05 00:00:00Z|@C|0|Retrieving GPH information for 2014-01-05T22:30:00
+2014-07-02 07:59:14Z|SMAP_L4_OPS|L4_SM_genISO|insertGroupMeta|2014-01-05 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = GPH, Time = 2014-01-05T22:30:00
+2014-07-02 07:59:14Z|SMAP_L4_OPS|L4_SM_genISO|compressHDF|2014-01-05 00:00:00Z|@C|0|Compressing the HDF5 file: Collection = GPH, Time = 2014-01-05T22:30:00
+2014-07-02 07:59:38Z|SMAP_L4_OPS|L4_SM_genISO|insertXMLMeta|2014-01-05 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = GPH, Time = 2014-01-05T22:30:00
+2014-07-02 07:59:40Z|SMAP_L4_OPS|L4_SM_genISO|insertSeriesXML|2014-01-05 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = GPH, Time = 2014-01-05T22:30:00
+2014-07-02 07:59:40Z|SMAP_L4_OPS|L4_SM_genISO|genAUP|2014-01-05 00:00:00Z|@C|0|Generating AUP granules for 2014-01-06T00:00:00
+2014-07-02 07:59:40Z|SMAP_L4_OPS|L4_SM_genISO|getOBSInfo|2014-01-05 00:00:00Z|@C|0|Retrieving observation information for 2014-01-06T00:00:00
+2014-07-02 07:59:41Z|SMAP_L4_OPS|L4_SM_genISO|genHDF|2014-01-05 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = AUP, Time = 2014-01-06T00:00:00
+2014-07-02 07:59:45Z|SMAP_L4_OPS|L4_SM_genISO|genQA|2014-01-05 00:00:00Z|@C|0|Generating the QA file: Collection = AUP, Time = 2014-01-06T00:00:00
+2014-07-02 08:01:00Z|SMAP_L4_OPS|L4_SM_genISO|getAUPInfo|2014-01-05 00:00:00Z|@C|0|Retrieving AUP information for 2014-01-06T00:00:00
+2014-07-02 08:01:00Z|SMAP_L4_OPS|L4_SM_genISO|insertGroupMeta|2014-01-05 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = AUP, Time = 2014-01-06T00:00:00
+2014-07-02 08:01:00Z|SMAP_L4_OPS|L4_SM_genISO|compressHDF|2014-01-05 00:00:00Z|@C|0|Compressing the HDF5 file: Collection = AUP, Time = 2014-01-06T00:00:00
+2014-07-02 08:01:19Z|SMAP_L4_OPS|L4_SM_genISO|insertXMLMeta|2014-01-05 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = AUP, Time = 2014-01-06T00:00:00
+2014-07-02 08:01:21Z|SMAP_L4_OPS|L4_SM_genISO|insertSeriesXML|2014-01-05 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = AUP, Time = 2014-01-06T00:00:00
+2014-07-02 08:01:21Z|SMAP_L4_OPS|L4_SM_genISO|main|2014-01-05 00:00:00Z|@C|0|End Generation of SMAP Granules
+2014-07-02 08:01:22Z|SMAP_L4_OPS|L4_SM|export|2014-01-05 00:00:00Z|@C|0|Exporting GPH_NSIDC
+2014-07-02 08:01:40Z|SMAP_L4_OPS|L4_SM|export|2014-01-05 00:00:00Z|@C|0|Exporting GPH_JPL
+2014-07-02 08:01:59Z|SMAP_L4_OPS|L4_SM|export|2014-01-05 00:00:00Z|@C|0|Exporting AUP_JPL
+2014-07-02 08:02:18Z|SMAP_L4_OPS|L4_SM|export|2014-01-05 00:00:00Z|@C|0|Exporting AUP_NSIDC
+2014-07-02 08:02:36Z|SMAP_L4_OPS|L4_SM|main|2014-01-05 00:00:00Z|@C|0|L4_SM is complete.

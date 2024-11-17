@@ -1,0 +1,28 @@
+PDR_NAME       = TAVG3H.%Y%m%dT%H%M00.PDR
+PDR_SHORT_NAME = TAVG3H;
+PDR_LONG_NAME  = Land Data Assimilation System (TAVG3H);
+
+CLOCK_METHOD   = iso_time;
+START_TIME     = 5400;
+END_TIME       = 81000;
+INC_SEC        = 10800;
+MIN_FILE_COUNT = 8;
+WAIT_TIME      = 259200;
+
+ORIGINATING_SYSTEM = SMAP_L4;
+TOTAL_FILE_COUNT = 1;
+
+L4_SM_OUTPUT = <L4_SM_STREAM_directoryID>/runModel/output;
+
+OBJECT = FILE_GROUP;
+
+  DATA_TYPE = SPL4NR3H;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_OUTPUT>/SMAP_EASEv2_M09_GLOBAL/cat/ens_avg/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.ens_avg.ldas_tile_tavg1hto3h_out.%Y%m%d_%H%Mz.bin;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+  END_OBJECT = FILE_SPEC;
+
+END_OBJECT = FILE_GROUP;

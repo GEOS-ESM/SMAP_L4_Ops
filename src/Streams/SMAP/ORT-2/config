@@ -1,0 +1,5 @@
+# This data stream is for acquiring data during ORT-2.
+
+# Acquisition related parameter settings go in here.
+
+DATA_VERSION = 001;

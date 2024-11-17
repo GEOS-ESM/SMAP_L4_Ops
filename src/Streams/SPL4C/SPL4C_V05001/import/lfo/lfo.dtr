@@ -1,0 +1,55 @@
+PDR_NAME       = LFO.%Y%m%dT%H%M%S.PDR
+PDR_SHORT_NAME = LFO;
+PDR_LONG_NAME  = GEOS-5 Meteorological Forward Processing Stream;
+
+CLOCK_METHOD   = iso_time;
+START_TIME     = 1800;
+END_TIME       = 84600
+INC_SEC        = 3600;
+MIN_FILE_COUNT = 24;
+WAIT_TIME      = 259200;
+
+L4_C_LFO_IN_DIR   = <L4_C_LFO_directoryID>/diag/Y%Y/M%m/D%d;
+L4_C_LFO_OUT_DIR  = <DTR_DIR_ID>/data/Y%Y/M%m/D%d;
+L4_C_LFO_IN_NAME  = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_%H%M.V01.nc4;
+
+MET_FP_ROOT = <L4_C_LFO_OUT_DIR>;
+
+MET_FP_PATH01 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_0030.V01.nc4;
+MET_FP_PATH02 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_0130.V01.nc4;
+MET_FP_PATH03 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_0230.V01.nc4;
+MET_FP_PATH04 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_0330.V01.nc4;
+MET_FP_PATH05 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_0430.V01.nc4;
+MET_FP_PATH06 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_0530.V01.nc4;
+MET_FP_PATH07 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_0630.V01.nc4;
+MET_FP_PATH08 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_0730.V01.nc4;
+MET_FP_PATH09 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_0830.V01.nc4;
+MET_FP_PATH10 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_0930.V01.nc4;
+MET_FP_PATH11 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_1030.V01.nc4;
+MET_FP_PATH12 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_1130.V01.nc4;
+MET_FP_PATH13 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_1230.V01.nc4;
+MET_FP_PATH14 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_1330.V01.nc4;
+MET_FP_PATH15 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_1430.V01.nc4;
+MET_FP_PATH16 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_1530.V01.nc4;
+MET_FP_PATH17 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_1630.V01.nc4;
+MET_FP_PATH18 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_1730.V01.nc4;
+MET_FP_PATH19 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_1830.V01.nc4;
+MET_FP_PATH20 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_1930.V01.nc4;
+MET_FP_PATH21 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_2030.V01.nc4;
+MET_FP_PATH22 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_2130.V01.nc4;
+MET_FP_PATH23 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_2230.V01.nc4;
+MET_FP_PATH24 = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_2330.V01.nc4;
+
+OBJECT = FILE_GROUP;
+
+  DATA_TYPE = GEOS5LFO;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_C_LFO_IN_DIR>;
+    FILE_ID = <L4_C_LFO_IN_NAME>;
+    FILE_TYPE = NetCDF4;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_C_LFO_OUT_DIR>;
+  END_OBJECT = FILE_SPEC;
+
+END_OBJECT = FILE_GROUP;

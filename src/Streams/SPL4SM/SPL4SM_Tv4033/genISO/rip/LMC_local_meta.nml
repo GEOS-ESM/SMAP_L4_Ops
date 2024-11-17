@@ -1,0 +1,355 @@
+ &file
+   title = 'SMAP L4_SM Land-Model-Constants (LMC) Data Granule'
+   history = 'File written by ldas2daac.x'
+   source = '<L4_SM_SWVersionID>'
+   contact = 'http://gmao.gsfc.nasa.gov'
+   conventions = 'CF'
+   institution = 'NASA Global Modeling and Assimilation Office'
+   references = 'see SMAP L4_SM Product Specification Documentation'
+   comment = 'HDF-5' /
+
+ &group
+   name = '/'
+   num_elements = 7 /
+
+ &element
+   name = 'time'
+   long_name = 'Time' /
+
+ &element
+   name = 'y'
+   real_size = 64
+   long_name = 'Y coordinate of cell center in EASE 2.0 global projection'
+   standard_name = 'projection_y_coordinate'
+   units = 'm'
+   axis = 'Y'
+   valid_min = '-7.31004e+06'
+   valid_max = '7.31004e+06' /
+
+ &element
+   name = 'x'
+   real_size = 64
+   long_name = 'X coordinate of cell center in EASE 2.0 global projection'
+   standard_name = 'projection_x_coordinate'
+   units = 'm'
+   axis = 'X'
+   valid_min = '-1.7363e+07'
+   valid_max = '1.7363e+07' /
+
+ &element
+   name = 'cell_lat'
+   long_name = 'The geodetic latitude of the center of each cell in the cylindrical 9 km Earth-fixed EASE-Grid 2.0. Zero latitude represents the Equator. Positive latitudes represent locations North of the Equator. Negative latitudes represent locations South of the Equator.'
+   units = 'degrees'
+   valid_min = '-90'
+   valid_max = '90' /
+
+ &element
+   name = 'cell_lon'
+   long_name = 'The longitude of the center of each cell in the cylindrical 9 km Earth-fixed EASE-Grid 2.0. Zero longitude represents the Prime Meridian. Positive longitudes represent locations to the East of the Prime Meridian. Negative longitudes represent locations to the West of the Prime Meridian.'
+   units = 'degrees'
+   valid_min = '-180'
+   valid_max = '179.999' /
+
+ &element
+   name = 'cell_row'
+   uint_size = 32
+   long_name = 'The row index of each cell in the cylindrical 9 km Earth-fixed EASE-Grid 2.0. Type is Unsigned32.'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'dimensionless'
+   valid_min = '0'
+   valid_max = '1623' /
+
+ &element
+   name = 'cell_column'
+   uint_size = 32
+   long_name = 'The column index of each cell in the cylindrical 9 km Earth-fixed EASE-Grid 2.0. Type is Unsigned32.'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'dimensionless'
+   valid_min = '0'
+   valid_max = '3855' /
+
+ &group
+   name = 'Land-Model-Constants_Data'
+   num_elements = 35 /
+
+ &element
+   name = 'cell_land_fraction'
+   long_name = 'Area fraction of land within each grid cell.'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'dimensionless'
+   valid_min = '0'
+   valid_max = '1' /
+
+ &element
+   name = 'cell_elevation'
+   long_name = 'Mean elevation above sea level of land within each grid cell.'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'm'
+   valid_min = '-500'
+   valid_max = '6000' /
+
+ &element
+   name = 'clsm_dzsf'
+   long_name = 'Catchment model: Thickness of surface soil moisture layer'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'm'
+   valid_min = '0.05'
+   valid_max = '0.05' /
+
+ &element
+   name = 'clsm_dzrz'
+   long_name = 'Catchment model: Thickness of root zone soil moisture layer'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'm'
+   valid_min = '1'
+   valid_max = '1' /
+
+ &element
+   name = 'clsm_dzpr'
+   long_name = 'Catchment model: Thickness of profile soil moisture layer ("depth-to-bedrock" in the Catchment model)'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'm'
+   valid_min = '1.33'
+   valid_max = '10' /
+
+ &element
+   name = 'clsm_dztsurf'
+   long_name = 'Catchment model: Thickness of soil layer associated with surface_temp'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'm'
+   valid_min = '0'
+   valid_max = '0.05' /
+
+ &element
+   name = 'clsm_dzgt1'
+   long_name = 'Catchment model: Thickness of soil heat diffusion model layer 1'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'm'
+   valid_min = '0.0988'
+   valid_max = '0.0988' /
+
+ &element
+   name = 'clsm_dzgt2'
+   long_name = 'Catchment model: Thickness of soil heat diffusion model layer 2'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'm'
+   valid_min = '0.1952'
+   valid_max = '0.1952' /
+
+ &element
+   name = 'clsm_dzgt3'
+   long_name = 'Catchment model: Thickness of soil heat diffusion model layer 3'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'm'
+   valid_min = '0.3859'
+   valid_max = '0.3859' /
+
+ &element
+   name = 'clsm_dzgt4'
+   long_name = 'Catchment model: Thickness of soil heat diffusion model layer 4'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'm'
+   valid_min = '0.7626'
+   valid_max = '0.7626' /
+
+ &element
+   name = 'clsm_dzgt5'
+   long_name = 'Catchment model: Thickness of soil heat diffusion model layer 5'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'm'
+   valid_min = '1.5071'
+   valid_max = '1.5071' /
+
+ &element
+   name = 'clsm_dzgt6'
+   long_name = 'Catchment model: Thickness of soil heat diffusion model layer 6'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'm'
+   valid_min = '10'
+   valid_max = '10' /
+
+ &element
+   name = 'clsm_poros'
+   long_name = 'Catchment model: Soil porosity'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'm3 m-3'
+   valid_min = '0.3'
+   valid_max = '0.9' /
+
+ &element
+   name = 'clsm_wp'
+   long_name = 'Catchment model: Soil wilting point'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'm3 m-3'
+   valid_min = '0.001'
+   valid_max = '0.3' /
+
+ &element
+   name = 'clsm_cdcr1'
+   long_name = 'Catchment model: Catchment deficit at which baseflow ceases'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'kg m-2'
+   valid_min = '30'
+   valid_max = '3000' /
+
+ &element
+   name = 'clsm_cdcr2'
+   long_name = 'Catchment model: Maximum water holding capacity of land element'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'kg m-2'
+   valid_min = '200'
+   valid_max = '6000' /
+
+ &element
+   name = 'mwrtm_vegcls'
+   uint_size = 32
+   long_name = 'Microwave radiative transfer model: Vegetation class.  Type is Unsigned32.'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'dimensionless'
+   valid_min = '1'
+   valid_max = '16' /
+
+ &element
+   name = 'mwrtm_soilcls'
+   uint_size = 32
+   long_name = 'Microwave radiative transfer model: Soil class. Type is Unsigned32.'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'dimensionless'
+   valid_min = '1'
+   valid_max = '253' /
+
+ &element
+   name = 'mwrtm_sand'
+   long_name = 'Microwave radiative transfer model: Sand fraction'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'dimensionless'
+   valid_min = '0'
+   valid_max = '1.0' /
+
+ &element
+   name = 'mwrtm_clay'
+   long_name = 'Microwave radiative transfer model: Clay fraction'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'dimensionless'
+   valid_min = '0'
+   valid_max = '1.0' /
+
+ &element
+   name = 'mwrtm_poros'
+   long_name = 'Microwave radiative transfer model: Porosity'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'm3 m-3'
+   valid_min = '0.3'
+   valid_max = '0.9' /
+
+ &element
+   name = 'mwrtm_wangwt'
+   long_name = 'Microwave radiative transfer model: Wang dielectric model transition soil moisture'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'm3 m-3'
+   valid_min = '0.1'
+   valid_max = '0.4' /
+
+ &element
+   name = 'mwrtm_wangwp'
+   long_name = 'Microwave radiative transfer model: Wang dielectric model wilting point soil moisture'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'm3 m-3'
+   valid_min = '0'
+   valid_max = '0.4' /
+
+ &element
+   name = 'mwrtm_rghhmin'
+   long_name = 'Microwave radiative transfer model: Minimum microwave roughness parameter'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'dimensionless'
+   valid_min = '0'
+   valid_max = '2.0' /
+
+ &element
+   name = 'mwrtm_rghhmax'
+   long_name = 'Microwave radiative transfer model: Maximum microwave roughness parameter'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'dimensionless'
+   valid_min = '0'
+   valid_max = '3.0' /
+
+ &element
+   name = 'mwrtm_rghwmin'
+   long_name = 'Microwave radiative transfer model: Soil moisture value below which maximum microwave roughness parameter is used'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'm3 m-3'
+   valid_min = '0.1'
+   valid_max = '0.4' /
+
+ &element
+   name = 'mwrtm_rghwmax'
+   long_name = 'Microwave radiative transfer model: Soil moisture value above which minimum microwave roughness parameter is used'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'm3 m-3'
+   valid_min = '0.3'
+   valid_max = '0.9' /
+
+ &element
+   name = 'mwrtm_rghnrh'
+   long_name = 'Microwave radiative transfer model: H-pol. Exponent for rough reflectivity parameterization'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'dimensionless'
+   valid_min = '0'
+   valid_max = '1.75' /
+
+ &element
+   name = 'mwrtm_rghnrv'
+   long_name = 'Microwave radiative transfer model: V-pol. Exponent for rough reflectivity parameterization'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'dimensionless'
+   valid_min = '-1'
+   valid_max = '2' /
+
+ &element
+   name = 'mwrtm_rghpolmix'
+   long_name = 'Microwave radiative transfer model: Polarization mixing parameter'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'dimensionless'
+   valid_min = '0'
+   valid_max = '0' /
+
+ &element
+   name = 'mwrtm_omega'
+   long_name = 'Microwave radiative transfer model: Scattering albedo'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'dimensionless'
+   valid_min = '0'
+   valid_max = '0.3' /
+
+ &element
+   name = 'mwrtm_bh'
+   long_name = 'Microwave radiative transfer model: H-pol. Vegetation b parameter'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'dimensionless'
+   valid_min = '0'
+   valid_max = '0.7' /
+
+ &element
+   name = 'mwrtm_bv'
+   long_name = 'Microwave radiative transfer model: V-pol. Vegetation b parameter'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'dimensionless'
+   valid_min = '-0.15'
+   valid_max = '0.85' /
+
+ &element
+   name = 'mwrtm_lewt'
+   long_name = 'Microwave radiative transfer model: Parameter to transform leaf area index into vegetation water content'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'kg m-2'
+   valid_min = '0'
+   valid_max = '2' /
+
+ &element
+   name = 'clsm_veghght'
+   long_name = 'Catchment model: Vegetation canopy height'
+   coordinates = '/cell_lat /cell_lon'
+   units = 'm'
+   valid_min = '0'
+   valid_max = '60' /

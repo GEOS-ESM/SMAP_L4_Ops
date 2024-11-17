@@ -1,0 +1,50 @@
+# l4c_MET.rip  (prototype)
+# version: 4.6.5
+# revised: 2013-10-29T11:16:00-07:00,jmg
+# author : Joe Glassy, Univ. Montana
+# history: added L4C_MODEL_YEAR on 2013-10-29 as per Joe A's suggestion.
+# notes  : RIP file syntax supports use of '#' in first column to indicate comment lines,
+#          and blank lines are ignored. Each line consists of a recognized keyword, followed
+#          by a delimiter (which can be a space,comma,tab, or equal-sign symbol), followed by
+#          a single 'value' argument string.
+
+# local (Univ Montana) release identifier
+L4C_MET_RELEASE_TAG	 = L4_C_MET_D4.1-2013-10-29T11:16:00-07:00
+L4C_CRID                 = CRID-yet-to-be-defined
+L4C_MET_SOFTWARE_VERSION = 4.6.5
+
+# added 2013-10-29T11:10:00-7:00, as per Joe A suggestion.
+L4C_MODEL_YEAR    = %Y
+# model day of year 
+L4C_MODEL_YEARDAY = %j
+
+# L4C_INPUT_ANCILLARY_PATH = SMAP_L4C_Ancillary.h5
+# Prototype: instead, use raw binary MODIS M09 global 9km mask on Plant Function Type (PFT)
+L4C_INPUT_ANCILLARY_PATH = <L4C_INPUT_ANCILLARY_PATH>
+
+# Define all (3) root directories. Note: these absolute root paths obviously MUST be 
+#   changed to match the local environment, such as on NCCS Discover 
+L4C_INPUT_MET_FP_ROOTDIR      = <L4C_INPUT_MET_FP_ROOTDIR>
+L4C_INPUT_MET_L4_SM_ROOTDIR   = <L4C_INPUT_MET_L4_SM_ROOTDIR>
+L4C_INPUT_MET_L3_SM_A_ROOTDIR = <L4C_INPUT_MET_L3_SM_A_ROOTDIR>
+# Define location of SOC daily intermediate file
+L4C_INPUT_MET_SOC_ROOTDIR     = <L4C_INPUT_MET_SOC_ROOTDIR>
+
+# proxy for the output path
+L4C_OUTPUT_MET_PATH = <L4C_OUTPUT_MET_PATH>
+
+# define (8) 3-hourly L4_SM granules, for times: 0130,0430,0730,1030,1330,1630,1930,2230
+L4C_INPUT_MET_L4_SM_PATH = <L4C_INPUT_MET_L4_SM_PATH>
+
+# Define collection of (24) hourly GEOS-5 FP granules for this model yearday
+#  using RIP multi-valued keyword syntax, where a keyword is repeated multiple
+#  times, once for each member of the collection.
+L4C_INPUT_MET_FP_PATH = <L4C_INPUT_MET_FP_PATH>
+#
+# define the (1) daily L3_SM_A granule, for times: daily
+L4C_INPUT_MET_L3_SM_A_PATH = <L4C_INPUT_MET_L3_SM_A_PATH>
+# daily intermediate Soil Organic File is the only one assured
+# to be kept persistent year round, so this is where the FT_QC_M03
+# and FT_ROLLING_M03 freeze thaw data extacted fro L3_SM_A is stored
+L4C_INPUT_MET_SOC_PATH = <L4C_INPUT_MET_SOC_PATH>
+#

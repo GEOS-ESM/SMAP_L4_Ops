@@ -1,0 +1,79 @@
+# Dataset Identification Metadata
+# ===============================
+
+  PCORR_VersionID = CPCUG5FPv4
+  PCORR_CompositeReleaseID = <PCORR_VersionID>_001
+
+  PCORR_STREAM_version = <PCORR_VersionID>
+  PCORR_STREAM_description  = TBD
+  PCORR_STREAM_directoryID  = <L4_OPS_directoryID>/<PCORR_STREAM_version>
+  PCORR_STREAM_changeLog = Initial version
+
+  PCORR_version = <PCORR_VersionID>
+  PCORR_directoryID = <L4_DATA_directoryID>/PRECIP
+  PCORR_description = CPCU Corrected Precipitation (CPCUG5FPv4)
+  PCORR_changeLog = Initial version
+
+# Series Identification Metadata
+# ==============================
+
+  PCORR_title = GEOS5,2d,1-Hourly,Time-Averaged,Single-Level
+  PCORR_history = File written in Fortran 90
+  PCORR_convention = COARDS
+  PCORR_institution = NASA Global Modeling and Assimilation Office
+  PCORR_contact = Rolf Reichle/Qing Liu
+  PCORR_references = Technical Report Series on Global Modeling and Data Assimilation, Volume 35 Randal D. Koster, Editor: Observation-Corrected Precipitation Estimates in GEOS-5
+  PCORR_source = CPCUG5FPv4
+  PCORR_comment = Corrected Fields Using CPCU Method-A with GPCPv2.2 Scaling (CPCU and MERRA2), Latitude Tapering (50-60N/S, Africa Excluded)
+
+# Process Step Lineage Metadata
+# =============================
+
+  PCORR_SWVersionID = GEOSldas-SMAP_L4_OPS-R17_3s
+  PCORR_softwareDate = 2021-10-21
+  PCORR_algorithmVersionID = CPCU_A_001
+
+# Land Forcing Input Data
+# =======================
+
+  PCORR_LFO_version = GEOS.fp.asm
+  PCORR_LFO_description = GEOS Forward Processing
+  PCORR_LFO_directoryID = <L4_DATA_directoryID>/GEOS/FP/<L4_SM_LFO_version>
+  PCORR_LFO_changeLog   = Initial version
+
+# CPCU Input Data
+# ===============
+
+  PCORR_CPCU_version = 1.0
+  PCORR_CPCU_description = Climate Prediction Center Unified Precipitation
+  PCORR_CPCU_directoryID = <L4_DATA_directoryID>/CPCU/v<PCORR_CPCU_version>
+  PCORR_CPCU_changeLog = 
+
+# CPCU Scaling Data
+# =================
+
+  PCORR_CPCU_SCALE_version = GPCP2.2_CPCU_1979-2013
+  PCORR_CPCU_SCALE_description = GPCP v2.2 CPCU Scaling Factors
+  PCORR_CPCU_SCALE_directoryID = <L4_DATA_directoryID>/PRECIP/etc;
+  PCORR_CPCU_SCALE_changeLog = 
+
+# LFO Scaling Data
+# ================
+
+  PCORR_LFO_SCALE_version = GPCP2.2_MERRA2GCM_G5FPgrid_1980-2014
+  PCORR_LFO_SCALE_description = GPCP v2.2 / MERRA2 Scaling Factors
+  PCORR_LFO_SCALE_directoryID = <L4_DATA_directoryID>/PRECIP/etc;
+  PCORR_LFO_SCALE_changeLog =
+
+# Precipitation Correction
+# Run Time Input Parmeters
+# ========================
+
+  PCORR_METHOD = CPCU_A
+  PCORR_EXCLUDE_AFRICA = .true.
+  PCORR_LATITUDE_TAPERING = .true.
+  PCORR_MASKOUT = .false.
+  PCORR_EXCHANGE_DLON = 0.0625
+  PCORR_EXCHANGE_DLAT = 0.125
+  PCORR_SCALE_CPCU = .true.
+  PCORR_SCALE_LFO  = .true.

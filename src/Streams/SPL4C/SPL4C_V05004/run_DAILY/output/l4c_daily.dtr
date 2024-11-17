@@ -1,0 +1,32 @@
+PDR_NAME       = L4_C_DAILY.%Y%m%dT000000.PDR;
+PDR_SHORT_NAME = L4_C_DAILY;
+PDR_LONG_NAME  = L4_C Model Output;
+
+CLOCK_METHOD   = iso_time;
+MIN_FILE_COUNT = 1;
+WAIT_TIME      = 300;
+
+ORIGINATING_SYSTEM = SMAP_L4;
+TOTAL_FILE_COUNT = 3;
+
+L4_C_DAILY_fileName = L4_C_mdl_%Y%m%dT000000_<L4_C_VersionID>_<PRODUCT_COUNTER>;
+
+OBJECT = FILE_GROUP;
+
+  DATA_TYPE = L4CMDL;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_DATA_directoryID>/L4_C/<L4_C_VersionID>/daily/Y%Y/M%m;
+    FILE_ID = <L4_C_DAILY_fileName>.h5
+    FILE_TYPE = SCIENCE;
+    FILE_SIZE =
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_DATA_directoryID>/L4_C/<L4_C_VersionID>/restart/Y%Y/M%m;
+    FILE_ID = <L4_C_DAILY_fileName>.soc
+    FILE_TYPE = SOC;
+    FILE_SIZE =
+  END_OBJECT = FILE_SPEC;
+
+END_OBJECT = FILE_GROUP;

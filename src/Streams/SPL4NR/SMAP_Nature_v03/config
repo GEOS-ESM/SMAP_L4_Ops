@@ -1,0 +1,73 @@
+# Dataset Identification Metadata
+# ===============================
+
+  L4_SM_VersionID = V15001
+  L4_SM_CompositeReleaseID = <L4_SM_VersionID>001
+
+  L4_SM_STREAM_version      = SMAP_Nature_v03
+  L4_SM_STREAM_description  = TBD
+  L4_SM_STREAM_directoryID  = <L4_OPS_directoryID>/SPL4NR/<L4_SM_STREAM_version>
+
+# Series Identification Metadata
+# ==============================
+
+  L4_SM_revisionDate = 2014-02-22
+  L4_SM_maintenanceDate = 2015-01-01
+  L4_SM_PSDPublicationDate = 2014-02-14
+  L4_SM_PSDEdition = 1.1
+  L4_SM_identifier_product_DOI = TBD
+
+# Process Step Lineage Metadata
+# =============================
+
+  L4_SM_SWVersionID = LDASsa_m2-SMAP_Nature_v03
+  L4_SM_softwareDate = 2014-02-22
+  L4_SM_algorithmVersionID = D05000
+  L4_SM_ATBDDate = 2014-02-14
+  L4_SM_ATBDVersion = 1.1
+  L4_SM_documentation = TBD
+  L4_SM_runTimeParameters = TBD
+
+# L4_SM Land Forcing Input Data
+# =============================
+
+  L4_SM_LFO_version = e5110_fp
+  L4_SM_LFO_description = GEOS-5 Forward Processing
+  L4_SM_LFO_directoryID = <L4_DATA_directoryID>/GEOS-5/FP
+  L4_SM_LFO_changeLog = Initial version
+
+  L4_SM_PRECIP_version  = CPCUG5FPv1
+  L4_SM_PRECIP_description = CPCU Corrected Precipitation
+  L4_SM_PRECIP_directoryID = <L4_DATA_directoryID>/PRECIP
+  L4_SM_PRECIP_changeLog = Initial version
+
+# L4_SM Boundary Conditions
+# =========================
+
+  L4_SM_BCS_CLSM_version = mkCatchParam_v15
+  L4_SM_BCS_CLSM_description = TBD
+  L4_SM_BCS_CLSM_directoryID = <L4_DATA_directoryID>/L4_SM/bcs/CLSM_params/<L4_SM_BCS_CLSM_version>
+  L4_SM_BCS_CLSM_changeLog = Initial version
+
+  L4_SM_BCS_RTM_version = v15_CalD_RPFPIT_filled
+  L4_SM_BCS_RTM_description = TBD
+  L4_SM_BCS_RTM_directoryID = <L4_DATA_directoryID>/L4_SM/bcs/RTM_params/<L4_SM_BCS_RTM_version>
+  L4_SM_BCS_RTM_changeLog = Initial version
+
+# L4_SM Run Time Input Parmeters
+# ==============================
+
+  L4_SM_DRIVER_version = V01
+  L4_SM_DRIVER_description = LDAS Main Driver Inputs
+  L4_SM_DRIVER_directoryID = <L4_SM_STREAM_directoryID>/runModel/rip
+  L4_SM_DRIVER_changeLog = Initial version
+
+  L4_SM_ENSPROP_version = V01
+  L4_SM_ENSPROP_description = EnKF Inputs
+  L4_SM_ENSPROP_directoryID = <L4_SM_STREAM_directoryID>/runModel/rip
+  L4_SM_ENSPROP_changeLog = Initial version
+
+  L4_SM_BATCH_JOB_version = V01
+  L4_SM_BATCH_JOB_description = Batch Job
+  L4_SM_BATCH_JOB_directoryID = <L4_SM_STREAM_directoryID>/runModel/rip
+  L4_SM_BATCH_JOB_changeLog = Initial version

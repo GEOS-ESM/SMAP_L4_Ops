@@ -1,0 +1,8 @@
+
+* * -rf 3600 -export -define MIN_CRID=R16000
+
+20180627 20180628 -f
+
+20180711 20180711 -define CROSS_STREAM=f521_fp
+
+20180712 *  -define L4_SM_LFO_version=f521_fp -define L4_SM_LFO_changeLog="GEOS-5 FP stream changed to f521_fp"

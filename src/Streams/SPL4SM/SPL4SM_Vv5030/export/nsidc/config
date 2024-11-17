@@ -1,0 +1,11 @@
+PDR_EXPORT_DIR = <L4_EXPORT_directoryID>/smapnsid/data_out/<CompositeStreamID>/PDR;
+PAN_EXPORT_DIR = <L4_EXPORT_directoryID>/smapnsid/a/data_in/<CompositeStreamID>/PAN;
+PDRD_EXPORT_DIR = <L4_EXPORT_directoryID>/smapnsid/a/data_in/<CompositeStreamID>/PDRD;
+L4_SM_CLIENT_DIR = /dpstage01/smaplevel4/smapnsid/data_out/<CompositeStreamID>/data;
+
+#L4_DATA_directoryID = /css/smapl4/public/L4_Products
+
+REPORT_directoryID = <L4_EXPORT_directoryID>/smapnsid/data_out/<CompositeStreamID>/report;
+REPORT_fileID = SMAP_GMAO_NSIDC_SDATE_EDATE.txt;
+
+REPORT_title = GMAO SMAP Report to NSIDC;

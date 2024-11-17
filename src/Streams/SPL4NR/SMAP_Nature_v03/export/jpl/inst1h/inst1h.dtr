@@ -1,0 +1,35 @@
+PDR_NAME       = SPL4NRIN.%Y%m%dT%H%M00.<SYSTEM_TIME>.PDR
+PDR_SHORT_NAME = INST1H_JPL;
+PDR_LONG_NAME  = SMAP Nature Run Hourly Instantaneous Collection
+PDR_EXPORT_DIR = <L4_EXPORT_directoryID>/smapjpl/data_out/<L4_SM_STREAM_version>/PDR;
+
+ORIGINATING_SYSTEM = SMAP_SDS;
+TOTAL_FILE_COUNT = 1;
+
+CLOCK_METHOD   = iso_time;
+START_TIME     = 3600;
+END_TIME       = 86400;
+INC_SEC        = 3600;
+MIN_FILE_COUNT = 24;
+WAIT_TIME      = 259200;
+
+L4_SM_INPUT_DIR = <L4_SM_STREAM_directoryID>/genISO/output/Y%Y/M%m/D%d;
+L4_SM_OUTPUT_DIR = <L4_EXPORT_directoryID>/smapjpl/data_out/<L4_SM_STREAM_version>/data/SPL4NRIN;
+L4_SM_CLIENT_DIR = data_out/<L4_SM_STREAM_version>/data/SPL4NRIN;
+
+OBJECT = FILE_GROUP;
+
+  DATA_TYPE = SPL4NRIN;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_INPUT_DIR>;
+    FILE_ID = <L4_SM_STREAM_version>.inst1h.%Y%m%dT%H%M00.h5;
+    FILE_TYPE = HDF;
+    FILE_SIZE =
+    FILE_CKSUM_TYPE = MD5;
+    FILE_CKSUM_VALUE =
+    FILE_LOCAL_DIR = <L4_SM_OUTPUT_DIR>;
+    FILE_CLIENT_DIR = <L4_SM_CLIENT_DIR>;
+  END_OBJECT = FILE_SPEC;
+
+END_OBJECT = FILE_GROUP;

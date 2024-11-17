@@ -1,0 +1,27 @@
+#!/bin/sh
+
+ARCHIVE="/archive/u/dao_ops/SMAP_L4"
+
+  while read rpathname; do
+
+    apathname="$ARCHIVE/$rpathname";
+
+    if [ ! -f $apathname ]; then
+
+      echo "Archiving $rpathname"
+      mkdir -p `dirname $apathname`
+      cp $rpathname $apathname
+
+      rsize=`du -sb $rpathname | cut -f1`
+      asize=`du -sb $apathname | cut -f1`
+
+      if [ "$rsize" -ne "$asize" ]; then
+        echo "Failed to copy $rpathname to $apathname"
+        exit 1
+      fi
+
+    fi
+
+  done
+
+exit 0

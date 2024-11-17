@@ -1,0 +1,132 @@
+=head2 Fri Mar 20 20:00:10 2020: C<Module> L<Data::UUID|Data::UUID>
+
+=over 4
+
+=item *
+
+C<installed into: /home/dao_ops/SMAP/sandbox/GEOSldas/Ops/src/SMAP_Shared/SMAP_perllib/lib/perl5/site_perl/5.18.2>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.224>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Fri Mar 20 20:15:31 2020: C<Module> L<String::ShellQuote|String::ShellQuote>
+
+=over 4
+
+=item *
+
+C<installed into: /home/dao_ops/SMAP/sandbox/GEOSldas/Ops/src/SMAP_Shared/SMAP_perllib/lib/perl5/site_perl/5.18.2>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.04>
+
+=item *
+
+C<EXE_FILES: shell-quote>
+
+=back
+
+=head2 Fri Mar 20 20:19:49 2020: C<Module> L<Net::SSH|Net::SSH>
+
+=over 4
+
+=item *
+
+C<installed into: /home/dao_ops/SMAP/sandbox/GEOSldas/Ops/src/SMAP_Shared/SMAP_perllib/lib/perl5/site_perl/5.18.2>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.09>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Fri Mar 20 20:20:18 2020: C<Module> L<Net::SCP|Net::SCP>
+
+=over 4
+
+=item *
+
+C<installed into: /home/dao_ops/SMAP/sandbox/GEOSldas/Ops/src/SMAP_Shared/SMAP_perllib/lib/perl5/site_perl/5.18.2>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.08>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Apr  9 18:32:17 2020: C<Module> L<Net::SFTP|Net::SFTP>
+
+=over 4
+
+=item *
+
+C<installed into: /home/dao_ops/SMAP/sandbox/SMAP_L4_SLES12/Ops/src/SMAP_Shared/SMAP_perllib/lib/perl5/site_perl/5.18.2>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.12>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
+=head2 Thu Apr  9 18:42:33 2020: C<Module> L<Net::SFTP::Foreign|Net::SFTP::Foreign>
+
+=over 4
+
+=item *
+
+C<installed into: /home/dao_ops/SMAP/sandbox/SMAP_L4_SLES12/Ops/src/SMAP_Shared/SMAP_perllib/lib/perl5/site_perl/5.18.2>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.90>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+

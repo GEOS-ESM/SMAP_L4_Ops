@@ -1,0 +1,12 @@
+SPL3SMA_CompositeReleaseID  = h5dump -a Metadata/DatasetIdentification/CompositeReleaseID <SPL3SMA_FILE>
+SPL4SMGP_CompositeReleaseID = h5dump -a Metadata/DatasetIdentification/CompositeReleaseID <SPL4SMGP_FILE>
+
+L4_C_MOD_version      = h5dump -a L4_C_SW_VERSION <L4CMOD_FILE>
+L4_C_MET_version      = h5dump -a L4_C_SW_VERSION <L4CMET_FILE>
+L4_C_MDL_version      = h5dump -a L4_C_SW_VERSION <L4CMDL_FILE>
+L4_C_FPAR_version     = ncdump -a LOCALVERSIONID -t fpar <MODFPAR_FILE>
+L4_C_GEOS5_version    = h5dump -a VersionID <GEOS5LFO_FILE>
+
+L4_C_ANC_version          = <L4_C_ANC_version>
+L4_C_FPAR_CLIMATE_version = <L4_C_FPAR_CLIMATE_version>
+L4_C_BPLUT_version        = <L4_C_BPLUT_version>

@@ -1,0 +1,18 @@
+<GranuleMetaDataFile>
+    <GranuleURMetaData>
+        <CollectionMetaData>
+            <ShortName>@SHORT_NAME@</ShortName>
+            <VersionID>1</VersionID>
+        </CollectionMetaData>
+        <ECSDataGranule>
+            <LocalGranuleID>@LocalGranuleID@</LocalGranuleID>
+            <ProductionDateTime>@ProductionDateTime@</ProductionDateTime>
+        </ECSDataGranule>
+        <RangeDateTime>
+            <RangeEndingTime>@RangeEndingTime@</RangeEndingTime>
+            <RangeEndingDate>@RangeEndingDate@</RangeEndingDate>
+            <RangeBeginningTime>@RangeBeginningTime@</RangeBeginningTime>
+            <RangeBeginningDate>@RangeBeginningDate@</RangeBeginningDate>
+        </RangeDateTime>
+    </GranuleURMetaData>
+</GranuleMetaDataFile>

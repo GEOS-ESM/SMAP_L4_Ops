@@ -1,0 +1,348 @@
+2014-11-10 01:10:25Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-24T00:00:00
+2014-11-10 01:10:29Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-24 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-10 01:10:34Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|Exiting runMet : [9s]
+2014-11-10 01:10:34Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-24 00:00:00Z|@C|0|Exiting L4_C.pl : [9s]
+2014-11-10 02:10:35Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-24T00:00:00
+2014-11-10 02:10:35Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-24 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-10 02:10:35Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|Exiting runMet : [0s]
+2014-11-10 02:10:35Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-24 00:00:00Z|@C|0|Exiting L4_C.pl : [0s]
+2014-11-10 03:10:36Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-24T00:00:00
+2014-11-10 03:10:37Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-24 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-10 03:10:37Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|Exiting runMet : [1s]
+2014-11-10 03:10:37Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-24 00:00:00Z|@C|0|Exiting L4_C.pl : [1s]
+2014-11-10 04:10:38Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-24T00:00:00
+2014-11-10 04:10:38Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-24 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-10 04:10:38Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|Exiting runMet : [0s]
+2014-11-10 04:10:38Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-24 00:00:00Z|@C|0|Exiting L4_C.pl : [1s]
+2014-11-10 05:10:40Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-24T00:00:00
+2014-11-10 05:10:40Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-24 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-10 05:10:40Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|Exiting runMet : [0s]
+2014-11-10 05:10:40Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-24 00:00:00Z|@C|0|Exiting L4_C.pl : [1s]
+2014-11-10 06:10:41Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-24T00:00:00
+2014-11-10 06:10:41Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-24 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-10 06:10:41Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|Exiting runMet : [0s]
+2014-11-10 06:10:41Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-24 00:00:00Z|@C|0|Exiting L4_C.pl : [1s]
+2014-11-10 07:10:42Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-24T00:00:00
+2014-11-10 07:10:42Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-24 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-10 07:10:42Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|Exiting runMet : [0s]
+2014-11-10 07:10:42Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-24 00:00:00Z|@C|0|Exiting L4_C.pl : [0s]
+2014-11-10 08:10:44Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-24T00:00:00
+2014-11-10 08:10:44Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-24 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-10 08:10:44Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|Exiting runMet : [0s]
+2014-11-10 08:10:44Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-24 00:00:00Z|@C|0|Exiting L4_C.pl : [1s]
+2014-11-10 09:10:45Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-24T00:00:00
+2014-11-10 09:10:46Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-24 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-10 09:10:46Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|Exiting runMet : [1s]
+2014-11-10 09:10:46Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-24 00:00:00Z|@C|0|Exiting L4_C.pl : [2s]
+2014-11-10 10:10:47Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-24T00:00:00
+2014-11-10 10:11:18Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|l4c_MET preprocessing is complete
+2014-11-10 10:11:18Z|L4_C_SPS|L4_C.pl|runMet|2014-10-24 00:00:00Z|@C|0|Exiting runMet : [31s]
+2014-11-10 10:11:18Z|L4_C_SPS|L4_C.pl|runModis|2014-10-24 00:00:00Z|@C|0|Executing the MODIS Preprocessor: Time = 2014-10-24T00:00:00
+2014-11-10 10:13:48Z|L4_C_SPS|L4_C.pl|runModis|2014-10-24 00:00:00Z|@C|0|l4c_MODIS preprocessing is complete
+2014-11-10 10:13:48Z|L4_C_SPS|L4_C.pl|runModis|2014-10-24 00:00:00Z|@C|0|Exiting runModis : [150s]
+2014-11-10 10:13:48Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-24 00:00:00Z|@C|0|Executing the Carbon Model: Collection = MDL, Time = 2014-10-24T00:00:00
+2014-11-10 10:13:55Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-24 00:00:00Z|@C|0|Executing l4c_DAILY
+2014-11-10 10:21:47Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-24 00:00:00Z|@C|0|l4c_DAILY processing is complete
+2014-11-10 10:21:47Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-24 00:00:00Z|@C|0|Exiting runDaily : [479s]
+2014-11-10 10:21:49Z|L4_C_SPS|L4_C_genISO|getMDLInfo|2014-10-24 00:00:00Z|@C|0|Exiting getMDLInfo : [0s]
+2014-11-10 10:21:51Z|L4_C_SPS|L4_C_genISO|getLFOInfo|2014-10-24 00:00:00Z|@C|0|Exiting getLFOInfo : [2s]
+2014-11-10 10:21:57Z|L4_C_SPS|L4_C_genISO|getGPHInfo|2014-10-24 00:00:00Z|@C|0|Exiting getGPHInfo : [6s]
+2014-11-10 10:22:01Z|L4_C_SPS|L4_C_genISO|getSMAPInfo|2014-10-24 00:00:00Z|@C|0|Exiting getSMAPInfo : [4s]
+2014-11-10 10:22:01Z|L4_C_SPS|L4_C_genISO|getMETInfo|2014-10-24 00:00:00Z|@C|0|Exiting getMETInfo : [12s]
+2014-11-10 10:22:10Z|L4_C_SPS|L4_C_genISO|getFPARInfo|2014-10-24 00:00:00Z|@C|0|Exiting getFPARInfo : [9s]
+2014-11-10 10:22:10Z|L4_C_SPS|L4_C_genISO|getMODInfo|2014-10-24 00:00:00Z|@C|0|Exiting getMODInfo : [9s]
+2014-11-10 10:22:16Z|L4_C_SPS|L4_C_genISO|getSOCInfo|2014-10-24 00:00:00Z|@C|0|Exiting getSOCInfo : [6s]
+2014-11-10 10:22:16Z|L4_C_SPS|L4_C_genISO|getANCInfo|2014-10-24 00:00:00Z|@C|0|Exiting getANCInfo : [0s]
+2014-11-10 10:22:41Z|L4_C_SPS|L4_C_genISO|getCLIMInfo|2014-10-24 00:00:00Z|@C|0|Exiting getCLIMInfo : [25s]
+2014-11-10 10:22:45Z|L4_C_SPS|L4_C_genISO|genHDF|2014-10-24 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = MDL, Time = 2014-10-24T00:00:00
+2014-11-10 10:22:46Z|L4_C_SPS|L4_C_genISO|genHDF|2014-10-24 00:00:00Z|@C|0|Exiting genHDF : [1s]
+2014-11-10 10:22:46Z|L4_C_SPS|L4_C_genISO|insertGroupMeta|2014-10-24 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = MDL, Time = 2014-10-24T00:00:00
+2014-11-10 10:22:47Z|L4_C_SPS|L4_C_genISO|insertGroupMeta|2014-10-24 00:00:00Z|@C|0|Exiting insertGroupMeta : [1s]
+2014-11-10 10:22:48Z|L4_C_SPS|L4_C_genISO|insertConfigTar|2014-10-24 00:00:00Z|@C|0|Exiting insertConfigTar : [0s]
+2014-11-10 10:22:48Z|L4_C_SPS|L4_C_genISO|insertConfig|2014-10-24 00:00:00Z|@C|0|Exiting insertConfig : [1s]
+2014-11-10 10:22:48Z|L4_C_SPS|L4_C_genISO|insertXMLMeta|2014-10-24 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = MDL, Time = 2014-10-24T00:00:00
+2014-11-10 10:22:51Z|L4_C_SPS|L4_C_genISO|insertXMLMeta|2014-10-24 00:00:00Z|@C|0|Exiting insertXMLMeta : [3s]
+2014-11-10 10:22:51Z|L4_C_SPS|L4_C_genISO|insertSeriesXML|2014-10-24 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = MDL, Time = 2014-10-24T00:00:00
+2014-11-10 10:22:51Z|L4_C_SPS|L4_C_genISO|insertSeriesXML|2014-10-24 00:00:00Z|@C|0|Exiting insertSeriesXML : [0s]
+2014-11-10 10:22:51Z|L4_C_SPS|L4_C_genISO|genMDL|2014-10-24 00:00:00Z|@C|0|Exiting genMDL : [62s]
+2014-11-10 10:22:51Z|L4_C_SPS|L4_C_genISO|genDAAC|2014-10-24 00:00:00Z|@C|0|Exiting genDAAC : [62s]
+2014-11-10 10:22:51Z|L4_C_SPS|L4_C_genISO|L4_C_genISO.pl|2014-10-24 00:00:00Z|@C|0|Exiting L4_C_genISO.pl : [63s]
+2014-11-10 10:22:51Z|L4_C_SPS|L4_C.pl|genISO|2014-10-24 00:00:00Z|@C|0|Exiting genISO : [64s]
+2014-11-10 10:22:51Z|L4_C_SPS|L4_C.pl|export|2014-10-24 00:00:00Z|@C|0|Exporting MDL_JPL
+2014-11-10 10:22:54Z|L4_C_SPS|L4_C.pl|export|2014-10-24 00:00:00Z|@C|0|Exporting MDL_NSIDC
+2014-11-10 10:22:57Z|L4_C_SPS|L4_C.pl|export|2014-10-24 00:00:00Z|@C|0|Exiting export : [6s]
+2014-11-10 10:22:57Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-24 00:00:00Z|@C|0|L4_C is complete.
+2014-11-10 10:22:57Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-24 00:00:00Z|@C|0|Exiting L4_C.pl : [730s]
+2014-11-10 11:22:59Z|L4_C_SPS|L4_C.pl|runMet|2014-10-25 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-25T00:00:00
+2014-11-10 11:23:03Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-25 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-10 11:23:04Z|L4_C_SPS|L4_C.pl|runMet|2014-10-25 00:00:00Z|@C|0|Exiting runMet : [5s]
+2014-11-10 11:23:04Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-25 00:00:00Z|@C|0|Exiting L4_C.pl : [6s]
+2014-11-10 12:23:06Z|L4_C_SPS|L4_C.pl|runMet|2014-10-25 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-25T00:00:00
+2014-11-10 12:23:06Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-25 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-10 12:23:06Z|L4_C_SPS|L4_C.pl|runMet|2014-10-25 00:00:00Z|@C|0|Exiting runMet : [0s]
+2014-11-10 12:23:06Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-25 00:00:00Z|@C|0|Exiting L4_C.pl : [1s]
+2014-11-10 13:23:09Z|L4_C_SPS|L4_C.pl|runMet|2014-10-25 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-25T00:00:00
+2014-11-10 13:23:38Z|L4_C_SPS|L4_C.pl|runMet|2014-10-25 00:00:00Z|@C|0|l4c_MET preprocessing is complete
+2014-11-10 13:23:38Z|L4_C_SPS|L4_C.pl|runMet|2014-10-25 00:00:00Z|@C|0|Exiting runMet : [29s]
+2014-11-10 13:23:38Z|L4_C_SPS|L4_C.pl|runModis|2014-10-25 00:00:00Z|@C|0|Exiting runModis : [0s]
+2014-11-10 13:23:38Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-25 00:00:00Z|@C|0|Executing the Carbon Model: Collection = MDL, Time = 2014-10-25T00:00:00
+2014-11-10 13:23:40Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-25 00:00:00Z|@C|0|Executing l4c_DAILY
+2014-11-10 13:31:23Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-25 00:00:00Z|@C|0|l4c_DAILY processing is complete
+2014-11-10 13:31:23Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-25 00:00:00Z|@C|0|Exiting runDaily : [465s]
+2014-11-10 13:31:25Z|L4_C_SPS|L4_C_genISO|getMDLInfo|2014-10-25 00:00:00Z|@C|0|Exiting getMDLInfo : [0s]
+2014-11-10 13:31:27Z|L4_C_SPS|L4_C_genISO|getLFOInfo|2014-10-25 00:00:00Z|@C|0|Exiting getLFOInfo : [2s]
+2014-11-10 13:31:31Z|L4_C_SPS|L4_C_genISO|getGPHInfo|2014-10-25 00:00:00Z|@C|0|Exiting getGPHInfo : [4s]
+2014-11-10 13:31:34Z|L4_C_SPS|L4_C_genISO|getSMAPInfo|2014-10-25 00:00:00Z|@C|0|Exiting getSMAPInfo : [3s]
+2014-11-10 13:31:34Z|L4_C_SPS|L4_C_genISO|getMETInfo|2014-10-25 00:00:00Z|@C|0|Exiting getMETInfo : [9s]
+2014-11-10 13:31:43Z|L4_C_SPS|L4_C_genISO|getFPARInfo|2014-10-25 00:00:00Z|@C|0|Exiting getFPARInfo : [9s]
+2014-11-10 13:31:43Z|L4_C_SPS|L4_C_genISO|getMODInfo|2014-10-25 00:00:00Z|@C|0|Exiting getMODInfo : [9s]
+2014-11-10 13:31:47Z|L4_C_SPS|L4_C_genISO|getSOCInfo|2014-10-25 00:00:00Z|@C|0|Exiting getSOCInfo : [4s]
+2014-11-10 13:31:48Z|L4_C_SPS|L4_C_genISO|getANCInfo|2014-10-25 00:00:00Z|@C|0|Exiting getANCInfo : [1s]
+2014-11-10 13:32:10Z|L4_C_SPS|L4_C_genISO|getCLIMInfo|2014-10-25 00:00:00Z|@C|0|Exiting getCLIMInfo : [22s]
+2014-11-10 13:32:15Z|L4_C_SPS|L4_C_genISO|genHDF|2014-10-25 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = MDL, Time = 2014-10-25T00:00:00
+2014-11-10 13:32:15Z|L4_C_SPS|L4_C_genISO|genHDF|2014-10-25 00:00:00Z|@C|0|Exiting genHDF : [0s]
+2014-11-10 13:32:15Z|L4_C_SPS|L4_C_genISO|insertGroupMeta|2014-10-25 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = MDL, Time = 2014-10-25T00:00:00
+2014-11-10 13:32:17Z|L4_C_SPS|L4_C_genISO|insertGroupMeta|2014-10-25 00:00:00Z|@C|0|Exiting insertGroupMeta : [2s]
+2014-11-10 13:32:18Z|L4_C_SPS|L4_C_genISO|insertConfigTar|2014-10-25 00:00:00Z|@C|0|Exiting insertConfigTar : [1s]
+2014-11-10 13:32:18Z|L4_C_SPS|L4_C_genISO|insertConfig|2014-10-25 00:00:00Z|@C|0|Exiting insertConfig : [1s]
+2014-11-10 13:32:18Z|L4_C_SPS|L4_C_genISO|insertXMLMeta|2014-10-25 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = MDL, Time = 2014-10-25T00:00:00
+2014-11-10 13:32:21Z|L4_C_SPS|L4_C_genISO|insertXMLMeta|2014-10-25 00:00:00Z|@C|0|Exiting insertXMLMeta : [3s]
+2014-11-10 13:32:21Z|L4_C_SPS|L4_C_genISO|insertSeriesXML|2014-10-25 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = MDL, Time = 2014-10-25T00:00:00
+2014-11-10 13:32:21Z|L4_C_SPS|L4_C_genISO|insertSeriesXML|2014-10-25 00:00:00Z|@C|0|Exiting insertSeriesXML : [0s]
+2014-11-10 13:32:21Z|L4_C_SPS|L4_C_genISO|genMDL|2014-10-25 00:00:00Z|@C|0|Exiting genMDL : [56s]
+2014-11-10 13:32:21Z|L4_C_SPS|L4_C_genISO|genDAAC|2014-10-25 00:00:00Z|@C|0|Exiting genDAAC : [56s]
+2014-11-10 13:32:21Z|L4_C_SPS|L4_C_genISO|L4_C_genISO.pl|2014-10-25 00:00:00Z|@C|0|Exiting L4_C_genISO.pl : [58s]
+2014-11-10 13:32:21Z|L4_C_SPS|L4_C.pl|genISO|2014-10-25 00:00:00Z|@C|0|Exiting genISO : [58s]
+2014-11-10 13:32:21Z|L4_C_SPS|L4_C.pl|export|2014-10-25 00:00:00Z|@C|0|Exporting MDL_JPL
+2014-11-10 13:32:24Z|L4_C_SPS|L4_C.pl|export|2014-10-25 00:00:00Z|@C|0|Exporting MDL_NSIDC
+2014-11-10 13:32:27Z|L4_C_SPS|L4_C.pl|export|2014-10-25 00:00:00Z|@C|0|Exiting export : [6s]
+2014-11-10 13:32:27Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-25 00:00:00Z|@C|0|L4_C is complete.
+2014-11-10 13:32:27Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-25 00:00:00Z|@C|0|Exiting L4_C.pl : [560s]
+2014-11-10 14:32:30Z|L4_C_SPS|L4_C.pl|runMet|2014-10-26 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-26T00:00:00
+2014-11-10 14:32:33Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-26 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-10 14:32:34Z|L4_C_SPS|L4_C.pl|runMet|2014-10-26 00:00:00Z|@C|0|Exiting runMet : [4s]
+2014-11-10 14:32:34Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-26 00:00:00Z|@C|0|Exiting L4_C.pl : [6s]
+2014-11-10 15:32:37Z|L4_C_SPS|L4_C.pl|runMet|2014-10-26 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-26T00:00:00
+2014-11-10 15:32:37Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-26 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-10 15:32:37Z|L4_C_SPS|L4_C.pl|runMet|2014-10-26 00:00:00Z|@C|0|Exiting runMet : [0s]
+2014-11-10 15:32:37Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-26 00:00:00Z|@C|0|Exiting L4_C.pl : [3s]
+2014-11-10 16:32:40Z|L4_C_SPS|L4_C.pl|runMet|2014-10-26 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-26T00:00:00
+2014-11-10 16:32:41Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-26 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-10 16:32:41Z|L4_C_SPS|L4_C.pl|runMet|2014-10-26 00:00:00Z|@C|0|Exiting runMet : [1s]
+2014-11-10 16:32:41Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-26 00:00:00Z|@C|0|Exiting L4_C.pl : [3s]
+2014-11-10 17:24:34Z|L4_SPS|L4.pl||2014-11-10 17:24:34Z|@A|1|Operator issued the following command: L4.pl -print all -st SPL4C -sn SPL4C_V06002 -date 20141110
+2014-11-10 17:25:13Z|L4_SPS|L4.pl||2014-11-10 17:25:13Z|@A|1|Operator issued the following command: L4.pl -print all -st SPL4C -sn SPL4C_V06002 -date 20141110
+2014-11-10 17:26:45Z|L4_SPS|L4.pl||2014-11-10 17:26:45Z|@A|1|Operator issued the following command: L4.pl -print all -st SPL4C -sn SPL4C_V06002 -date 20141110
+2014-11-10 17:32:43Z|L4_C_SPS|L4_C.pl|runMet|2014-10-26 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-26T00:00:00
+2014-11-10 17:33:13Z|L4_C_SPS|L4_C.pl|runMet|2014-10-26 00:00:00Z|@C|0|l4c_MET preprocessing is complete
+2014-11-10 17:33:13Z|L4_C_SPS|L4_C.pl|runMet|2014-10-26 00:00:00Z|@C|0|Exiting runMet : [30s]
+2014-11-10 17:33:13Z|L4_C_SPS|L4_C.pl|runModis|2014-10-26 00:00:00Z|@C|0|Exiting runModis : [0s]
+2014-11-10 17:33:13Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-26 00:00:00Z|@C|0|Executing the Carbon Model: Collection = MDL, Time = 2014-10-26T00:00:00
+2014-11-10 17:33:15Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-26 00:00:00Z|@C|0|Executing l4c_DAILY
+2014-11-10 17:41:07Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-26 00:00:00Z|@C|0|l4c_DAILY processing is complete
+2014-11-10 17:41:07Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-26 00:00:00Z|@C|0|Exiting runDaily : [474s]
+2014-11-10 17:41:09Z|L4_C_SPS|L4_C_genISO|getMDLInfo|2014-10-26 00:00:00Z|@C|0|Exiting getMDLInfo : [0s]
+2014-11-10 17:41:11Z|L4_C_SPS|L4_C_genISO|getLFOInfo|2014-10-26 00:00:00Z|@C|0|Exiting getLFOInfo : [2s]
+2014-11-10 17:41:16Z|L4_C_SPS|L4_C_genISO|getGPHInfo|2014-10-26 00:00:00Z|@C|0|Exiting getGPHInfo : [5s]
+2014-11-10 17:41:20Z|L4_C_SPS|L4_C_genISO|getSMAPInfo|2014-10-26 00:00:00Z|@C|0|Exiting getSMAPInfo : [4s]
+2014-11-10 17:41:20Z|L4_C_SPS|L4_C_genISO|getMETInfo|2014-10-26 00:00:00Z|@C|0|Exiting getMETInfo : [11s]
+2014-11-10 17:41:29Z|L4_C_SPS|L4_C_genISO|getFPARInfo|2014-10-26 00:00:00Z|@C|0|Exiting getFPARInfo : [9s]
+2014-11-10 17:41:29Z|L4_C_SPS|L4_C_genISO|getMODInfo|2014-10-26 00:00:00Z|@C|0|Exiting getMODInfo : [9s]
+2014-11-10 17:41:36Z|L4_C_SPS|L4_C_genISO|getSOCInfo|2014-10-26 00:00:00Z|@C|0|Exiting getSOCInfo : [7s]
+2014-11-10 17:41:37Z|L4_C_SPS|L4_C_genISO|getANCInfo|2014-10-26 00:00:00Z|@C|0|Exiting getANCInfo : [1s]
+2014-11-10 17:41:56Z|L4_C_SPS|L4_C_genISO|getCLIMInfo|2014-10-26 00:00:00Z|@C|0|Exiting getCLIMInfo : [19s]
+2014-11-10 17:42:01Z|L4_C_SPS|L4_C_genISO|genHDF|2014-10-26 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = MDL, Time = 2014-10-26T00:00:00
+2014-11-10 17:42:01Z|L4_C_SPS|L4_C_genISO|genHDF|2014-10-26 00:00:00Z|@C|0|Exiting genHDF : [0s]
+2014-11-10 17:42:01Z|L4_C_SPS|L4_C_genISO|insertGroupMeta|2014-10-26 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = MDL, Time = 2014-10-26T00:00:00
+2014-11-10 17:42:03Z|L4_C_SPS|L4_C_genISO|insertGroupMeta|2014-10-26 00:00:00Z|@C|0|Exiting insertGroupMeta : [2s]
+2014-11-10 17:42:04Z|L4_C_SPS|L4_C_genISO|insertConfigTar|2014-10-26 00:00:00Z|@C|0|Exiting insertConfigTar : [1s]
+2014-11-10 17:42:04Z|L4_C_SPS|L4_C_genISO|insertConfig|2014-10-26 00:00:00Z|@C|0|Exiting insertConfig : [1s]
+2014-11-10 17:42:04Z|L4_C_SPS|L4_C_genISO|insertXMLMeta|2014-10-26 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = MDL, Time = 2014-10-26T00:00:00
+2014-11-10 17:42:06Z|L4_C_SPS|L4_C_genISO|insertXMLMeta|2014-10-26 00:00:00Z|@C|0|Exiting insertXMLMeta : [2s]
+2014-11-10 17:42:06Z|L4_C_SPS|L4_C_genISO|insertSeriesXML|2014-10-26 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = MDL, Time = 2014-10-26T00:00:00
+2014-11-10 17:42:06Z|L4_C_SPS|L4_C_genISO|insertSeriesXML|2014-10-26 00:00:00Z|@C|0|Exiting insertSeriesXML : [0s]
+2014-11-10 17:42:06Z|L4_C_SPS|L4_C_genISO|genMDL|2014-10-26 00:00:00Z|@C|0|Exiting genMDL : [57s]
+2014-11-10 17:42:06Z|L4_C_SPS|L4_C_genISO|genDAAC|2014-10-26 00:00:00Z|@C|0|Exiting genDAAC : [57s]
+2014-11-10 17:42:06Z|L4_C_SPS|L4_C_genISO|L4_C_genISO.pl|2014-10-26 00:00:00Z|@C|0|Exiting L4_C_genISO.pl : [59s]
+2014-11-10 17:42:06Z|L4_C_SPS|L4_C.pl|genISO|2014-10-26 00:00:00Z|@C|0|Exiting genISO : [59s]
+2014-11-10 17:42:06Z|L4_C_SPS|L4_C.pl|export|2014-10-26 00:00:00Z|@C|0|Exporting MDL_JPL
+2014-11-10 17:42:09Z|L4_C_SPS|L4_C.pl|export|2014-10-26 00:00:00Z|@C|0|Exporting MDL_NSIDC
+2014-11-10 17:42:13Z|L4_C_SPS|L4_C.pl|export|2014-10-26 00:00:00Z|@C|0|Exiting export : [7s]
+2014-11-10 17:42:13Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-26 00:00:00Z|@C|0|L4_C is complete.
+2014-11-10 17:42:13Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-26 00:00:00Z|@C|0|Exiting L4_C.pl : [572s]
+2014-11-10 18:42:14Z|L4_C_SPS|L4_C.pl|runMet|2014-10-27 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-27T00:00:00
+2014-11-10 18:42:18Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-27 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-10 18:42:20Z|L4_C_SPS|L4_C.pl|runMet|2014-10-27 00:00:00Z|@C|0|Exiting runMet : [6s]
+2014-11-10 18:42:20Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-27 00:00:00Z|@C|0|Exiting L4_C.pl : [7s]
+2014-11-10 19:42:23Z|L4_C_SPS|L4_C.pl|runMet|2014-10-27 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-27T00:00:00
+2014-11-10 19:42:23Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-27 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-10 19:42:23Z|L4_C_SPS|L4_C.pl|runMet|2014-10-27 00:00:00Z|@C|0|Exiting runMet : [0s]
+2014-11-10 19:42:23Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-27 00:00:00Z|@C|0|Exiting L4_C.pl : [3s]
+2014-11-10 20:42:26Z|L4_C_SPS|L4_C.pl|runMet|2014-10-27 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-27T00:00:00
+2014-11-10 20:42:58Z|L4_C_SPS|L4_C.pl|runMet|2014-10-27 00:00:00Z|@C|0|l4c_MET preprocessing is complete
+2014-11-10 20:42:58Z|L4_C_SPS|L4_C.pl|runMet|2014-10-27 00:00:00Z|@C|0|Exiting runMet : [32s]
+2014-11-10 20:42:58Z|L4_C_SPS|L4_C.pl|runModis|2014-10-27 00:00:00Z|@C|0|Exiting runModis : [0s]
+2014-11-10 20:42:58Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-27 00:00:00Z|@C|0|Executing the Carbon Model: Collection = MDL, Time = 2014-10-27T00:00:00
+2014-11-10 20:42:59Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-27 00:00:00Z|@C|0|Executing l4c_DAILY
+2014-11-10 20:50:53Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-27 00:00:00Z|@C|0|l4c_DAILY processing is complete
+2014-11-10 20:50:53Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-27 00:00:00Z|@C|0|Exiting runDaily : [475s]
+2014-11-10 20:50:56Z|L4_C_SPS|L4_C_genISO|getMDLInfo|2014-10-27 00:00:00Z|@C|0|Exiting getMDLInfo : [0s]
+2014-11-10 20:50:58Z|L4_C_SPS|L4_C_genISO|getLFOInfo|2014-10-27 00:00:00Z|@C|0|Exiting getLFOInfo : [2s]
+2014-11-10 20:51:02Z|L4_C_SPS|L4_C_genISO|getGPHInfo|2014-10-27 00:00:00Z|@C|0|Exiting getGPHInfo : [4s]
+2014-11-10 20:51:05Z|L4_C_SPS|L4_C_genISO|getSMAPInfo|2014-10-27 00:00:00Z|@C|0|Exiting getSMAPInfo : [3s]
+2014-11-10 20:51:05Z|L4_C_SPS|L4_C_genISO|getMETInfo|2014-10-27 00:00:00Z|@C|0|Exiting getMETInfo : [9s]
+2014-11-10 20:51:12Z|L4_C_SPS|L4_C_genISO|getFPARInfo|2014-10-27 00:00:00Z|@C|0|Exiting getFPARInfo : [7s]
+2014-11-10 20:51:12Z|L4_C_SPS|L4_C_genISO|getMODInfo|2014-10-27 00:00:00Z|@C|0|Exiting getMODInfo : [7s]
+2014-11-10 20:51:15Z|L4_C_SPS|L4_C_genISO|getSOCInfo|2014-10-27 00:00:00Z|@C|0|Exiting getSOCInfo : [3s]
+2014-11-10 20:51:16Z|L4_C_SPS|L4_C_genISO|getANCInfo|2014-10-27 00:00:00Z|@C|0|Exiting getANCInfo : [1s]
+2014-11-10 20:51:37Z|L4_C_SPS|L4_C_genISO|getCLIMInfo|2014-10-27 00:00:00Z|@C|0|Exiting getCLIMInfo : [21s]
+2014-11-10 20:51:41Z|L4_C_SPS|L4_C_genISO|genHDF|2014-10-27 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = MDL, Time = 2014-10-27T00:00:00
+2014-11-10 20:51:41Z|L4_C_SPS|L4_C_genISO|genHDF|2014-10-27 00:00:00Z|@C|0|Exiting genHDF : [0s]
+2014-11-10 20:51:41Z|L4_C_SPS|L4_C_genISO|insertGroupMeta|2014-10-27 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = MDL, Time = 2014-10-27T00:00:00
+2014-11-10 20:51:43Z|L4_C_SPS|L4_C_genISO|insertGroupMeta|2014-10-27 00:00:00Z|@C|0|Exiting insertGroupMeta : [2s]
+2014-11-10 20:51:44Z|L4_C_SPS|L4_C_genISO|insertConfigTar|2014-10-27 00:00:00Z|@C|0|Exiting insertConfigTar : [1s]
+2014-11-10 20:51:44Z|L4_C_SPS|L4_C_genISO|insertConfig|2014-10-27 00:00:00Z|@C|0|Exiting insertConfig : [1s]
+2014-11-10 20:51:44Z|L4_C_SPS|L4_C_genISO|insertXMLMeta|2014-10-27 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = MDL, Time = 2014-10-27T00:00:00
+2014-11-10 20:51:47Z|L4_C_SPS|L4_C_genISO|insertXMLMeta|2014-10-27 00:00:00Z|@C|0|Exiting insertXMLMeta : [3s]
+2014-11-10 20:51:47Z|L4_C_SPS|L4_C_genISO|insertSeriesXML|2014-10-27 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = MDL, Time = 2014-10-27T00:00:00
+2014-11-10 20:51:47Z|L4_C_SPS|L4_C_genISO|insertSeriesXML|2014-10-27 00:00:00Z|@C|0|Exiting insertSeriesXML : [0s]
+2014-11-10 20:51:47Z|L4_C_SPS|L4_C_genISO|genMDL|2014-10-27 00:00:00Z|@C|0|Exiting genMDL : [51s]
+2014-11-10 20:51:47Z|L4_C_SPS|L4_C_genISO|genDAAC|2014-10-27 00:00:00Z|@C|0|Exiting genDAAC : [51s]
+2014-11-10 20:51:47Z|L4_C_SPS|L4_C_genISO|L4_C_genISO.pl|2014-10-27 00:00:00Z|@C|0|Exiting L4_C_genISO.pl : [53s]
+2014-11-10 20:51:47Z|L4_C_SPS|L4_C.pl|genISO|2014-10-27 00:00:00Z|@C|0|Exiting genISO : [54s]
+2014-11-10 20:51:47Z|L4_C_SPS|L4_C.pl|export|2014-10-27 00:00:00Z|@C|0|Exporting MDL_JPL
+2014-11-10 20:51:50Z|L4_C_SPS|L4_C.pl|export|2014-10-27 00:00:00Z|@C|0|Exporting MDL_NSIDC
+2014-11-10 20:51:53Z|L4_C_SPS|L4_C.pl|export|2014-10-27 00:00:00Z|@C|0|Exiting export : [6s]
+2014-11-10 20:51:53Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-27 00:00:00Z|@C|0|L4_C is complete.
+2014-11-10 20:51:53Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-27 00:00:00Z|@C|0|Exiting L4_C.pl : [569s]
+2014-11-10 21:51:56Z|L4_C_SPS|L4_C.pl|runMet|2014-10-28 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-28T00:00:00
+2014-11-10 21:52:00Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-28 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-10 21:52:01Z|L4_C_SPS|L4_C.pl|runMet|2014-10-28 00:00:00Z|@C|0|Exiting runMet : [5s]
+2014-11-10 21:52:01Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-28 00:00:00Z|@C|0|Exiting L4_C.pl : [7s]
+2014-11-10 22:52:04Z|L4_C_SPS|L4_C.pl|runMet|2014-10-28 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-28T00:00:00
+2014-11-10 22:52:05Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-28 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-10 22:52:05Z|L4_C_SPS|L4_C.pl|runMet|2014-10-28 00:00:00Z|@C|0|Exiting runMet : [1s]
+2014-11-10 22:52:05Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-28 00:00:00Z|@C|0|Exiting L4_C.pl : [3s]
+2014-11-10 23:52:08Z|L4_C_SPS|L4_C.pl|runMet|2014-10-28 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-28T00:00:00
+2014-11-10 23:52:38Z|L4_C_SPS|L4_C.pl|runMet|2014-10-28 00:00:00Z|@C|0|l4c_MET preprocessing is complete
+2014-11-10 23:52:38Z|L4_C_SPS|L4_C.pl|runMet|2014-10-28 00:00:00Z|@C|0|Exiting runMet : [30s]
+2014-11-10 23:52:38Z|L4_C_SPS|L4_C.pl|runModis|2014-10-28 00:00:00Z|@C|0|Exiting runModis : [0s]
+2014-11-10 23:52:38Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-28 00:00:00Z|@C|0|Executing the Carbon Model: Collection = MDL, Time = 2014-10-28T00:00:00
+2014-11-10 23:52:40Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-28 00:00:00Z|@C|0|Executing l4c_DAILY
+2014-11-11 00:00:34Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-28 00:00:00Z|@C|0|l4c_DAILY processing is complete
+2014-11-11 00:00:34Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-28 00:00:00Z|@C|0|Exiting runDaily : [476s]
+2014-11-11 00:00:37Z|L4_C_SPS|L4_C_genISO|getMDLInfo|2014-10-28 00:00:00Z|@C|0|Exiting getMDLInfo : [0s]
+2014-11-11 00:00:40Z|L4_C_SPS|L4_C_genISO|getLFOInfo|2014-10-28 00:00:00Z|@C|0|Exiting getLFOInfo : [3s]
+2014-11-11 00:00:46Z|L4_C_SPS|L4_C_genISO|getGPHInfo|2014-10-28 00:00:00Z|@C|0|Exiting getGPHInfo : [6s]
+2014-11-11 00:00:51Z|L4_C_SPS|L4_C_genISO|getSMAPInfo|2014-10-28 00:00:00Z|@C|0|Exiting getSMAPInfo : [5s]
+2014-11-11 00:00:51Z|L4_C_SPS|L4_C_genISO|getMETInfo|2014-10-28 00:00:00Z|@C|0|Exiting getMETInfo : [14s]
+2014-11-11 00:01:00Z|L4_C_SPS|L4_C_genISO|getFPARInfo|2014-10-28 00:00:00Z|@C|0|Exiting getFPARInfo : [9s]
+2014-11-11 00:01:00Z|L4_C_SPS|L4_C_genISO|getMODInfo|2014-10-28 00:00:00Z|@C|0|Exiting getMODInfo : [9s]
+2014-11-11 00:01:05Z|L4_C_SPS|L4_C_genISO|getSOCInfo|2014-10-28 00:00:00Z|@C|0|Exiting getSOCInfo : [5s]
+2014-11-11 00:01:06Z|L4_C_SPS|L4_C_genISO|getANCInfo|2014-10-28 00:00:00Z|@C|0|Exiting getANCInfo : [1s]
+2014-11-11 00:01:33Z|L4_C_SPS|L4_C_genISO|getCLIMInfo|2014-10-28 00:00:00Z|@C|0|Exiting getCLIMInfo : [27s]
+2014-11-11 00:01:40Z|L4_C_SPS|L4_C_genISO|genHDF|2014-10-28 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = MDL, Time = 2014-10-28T00:00:00
+2014-11-11 00:01:40Z|L4_C_SPS|L4_C_genISO|genHDF|2014-10-28 00:00:00Z|@C|0|Exiting genHDF : [0s]
+2014-11-11 00:01:40Z|L4_C_SPS|L4_C_genISO|insertGroupMeta|2014-10-28 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = MDL, Time = 2014-10-28T00:00:00
+2014-11-11 00:01:42Z|L4_C_SPS|L4_C_genISO|insertGroupMeta|2014-10-28 00:00:00Z|@C|0|Exiting insertGroupMeta : [2s]
+2014-11-11 00:01:43Z|L4_C_SPS|L4_C_genISO|insertConfigTar|2014-10-28 00:00:00Z|@C|0|Exiting insertConfigTar : [1s]
+2014-11-11 00:01:43Z|L4_C_SPS|L4_C_genISO|insertConfig|2014-10-28 00:00:00Z|@C|0|Exiting insertConfig : [1s]
+2014-11-11 00:01:43Z|L4_C_SPS|L4_C_genISO|insertXMLMeta|2014-10-28 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = MDL, Time = 2014-10-28T00:00:00
+2014-11-11 00:01:45Z|L4_C_SPS|L4_C_genISO|insertXMLMeta|2014-10-28 00:00:00Z|@C|0|Exiting insertXMLMeta : [2s]
+2014-11-11 00:01:45Z|L4_C_SPS|L4_C_genISO|insertSeriesXML|2014-10-28 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = MDL, Time = 2014-10-28T00:00:00
+2014-11-11 00:01:45Z|L4_C_SPS|L4_C_genISO|insertSeriesXML|2014-10-28 00:00:00Z|@C|0|Exiting insertSeriesXML : [0s]
+2014-11-11 00:01:45Z|L4_C_SPS|L4_C_genISO|genMDL|2014-10-28 00:00:00Z|@C|0|Exiting genMDL : [68s]
+2014-11-11 00:01:45Z|L4_C_SPS|L4_C_genISO|genDAAC|2014-10-28 00:00:00Z|@C|0|Exiting genDAAC : [68s]
+2014-11-11 00:01:46Z|L4_C_SPS|L4_C_genISO|L4_C_genISO.pl|2014-10-28 00:00:00Z|@C|0|Exiting L4_C_genISO.pl : [71s]
+2014-11-11 00:01:46Z|L4_C_SPS|L4_C.pl|genISO|2014-10-28 00:00:00Z|@C|0|Exiting genISO : [72s]
+2014-11-11 00:01:46Z|L4_C_SPS|L4_C.pl|export|2014-10-28 00:00:00Z|@C|0|Exporting MDL_JPL
+2014-11-11 00:01:49Z|L4_C_SPS|L4_C.pl|export|2014-10-28 00:00:00Z|@C|0|Exporting MDL_NSIDC
+2014-11-11 00:01:53Z|L4_C_SPS|L4_C.pl|export|2014-10-28 00:00:00Z|@C|0|Exiting export : [7s]
+2014-11-11 00:01:53Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-28 00:00:00Z|@C|0|L4_C is complete.
+2014-11-11 00:01:53Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-28 00:00:00Z|@C|0|Exiting L4_C.pl : [587s]
+2014-11-11 01:01:56Z|L4_C_SPS|L4_C.pl|runMet|2014-10-29 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-29T00:00:00
+2014-11-11 01:01:59Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-29 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-11 01:02:01Z|L4_C_SPS|L4_C.pl|runMet|2014-10-29 00:00:00Z|@C|0|Exiting runMet : [5s]
+2014-11-11 01:02:01Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-29 00:00:00Z|@C|0|Exiting L4_C.pl : [7s]
+2014-11-11 02:02:07Z|L4_C_SPS|L4_C.pl|runMet|2014-10-29 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-29T00:00:00
+2014-11-11 02:02:37Z|L4_C_SPS|L4_C.pl|runMet|2014-10-29 00:00:00Z|@C|0|l4c_MET preprocessing is complete
+2014-11-11 02:02:37Z|L4_C_SPS|L4_C.pl|runMet|2014-10-29 00:00:00Z|@C|0|Exiting runMet : [30s]
+2014-11-11 02:02:38Z|L4_C_SPS|L4_C.pl|runModis|2014-10-29 00:00:00Z|@C|0|Exiting runModis : [0s]
+2014-11-11 02:02:38Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-29 00:00:00Z|@C|0|Executing the Carbon Model: Collection = MDL, Time = 2014-10-29T00:00:00
+2014-11-11 02:02:39Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-29 00:00:00Z|@C|0|Executing l4c_DAILY
+2014-11-11 02:11:11Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-29 00:00:00Z|@C|0|l4c_DAILY processing is complete
+2014-11-11 02:11:11Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-29 00:00:00Z|@C|0|Exiting runDaily : [513s]
+2014-11-11 02:11:14Z|L4_C_SPS|L4_C_genISO|getMDLInfo|2014-10-29 00:00:00Z|@C|0|Exiting getMDLInfo : [0s]
+2014-11-11 02:11:16Z|L4_C_SPS|L4_C_genISO|getLFOInfo|2014-10-29 00:00:00Z|@C|0|Exiting getLFOInfo : [2s]
+2014-11-11 02:11:21Z|L4_C_SPS|L4_C_genISO|getGPHInfo|2014-10-29 00:00:00Z|@C|0|Exiting getGPHInfo : [5s]
+2014-11-11 02:11:27Z|L4_C_SPS|L4_C_genISO|getSMAPInfo|2014-10-29 00:00:00Z|@C|0|Exiting getSMAPInfo : [6s]
+2014-11-11 02:11:27Z|L4_C_SPS|L4_C_genISO|getMETInfo|2014-10-29 00:00:00Z|@C|0|Exiting getMETInfo : [13s]
+2014-11-11 02:11:36Z|L4_C_SPS|L4_C_genISO|getFPARInfo|2014-10-29 00:00:00Z|@C|0|Exiting getFPARInfo : [9s]
+2014-11-11 02:11:36Z|L4_C_SPS|L4_C_genISO|getMODInfo|2014-10-29 00:00:00Z|@C|0|Exiting getMODInfo : [9s]
+2014-11-11 02:11:44Z|L4_C_SPS|L4_C_genISO|getSOCInfo|2014-10-29 00:00:00Z|@C|0|Exiting getSOCInfo : [8s]
+2014-11-11 02:11:46Z|L4_C_SPS|L4_C_genISO|getANCInfo|2014-10-29 00:00:00Z|@C|0|Exiting getANCInfo : [2s]
+2014-11-11 02:12:12Z|L4_C_SPS|L4_C_genISO|getCLIMInfo|2014-10-29 00:00:00Z|@C|0|Exiting getCLIMInfo : [26s]
+2014-11-11 02:12:18Z|L4_C_SPS|L4_C_genISO|genHDF|2014-10-29 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = MDL, Time = 2014-10-29T00:00:00
+2014-11-11 02:12:19Z|L4_C_SPS|L4_C_genISO|genHDF|2014-10-29 00:00:00Z|@C|0|Exiting genHDF : [1s]
+2014-11-11 02:12:19Z|L4_C_SPS|L4_C_genISO|insertGroupMeta|2014-10-29 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = MDL, Time = 2014-10-29T00:00:00
+2014-11-11 02:12:21Z|L4_C_SPS|L4_C_genISO|insertGroupMeta|2014-10-29 00:00:00Z|@C|0|Exiting insertGroupMeta : [2s]
+2014-11-11 02:12:22Z|L4_C_SPS|L4_C_genISO|insertConfigTar|2014-10-29 00:00:00Z|@C|0|Exiting insertConfigTar : [1s]
+2014-11-11 02:12:22Z|L4_C_SPS|L4_C_genISO|insertConfig|2014-10-29 00:00:00Z|@C|0|Exiting insertConfig : [1s]
+2014-11-11 02:12:22Z|L4_C_SPS|L4_C_genISO|insertXMLMeta|2014-10-29 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = MDL, Time = 2014-10-29T00:00:00
+2014-11-11 02:12:25Z|L4_C_SPS|L4_C_genISO|insertXMLMeta|2014-10-29 00:00:00Z|@C|0|Exiting insertXMLMeta : [3s]
+2014-11-11 02:12:25Z|L4_C_SPS|L4_C_genISO|insertSeriesXML|2014-10-29 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = MDL, Time = 2014-10-29T00:00:00
+2014-11-11 02:12:25Z|L4_C_SPS|L4_C_genISO|insertSeriesXML|2014-10-29 00:00:00Z|@C|0|Exiting insertSeriesXML : [0s]
+2014-11-11 02:12:25Z|L4_C_SPS|L4_C_genISO|genMDL|2014-10-29 00:00:00Z|@C|0|Exiting genMDL : [71s]
+2014-11-11 02:12:25Z|L4_C_SPS|L4_C_genISO|genDAAC|2014-10-29 00:00:00Z|@C|0|Exiting genDAAC : [71s]
+2014-11-11 02:12:25Z|L4_C_SPS|L4_C_genISO|L4_C_genISO.pl|2014-10-29 00:00:00Z|@C|0|Exiting L4_C_genISO.pl : [74s]
+2014-11-11 02:12:25Z|L4_C_SPS|L4_C.pl|genISO|2014-10-29 00:00:00Z|@C|0|Exiting genISO : [74s]
+2014-11-11 02:12:25Z|L4_C_SPS|L4_C.pl|export|2014-10-29 00:00:00Z|@C|0|Exporting MDL_JPL
+2014-11-11 02:12:28Z|L4_C_SPS|L4_C.pl|export|2014-10-29 00:00:00Z|@C|0|Exporting MDL_NSIDC
+2014-11-11 02:12:32Z|L4_C_SPS|L4_C.pl|export|2014-10-29 00:00:00Z|@C|0|Exiting export : [7s]
+2014-11-11 02:12:32Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-29 00:00:00Z|@C|0|L4_C is complete.
+2014-11-11 02:12:32Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-29 00:00:00Z|@C|0|Exiting L4_C.pl : [630s]
+2014-11-11 03:12:35Z|L4_C_SPS|L4_C.pl|runMet|2014-10-30 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-30T00:00:00
+2014-11-11 03:12:39Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-30 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-11 03:12:41Z|L4_C_SPS|L4_C.pl|runMet|2014-10-30 00:00:00Z|@C|0|Exiting runMet : [6s]
+2014-11-11 03:12:41Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-30 00:00:00Z|@C|0|Exiting L4_C.pl : [8s]
+2014-11-11 04:12:44Z|L4_C_SPS|L4_C.pl|runMet|2014-10-30 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-30T00:00:00
+2014-11-11 04:12:44Z|L4_C_SPS|L4_C.pl|DMGR::mexecute|2014-10-30 00:00:00Z|@A|DTR-002|Waiting for data type: "SPL4SMGP"
+2014-11-11 04:12:44Z|L4_C_SPS|L4_C.pl|runMet|2014-10-30 00:00:00Z|@C|0|Exiting runMet : [0s]
+2014-11-11 04:12:44Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-30 00:00:00Z|@C|0|Exiting L4_C.pl : [2s]
+2014-11-11 05:12:48Z|L4_C_SPS|L4_C.pl|runMet|2014-10-30 00:00:00Z|@C|0|Executing the MET Preprocessor: Time = 2014-10-30T00:00:00
+2014-11-11 05:13:18Z|L4_C_SPS|L4_C.pl|runMet|2014-10-30 00:00:00Z|@C|0|l4c_MET preprocessing is complete
+2014-11-11 05:13:18Z|L4_C_SPS|L4_C.pl|runMet|2014-10-30 00:00:00Z|@C|0|Exiting runMet : [30s]
+2014-11-11 05:13:18Z|L4_C_SPS|L4_C.pl|runModis|2014-10-30 00:00:00Z|@C|0|Exiting runModis : [0s]
+2014-11-11 05:13:19Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-30 00:00:00Z|@C|0|Executing the Carbon Model: Collection = MDL, Time = 2014-10-30T00:00:00
+2014-11-11 05:13:20Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-30 00:00:00Z|@C|0|Executing l4c_DAILY
+2014-11-11 05:21:31Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-30 00:00:00Z|@C|0|l4c_DAILY processing is complete
+2014-11-11 05:21:31Z|L4_C_SPS|L4_C.pl|runDaily|2014-10-30 00:00:00Z|@C|0|Exiting runDaily : [492s]
+2014-11-11 05:21:35Z|L4_C_SPS|L4_C_genISO|getMDLInfo|2014-10-30 00:00:00Z|@C|0|Exiting getMDLInfo : [0s]
+2014-11-11 05:21:38Z|L4_C_SPS|L4_C_genISO|getLFOInfo|2014-10-30 00:00:00Z|@C|0|Exiting getLFOInfo : [2s]
+2014-11-11 05:21:43Z|L4_C_SPS|L4_C_genISO|getGPHInfo|2014-10-30 00:00:00Z|@C|0|Exiting getGPHInfo : [5s]
+2014-11-11 05:21:47Z|L4_C_SPS|L4_C_genISO|getSMAPInfo|2014-10-30 00:00:00Z|@C|0|Exiting getSMAPInfo : [4s]
+2014-11-11 05:21:47Z|L4_C_SPS|L4_C_genISO|getMETInfo|2014-10-30 00:00:00Z|@C|0|Exiting getMETInfo : [12s]
+2014-11-11 05:21:56Z|L4_C_SPS|L4_C_genISO|getFPARInfo|2014-10-30 00:00:00Z|@C|0|Exiting getFPARInfo : [9s]
+2014-11-11 05:21:56Z|L4_C_SPS|L4_C_genISO|getMODInfo|2014-10-30 00:00:00Z|@C|0|Exiting getMODInfo : [9s]
+2014-11-11 05:22:03Z|L4_C_SPS|L4_C_genISO|getSOCInfo|2014-10-30 00:00:00Z|@C|0|Exiting getSOCInfo : [7s]
+2014-11-11 05:22:04Z|L4_C_SPS|L4_C_genISO|getANCInfo|2014-10-30 00:00:00Z|@C|0|Exiting getANCInfo : [1s]
+2014-11-11 05:22:23Z|L4_C_SPS|L4_C_genISO|getCLIMInfo|2014-10-30 00:00:00Z|@C|0|Exiting getCLIMInfo : [19s]
+2014-11-11 05:22:28Z|L4_C_SPS|L4_C_genISO|genHDF|2014-10-30 00:00:00Z|@C|0|Generating the HDF-5 file: Collection = MDL, Time = 2014-10-30T00:00:00
+2014-11-11 05:22:28Z|L4_C_SPS|L4_C_genISO|genHDF|2014-10-30 00:00:00Z|@C|0|Exiting genHDF : [0s]
+2014-11-11 05:22:28Z|L4_C_SPS|L4_C_genISO|insertGroupMeta|2014-10-30 00:00:00Z|@C|0|Inserting the HDF5 group metadata: Collection = MDL, Time = 2014-10-30T00:00:00
+2014-11-11 05:22:30Z|L4_C_SPS|L4_C_genISO|insertGroupMeta|2014-10-30 00:00:00Z|@C|0|Exiting insertGroupMeta : [2s]
+2014-11-11 05:22:31Z|L4_C_SPS|L4_C_genISO|insertConfigTar|2014-10-30 00:00:00Z|@C|0|Exiting insertConfigTar : [1s]
+2014-11-11 05:22:31Z|L4_C_SPS|L4_C_genISO|insertConfig|2014-10-30 00:00:00Z|@C|0|Exiting insertConfig : [1s]
+2014-11-11 05:22:31Z|L4_C_SPS|L4_C_genISO|insertXMLMeta|2014-10-30 00:00:00Z|@C|0|Inserting the ISO dataset XML metadata: Collection = MDL, Time = 2014-10-30T00:00:00
+2014-11-11 05:22:34Z|L4_C_SPS|L4_C_genISO|insertXMLMeta|2014-10-30 00:00:00Z|@C|0|Exiting insertXMLMeta : [3s]
+2014-11-11 05:22:34Z|L4_C_SPS|L4_C_genISO|insertSeriesXML|2014-10-30 00:00:00Z|@C|0|Inserting the ISO series XML metadata: Collection = MDL, Time = 2014-10-30T00:00:00
+2014-11-11 05:22:34Z|L4_C_SPS|L4_C_genISO|insertSeriesXML|2014-10-30 00:00:00Z|@C|0|Exiting insertSeriesXML : [0s]
+2014-11-11 05:22:34Z|L4_C_SPS|L4_C_genISO|genMDL|2014-10-30 00:00:00Z|@C|0|Exiting genMDL : [59s]
+2014-11-11 05:22:34Z|L4_C_SPS|L4_C_genISO|genDAAC|2014-10-30 00:00:00Z|@C|0|Exiting genDAAC : [59s]
+2014-11-11 05:22:34Z|L4_C_SPS|L4_C_genISO|L4_C_genISO.pl|2014-10-30 00:00:00Z|@C|0|Exiting L4_C_genISO.pl : [62s]
+2014-11-11 05:22:34Z|L4_C_SPS|L4_C.pl|genISO|2014-10-30 00:00:00Z|@C|0|Exiting genISO : [63s]
+2014-11-11 05:22:34Z|L4_C_SPS|L4_C.pl|export|2014-10-30 00:00:00Z|@C|0|Exporting MDL_JPL
+2014-11-11 05:22:37Z|L4_C_SPS|L4_C.pl|export|2014-10-30 00:00:00Z|@C|0|Exporting MDL_NSIDC
+2014-11-11 05:22:40Z|L4_C_SPS|L4_C.pl|export|2014-10-30 00:00:00Z|@C|0|Exiting export : [6s]
+2014-11-11 05:22:40Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-30 00:00:00Z|@C|0|L4_C is complete.
+2014-11-11 05:22:40Z|L4_C_SPS|L4_C.pl|L4_C.pl|2014-10-30 00:00:00Z|@C|0|Exiting L4_C.pl : [595s]

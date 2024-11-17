@@ -1,0 +1,184 @@
+# file     : l4c_MODIS.rip
+#
+# purpose  : NASA SMAP L4_C_MODIS pre-processor runtime input parameter (RIP)
+#            template and, as of v5.0.1, also pre-process FparClimatology for
+#            the indicated day-of-year and 8-day composite period.
+#
+# revised  : v5.0.1-2014-08-19T18:53:00, integration on v5.0.1
+# revised  : v5.0.1-2014-04-22T11:32:00-7:00, extend for FparClimatology
+#            pre-processing
+# revised  : v4.1.3-2013-11-18T10:32:00-07:00,NCC
+#
+# release_mode : development
+#
+# platform : NCCS Discover
+#
+# author   : joe glassy
+#
+# notes    : 
+#
+# Syntax   : RECAP-- comments are supported by starting the line with a '#'
+#                     symbol.
+#                 -- blank lines are allowed
+#                 -- each line represents one name-value-pair (NVP), started by
+#                    a keyword.
+#                 -- keywords used may be any case, but must match those defined
+#                    in the software
+#                 -- values are stored as strings, but no embedded blanks in
+#                    'value' strings are not yet supported
+#                 -- name value pairs are by default 'single-valued' but if an
+#                    identical keyword is repeated over
+#                    many lines, this indicates the NVP is a multi-valued NVP.
+#                 -- when a new NVP is added, its keyword must be added to the
+#                    string-table in nvp_custom.c 
+#                    and a user-defined service function
+#                    (fxSvc_L4C_{newkeyword} must be defined in nvp_custom.c
+#                    and the application must be re-compiled.
+#
+#******************************************************************************
+
+# Univ Montana L4C subsystem release
+# (cert of interoperability) identifier
+# =====================================
+
+L4C_SUBSYSTEM_RELEASE           = <L4_C_SWVersionID>
+L4C_SCIENCE_VERSION_ID          = <L4_C_VersionID>
+L4C_CRID                        = <L4_C_CompositeReleaseID>
+L4C_MODIS_SOFTWARE_VERSION      = <L4_C_algorithmVersionID>
+L4C_INPUT_DATASET_MODIS_VERSION = <L4_C_algorithmVersionID>
+
+# Define ATBD and Product Spec Document
+# governing this run which are written into
+# /Metadata/Config group
+# =========================================
+
+L4C_ATBD_VERSION  = "<L4_C_ATBDVersion>"
+L4C_ATBD_DATE     = "<L4_C_ATBDDate>"
+
+L4C_PSD_EDITION   = "<L4_C_PSDEdition>"
+L4C_PSD_PUBDATE   = "<L4_C_PSDPublicationDate>"
+
+L4C_MODIS_TASK_LABEL = L4C_MODIS_Task-v5.0.1-2014-08-12T17:45:00
+L4C_MODIS_TASK_UUID  = a534abbc-1761-11e4-9359-97a5c57f0915
+
+# Run mode key to be supported in future,
+# with values: {development|production}
+# =======================================
+
+L4C_RUN_MODE = production
+
+# Choices are: FPAR|NDVI. If FPAR, 
+# gppMethodCode=1, or if NDVI, is 0 and if
+# NDVI must specify a collection of (286)
+# L4C_INPUT_VIIRS_NDVI_GRANULE nvps below
+# instead of the FPAR's 
+# =========================================
+
+L4C_GPP_SOURCE = <L4C_GPP_SOURCE>
+
+# Define the current model day of
+# year index {1..366} inclusive
+# ===============================
+
+L4C_MODEL_YEAR    = %Y
+L4C_MODEL_YEARDAY = %j
+L4C_MODEL_PERIOD  = <L4C_MODEL_PERIOD>
+
+# Compression level used for datasets
+# in HDF5 output file 
+# ===================================
+
+L4C_COMPRESSION_LEVEL = 3
+
+# SMAP_L4_C_Ancillary.h5 stores (4) tile
+# reference images {_r_,_c_,_h_,_v_} and the
+# EG 9km mask required. Temporary: using a L4_C
+# MODIS specific ancillary file for now but soon
+# will use the standard one.
+# ==============================================
+
+L4C_INPUT_MODIS_ANCILLARY_ROOTDIR = <L4C_INPUT_MODIS_ANCILLARY_ROOTDIR>
+L4C_INPUT_MODIS_ANCILLARY_PATH    = <L4C_INPUT_MODIS_ANCILLARY_PATH>
+
+# Define the 286 (or n. available) Sinusoidal
+# FPAR 8-day tiles corresponding to this model
+# year and model day-of-year.
+# ============================================
+
+L4C_INPUT_MODIS_ROOTDIR      = <L4C_INPUT_MODIS_ROOTDIR>
+L4C_INPUT_MODIS_FPAR_GRANULE = <L4C_INPUT_MODIS_FPAR_GRANULE>
+
+# Define the 286 (or n. available) Sinusoidal
+# VIIRS NDVI 8-day tiles corresponding to this
+# model year and model day-of-year.
+# ============================================
+
+#L4C_INPUT_VIIRS_NDVI_GRANULE = <L4C_INPUT_VIIRS_NDVI_GRANULE>
+
+# MODIS output
+# ============
+
+L4C_OUTPUT_MODIS_ROOTDIR = <L4C_OUTPUT_MODIS_ROOTDIR>
+L4C_OUTPUT_MODIS_PATH    = <L4C_OUTPUT_MODIS_PATH>
+L4C_OUTPUT_LOG_ROOTDIR   = <L4C_OUTPUT_LOG_ROOTDIR>
+
+# HDF SDS Related Parameters <Begins HERE--->
+# ==========================
+
+L4C_MODIS_GRID_NAME = MOD_Grid_MOD15A2
+
+# original, static (scalar) input
+# dataset names
+# ===============================
+
+L4C_INPUT_DATASET_MODIS_FPAR          = Fpar_1km
+L4C_INPUT_DATASET_MODIS_FPAR_QC       = FparLai_QC
+L4C_INPUT_DATASET_MODIS_FPAR_QC_EXTRA = FparExtra_QC
+
+L4C_INPUT_DATASET_VIIRS_NDVI    = "1km 16 days NDVI"
+L4C_INPUT_DATASET_VIIRS_NDVI_QC = "1km 16 days pixel reliability"
+
+# Equivalent OUTPUT EASEGRID 1k global
+# mosaic output dataset names
+# ====================================
+
+L4C_OUTPUT_DATASET_MODIS_FPAR          = fpar_M01
+L4C_OUTPUT_DATASET_MODIS_FPAR_QC       = fpar_qc_M01
+# L4C_OUTPUT_DATASET_MODIS_FPAR_QC_EXTRA = fpar_extra_qc_M01
+L4C_OUTPUT_DATASET_VIIRS_NDVI          = ndvi_M01
+L4C_OUTPUT_DATASET_VIIRS_NDVI_QC       = ndvi_qc_M01
+
+# New method for listing a collection
+# of INPUT variable names...
+# ===================================
+
+L4C_INPUT_MODIS_VARLIST_FPAR = Fpar_1km
+L4C_INPUT_MODIS_VARLIST_FPAR = Fpar_1km_QC
+
+# L4C_INPUT_MODIS_VARLIST_FPAR = FparExtra_QC
+
+L4C_INPUT_MODIS_VARLIST_NDVI = ndvi_1km
+L4C_INPUT_MODIS_VARLIST_NDVI = ndvi_qc
+
+# ANCILLARY -- standard set of ancillary symbols
+# PFT mask 9km image and friends
+# ==============================================
+
+L4C_ANC_DATASET_PFT_M09_MASK = MCD12Q1_M09_lc_mask_uint8
+
+L4C_ANC_DATASET_LATITUDE_1KM_COORD  = SMAP_L4_C_LAT_14616_x_34704_M01_flt32
+L4C_ANC_DATASET_LONGITUDE_1KM_COORD = SMAP_L4_C_LON_14616_x_34704_M01_flt32
+
+L4C_ANC_DATASET_TILE_ROW_M01     = tile_r_M01_1km_ease2_template_int16
+L4C_ANC_DATASET_TILE_COL_M01     = tile_c_M01_1km_ease2_template_int16
+L4C_ANC_DATASET_TILE_HORI_HH_M01 = tile_h_M01_1km_ease2_template_uint8
+L4C_ANC_DATASET_TILE_VERT_VV_M01 = tile_v_M01_1km_ease2_template_uint8
+
+# 1D indirection indices for
+# 9km row,col
+# ==========================
+
+L4C_ANC_DATASET_M09LAND_ROW_INDEX = MCD12Q1_M09land_col_uint16
+L4C_ANC_DATASET_M09LAND_COL_INDEX = MCD12Q1_M09land_row_uint16
+
+# done

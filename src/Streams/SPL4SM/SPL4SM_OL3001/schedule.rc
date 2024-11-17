@@ -1,0 +1,22 @@
+
+* 20170422 -rf 300 -f -noHDF -define MIN_CRID=R14010 -define MAX_CRID=R14010
+
+20170423 20170506 -rf 300 -f -noHDF -define MIN_CRID=R14010
+
+20170507 * -rf 3600 -define MIN_CRID=R15060
+
+20170501 * -define L4_SM_PRECIP_description="CPCU Corrected Precipitation (First-look)" -define L4_SM_PRECIP_changeLog="Precipitation correction changed to first-look mode."
+
+20150331 20150501 -define L4_SM_LFO_version=e5130_fp -define L4_SM_LFO_changeLog="Initial version"
+
+20150501 20150501 -define CROSS_STREAM=e5131_fp
+
+20150502 20170124  -define L4_SM_LFO_version=e5131_fp -define L4_SM_LFO_changeLog="GEOS-5 FP stream changed to e5131_fp"
+
+20170124 20170124 -define CROSS_STREAM=f516_fp
+
+20170125 20171101  -define L4_SM_LFO_version=f516_fp -define L4_SM_LFO_changeLog="GEOS-5 FP stream changed to f516_fp"
+
+20171101 20171101 -define CROSS_STREAM=f517_fp
+
+20171102 *  -define L4_SM_LFO_version=f517_fp -define L4_SM_LFO_changeLog="GEOS-5 FP stream changed to f517_fp"

@@ -1,0 +1,28 @@
+PDR_NAME       = <L4_SM_LFO_version>.tavg1_2d_lfo_corr.%Y%m%dT%H%M%S.PDR
+PDR_SHORT_NAME = LFO_CORR;
+PDR_LONG_NAME  = Corrected Precipitation;
+
+CLOCK_METHOD   = iso_time;
+START_TIME     = -1800;
+END_TIME       = 84600;
+INC_SEC        = 3600;
+MIN_FILE_COUNT = 24;
+WAIT_TIME      = 259200;
+
+L4_SM_LFO_PRECIP_IN_DIR   = <L4_SM_PRECIP_directoryID>/diag/Y%Y/M%m/D%d;
+L4_SM_LFO_PRECIP_OUT_DIR  = <L4_SM_MET_PATH>/precip_corr_<L4_SM_PRECIP_version>/<L4_SM_LFO_version>/diag/Y%Y/M%m;
+L4_SM_LFO_PRECIP_NAME     = <L4_SM_LFO_version>.tavg1_2d_lfo_Nx_corr.%Y%m%d_%H%Mz.nc4
+
+OBJECT = FILE_GROUP;
+
+  DATA_TYPE = LFOPRECIP;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_LFO_PRECIP_IN_DIR>;
+    FILE_ID = <L4_SM_LFO_PRECIP_NAME>;
+    FILE_TYPE = NetCDF4;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_SM_LFO_PRECIP_OUT_DIR>;
+  END_OBJECT = FILE_SPEC;
+
+END_OBJECT = FILE_GROUP;

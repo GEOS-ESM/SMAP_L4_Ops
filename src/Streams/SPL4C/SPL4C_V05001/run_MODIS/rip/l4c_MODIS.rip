@@ -1,0 +1,89 @@
+#******************************************************************************
+# file     : l4c_MODIS.rip
+# purpose  : for current day-of-year, define NASA SMAP L4_C_MODIS pre-processor
+#            runtime input parameters (RIP)
+# revised  : v4.1.3-2013-11-18T10:32:00-07:00,NCC
+# release_mode : development
+# platform : NCCS Discover
+# author   : joe glassy
+# notes    : This is a representative RIP file
+#
+# Syntax   : RECAP -- comments are supported by starting the line with a 
+#                     '#' symbol.
+#                  -- blank lines are allowed
+#                  -- each line represents one name-value-pair (NVP), started
+#                     by a keyword.
+#                  -- keywords used may be any case, but must match those
+#                     defined in the software
+#                  -- values are stored as strings, but no embedded blanks in
+#                    'value' strings are not yet supported
+#                  -- name value pairs are by default 'single-valued' but if
+#                     an identical keyword is repeated over many lines, this
+#                     indicates the NVP is a multi-valued NVP.
+#                  -- when a new NVP is added, its keyword must be added to the
+#                     string-table in nvp_custom.c
+#                     and a user-defined service function 
+#                     (fxSvc_L4C_{newkeyword} must be defined in nvp_custom.c
+#                     and the application must be re-compiled.
+#******************************************************************************
+
+L4C_CRID = CRID-yet-to-be-defined
+L4C_MODIS_SOFTWARE_VERSION   = <L4_C_SWVersionID>
+
+# L4C_PLATFORM 
+# Release mode key to be supported in future,
+# with values:{development|production}
+# ===========================================
+
+# L4C_RELEASE_MODE           = development
+
+L4C_MODIS_RELEASE_TAG	     = <L4_C_algorithmVersionID>
+
+# Define the current model day of
+# year index {1..366} inclusive
+# ===============================
+
+L4C_MODEL_YEAR      = %Y
+
+L4C_MODEL_DAYOFYEAR	= %j
+L4C_MODEL_PERIOD	= 21
+
+# SMAP_L4_C_Ancillary.h5 stores (4) tile reference
+# images {_r_,_c_,_h_,_v_} and the EG 9km mask required
+# temporary: using a L4_C MODIS specific ancillary file
+# for now but soon will use the standard one
+# =====================================================
+
+L4C_MODIS_INPUT_ANCILLARY_PATH = <L4C_MODIS_INPUT_ANCILLARY_PATH>
+
+# Define the INPUT directory root, was originally
+# "/MODIS/Mirror/MOD15A2.005/2013.05.25"
+# ===============================================
+
+L4C_MODIS_INPUT_ROOTDIR  = <L4C_MODIS_INPUT_ROOTDIR>
+
+# Define the OUTPUT directory root
+# ================================
+
+L4C_MODIS_OUTPUT_ROOTDIR = <L4C_MODIS_OUTPUT_ROOTDIR>
+
+# Define l4c_MODIS.ex's primary OUTPUT file. 
+# Note that if L4C_MODIS_OUTPUT_ROOTDIR is defined,
+# it is prepended ahead of L4C_MODIS_OUTPUT_PATH.
+# Also note that if requested, the code will append
+# a dayofyear {DDD=1..366}
+# or a composite period index {PP=1..46} to this 
+# path name, just ahead of the .h5 extension.
+# =================================================
+
+L4C_MODIS_OUTPUT_PATH    = <L4C_MODIS_OUTPUT_PATH>
+
+# Define the 286 Sinusoidal FPAR 8-day tiles 
+# corresponding to this model day-of-year
+# Note: day-of-year 145 corresponds here to our
+# FPAR 8-day "2013.05.25" dataset and that 
+# these are essentially sorted in geospatial 
+# row-major-order for tiles
+# =============================================
+
+L4C_MODIS_FPAR_GRANULE = <L4C_MODIS_FPAR_GRANULE>

@@ -1,0 +1,597 @@
+PDR_NAME       = LDAS_RESTART.%Y%m%dT000000.PDR
+PDR_SHORT_NAME = RESTART;
+PDR_LONG_NAME  = Land Data Assimilation System (Restart);
+
+CLOCK_METHOD   = iso_time;
+START_TIME     = 0;
+END_TIME       = 86400;
+INC_SEC        = 86400;
+MIN_FILE_COUNT = 2;
+WAIT_TIME      = 259200;
+
+#ARCHIVE_SCHEDULE = 20150331 %Y%m01
+
+ORIGINATING_SYSTEM = SMAP_L4;
+TOTAL_FILE_COUNT = 72;
+
+OBJECT = FILE_GROUP;
+
+  DATA_TYPE = LDASRS;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0000/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0000/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0000/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0000/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0001/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0001/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0001/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0001/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0002/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0002/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0002/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0002/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0003/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0003/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0003/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0003/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0004/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0004/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0004/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0004/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0005/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0005/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0005/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0005/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0006/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0006/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0006/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0006/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0007/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0007/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0007/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0007/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0008/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0008/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0008/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0008/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0009/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0009/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0009/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0009/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0010/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0010/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0010/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0010/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0011/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0011/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0011/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0011/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0012/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0012/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0012/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0012/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0013/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0013/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0013/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0013/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0014/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0014/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0014/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0014/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0015/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0015/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0015/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0015/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0016/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0016/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0016/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0016/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0017/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0017/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0017/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0017/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0018/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0018/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0018/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0018/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0019/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0019/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0019/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0019/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0020/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0020/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0020/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0020/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0021/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0021/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0021/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0021/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0022/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0022/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0022/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0022/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0023/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0023/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0023/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0023/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0000/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0000/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0001/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0001/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0002/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0002/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0003/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0003/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0004/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0004/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0005/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0005/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0006/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0006/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0007/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0007/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0008/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0008/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0009/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0009/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0010/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0010/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0011/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0011/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0012/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0012/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0013/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0013/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0014/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0014/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0015/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0015/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0016/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0016/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0017/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0017/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0018/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0018/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0019/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0019/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0020/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0020/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0021/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0021/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0022/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0022/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0023/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0023/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+  
+END_OBJECT = FILE_GROUP;

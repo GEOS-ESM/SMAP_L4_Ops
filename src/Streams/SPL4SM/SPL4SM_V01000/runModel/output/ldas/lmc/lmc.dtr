@@ -1,0 +1,32 @@
+PDR_NAME       = LDAS_LMC.%Y%m%dT000000.PDR
+PDR_SHORT_NAME = LMC;
+PDR_LONG_NAME  = Land Data Assimilation System (LMC);
+
+CLOCK_METHOD   = iso_time;
+MIN_FILE_COUNT = 1;
+WAIT_TIME      = 259200;
+
+ORIGINATING_SYSTEM = SMAP_L4;
+TOTAL_FILE_COUNT = 2;
+
+L4_SM_OUTPUT = <L4_SM_STREAM_directoryID>/runModel/output;
+
+OBJECT = FILE_GROUP;
+
+  DATA_TYPE = SPL4SMLM;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_OUTPUT>/SMAP_EASEv2_M09_GLOBAL/rc_out/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.ldas_smapL4SMlmc.%Y%m%d_%H%Mz.bin;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+  END_OBJECT = FILE_SPEC;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_OUTPUT>/SMAP_EASEv2_M09_GLOBAL/rc_out/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.ldas_smapL4SMlmc.%Y%m%d_%H%Mz.qa;
+    FILE_TYPE = ASCII;
+    FILE_SIZE =
+  END_OBJECT = FILE_SPEC;
+
+END_OBJECT = FILE_GROUP;

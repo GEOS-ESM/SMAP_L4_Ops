@@ -1,0 +1,27 @@
+PDR_NAME       = LDAS_RESTART.%Y%m%dT000000.PDR
+PDR_SHORT_NAME = RESTART;
+PDR_LONG_NAME  = Land Data Assimilation System (Restart);
+
+CLOCK_METHOD   = iso_time;
+START_TIME     = 0;
+END_TIME       = 86400;
+INC_SEC        = 86400;
+MIN_FILE_COUNT = 1;
+WAIT_TIME      = 259200;
+
+ORIGINATING_SYSTEM = SMAP_L4;
+TOTAL_FILE_COUNT = 1;
+
+OBJECT = FILE_GROUP;
+
+  DATA_TYPE = LDASRS;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0000/Y%Y/M%m;
+    FILE_ID = <L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0000/Y%Y/M%m;
+  END_OBJECT = FILE_SPEC;
+
+END_OBJECT = FILE_GROUP;

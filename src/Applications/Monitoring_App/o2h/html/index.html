@@ -1,0 +1,135 @@
+<html>
+<head><title>{expver} Observing System Summary</title></head>
+<body text="#000000" bgcolor="#ffffe3" link="#0000ff" vlink="#800080" alink="#ff00ff">
+<script language="javascript">
+<!--
+function leapto(form)
+{var pname = form.pname.selectedIndex;
+window.location = (form.pname.options[pname].value);}
+//-->
+</script>
+<center><h2>Observing System Summary - {expver}</h2></center>
+<center><b><font color=blue>{begin} - {end}</font></b></center>
+<p><table cellspacing=10>
+<tr>
+<th align=right></th>
+<th align=left></th>
+<th colspan=4><font color=red>Statistics</font></th>
+<th><font color=red>Time series</font></th>
+<th><font color=red>Spatial coverage</font></th>
+</tr>
+<tr align=right>
+<td align=right><a href="index.html" ONCLICK=window.open("G1.html","","width=500,height=400,resizable,scrollbars")><b>G1</b></a></td>
+<td align=left><b><font color=red>All SMAP data</font></b></td>
+<td align=center><a href="all_data_global.png"><b>Global</b></a></td>
+<td align=center><a href="all_data_n.hem.png"><b>NH</b></a></td>
+<td align=center><a href="all_data_tropics.png"><b>TR</b></a></td>
+<td align=center><a href="all_data_s.hem.png"><b>SH</b></a></td>
+<td align=center><a href="all_data_ts.png"><b>Global</b></a></td>
+<td><form><select name="pname" onChange="leapto(this.form)">
+<option selected value="index.html">Analysis time:</option>
+{all_cov}
+</select></form></td>
+</tr>
+<tr align=right>
+<td align=right><a href="index.html" ONCLICK=window.open("G2.html","","width=500,height=400,resizable,scrollbars")><b>G2</b></a></td>
+<td align=left><font color=blue>SMAP L1C Tbh A</font></td>
+<td align=center><a href="l1c-tbh_a_global.png"><b>Global</b></a></td>
+<td align=center><a href="l1c-tbh_a_n.hem.png"><b>NH</b></a></td>
+<td align=center><a href="l1c-tbh_a_tropics.png"><b>TR</b></a></td>
+<td align=center><a href="l1c-tbh_a_s.hem.png"><b>SH</b></a></td>
+<td align=center><a href="l1c-tbh_a_ts.png"><b>Global</b></a></td>
+<td><form><select name="pname" onChange="leapto(this.form)">
+<option selected value="index.html">Analysis time:</option>
+{640_cov}
+</select></form></td>
+</tr>
+<tr align=right>
+<td align=right><a href="index.html" ONCLICK=window.open("G3.html","","width=500,height=400,resizable,scrollbars")><b>G3</b></a></td>
+<td align=left><font color=blue>SMAP L1C Tbh D</font></td>
+<td align=center><a href="l1c-tbh_d_global.png"><b>Global</b></a></td>
+<td align=center><a href="l1c-tbh_d_n.hem.png"><b>NH</b></a></td>
+<td align=center><a href="l1c-tbh_d_tropics.png"><b>TR</b></a></td>
+<td align=center><a href="l1c-tbh_d_s.hem.png"><b>SH</b></a></td>
+<td align=center><a href="l1c-tbh_d_ts.png"><b>Global</b></a></td>
+<td><form><select name="pname" onChange="leapto(this.form)">
+<option selected value="index.html">Analysis time:</option>
+{641_cov}
+</select></form></td>
+</tr>
+<tr align=right>
+<td align=right><a href="index.html" ONCLICK=window.open("G4.html","","width=500,height=400,resizable,scrollbars")><b>G4</b></a></td>
+<td align=left><font color=blue>SMAP L1C Tbv A</font></td>
+<td align=center><a href="l1c-tbv_a_global.png"><b>Global</b></a></td>
+<td align=center><a href="l1c-tbv_a_n.hem.png"><b>NH</b></a></td>
+<td align=center><a href="l1c-tbv_a_tropics.png"><b>TR</b></a></td>
+<td align=center><a href="l1c-tbv_a_s.hem.png"><b>SH</b></a></td>
+<td align=center><a href="l1c-tbv_a_ts.png"><b>Global</b></a></td>
+<td><form><select name="pname" onChange="leapto(this.form)">
+<option selected value="index.html">Analysis time:</option>
+{642_cov}
+</select></form></td>
+</tr>
+<tr align=right>
+<td align=right><a href="index.html" ONCLICK=window.open("G5.html","","width=500,height=400,resizable,scrollbars")><b>G5</b></a></td>
+<td align=left><font color=blue>SMAP L1C Tbv D</font></td>
+<td align=center><a href="l1c-tbv_d_global.png"><b>Global</b></a></td>
+<td align=center><a href="l1c-tbv_d_n.hem.png"><b>NH</b></a></td>
+<td align=center><a href="l1c-tbv_d_tropics.png"><b>TR</b></a></td>
+<td align=center><a href="l1c-tbv_d_s.hem.png"><b>SH</b></a></td>
+<td align=center><a href="l1c-tbv_d_ts.png"><b>Global</b></a></td>
+<td><form><select name="pname" onChange="leapto(this.form)">
+<option selected value="index.html">Analysis time:</option>
+{643_cov}
+</select></form></td>
+</tr>
+<tr align=right>
+<td align=right><a href="index.html" ONCLICK=window.open("G6.html","","width=500,height=400,resizable,scrollbars")><b>G6</b></a></td>
+<td align=left><font color=blue>SMAP L2AP Tbh A</font></td>
+<td><hr></td>
+<td><hr></td>
+<td><hr></td>
+<td><hr></td>
+<td><hr></td>
+<td><hr></td>
+</tr>
+<tr align=right>
+<td align=right><a href="index.html" ONCLICK=window.open("G7.html","","width=500,height=400,resizable,scrollbars")><b>G7</b></a></td>
+<td align=left><font color=blue>SMAP L2AP Tbh D</font></td>
+<td><hr></td>
+<td><hr></td>
+<td><hr></td>
+<td><hr></td>
+<td><hr></td>
+<td><hr></td>
+</tr>
+<tr align=right>
+<td align=right><a href="index.html" ONCLICK=window.open("G8.html","","width=500,height=400,resizable,scrollbars")><b>G8</b></a></td>
+<td align=left><font color=blue>SMAP L2AP Tbv A</font></td>
+<td><hr></td>
+<td><hr></td>
+<td><hr></td>
+<td><hr></td>
+<td><hr></td>
+<td><hr></td>
+</tr>
+<tr align=right>
+<td align=right><a href="index.html" ONCLICK=window.open("G9.html","","width=500,height=400,resizable,scrollbars")><b>G9</b></a></td>
+<td align=left><font color=blue>SMAP L2AP Tbv D</font></td>
+<td><hr></td>
+<td><hr></td>
+<td><hr></td>
+<td><hr></td>
+<td><hr></td>
+<td><hr></td>
+</tr>
+</td></table>
+<p><hr>
+<ul>
+<li><a href="index.html" ONCLICK=window.open("kxtable.html","","width=800,height=500,resizable,scrollbars")>Data Sources (kx)</a></li>
+<li><a href="index.html" ONCLICK=window.open("kttable.html","","width=400,height=500,resizable,scrollbars")>Data Types (kt)</a></li>
+<li><a href="index.html" ONCLICK=window.open("qcxtable.html","","width=400,height=500,resizable,scrollbars")>QC Exclusion Marks (qcx)</a></li>
+<li><a href="index.html" ONCLICK=window.open("qchtable.html","","width=400,height=500,resizable,scrollbars")>QC History Marks (qch)</a></li>
+</ul>
+<p><hr>
+</body></html>

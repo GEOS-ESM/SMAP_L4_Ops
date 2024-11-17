@@ -1,0 +1,144 @@
+  ORIGINATING_SYSTEM = SMAP_GMAO
+  ECSVersionID       = 777
+  CompositeStreamID  = test
+
+  L4_OPERATIONAL_version = jardizzo-SMAP_L4_OPS-R13
+  L4_OPERATIONAL_description = SMAP Level-4 Operational System
+  L4_OPERATIONAL_changeLog = Initial version
+
+  L4_C_METADATA_version = jardizzo-SMAP_L4_C-meta_v1.0
+  L4_C_METADATA_description = SMAP Level-4 Carbon Metadata Version
+  L4_C_METADATA_changeLog = Initial version
+
+# Dataset Identification Metadata
+# ===============================
+
+  L4_C_VersionID = Tv2000
+  L4_C_ECSVersionID = <ECSVersionID>
+  L4_C_CompositeReleaseID = <L4_C_VersionID>0001
+
+  L4_C_STREAM_version      = SPL4C_<L4_C_VersionID>
+  L4_C_STREAM_description  = <CompositeStreamID>
+  L4_C_STREAM_directoryID  = <L4_OPS_directoryID>/SPL4C/<L4_C_STREAM_version>
+
+# Series Identification Metadata
+# ==============================
+
+  L4_C_revisionDate = 2015-11-01
+  L4_C_maintenanceDate = 2016-07-31
+  L4_C_PSDPublicationDate = 2015-06-22
+  L4_C_PSDEdition = 1.8.1
+  L4_C_identifier_product_DOI = 10.5067/22TFAUSNLO9R
+
+# Process Step Lineage Metadata
+# =============================
+
+  L4_C_SWVersionID = umt-SMAP_L4_C-v7.1
+  L4_C_softwareDate = 2016-02-18
+  L4_C_algorithmVersionID = umt-SMAP_L4_C-v7.1
+  L4_C_ATBDDate = 2014-12-09
+  L4_C_ATBDVersion = Revision-A
+  L4_C_documentation = TBD
+  L4_C_runTimeParameters = TBD
+
+# The following variables refer to
+# software documents and default to the
+# ATBD in the absence of another document.
+# ========================================
+
+  L4_C_documentDate = <L4_C_ATBDDate>
+  L4_C_documentVersion = <L4_C_ATBDVersion>
+
+# GEOS-5 Land Forcing Data
+# ========================
+
+  L4_C_LFO_version = e5130_fp
+  L4_C_LFO_description = GEOS-5 Forward Processing
+  L4_C_LFO_directoryID = <L4_DATA_directoryID>/GEOS-5/FP/<L4_C_LFO_version>
+  L4_C_LFO_changeLog = Initial version
+
+# L4 Soil Moisture Data
+# =====================
+
+  L4_C_SPL4SMGP_version = Vb1010
+  L4_C_SPL4SMGP_description = SMAP Level-4 Soil Moisture (GPH)
+  L4_C_SPL4SMGP_directoryID = <L4_DATA_directoryID>/L4_SM/<L4_C_SPL4SMGP_version>/gph
+  L4_C_SPL4SMGP_changeLog = Initial version
+
+# SMAP Data
+# =========
+
+  L4_C_SPL3SMA_version = T12323
+  L4_C_SPL3SMA_description = SMAP L3 Soil Moisture Active
+  L4_C_SPL3SMA_directoryID = <L4_DATA_directoryID>/SMAP/OASIS/L3_SM_A
+  L4_C_SPL3SMA_changeLog = Initial version
+
+# L4_C MODIS Data
+# ===============
+
+  L4_C_MODIS_version = MOD15A2.005
+  L4_C_MODIS_description = TBD
+  L4_C_MODIS_directoryID = <L4_DATA_directoryID>/MODIS/FPAR/<L4_C_MODIS_version>
+  L4_C_MODIS_changeLog = Initial version
+
+# L4_C VIIRS Data
+# ===============
+
+  L4_C_VIIRS_version = 3001
+  L4_C_VIIRS_description = TBD
+  L4_C_VIIRS_directoryID = <L4_DATA_directoryID>/VIIRS/VI/<L4_C_VIIRS_version>
+  L4_C_VIIRS_changeLog = Initial version
+
+# L4_C Ancillary Data
+# ===================
+
+  L4_C_ANC_version = 7.0
+  L4_C_ANC_description = TBD
+  L4_C_ANC_directoryID = <L4_DATA_directoryID>/L4_C/ancillary
+  L4_C_ANC_changeLog = Initial version
+
+# L4_C FPAR Climatology Data
+# ==========================
+
+  L4_C_FPAR_CLIMATE_version = 1.2
+  L4_C_FPAR_CLIMATE_description = TBD
+  L4_C_FPAR_CLIMATE_directoryID = <L4_DATA_directoryID>/L4_C/ancillary
+  L4_C_FPAR_CLIMATE_changeLog = Initial version
+
+# L4_C BPLUT Climatology Data
+# ===========================
+
+  L4_C_BPLUT_version = 7.0
+  L4_C_BPLUT_description = TBD
+  L4_C_BPLUT_directoryID = <L4_DATA_directoryID>/L4_C/ancillary
+  L4_C_BPLUT_changeLog = Initial version
+
+# L4_C SOC Data
+# =============
+
+  L4_C_SOC_version = 7.0_nogzip
+  L4_C_SOC_description = TBD
+  L4_C_SOC_directoryID = <L4_DATA_directoryID>/L4_C/restart/soc
+  L4_C_SOC_changeLog = Initial version
+
+# Directory settings for monitoring output
+# Set to null (nothing after the equal
+# sign - no blanks) to turn off.
+# ========================================
+
+  L4_C_BROWSE_directoryID = <L4_DATA_directoryID>/L4_C/<L4_C_VersionID>/browse;
+
+  L4_C_QUADS_directoryID = <L4_DATA_directoryID>/L4_C/<L4_C_VersionID>/quads;
+
+# Export settings for monitoring output
+# Set to null (nothing after the equal
+# sign - no blanks) to turn off.
+# ========================================
+
+  L4_BROWSE_directoryID = <L4_C_BROWSE_directoryID>;
+  L4_BROWSE_EXPORT_LOGIN = scp://dao_ops@polar.gsfc.nasa.gov;
+  L4_BROWSE_EXPORT_DIR = /san_extranet/collab/SMAP/browse/l4c/<L4_C_VersionID>;
+
+  L4_QUADS_directoryID = <L4_C_QUADS_directoryID>;
+  L4_QUADS_EXPORT_LOGIN = scp://dao_ops@polar.gsfc.nasa.gov;
+  L4_QUADS_EXPORT_DIR = /san_extranet/collab/SMAP/monitoring/l4c_quads/<L4_C_VersionID>;

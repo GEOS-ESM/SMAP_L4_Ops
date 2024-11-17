@@ -1,0 +1,10 @@
+PDR_EXPORT_DIR = <L4_EXPORT_directoryID>/smapjpl/data_out/<CompositeStreamID>/PDR;
+#PDR_STAGE_DIR = <L4_EXPORT_directoryID>/smapjpl/data_out/<CompositeStreamID>/stage;
+PAN_EXPORT_DIR = <L4_EXPORT_directoryID>/smapjpl/a/data_in/<CompositeStreamID>/PAN;
+PDRD_EXPORT_DIR = <L4_EXPORT_directoryID>/smapjpl/a/data_in/<CompositeStreamID>/PDRD;
+
+REPORT_directoryID = <L4_EXPORT_directoryID>/smapjpl/data_out/<CompositeStreamID>/report;
+REPORT_fileID = SMAP_GMAO_JPL_SDATE_EDATE.txt;
+REPORT_summaryFileID = GMAO-SDS_TEST_Weekly_Summary_Report_to_JPL-SDS_SDATE_EDATE.txt
+
+REPORT_title = GMAO SMAP Report to JPL;

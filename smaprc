@@ -1,0 +1,37 @@
+#!/bin/tcsh -f
+
+set sourced=($_)
+set cwd = `pwd`
+
+if ("$sourced" != "") then
+  set dir = `dirname $sourced[2]`
+else
+  set dir = `dirname $0`
+endif
+
+cd $dir
+set SMAP_HOME = `pwd`
+cd $cwd
+
+setenv PATH $PATH':.:'$SMAP_HOME/src/Applications/L4_App':'$SMAP_HOME/src/Applications/DTR_App:$SMAP_HOME/src/Applications/L4_SM_App:$SMAP_HOME/src/Applications/L4_SM_NR_App:$SMAP_HOME/src/Applications/L4_C_App:$SMAP_HOME/src/Applications/Precip_Corr_App:$SMAP_HOME/src/Applications/Tools_App:$SMAP_HOME/src/Applications/HDF5_App:$SMAP_HOME/src/Applications/Monitoring_App:/home/dao_ops/GEOSadas-5_17/GEOSadas/src/GMAO_Shared/GMAO_ods
+
+setenv PERL5LIB $SMAP_HOME/src/SMAP_Shared/SMAP_perllib/lib/perl5/site_perl/5.18.2:$SMAP_HOME/src/SMAP_Shared/SMAP_perllib/lib/perl5/site_perl:$SMAP_HOME/src/SMAP_Shared/SMAP_perllib
+
+setenv CVSROOT ':ext:cvsacldirect:/cvsroot/esma'
+setenv SMAP_REPOSITORY esma/src/Applications/SMAP_L4_Ops
+setenv SMAP_HOME $SMAP_HOME
+setenv SMAP_ROOT /discover/nobackup/projects/gmao/smap
+setenv SMAP_OPS_DIR $SMAP_ROOT/Operations
+setenv SMAP_DATA_DIR $SMAP_ROOT/SMAP_L4
+setenv SMAP_EXPORT_DIR /datastage/smaplevel4
+setenv SMAP_ARCHIVE_DIR /archive/u/dao_ops/SMAP_L4
+setenv SMAP_BLACKLIST $SMAP_ROOT/SMAP_L4/smap_blacklist.csv
+
+alias smaphome "cd $SMAP_HOME"
+alias smap "cd $SMAP_ROOT"
+alias smaplom "cd $SMAP_ROOT/SMAP_L4"
+alias smapops "cd $SMAP_ROOT/Operations"
+alias smapexp "cd $SMAP_EXPORT_DIR"
+alias smaparc "cd $SMAP_ARCHIVE_DIR"
+
+exit 0

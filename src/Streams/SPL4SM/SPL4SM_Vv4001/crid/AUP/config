@@ -1,0 +1,4 @@
+SPL2SMA_CompositeReleaseID  = h5dump -a Metadata/DatasetIdentification/CompositeReleaseID <SPL2SMA_FILE>
+SPL2SMAP_CompositeReleaseID = h5dump -a Metadata/DatasetIdentification/CompositeReleaseID <SPL2SMAP_FILE>
+SPL1CTB_CompositeReleaseID  = h5dump -a Metadata/DatasetIdentification/CompositeReleaseID <SPL1CTB_FILE>
+L4_SM_aup_identifier_product_DOI = <L4_SM_aup_identifier_product_DOI>

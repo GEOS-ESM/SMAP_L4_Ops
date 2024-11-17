@@ -1,0 +1,250 @@
+ &file
+   title = 'SMAP L4_SM Analysis Update (AUP) Data Granule'
+   history = 'File written by ldas2daac.x'
+   source = 'LDASsa_m2-SMAP_L4_SM_D00400_p1'
+   contact = 'http://gmao.gsfc.nasa.gov'
+   conventions = 'CF'
+   institution = 'NASA Global Modeling and Assimilation Office'
+   references = 'see SMAP L4_SM Product Specification Documentation'
+   comment = 'HDF-5' /
+
+ &group
+   name = '/'
+   num_elements = 5 /
+
+ &element
+   name = 'time'
+   long_name = 'Time' /
+
+ &element
+   name = 'cell_lat'
+   long_name = 'Grid cell latitude'
+   units = 'degrees_north'
+   valid_min = '-90'
+   valid_max = '90' /
+
+ &element
+   name = 'cell_lon'
+   long_name = 'Grid cell longitude'
+   units = 'degrees_east'
+   valid_min = '-180'
+   valid_max = '180' /
+
+ &element
+   name = 'cell_row'
+   uint_size = 32
+   long_name = 'Zero-based row index of EASE2 M09km grid'
+   units = '1'
+   valid_min = '0'
+   valid_max = '1623' /
+
+ &element
+   name = 'cell_column'
+   uint_size = 32
+   long_name = 'Zero-based column index of EASE2 M09km grid'
+   units = '1'
+   valid_min = '0'
+   valid_max = '3855' /
+
+ &group
+   name = 'Observations_Data'
+   num_elements = 8 /
+
+ &element
+   name = 'tb_h_resolution_flag'
+   uint_size = 32
+   long_name = 'Flag indicating the effective resolution of H-pol brightness temperature composite fields (tb_h_obs, tb_h_forecast, etc.): 1=36 km,  2=9 km. Type is Uint32. Output is only stored at times and locations for which input SMAP Level 1 or Level 2 data are assimilated.  If more than one overpass occurs for a given grid cell within the assimilation window, the latest overpass time prevails.'
+   units = '1'
+   valid_min = '1'
+   valid_max = '2' /
+
+ &element
+   name = 'tb_v_resolution_flag'
+   uint_size = 32
+   long_name = 'Flag indicating the effective resolution of V-pol brightness temperature composite fields (tb_v_obs, tb_v_forecast, etc.): 1=36 km,  2=9 km. Type is Uint32. Output is only stored at times and locations for which input SMAP Level 1 or Level 2 data are assimilated.  If more than one overpass occurs for a given grid cell within the assimilation window, the latest overpass time prevails.'
+   units = '1'
+   valid_min = '1'
+   valid_max = '2' /
+
+ &element
+   name = 'tb_h_obs'
+   long_name = 'Composite resolution observed (L2_SM_AP or L1C_TB) H-pol brightness temperature, represented as the average of fore and aft observations from the SMAP antenna. Observed brightness temperatures that originate from 36 km L1C_TB files are posted at 9 km here for convenience (as average over fore and aft brightness temperature if stored separately in L1C_TB product). Output is only stored at times and locations for which input SMAP Level 1 or Level 2 data are assimilated. If more than one overpass occurs for a given grid cell within the assimilation window, the latest overpass time prevails.'
+   units = 'K'
+   valid_min = '100'
+   valid_max = '350' /
+
+ &element
+   name = 'tb_v_obs'
+   long_name = 'Composite resolution observed (L2_SM_AP or L1C_TB) V-pol brightness temperature, represented as the average of fore and aft observations from the SMAP antenna. Observed brightness temperatures that originate from 36 km L1C_TB files are posted at 9 km here for convenience (as average over fore and aft brightness temperature if stored separately in L1C_TB product). Output is only stored at times and locations for which input SMAP Level 1 or Level 2 data are assimilated. If more than one overpass occurs for a given grid cell within the assimilation window, the latest overpass time prevails.'
+   units = 'K'
+   valid_min = '100'
+   valid_max = '350' /
+
+ &element
+   name = 'tb_h_obs_assim'
+   long_name = 'Assimilated value after climatological adjustment (scaling) of tb_h_obs for consistency with the land models seasonally varying mean brightness temperature climatology. Observed brightness temperatures that originate from 36 km L1C_TB files are posted at 9 km here for convenience (as average over fore and aft brightness temperature if stored separately in L1C_TB product). Output is only stored at times and locations for which input SMAP Level 1 or Level 2 data are assimilated. If more than one overpass occurs for a given grid cell within the assimilation window, the latest overpass time prevails.'
+   units = 'K'
+   valid_min = '100'
+   valid_max = '350' /
+
+ &element
+   name = 'tb_v_obs_assim'
+   long_name = 'Assimilated value after climatological adjustment (scaling) of tb_v_obs for consistency with the land models seasonally varying mean brightness temperature climatology. Observed brightness temperatures that originate from 36 km L1C_TB files are posted at 9 km here for convenience (as average over fore and aft brightness temperature if stored separately in L1C_TB product). Output is only stored at times and locations for which input SMAP Level 1 or Level 2 data are assimilated. If more than one overpass occurs for a given grid cell within the assimilation window, the latest overpass time prevails.'
+   units = 'K'
+   valid_min = '100'
+   valid_max = '350' /
+
+ &element
+   name = 'tb_h_obs_errstd'
+   long_name = 'Observation error std-dev for tb_h_obs_scaled. Observed brightness temperatures that originate from 36 km L1C_TB files are posted at 9 km here for convenience (as average over fore and aft brightness temperature if stored separately in L1C_TB product). Output is only stored at times and locations for which input SMAP Level 1 or Level 2 data are assimilated. If more than one overpass occurs for a given grid cell within the assimilation window, the latest overpass time prevails.'
+   units = 'K'
+   valid_min = '0'
+   valid_max = '50' /
+
+ &element
+   name = 'tb_v_obs_errstd'
+   long_name = 'Observation error std-dev for tb_v_obs_scaled. Observed brightness temperatures that originate from 36 km L1C_TB files are posted at 9 km here for convenience (as average over fore and aft brightness temperature if stored separately in L1C_TB product). Output is only stored at times and locations for which input SMAP Level 1 or Level 2 data are assimilated. If more than one overpass occurs for a given grid cell within the assimilation window, the latest overpass time prevails.'
+   units = 'K'
+   valid_min = '0'
+   valid_max = '50' /
+
+ &group
+   name = 'Forecast_Data'
+   num_elements = 9 /
+
+ &element
+   name = 'tb_h_forecast'
+   long_name = 'Composite resolution Catchment model forecast 1.41 GHz H-pol brightness temperature. Model forecast brightness temperatures that correspond to 36 km observations from the L1C_TB product are aggregated from 9 km to 36 km and then posted at 9 km for convenience (Z-scores are computed after aggregation to 36 km). Output is only stored at times and locations for which input SMAP Level 1 or Level 2 data are assimilated. If more than one overpass occurs for a given grid cell within the assimilation window, the latest overpass time prevails.'
+   units = 'K'
+   valid_min = '100'
+   valid_max = '350' /
+
+ &element
+   name = 'tb_v_forecast'
+   long_name = 'Composite resolution Catchment model forecast 1.41 GHz V-pol brightness temperature. Model forecast brightness temperatures that correspond to 36 km observations from the L1C_TB product are aggregated from 9 km to 36 km and then posted at 9 km for convenience (Z-scores are computed after aggregation to 36 km). Output is only stored at times and locations for which input SMAP Level 1 or Level 2 data are assimilated. If more than one overpass occurs for a given grid cell within the assimilation window, the latest overpass time prevails.'
+   units = 'K'
+   valid_min = '100'
+   valid_max = '350' /
+
+ &element
+   name = 'tb_h_forecast_ensstd'
+   long_name = 'Uncertainty (ensemble std-dev) of tb_h_forecast. Model forecast brightness temperatures that correspond to 36 km observations from the L1C_TB product are aggregated from 9 km to 36 km and then posted at 9 km for convenience (Z-scores are computed after aggregation to 36 km). Output is only stored at times and locations for which input SMAP Level 1 or Level 2 data are assimilated. If more than one overpass occurs for a given grid cell within the assimilation window, the latest overpass time prevails.'
+   units = 'K'
+   valid_min = '0'
+   valid_max = '50' /
+
+ &element
+   name = 'tb_v_forecast_ensstd'
+   long_name = 'Uncertainty (ensemble std-dev) of tb_v_forecast. Model forecast brightness temperatures that correspond to 36 km observations from the L1C_TB product are aggregated from 9 km to 36 km and then posted at 9 km for convenience (Z-scores are computed after aggregation to 36 km). Output is only stored at times and locations for which input SMAP Level 1 or Level 2 data are assimilated. If more than one overpass occurs for a given grid cell within the assimilation window, the latest overpass time prevails.'
+   units = 'K'
+   valid_min = '0'
+   valid_max = '50' /
+
+ &element
+   name = 'sm_surface_wetness_forecast'
+   long_name = 'Catchment model forecast surface soil moisture (0-5 cm; wetness units)'
+   units = '1'
+   valid_min = '0'
+   valid_max = '1' /
+
+ &element
+   name = 'sm_rootzone_wetness_forecast'
+   long_name = 'Catchment model forecast root zone soil moisture (0-100 cm; wetness units)'
+   units = '1'
+   valid_min = '0'
+   valid_max = '1' /
+
+ &element
+   name = 'sm_profile_wetness_forecast'
+   long_name = 'Catchment model forecast total profile soil moisture (0 cm to model bedrock depth; wetness units)'
+   units = '1'
+   valid_min = '0'
+   valid_max = '1' /
+
+ &element
+   name = 'surface_temp_forecast'
+   long_name = 'Catchment model forecast surface temperature'
+   units = 'K'
+   valid_min = '180'
+   valid_max = '350' /
+
+ &element
+   name = 'soil_temp_layer1_forecast'
+   long_name = 'Catchment model forecast soil temperature in layer 1 of soil heat diffusion model'
+   units = 'K'
+   valid_min = '210'
+   valid_max = '340' /
+
+ &group
+   name = 'Analysis_Data'
+   num_elements = 10 /
+
+ &element
+   name = 'sm_surface_wetness_analysis'
+   long_name = 'Analysis surface soil moisture (0-5 cm; wetness units)'
+   units = '1'
+   valid_min = '0'
+   valid_max = '1' /
+
+ &element
+   name = 'sm_rootzone_wetness_analysis'
+   long_name = 'Analysis root zone soil moisture (0-100 cm; wetness units)'
+   units = '1'
+   valid_min = '0'
+   valid_max = '1' /
+
+ &element
+   name = 'sm_profile_wetness_analysis'
+   long_name = 'Analysis total profile soil moisture (0 cm to model bedrock depth; wetness units)'
+   units = '1'
+   valid_min = '0'
+   valid_max = '1' /
+
+ &element
+   name = 'surface_temp_analysis'
+   long_name = 'Analysis surface temperature'
+   units = 'K'
+   valid_min = '180'
+   valid_max = '350' /
+
+ &element
+   name = 'soil_temp_layer1_analysis'
+   long_name = 'Analysis soil temperature in layer 1 of soil heat diffusion model'
+   units = 'K'
+   valid_min = '210'
+   valid_max = '340' /
+
+ &element
+   name = 'sm_surface_wetness_analysis_ensstd'
+   long_name = 'Uncertainty of analysis surface soil moisture (0-5 cm; ensemble std-dev; wetness units)'
+   units = '1'
+   valid_min = '0'
+   valid_max = '1' /
+
+ &element
+   name = 'sm_rootzone_wetness_analysis_ensstd'
+   long_name = 'Uncertainty of analysis root zone soil moisture (0-100 cm; ensemble std-dev; wetness units)'
+   units = '1'
+   valid_min = '0'
+   valid_max = '1' /
+
+ &element
+   name = 'sm_profile_wetness_analysis_ensstd'
+   long_name = 'Uncertainty of analysis total profile soil moisture (0 cm to model bedrock depth; ensemble std-dev; wetness units)'
+   units = '1'
+   valid_min = '0'
+   valid_max = '1' /
+
+ &element
+   name = 'surface_temp_analysis_ensstd'
+   long_name = 'Uncertainty of analysis surface temperature (ensemble std-dev)'
+   units = 'K'
+   valid_min = '0'
+   valid_max = '50' /
+
+ &element
+   name = 'soil_temp_layer1_analysis_ensstd'
+   long_name = 'Uncertainty of analysis soil temperature in layer 1 of soil heat diffusion model (ensemble std-dev)'
+   units = 'K'
+   valid_min = '0'
+   valid_max = '50' /

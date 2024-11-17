@@ -1,0 +1,6 @@
+
+20210101 * -rf 3600 -define MIN_CRID=R17000
+
+20150331 20201231 -rf 300 -f -noHDF -noPost -define MIN_CRID=R17000
+
+20200801 * -define L4_SM_PRECIP_version=CPCUFLKG5FPv3 L4_SM_PRECIP_description="CPCU Corrected Precipitation (Version-3, FLK)" -define L4_SM_PRECIP_changeLog="Precipitation correction changed to first-look mode."

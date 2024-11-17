@@ -1,0 +1,609 @@
+ &meta
+   name = 'Metadata/DataQuality/TBH/Scope'
+   value = 'tb_h_obs|tb_h_forecast' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBH/CompletenessOmission/evaluationMethodType'
+   value = 'directInternal' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBH/CompletenessOmission/measureDescription'
+   value = 'Percent of land grid cells (excluding inland water and permanent ice) that lack geophysical data relative to the total number of land grid cells that fall within the global domain (excluding inland water and permanent ice).   Metadata values are computed by pooling data from all elements listed in scope.' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBH/CompletenessOmission/nameOfMeasure'
+   value = 'Percent of Missing Data' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBH/CompletenessOmission/value'
+   real_size = 32
+   value = '<TBH_OBS_COMPLETENESS_OMISSION>|<TBH_FC_COMPLETENESS_OMISSION>' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBH/CompletenessOmission/unitOfMeasure'
+   value = 'Percent' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBH/DomainConsistency/evaluationMethodType'
+   value = 'directInternal' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBH/DomainConsistency/measureDescription'
+   value = 'Percent of geophysical data that fall within a predefined acceptable range of measure.' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBH/DomainConsistency/nameOfMeasure'
+   value = 'Percent of geophysical data that are within the acceptable range.' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBH/DomainConsistency/value'
+   value = '100' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBH/DomainConsistency/unitOfMeasure'
+   value = 'Percent' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBV/Scope'
+   value = 'tb_v_obs|tb_v_forecast' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBV/CompletenessOmission/evaluationMethodType'
+   value = 'directInternal' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBV/CompletenessOmission/measureDescription'
+   value = 'Percent of land grid cells (excluding inland water and permanent ice) that lack geophysical data relative to the total number of land grid cells that fall within the global domain (excluding inland water and permanent ice).   Metadata values are computed by pooling data from all elements listed in scope.' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBV/CompletenessOmission/nameOfMeasure'
+   value = 'Percent of Missing Data' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBV/CompletenessOmission/value'
+   real_size = 32
+   value = '<TBV_OBS_COMPLETENESS_OMISSION>|<TBV_FC_COMPLETENESS_OMISSION>' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBV/CompletenessOmission/unitOfMeasure'
+   value = 'Percent' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBV/DomainConsistency/evaluationMethodType'
+   value = 'directInternal' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBV/DomainConsistency/measureDescription'
+   value = 'Percent of geophysical data that fall within a predefined acceptable range of measure.' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBV/DomainConsistency/nameOfMeasure'
+   value = 'Percent of geophysical data that are within the acceptable range.' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBV/DomainConsistency/value'
+   value = '100' /
+
+ &meta
+   name = 'Metadata/DataQuality/TBV/DomainConsistency/unitOfMeasure'
+   value = 'Percent' /
+
+ &meta
+   name = 'Metadata/DataQuality/FT/Scope'
+   value = 'freeze_thaw_fraction' /
+
+ &meta
+   name = 'Metadata/DataQuality/FT/CompletenessOmission/evaluationMethodType'
+   value = 'directInternal' /
+
+ &meta
+   name = 'Metadata/DataQuality/FT/CompletenessOmission/measureDescription'
+   value = 'Percent of land grid cells (excluding inland water and permanent ice) that lack geophysical data relative to the total number of land grid cells that fall within the global domain (excluding inland water and permanent ice).' /
+
+ &meta
+   name = 'Metadata/DataQuality/FT/CompletenessOmission/nameOfMeasure'
+   value = '0' /
+
+ &meta
+   name = 'Metadata/DataQuality/FT/CompletenessOmission/value'
+   value = '0' /
+
+ &meta
+   name = 'Metadata/DataQuality/FT/CompletenessOmission/unitOfMeasure'
+   value = 'Percent' /
+
+ &meta
+   name = 'Metadata/DataQuality/FT/DomainConsistency/evaluationMethodType'
+   value = 'directInternal' /
+
+ &meta
+   name = 'Metadata/DataQuality/FT/DomainConsistency/measureDescription'
+   value = 'Percent of geophysical data that fall within a predefined acceptable range of measure.' /
+
+ &meta
+   name = 'Metadata/DataQuality/FT/DomainConsistency/nameOfMeasure'
+   value = 'Percent of geophysical data that are within the acceptable range.' /
+
+ &meta
+   name = 'Metadata/DataQuality/FT/DomainConsistency/value'
+   value = '0' /
+
+ &meta
+   name = 'Metadata/DataQuality/FT/DomainConsistency/unitOfMeasure'
+   value = 'Percent' /
+
+ &meta
+   name = 'Metadata/Extent/description'
+   value = 'Global land excluding inland water and permanent ice.' /
+
+ &meta
+   name = 'Metadata/Extent/westBoundLongitude'
+   real_size = 32
+   value  = '-180' /
+
+ &meta
+   name = 'Metadata/Extent/eastBoundLongitude'
+   real_size = 32
+   value  = '180' /
+
+ &meta
+   name = 'Metadata/Extent/southBoundLatitude'
+   real_size = 32
+   value  = '-90' /
+
+ &meta
+   name = 'Metadata/Extent/northBoundLatitude'
+   real_size = 32
+   value  = '90' /
+
+ &meta
+   name = 'Metadata/Extent/rangeBeginningDateTime'
+   value = '<AUPrangeBeginningDateTime>' /
+
+ &meta
+   name = 'Metadata/Extent/rangeEndingDateTime'
+   value = '<AUPrangeEndingDateTime>' /
+
+ &meta
+   name = 'Metadata/ProcessStep/processor'
+   value = 'Soil Moisture Active Passive (SMAP) Mission Science Data System (SDS) Operations Facility' /
+
+ &meta
+   name = 'Metadata/ProcessStep/stepDateTime'
+   value = '<ProductionDateTime>' /
+
+ &meta
+   name = 'Metadata/ProcessStep/processDescription'
+   value = 'Assimilates Level 1 and Level 2 SMAP data into a global land surface model to generate spatially complete and temporally continuous estimates of soil moisture and associated land surface conditions.' /
+
+ &meta
+   name = 'Metadata/ProcessStep/documentation'
+   value = 'TBD' /
+
+ &meta
+   name = 'Metadata/ProcessStep/identifier'
+   value = 'L4_SM_SPS' /
+
+ &meta
+   name = 'Metadata/ProcessStep/runTimeParameters'
+   value = 'TBD' /
+
+ &meta
+   name = 'Metadata/ProcessStep/SWVersionID'
+   value = 'TBD' /
+
+ &meta
+   name = 'Metadata/ProcessStep/softwareDate'
+   value = 'TBD' /
+
+ &meta
+   name = 'Metadata/ProcessStep/softwareTitle'
+   value = 'Level 4 Surface and Root Zone Soil Moisture SPS' /
+
+ &meta
+   name = 'Metadata/ProcessStep/timeVariableEpoch'
+   value = 'J2000' /
+
+ &meta
+   name = 'Metadata/ProcessStep/epochJulianDate'
+   real_size = 32
+   value  = '2451545.00' /
+
+ &meta
+   name = 'Metadata/ProcessStep/epochUTCDate'
+   value = '2000-01-01T11:58:55.816Z' /
+
+ &meta
+   name = 'Metadata/ProcessStep/ATBDTitle'
+   value = 'Soil Moisture Active Passive (SMAP) Level 4 Surface and Root Zone Soil Moisture (L4_SM) Algorithm Theoretical Basis Document (ATBD)' /
+
+ &meta
+   name = 'Metadata/ProcessStep/ATBDDate'
+   value = 'TBD' /
+
+ &meta
+   name = 'Metadata/ProcessStep/ATBDVersion'
+   value = 'TBD' /
+
+ &meta
+   name = 'Metadata/ProcessStep/algorithmDescription'
+   value = 'The L4_SM algorithm is a customized, off-line (land-only) version of the ensemble-based NASA GEOS-5 land data assimilation system. It merges SMAP observations with estimates from a land surface model that is driven with observations-based precipitation forcing.' /
+
+ &meta
+   name = 'Metadata/ProcessStep/algorithmVersionID'
+   value = 'TBD' /
+
+ &meta
+   name = 'Metadata/Source/L1C_TB/description'
+   value = 'The SMAP Level 1C Brightness Temperature product, which contains the assimilated SMAP radiometer brightness temperatures on 36 km EASE-Grid 2.0.' /
+
+ &meta
+   name = 'Metadata/Source/L1C_TB/fileName'
+   value = '<SPL1CTB_fileName>' /
+
+ &meta
+   name = 'Metadata/Source/L1C_TB/creationDate'
+   value = '<SPL1CTB_creationDate>' /
+
+ &meta
+   name = 'Metadata/Source/L1C_TB/version'
+   value = '<SPL1CTB_version>' /
+
+ &meta
+   name = 'Metadata/Source/L1C_TB/identifier'
+   value = 'SPL1CTB' /
+
+ &meta
+   name = 'Metadata/Source/L1C_TB/DOI'
+   value = '<SPL1CTB_DOI>' /
+
+ &meta
+   name = 'Metadata/Source/L2_SM_AP/description'
+   value = 'The SMAP Level 2 Active/Passive Soil Moisture product which contains assimilated SMAP radiometer brightness temperatures downscaled to 9 km EASE-Grid 2.0 through combination with SMAP radar backscatter observations.' /
+
+ &meta
+   name = 'Metadata/Source/L2_SM_AP/fileName'
+   value = '<SPL2SMAP_fileName>' /
+
+ &meta
+   name = 'Metadata/Source/L2_SM_AP/creationDate'
+   value = '<SPL2SMAP_creationDate>' /
+
+ &meta
+   name = 'Metadata/Source/L2_SM_AP/version'
+   value = '<SPL2SMAP_version>' /
+
+ &meta
+   name = 'Metadata/Source/L2_SM_AP/identifier'
+   value = 'SPL2SMAP' /
+
+ &meta
+   name = 'Metadata/Source/L2_SM_AP/DOI'
+   value = '<SPL2SMAP_DOI>' /
+
+ &meta
+   name = 'Metadata/Source/L2_SM_A/description'
+   value = 'The SMAP Level 2 Active Soil Moisture product which contains the assimilated SMAP radar-based freeze-thaw indicator.' /
+
+ &meta
+   name = 'Metadata/Source/L2_SM_A/fileName'
+   value = '<SPL2SMA_fileName>' /
+
+ &meta
+   name = 'Metadata/Source/L2_SM_A/creationDate'
+   value = '<SPL2SMA_creationDate>' /
+
+ &meta
+   name = 'Metadata/Source/L2_SM_A/version'
+   value = '<SPL2SMA_version>' /
+
+ &meta
+   name = 'Metadata/Source/L2_SM_A/identifier'
+   value = 'SPL2SMA' /
+
+ &meta
+   name = 'Metadata/Source/L2_SM_A/DOI'
+   value = '<SPL2SMA_DOI>' /
+
+ &meta
+   name = 'Metadata/Source/GEOS5_lfo/description'
+   value = 'The surface meteorological data from the NASA GEOS-5 system that are used to force the land surface model component of the L4_SM algorithm.' /
+
+ &meta
+   name = 'Metadata/Source/GEOS5_lfo/fileName'
+   value = '<GEOS5_lfo_fileName>' /
+
+ &meta
+   name = 'Metadata/Source/GEOS5_lfo/creationDate'
+   value = '<GEOS5_lfo_creationDate>' /
+
+ &meta
+   name = 'Metadata/Source/GEOS5_lfo/version'
+   value = '<GEOS5_lfo_version>' /
+
+ &meta
+   name = 'Metadata/Source/GEOS5_lfo/identifier'
+   value = '<GEOS5LFO>' /
+
+ &meta
+   name = 'Metadata/Source/GEOS5_lfo/DOI'
+   value = '<GEOS5_lfo_DOI>' /
+
+ &meta
+   name = 'Metadata/Source/CPCU_Precipitation/description'
+   value = 'The gauge-based CPC Unified precipitation product that is used to correct the GEOS5 precipitation forcing.' /
+
+ &meta
+   name = 'Metadata/Source/CPCU_Precipitation/fileName'
+   value = '<CPCU_filename>' /
+
+ &meta
+   name = 'Metadata/Source/CPCU_Precipitation/creationDate'
+   value = '<CPCU_creationDate>' /
+
+ &meta
+   name = 'Metadata/Source/CPCU_Precipitation/version'
+   value = '<CPCU_version>' /
+
+ &meta
+   name = 'Metadata/Source/CPCU_Precipitation/identifier'
+   value = 'CPCU' /
+
+ &meta
+   name = 'Metadata/Source/CPCU_Precipitation/DOI'
+   value = '<CPCU_DOI>' /
+
+ &meta
+   name = 'Metadata/DataSetIdentification/creationDate'
+   value = '<SPL4SMAU_creationDate>' /
+
+ &meta
+   name = 'Metadata/DataSetIdentification/CompositeReleaseID'
+   value = '<SPL4SM_CRID>' /
+
+ &meta
+   name = 'Metadata/DataSetIdentification/fileName'
+   value = '<SPL4SMAU_fileName>' /
+
+ &meta
+   name = 'Metadata/DataSetIdentification/originatorOrganizationName'
+   value = 'NASA Global Modeling and Assimilation Office, Goddard Space Flight Center, Greenbelt, Maryland, USA' /
+
+ &meta
+   name = 'Metadata/DataSetIdentification/longName'
+   value = 'SMAP Level 4 Surface and Root Zone Soil Moisture AUP Collection' /
+
+ &meta
+   name = 'Metadata/DataSetIdentification/shortName'
+   value = 'SPL4SMAU' /
+
+ &meta
+   name = 'Metadata/DataSetIdentification/SMAPShortName'
+   value = 'L4_SM AUP Collection' /
+
+ &meta
+   name = 'Metadata/DataSetIdentification/abstract'
+   value = 'The SMAP L4_SM data product provides global, 3-hourly surface and root zone soil moisture at 9 km resolution.  The L4_SM data product consists of three Collections of data granules (or files): the geophysical data Collection (shortName=SPL4SMGP), the analysis update data Collection (shortName=SPL4SMAU), and the land-model-constants data Collection (shortName=SPL4SMLM).' /
+
+ &meta
+   name = 'Metadata/DataSetIdentification/characterSet'
+   value = 'utf8' /
+
+ &meta
+   name = 'Metadata/DataSetIdentification/credit'
+   value = 'The software that generates the L4_SM data product and the data system that automates its production were designed and implemented at the NASA Global Modeling and Assimilation Office, Goddard Space Flight Center, Greenbelt, Maryland, USA.' /
+
+ &meta
+   name = 'Metadata/DataSetIdentification/language'
+   value = 'eng' /
+
+ &meta
+   name = 'Metadata/DataSetIdentification/purpose'
+   value = 'The SMAP L4_SM data product provides spatially and temporally complete surface and root zone soil moisture information for science and applications users.' /
+
+ &meta
+   name = 'Metadata/DataSetIdentification/status'
+   value = '"on-going" ("completed" after final reprocessing)' /
+
+ &meta
+   name = 'Metadata/DataSetIdentification/topicCategoryCode'
+   value = 'geoscientificInformation' /
+
+ &meta
+   name = 'Metadata/DataSetIdentification/QACreationDate'
+   value = '<SPL4SMAU_QACreationDate>' /
+
+ &meta
+   name = 'Metadata/DataSetIdentification/QAFileName'
+   value = '<SPL4SMAU_QAFilename>' /
+
+ &meta
+   name = 'Metadata/DataSetIdentification/QAAbstract'
+   value = 'An ASCII product that contains statistical information on data product results.  These statistics enable data producers and users to assess the quality of the data in the data product granule.' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/revisionDate'
+   value = '<L4_SM_revisionDate>' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/VersionID'
+   value = '<L4_SM_VersionID>' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/CompositeReleaseID'
+   value = '<L4_SM_CompositeReleaseID>' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/longName'
+   value = 'SMAP Level 4 Surface and Root Zone Soil Moisture aup Collection' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/shortName'
+   value = 'SPL4SMAU' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/identifier_product_DOI'
+   value = '<L4_SM_identifier_product_DOI>' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/resourceProviderOrganizationName'
+   value = 'National Aeronautics and Space Administration' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/abstract'
+   value = 'The SMAP L4_SM data product provides global, 3-hourly surface and root zone soil moisture at 9 km resolution.  The L4_SM data product consists of three Collections of data granules (or files): the geophysical data Collection (shortName=SPL4SMGP), the analysis update data Collection (shortName=SPL4SMAU), and the land-model-constants data Collection (shortName=SPL4SMLM).' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/characterSet'
+   value = 'utf8' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/credit'
+   value = 'The software that generates the L4_SM data product and the data system that automates its production were designed and implemented at the NASA Global Modeling and Assimilation Office, Goddard Space Flight Center, Greenbelt, Maryland, USA.' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/language'
+   value = 'Eng' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/purpose'
+   value = 'The SMAP L4_SM data product provides spatially and temporally complete surface and root zone soil moisture information for science and applications users.' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/status'
+   value = '"on-going" ("completed" after final reprocessing)' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/topicCategoryCode'
+   value = 'geoscientificInformation' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/pointOfContact'
+   value = 'National Snow and Ice Data Center, Boulder, Colorado, USA.' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/PSDPublicationDate'
+   value = '<L4_SM_PSDPublicationDate>' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/PSDEdition'
+   value = '<L4_SM_PSDEdition>' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/PSDTitle'
+   value = 'Soil Moisture Active Passive Mission Level 4 Surface and Root Zone Soil Moisture (L4_SM) Product Specification Document' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/SMAPShortName'
+   value = 'L4_SM' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/mission'
+   value = 'Soil Moisture Active Passive (SMAP)' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/maintenanceAndUpdateFrequency'
+   value = 'As Needed' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/maintenanceDate'
+   value = '<L4_SM_maintenanceDate>' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/format'
+   value = 'HDF5' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/formatVersion'
+   value = '<HDF5_formatVersion>' /
+
+ &meta
+   name = 'Metadata/GridSpatialRepresentation/Latitude/dimensionSize'
+   uint_size = 32
+   value = '1624' /
+
+ &meta
+   name = 'Metadata/GridSpatialRepresentation/Latitude/resolution'
+   value = '9 km on average' /
+
+ &meta
+   name = 'Metadata/GridSpatialRepresentation/Longitude/dimensionSize'
+   uint_size = 32
+   value = '3856' /
+
+ &meta
+   name = 'Metadata/GridSpatialRepresentation/Longitude/resolution'
+   value = '9 km on average' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/platform/antennaRotationRate'
+   real_size = 32
+   value = '13' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/platform/description'
+   value = 'The SMAP observatory houses an L-band radiometer that operates at 1.4 GHz and an L-band radar that operates at 1.26-1.29 GHz.  The instruments share a rotating reflector antenna with a 6 meter aperture that scans over a 1000 km swath.  The bus is a 3 axis stabilized spacecraft that provides momentum compensation for the rotating antenna.' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/platform/identifier'
+   value = 'SMAP' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/platformDocument/publicationDate'
+   value = '<SMAP_platformDocument_publicationDate>' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/platformDocument/edition'
+   value = '<SMAP_platformDocument_edition>' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/platformDocument/title'
+   value = '<SMAP_platformDocument_title>' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radar/description'
+   value = 'The SMAP radar instrument employs an L-band conically scanned system and SAR processing techniques to achieve moderate resolution (1 km) backscatter measurements over a very wide 1000 km swath.' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radar/identifier'
+   value = 'SMAP SAR' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radar/type'
+   value = 'L-band Synthetic Aperture Radar' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radarDocument/publicationDate'
+   value = '<SMAP_radarDocument_publicationDate>' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radarDocument/edition'
+   value = '<SMAP_radarDocument_edition>' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radarDocument/title'
+   value = '<SMAP_radarDocument_title>' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radiometer/description'
+   value = 'The SMAP L-band Radiometer records V-pol, H-pol, 3rd and 4th Stokes brightness temperatures at 40 km resolution at 4.3 Megatbits per second with accuracies of 1.3 Kelvin or better.' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radiometer/identifier'
+   value = 'SMAP RAD' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radiometer/type'
+   value = 'L-band Radiometer' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radiometerDocument/publicationDate'
+   value = '<SMAP_radiometerDocument_publicationDate>' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radiometerDocument/edition'
+   value = '<SMAP_radiometerDocument_edition>' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radiometerDocument/title'
+   value = '<SMAP_radiometerDocument_title>' /

@@ -1,0 +1,15 @@
+
+dtr.pl SMAP_L4_C_ANC_MDL_LOG $1
+
+dtr.pl SMAP_L4_C_ANC_MDL_RIP $1
+
+dtr.pl SMAP_L4_C_ANC_MET $1
+
+dtr.pl SMAP_L4_C_ANC_MET_LOG $1
+
+dtr.pl SMAP_L4_C_ANC_MET_RIP $1
+
+dtr.pl SMAP_L4_C_ANC_MOD_LOG $1
+
+dtr.pl SMAP_L4_C_ANC_MOD_RIP $1
+

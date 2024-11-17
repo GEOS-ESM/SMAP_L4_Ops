@@ -1,0 +1,6 @@
+L4_SM_LFO_version = h5dump -a VersionID <GEOS5_lfo_FILE>
+L4_SM_PRECIP_version = h5dump -a VersionID <GEOS5_lfo_corr_FILE> | <L4_SM_PRECIP_version>
+<L4_SM_LFO_DOI> = h5dump -a DOI <GEOS5_lfo_FILE> | <L4_SM_LFO_DOI>
+<L4_SM_PRECIP_DOI> =  h5dump -a DOI <GEOS5_lfo_corr_FILE> | <L4_SM_PRECIP_DOI>
+L4_SM_gph_identifier_product_DOI = <L4_SM_gph_identifier_product_DOI>
+L4_SM_CLIM_version = <L4_SM_CLIM_version>

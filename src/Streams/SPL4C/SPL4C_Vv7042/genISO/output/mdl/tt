@@ -1,0 +1,4222 @@
+HDF5 "/discover/nobackup/projects/gmao/smap/SMAP_L4/L4_C/Vv6041/modis/Y2021/L4_C_mod_20210626T000000_Vv6041_001.h5" {
+GROUP "/" {
+   ATTRIBUTE "Comment" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 23;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "HDF-5 file format used"
+      }
+   }
+   ATTRIBUTE "Contact" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 24;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "http://www.ntsg.umt.edu"
+      }
+   }
+   ATTRIBUTE "Conventions" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 7;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "CF 1.x"
+      }
+   }
+   ATTRIBUTE "FPAR_COMPLETENESS_OMISSION" {
+      DATATYPE  H5T_IEEE_F32LE
+      DATASPACE  SIMPLE { ( 1 ) / ( 1 ) }
+      DATA {
+      (0): 0
+      }
+   }
+   ATTRIBUTE "FPAR_DOMAIN_CONSISTENCY" {
+      DATATYPE  H5T_IEEE_F32LE
+      DATASPACE  SIMPLE { ( 1 ) / ( 1 ) }
+      DATA {
+      (0): 0
+      }
+   }
+   ATTRIBUTE "Filename" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 109;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/L4_C/Vv6041/modis/Y2021/L4_C_mod_20210626T000000_Vv6041_001.h5"
+      }
+   }
+   ATTRIBUTE "GRANULE_NAME" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 109;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/L4_C/Vv6041/modis/Y2021/L4_C_mod_20210626T000000_Vv6041_001.h5"
+      }
+   }
+   ATTRIBUTE "History" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 29;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "file written by l4c_DAILY.ex"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_ANC" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 108;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/gpfsm/dnb05/projects/p51/Operations/SPL4C/SPL4C_Vv6041/import/ancillary/data/SMAP_L4_C_Ancillary_v7.4.1.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_001" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h00v08.001.2021185104049.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_002" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h00v09.001.2021185102440.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_003" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h00v10.001.2021185102517.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_004" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h01v07.001.2021185103337.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_005" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h01v08.001.2021185103513.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_006" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h01v09.001.2021185102518.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_007" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h01v10.001.2021185102838.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_008" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h01v11.001.2021185102503.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_009" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h02v06.001.2021185103504.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_010" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h02v08.001.2021185103101.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_011" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h02v09.001.2021185101600.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_012" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h02v10.001.2021185103908.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_013" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h02v11.001.2021185102946.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_014" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h03v06.001.2021185103753.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_015" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h03v07.001.2021185103312.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_016" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h03v09.001.2021185101808.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_017" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h03v10.001.2021185105006.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_018" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h03v11.001.2021185102648.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_019" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h04v09.001.2021185101848.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_020" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h04v10.001.2021185103645.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_021" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h04v11.001.2021185102526.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_022" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h05v10.001.2021185102022.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_023" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h05v11.001.2021185102913.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_024" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h05v13.001.2021185103312.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_025" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h06v03.001.2021185103432.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_026" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h06v11.001.2021185102429.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_027" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h07v03.001.2021185104007.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_028" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h07v05.001.2021185102915.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_029" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h07v06.001.2021185103007.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_030" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h07v07.001.2021185102234.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_031" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h08v03.001.2021185110142.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_032" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h08v04.001.2021185105410.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_033" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h08v05.001.2021185102914.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_034" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h08v06.001.2021185103923.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_035" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h08v07.001.2021185102925.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_036" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h08v08.001.2021185104755.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_037" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h08v09.001.2021185102004.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_038" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h08v11.001.2021185101700.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_039" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h09v02.001.2021185110919.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_040" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h09v03.001.2021185112115.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_041" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h09v04.001.2021185104208.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_042" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h09v05.001.2021185103042.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_043" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h09v06.001.2021185105030.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_044" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h09v07.001.2021185103108.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_045" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h09v08.001.2021185102355.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_046" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h09v09.001.2021185102040.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_047" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h10v02.001.2021185112700.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_048" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h10v03.001.2021185105338.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_049" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h10v04.001.2021185103303.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_050" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h10v05.001.2021185105124.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_051" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h10v06.001.2021185105526.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_052" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h10v07.001.2021185102215.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_053" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h10v08.001.2021185103541.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_054" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h10v09.001.2021185102839.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_055" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h10v10.001.2021185105016.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_056" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h10v11.001.2021185102624.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_057" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h11v02.001.2021185112720.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_058" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h11v03.001.2021185112108.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_059" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h11v04.001.2021185105240.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_060" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h11v05.001.2021185103517.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_061" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h11v06.001.2021185104532.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_062" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h11v07.001.2021185102608.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_063" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h11v08.001.2021185103015.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_064" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h11v09.001.2021185102104.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_065" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h11v10.001.2021185103934.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_066" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h11v11.001.2021185103854.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_067" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h11v12.001.2021185102728.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_068" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h12v01.001.2021185111731.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_069" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h12v02.001.2021185115000.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_070" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h12v03.001.2021185111230.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_071" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h12v04.001.2021185105216.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_072" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h12v05.001.2021185102908.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_073" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h12v07.001.2021185102036.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_074" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h12v08.001.2021185102446.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_075" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h12v09.001.2021185102953.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_076" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h12v10.001.2021185102529.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_077" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h12v11.001.2021185103213.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_078" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h12v12.001.2021185103332.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_079" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h12v13.001.2021185103734.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_080" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h13v01.001.2021185112457.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_081" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h13v02.001.2021185114240.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_082" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h13v03.001.2021185112421.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_083" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h13v04.001.2021185103844.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_084" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h13v08.001.2021185103818.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_085" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h13v09.001.2021185104802.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_086" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h13v10.001.2021185103125.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_087" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h13v11.001.2021185103137.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_088" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h13v12.001.2021185103231.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_089" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h13v13.001.2021185104840.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_090" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h13v14.001.2021185105252.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_091" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h14v01.001.2021185114128.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_092" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h14v02.001.2021185113131.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_093" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h14v03.001.2021185111635.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_094" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h14v04.001.2021185105421.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_095" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h14v09.001.2021185102948.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_096" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h14v10.001.2021185102647.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_097" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h14v11.001.2021185103954.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_098" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h14v14.001.2021185104955.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_099" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h15v01.001.2021185114329.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_100" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h15v02.001.2021185113255.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_101" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h15v03.001.2021185112127.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_102" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h15v05.001.2021185103206.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_103" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h15v07.001.2021185104531.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_104" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h15v11.001.2021185104140.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_105" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h15v14.001.2021185105147.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_106" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h16v01.001.2021185114610.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_107" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h16v02.001.2021185113413.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_108" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h16v05.001.2021185104005.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_109" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h16v06.001.2021185104112.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_110" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h16v07.001.2021185104432.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_111" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h16v08.001.2021185103914.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_112" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h16v09.001.2021185103753.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_113" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h16v12.001.2021185104031.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_114" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h16v14.001.2021185104644.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_115" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h17v01.001.2021185114335.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_116" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h17v02.001.2021185113248.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_117" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h17v03.001.2021185113211.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_118" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h17v04.001.2021185104421.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_119" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h17v05.001.2021185104406.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_120" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h17v06.001.2021185104715.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_121" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h17v07.001.2021185103709.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_122" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h17v08.001.2021185103347.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_123" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h17v10.001.2021185103232.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_124" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h17v12.001.2021185103804.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_125" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h17v13.001.2021185105347.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_126" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h18v01.001.2021185114301.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_127" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h18v02.001.2021185114417.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_128" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h18v03.001.2021185112114.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_129" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h18v04.001.2021185105727.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_130" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h18v05.001.2021185104934.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_131" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h18v06.001.2021185103142.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_132" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h18v07.001.2021185102116.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_133" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h18v08.001.2021185104844.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_134" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h18v09.001.2021185104911.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_135" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h18v14.001.2021185105654.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_136" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h19v01.001.2021185115148.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_137" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h19v02.001.2021185114139.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_138" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h19v03.001.2021185111740.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_139" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h19v04.001.2021185110659.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_140" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h19v05.001.2021185104958.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_141" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h19v06.001.2021185102249.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_142" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h19v07.001.2021185104055.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_143" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h19v08.001.2021185102441.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_144" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h19v09.001.2021185104054.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_145" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h19v10.001.2021185103552.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_146" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h19v11.001.2021185103300.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_147" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h19v12.001.2021185105023.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_148" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h20v01.001.2021185114038.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_149" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h20v02.001.2021185113928.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_150" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h20v03.001.2021185112106.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_151" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h20v04.001.2021185105036.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_152" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h20v05.001.2021185104725.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_153" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h20v06.001.2021185102805.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_154" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h20v07.001.2021185104911.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_155" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h20v08.001.2021185102934.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_156" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h20v09.001.2021185103715.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_157" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h20v10.001.2021185102918.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_158" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h20v11.001.2021185104113.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_159" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h20v12.001.2021185105219.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_160" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h20v13.001.2021185105044.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_161" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h21v01.001.2021185114418.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_162" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h21v02.001.2021185115616.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_163" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h21v03.001.2021185112317.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_164" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h21v04.001.2021185105739.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_165" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h21v05.001.2021185102917.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_166" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h21v06.001.2021185102134.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_167" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h21v07.001.2021185105043.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_168" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h21v08.001.2021185104056.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_169" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h21v09.001.2021185105017.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_170" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h21v10.001.2021185103253.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_171" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h21v11.001.2021185105143.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_172" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h21v13.001.2021185105713.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_173" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h22v01.001.2021185113146.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_174" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h22v02.001.2021185114049.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_175" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h22v03.001.2021185111310.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_176" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h22v04.001.2021185105744.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_177" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h22v05.001.2021185105530.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_178" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h22v06.001.2021185105003.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_179" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h22v07.001.2021185103900.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_180" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h22v08.001.2021185102536.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_181" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h22v09.001.2021185104110.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_182" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h22v10.001.2021185103836.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_183" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h22v11.001.2021185104754.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_184" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h22v13.001.2021185103836.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_185" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h22v14.001.2021185104818.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_186" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h23v01.001.2021185110708.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_187" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h23v02.001.2021185114151.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_188" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h23v03.001.2021185112119.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_189" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h23v04.001.2021185110619.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_190" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h23v05.001.2021185105917.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_191" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h23v06.001.2021185104052.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_192" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h23v07.001.2021185104650.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_193" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h23v08.001.2021185104029.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_194" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h23v09.001.2021185105118.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_195" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h23v10.001.2021185104746.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_196" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h23v11.001.2021185103833.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_197" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h24v02.001.2021185113826.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_198" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h24v03.001.2021185112127.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_199" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h24v04.001.2021185110556.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_200" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h24v05.001.2021185105133.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_201" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h24v06.001.2021185105119.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_202" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h24v07.001.2021185104939.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_203" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h24v12.001.2021185104727.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_204" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h25v02.001.2021185111514.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_205" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h25v03.001.2021185110331.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_206" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h25v04.001.2021185105730.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_207" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h25v05.001.2021185104810.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_208" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h25v06.001.2021185104701.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_209" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h25v07.001.2021185104831.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_210" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h25v08.001.2021185103352.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_211" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h25v09.001.2021185103122.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_212" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h26v02.001.2021185110514.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_213" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h26v03.001.2021185110452.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_214" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h26v04.001.2021185105731.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_215" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h26v05.001.2021185104736.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_216" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h26v06.001.2021185105026.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_217" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h26v07.001.2021185103928.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_218" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h26v08.001.2021185104254.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_219" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h27v03.001.2021185111513.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_220" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h27v04.001.2021185110824.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_221" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h27v05.001.2021185111812.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_222" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h27v06.001.2021185104955.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_223" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h27v07.001.2021185105127.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_224" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h27v08.001.2021185104845.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_225" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h27v09.001.2021185104737.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_226" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h27v10.001.2021185104846.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_227" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h27v11.001.2021185105147.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_228" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h27v12.001.2021185105702.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_229" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h27v14.001.2021185105520.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_230" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h28v03.001.2021185105958.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_231" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h28v04.001.2021185105723.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_232" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h28v05.001.2021185105140.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_233" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h28v06.001.2021185105215.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_234" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h28v07.001.2021185105801.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_235" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h28v08.001.2021185104320.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_236" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h28v09.001.2021185104215.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_237" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h28v10.001.2021185104757.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_238" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h28v11.001.2021185105530.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_239" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h28v12.001.2021185105615.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_240" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h28v13.001.2021185105723.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_241" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h28v14.001.2021185104928.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_242" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h29v03.001.2021185104641.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_243" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h29v05.001.2021185105133.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_244" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h29v06.001.2021185105813.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_245" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h29v07.001.2021185104909.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_246" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h29v08.001.2021185105619.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_247" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h29v09.001.2021185105518.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_248" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h29v10.001.2021185105812.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_249" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h29v11.001.2021185110023.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_250" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h29v12.001.2021185105931.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_251" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h29v13.001.2021185105817.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_252" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h30v05.001.2021185105705.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_253" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h30v06.001.2021185105211.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_254" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h30v07.001.2021185105211.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_255" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h30v08.001.2021185104908.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_256" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h30v09.001.2021185104152.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_257" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h30v10.001.2021185105716.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_258" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h30v11.001.2021185105759.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_259" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h30v12.001.2021185105656.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_260" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h30v13.001.2021185104745.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_261" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h31v06.001.2021185104930.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_262" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h31v07.001.2021185105133.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_263" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h31v08.001.2021185105642.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_264" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h31v09.001.2021185104622.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_265" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h31v10.001.2021185105835.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_266" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h31v11.001.2021185105757.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_267" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h31v12.001.2021185105158.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_268" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h31v13.001.2021185104237.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_269" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h32v07.001.2021185105456.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_270" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h32v08.001.2021185104508.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_271" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h32v09.001.2021185104150.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_272" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h32v10.001.2021185105641.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_273" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h32v11.001.2021185105716.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_274" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h32v12.001.2021185110605.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_275" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h33v07.001.2021185111057.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_276" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h33v08.001.2021185111110.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_277" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h33v09.001.2021185111110.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_278" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h33v10.001.2021185111341.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_279" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h33v11.001.2021185110633.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_280" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h34v07.001.2021185110727.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_281" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h34v08.001.2021185111045.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_282" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h34v09.001.2021185110721.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_283" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h34v10.001.2021185111212.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_284" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h35v08.001.2021185110658.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_285" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h35v09.001.2021185110706.h5"
+      }
+   }
+   ATTRIBUTE "INPUTPOINTER_FPAR_286" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 130;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/VIIRS/FPAR/VNP15A2H.001/Y2021/M06/D26/VNP15A2H.A2021177.h35v10.001.2021185110549.h5"
+      }
+   }
+   ATTRIBUTE "Institution" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 27;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "University of Montana NTSG"
+      }
+   }
+   ATTRIBUTE "L4CMOD_CRID" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 11;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "Vv60410001"
+      }
+   }
+   ATTRIBUTE "L4CMOD_DATASET_VERSION" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 6;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "7.4.1"
+      }
+   }
+   ATTRIBUTE "L4CMOD_DAY_OF_YEAR" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 4;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "181"
+      }
+   }
+   ATTRIBUTE "L4CMOD_HOST_PLATFORM" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 11;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "discover08"
+      }
+   }
+   ATTRIBUTE "L4CMOD_MODEL_YEAR" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 5;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "2021"
+      }
+   }
+   ATTRIBUTE "L4CMOD_OUTPUT_GRANULE" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 109;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "/discover/nobackup/projects/gmao/smap/SMAP_L4/L4_C/Vv6041/modis/Y2021/L4_C_mod_20210626T000000_Vv6041_001.h5"
+      }
+   }
+   ATTRIBUTE "L4CMOD_OUTPUT_GRANULE_UUID" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 37;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "a277a936-b811-4323-86f4-f19aecd37463"
+      }
+   }
+   ATTRIBUTE "L4CMOD_PRODUCTION_DATETIME" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 25;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "2021-12-03T03:20:15.000Z"
+      }
+   }
+   ATTRIBUTE "L4CMOD_PRODUCTION_LEVEL" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 14;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "delivery_cert"
+      }
+   }
+   ATTRIBUTE "L4CMOD_RUNTIME_INPUTS_USED" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 14;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "l4c_MODIS.rip"
+      }
+   }
+   ATTRIBUTE "L4CMOD_SW_VERSION" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 6;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "7.4.1"
+      }
+   }
+   ATTRIBUTE "L4CMOD_TASK_LABEL" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 34;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "L4CMOD-v7.2.3-2017-05-27T14:50:00"
+      }
+   }
+   ATTRIBUTE "L4C_SUBSYS_RELEASE" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 41;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "L4C_SUBSYSTEM-v7.4.0-2018-05-01T12:21:00"
+      }
+   }
+   ATTRIBUTE "L4MOD_SW_DATETIME" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 26;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "v7.3.0.2-2021-10-06T10:01"
+      }
+   }
+   ATTRIBUTE "L4_C_ATBD_DATE" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 13;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): ""2014-12-09""
+      }
+   }
+   ATTRIBUTE "L4_C_ATBD_VERSION" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 13;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): ""Revision-A""
+      }
+   }
+   ATTRIBUTE "L4_C_BPLUT_USED" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 13;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "NOT-YET-USED"
+      }
+   }
+   ATTRIBUTE "L4_C_COMPOSITE_PERIOD" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 2;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "0"
+      }
+   }
+   ATTRIBUTE "L4_C_MDL_DOI" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 21;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "10.5067/22TFAUSNLO9R"
+      }
+   }
+   ATTRIBUTE "L4_C_PSD_EDITION" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 6;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): ""2.0""
+      }
+   }
+   ATTRIBUTE "L4_C_SUBSYSTEM_RELEASE" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 41;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "L4C_SUBSYSTEM-v7.4.0-2018-05-01T12:21:00"
+      }
+   }
+   ATTRIBUTE "References" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 60;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "See NASA SMAP Level 4 Carbon Product Specification Document"
+      }
+   }
+   ATTRIBUTE "Source" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 6;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "VIIRS"
+      }
+   }
+   ATTRIBUTE "Title" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 70;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "NASA SMAP Level 4 Carbon (L4_C) daily global 9km data product granule"
+      }
+   }
+   ATTRIBUTE "YEARDAY" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 4;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+      (0): "181"
+      }
+   }
+   DATASET "cell_lat" {
+      DATATYPE  H5T_IEEE_F32LE
+      DATASPACE  SIMPLE { ( 14616, 34704 ) / ( 14616, 34704 ) }
+      ATTRIBUTE "longname" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 9;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "latitude"
+         }
+      }
+      ATTRIBUTE "shortname" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 9;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "cell_lat"
+         }
+      }
+      ATTRIBUTE "standard_name" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 9;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "cell_lat"
+         }
+      }
+      ATTRIBUTE "units" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 14;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "degrees_north"
+         }
+      }
+      ATTRIBUTE "valid_max" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 6;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "+89.9"
+         }
+      }
+      ATTRIBUTE "valid_min" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 6;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "-89.9"
+         }
+      }
+   }
+   DATASET "cell_lon" {
+      DATATYPE  H5T_IEEE_F32LE
+      DATASPACE  SIMPLE { ( 14616, 34704 ) / ( 14616, 34704 ) }
+      ATTRIBUTE "longname" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 9;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "longitude"
+         }
+      }
+      ATTRIBUTE "shortname" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 9;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "cell_lon"
+         }
+      }
+      ATTRIBUTE "standard_name" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 9;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "cell_lon"
+         }
+      }
+      ATTRIBUTE "units" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 13;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "degrees_east"
+         }
+      }
+      ATTRIBUTE "valid_max" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 7;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "+179.9"
+         }
+      }
+      ATTRIBUTE "valid_min" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 7;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "-179,9"
+         }
+      }
+   }
+   DATASET "fpar_M01" {
+      DATATYPE  H5T_STD_U8LE
+      DATASPACE  SIMPLE { ( 14616, 34704 ) / ( 14616, 34704 ) }
+      ATTRIBUTE "coordinates" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 18;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "cell_lat cell_lon"
+         }
+      }
+      ATTRIBUTE "fillvalue" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 4;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "255"
+         }
+      }
+      ATTRIBUTE "longname" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 9;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "fpar_M01"
+         }
+      }
+      ATTRIBUTE "missing_value" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 4;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "254"
+         }
+      }
+      ATTRIBUTE "shortname" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 9;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "fpar_M01"
+         }
+      }
+      ATTRIBUTE "standard_name" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 9;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "fpar_M01"
+         }
+      }
+      ATTRIBUTE "units" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 15;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "percent 0..100"
+         }
+      }
+      ATTRIBUTE "valid_max" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 4;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "100"
+         }
+      }
+      ATTRIBUTE "valid_min" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 2;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "0"
+         }
+      }
+   }
+   DATASET "fpar_qc_M01" {
+      DATATYPE  H5T_STD_U8LE
+      DATASPACE  SIMPLE { ( 14616, 34704 ) / ( 14616, 34704 ) }
+      ATTRIBUTE "coordinates" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 18;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "cell_lat cell_lon"
+         }
+      }
+      ATTRIBUTE "fillvalue" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 4;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "255"
+         }
+      }
+      ATTRIBUTE "longname" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 12;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "fpar_qc_M01"
+         }
+      }
+      ATTRIBUTE "missing_value" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 4;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "254"
+         }
+      }
+      ATTRIBUTE "shortname" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 12;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "fpar_qc_M01"
+         }
+      }
+      ATTRIBUTE "standard_name" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 12;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "fpar_qc_M01"
+         }
+      }
+      ATTRIBUTE "units" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 20;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "QC -- dimensionless"
+         }
+      }
+      ATTRIBUTE "valid_max" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 2;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "3"
+         }
+      }
+      ATTRIBUTE "valid_min" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 2;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+         (0): "0"
+         }
+      }
+   }
+}
+}

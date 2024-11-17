@@ -1,0 +1,5 @@
+1. Add null error handler function to ERROR::Handler for situations when the
+   constructor is invoked without specifying the handler.
+
+2. In getProd: need to resolve File_Local_Dir with the date/time from 
+   clock->method().

@@ -1,0 +1,9 @@
+#BEGIN GET_FILES processing for MODIS Terra FPAR
+
+FILE_TYPES  = MOLA
+
+FILE_MOLT_REMOTE = http://e4ftl01.cr.usgs.gov/MOLA/MYD15A2.005/%y4.%m2.%d2/MYD15A2.A%y4%j3.*.005.*.hdf
+FILE_MOLT_LOCAL  = /discover/nobackup/projects/gmao/smap/SMAP_L4/MODIS/FPAR/MYD15A2.005/Y%y4/M%m2/D%d2
+FILE_MOLT_ARCHIVE = /archive/u/dao_ops/SMAP_L4/MODIS/FPAR/MYD15A2.005/Y%y4/M%m2/D%d2
+
+#END GET_FILES processing

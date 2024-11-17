@@ -1,0 +1,390 @@
+# --------------------------------------------------------------------
+# file         : l4c_DAILY-2015-09-07.rip
+# purpose      : Provides runtime inputs for a single day's model run
+#                within a given calendar year
+# revised      : v7.0-2015-09-07T16:24:00, after smrz changs ingested, and
+#                to test newest L4CMET output, supporting GEOS5 3KM F/T and
+#                or 3KM Passive Radiometer driven F/T
+# history      : n/a
+# release_mode : production
+# platform     : NCCS discover
+# author       : joe glassy, Lupine Logic Inc.
+# notes        : for test-year-day 201 (July 20,2013)
+#
+# SOC and rolling Freeze/Thaw PROCESSING CALENDAR PROTOCOLS USED:
+#  opMode =0 adjusts JUST the curr_doy calendar tracking slot to 1. (default behavior)
+#     SOC and FT calendar mode (0) default, adjusts annual tracking 
+#     calender for current day only 
+#  opMode =1 forces a ZERO OUT of all day slots in calendar.
+#  opMode =2 adjusts all slots to 1 from beginning of year to curr_doy, inclusive.
+#
+# ------------- STANZA: ALL Baseline Run (Daily) RELATED INPUTS --------
+
+L4C_CRID = <L4_C_CompositeReleaseID>
+#
+L4C_SCIENCE_VERSION_ID = <L4_C_VersionID>
+# could improve by changing to match attribute name L4C_SW_VERSION
+L4C_SW_VERSION = <L4_C_algorithmVersionID>
+
+# Note: the dataset version is distinct from the version of the
+# the software that produces it.
+L4C_DATASET_VERSION  = <L4_C_VersionID>
+
+# This will normally be NCCS node "discoverNNN" in production etc
+# NOTE: deprecate and use live uname -a call instead
+L4C_PLATFORM = discover
+
+# The KEY element of the SUBSYS_RELEASE is the version family "v5" here
+# whereas the date is provided for context, and a time HH:MM:00 is optional
+L4C_SUBSYSTEM_RELEASE = L4_C_SUBSYSTEM_v7-2015-08-10T15:12:00-07:00
+
+# Release level {local|GMAO|production} indicates critical run context so be 
+#  sure to set this to something other than 'local' such as
+#  ("GMAO" or "production") for official GMAO production runs
+L4C_PRODUCTION_LEVEL  = GMAO
+
+# Define ATBD and Product Spec Document governing this run
+# which are written into /Metadata/Config group
+L4C_ATBD_VERSION  = <L4_C_ATBDVersion>
+L4C_ATBD_DATE     = <L4_C_ATBDDate>
+L4C_PSD_EDITION   = <L4_C_PSDEdition>
+L4C_PSD_PUBDATE   = <L4_C_PSDPublicationDate>
+
+#  Optional: Univ MT task-instance text label
+L4C_TASK_LABEL  = V7-FORK-L4CMDL-Delivery-2015-09-07T19:37:00jg
+L4C_TASK_UUID   = 0f312fde-55ca-11e5-9fb4-b7ac23a21e06
+
+# Univ MT parameter {ON|OFF} governs logging of each function's completion
+# This is ON for development era work, OFF for production
+L4C_ENABLE_COMPLETION_MSG  = OFF
+
+# choices: {YES,ON,ENABLE}|{NO,OFF,DISABLE} Used locally only, leave OFF for 
+# L4C_GRANULE_METRICS = OFF
+
+#  2014-09-27, added option to disable for testing
+#  If omitted, default is to ENABLE SOC UPDATES
+# choices: {YES,ON,ENABLE}|{NO,OFF,DISABLE}
+L4C_ENABLE_SOC_UPDATE = YES
+
+# For TCF compatibility, accepts a 'run-mode' identifier
+L4C_RUN_MODE = step_forward
+
+# Compression level used for datasets in HDF5 output file 
+L4C_COMPRESSION_LEVEL   = 3
+
+# Pixel step interval. MUST leave this at 1 for all production runs
+L4C_PIXEL_STEPINTERVAL = 1
+
+# SOC and FT calendar mode (0) default, adjusts annual tracking 
+# calender for current day only 
+L4C_CALENDAR_MODE          = 0
+
+# Valid choices for GPP_SOURCE are only {'FPAR'|'NDVI'}
+L4C_GPP_SOURCE  = <L4C_GPP_SOURCE>
+
+# Note: if the L4C_FT_SOURCE directive is present, it takes precedence
+#  over the algorithmic logic for selecting 
+# Note: L3_SM_A:surface_flag's 'tsurf' at bit 7 -reverify L3_SM_A_RADAR_FT at bit ?
+
+# NEW v7 FORK choices: 
+# Note that the L4CMET preprocessor assigns the FT_STATE_UM_M03 uint 3km
+#  raster using a F/T source directive in its RIP file. Use caution in
+#  overriding L4CMET's F/T source policy.
+# enum:(DoUseFT_ActiveRadar, DoUseFT_ActiveTsurf, DoUseFT_PassiveRadiom,DoUseFT_PassiveTsurf, DoUseFT_GEOS5, DoUse_NO_FT)
+# L4C_FT_SOURCE (String) Choices are: ("USE_RADAR_FT","USE_TSURF_FT","USE_GEOS5_FT","USE_PASSIVE_FT","USE_PASSIVE_TSURF_FT")
+L4C_FT_SOURCE  = USE_GEOS5_FT
+
+# For backward compatibility to tcf_spin v3.2's "CONT.taskId" and "CONT.nTasks"
+# Remember SUBTASK_ID is a base0 counter starting at 0, not 1!
+L4C_SUBTASK_ID = 0
+L4C_N_SUBTASKS = 1
+
+# Rootdir defined, but overriden to allow direct reads from pilv4 mirror
+L4C_INPUT_ROOTDIR = <L4C_INPUT_ROOTDIR>
+
+# ------------- STANZA: ALL ANCILLARY RELATED INPUTS HERE ---------------
+
+# read from text file for D5, migrates to HDF5 for production. 
+# Note: make SURE all NDVI triggers in BPLUT are set to FALSE 
+
+L4C_INPUT_BPLUT_PATH = <L4C_INPUT_BPLUT_PATH>
+L4C_INPUT_ANCILLARY_PATH = <L4C_INPUT_ANCILLARY_PATH>
+L4C_INPUT_SOC_PATH = <L4C_INPUT_SOC_PATH>
+L4C_INPUT_MET_PATH = <L4C_INPUT_MET_PATH>
+L4C_INPUT_FPAR_8DAY_PATH  = <L4C_INPUT_FPAR_8DAY_PATH>
+
+# We use the orig Fpar Climatology from v6 since this hasn't been updated.
+L4C_INPUT_FPAR_CLIMATOLOGY_PATH = <L4C_INPUT_FPAR_CLIMATOLOGY_PATH>
+
+# ------------- STANZA: OUTPUT FILE parameters -------------
+# Define the OUTPUT directory root
+L4C_OUTPUT_ROOTDIR           = <L4C_OUTPUT_ROOTDIR>
+L4C_OUTPUT_DAILY_LOG_ROOTDIR = <L4C_OUTPUT_DAILY_LOG_ROOTDIR>
+L4C_OUTPUT_DAILY_PATH = <L4C_OUTPUT_DAILY_PATH>
+
+# ------------- STANZA: HDF5 VALID MIN,MAX -------------
+# Define valid_min,valid_max attribute values for NEE, GPP, Rh, SOC [gC m-2 d-1]
+L4C_INPUT_NEE_VALID_MIN  =   -30.0
+L4C_INPUT_NEE_VALID_MAX  =    20.0
+L4C_INPUT_GPP_VALID_MIN  =     0.0
+L4C_INPUT_GPP_VALID_MAX  =    30.0
+L4C_INPUT_RH_VALID_MIN   =     0.0
+L4C_INPUT_RH_VALID_MAX   =    20.0
+L4C_INPUT_SOC_VALID_MIN  =     0.0
+L4C_INPUT_SOC_VALID_MAX  = 25000.0
+#   Define method thresholds [ % exceeded]
+L4C_INPUT_GPP_METHOD_THRESHOLD = 50.0 
+L4C_INPUT_NDVI_METHOD_THRESHOLD = 50.0 
+
+# ------------- STANZA: HDF5 DATASET NAMES -------------
+
+# Specifies the HDF5 dataset name of BPLUT ...from inside SMAP_L4_C_Ancillary.h5 
+# Currently BPLUT read direct from text file, so is NOT yet read from ancillary file
+L4C_INPUT_DATASET_BPLUT = bplut_table
+
+L4C_ANC_DATASET_LATITUDE_1KM_COORD  = SMAP_L4_C_LAT_14616_x_34704_M01_flt32
+L4C_ANC_DATASET_LONGITUDE_1KM_COORD = SMAP_L4_C_LON_14616_x_34704_M01_flt32
+#
+L4C_ANC_DATASET_LATITUDE_9KM_COORD  = SMAP_L4_C_LAT_1624_x_3856_M09_flt32
+L4C_ANC_DATASET_LONGITUDE_9KM_COORD = SMAP_L4_C_LON_1624_x_3856_M09_flt32
+#
+L4C_ANC_DATASET_TILE_ROW_M01        = tile_r_M01_1km_ease2_template_int16
+L4C_ANC_DATASET_TILE_COL_M01        = tile_c_M01_1km_ease2_template_int16
+L4C_ANC_DATASET_TILE_HORI_HH_M01    = tile_h_M01_1km_ease2_template_uint8
+L4C_ANC_DATASET_TILE_VERT_VV_M01    = tile_v_M01_1km_ease2_template_uint8
+L4C_ANC_DATASET_M09LAND_ROW_INDEX   = MCD12Q1_M09land_col_uint16
+L4C_ANC_DATASET_M09LAND_COL_INDEX   = MCD12Q1_M09land_row_uint16
+
+# SMAP_L4_C_Ancillary.h5 stores 1d-sparse vector form
+#   of custom pixel-filter for POINT subset use or
+#   custom continental cut-out jobs. Set to all '1' in production
+#   Although stored in both forms in Ancillary.h5, verify which
+#   of these is supported by the pre-processor.
+L4C_INPUT_DATASET_PIXELFILTER           = L4C_M01land_PixFilter_uint8
+
+L4C_INPUT_DATASET_FPAR              = fpar_M01
+L4C_INPUT_DATASET_FPAR_QC           = fpar_qc_M01
+#  added 5/16/2014
+L4C_INPUT_DATASET_NDVI              = ndvi_M01
+L4C_INPUT_DATASET_NDVI_QC           = ndvi_qc_M01
+#
+# SMAP_L4_C_SOC.h5 fully qualified dataset names
+# TBd: verify possible bug: SOC layers sometimes not found even though they
+# are exactly as stated in the /SOC group.
+
+L4C_INPUT_DATASET_SOC_C0                = SOC/SOC_C0_M01_0001103
+L4C_INPUT_DATASET_SOC_C1                = SOC/SOC_C1_M01_0001103
+L4C_INPUT_DATASET_SOC_C2                = SOC/SOC_C2_M01_0001103
+L4C_INPUT_DATASET_NPP_SUM               = SOC/tcf_npp_sum_M01
+L4C_INPUT_DATASET_FT_ROLLING            = FT_ROLLING_M03
+L4C_INPUT_DATASET_FT_ROLLING_AGE        = FT_ROLLING_AGE_M03
+
+L4C_INPUT_DATASET_SOILROOTZONE_M09_MIN  = smrz_min_sat_M09
+L4C_INPUT_DATASET_SOILROOTZONE_M09_MAX  = smrz_max_sat_M09
+# TBD consolidate usage of these above and below into one set of names
+L4C_INPUT_DATASET_GWETROOT_MIN          = smrz_min_sat_M09
+L4C_INPUT_DATASET_GWETROOT_MAX          = smrz_max_sat_M09
+
+# NEW v7 fork requires 3km F/T GEOS5, if 
+L4C_INPUT_DATASET_FT_STATE_UM_M03    = FT_STATE_UM_M03
+
+# NEW v7 fork supporting 9KM F/T GEOS5 or Passive radiometer F/T source
+L4C_INPUT_DATASET_FT_STATE_UM_M09    = FT_STATE_UM_M09
+
+L4C_INPUT_DATASET_QV2M_M09_AVG      = QV2M_M09_AVG
+L4C_INPUT_DATASET_RAD_SW_DOWN       = RADIATION_SHORTWAVE_DOWNWARD_FLUX
+L4C_INPUT_DATASET_SM_ROOTZONE_WETNESS = SM_ROOTZONE_WETNESS
+L4C_INPUT_DATASET_SM_SURFACE_WETNESS  = SM_SURFACE_WETNESS
+L4C_INPUT_DATASET_SOIL_TEMP_LAYER1  = SOIL_TEMP_LAYER1
+L4C_INPUT_DATASET_SURFACE_PRESSURE  = SURFACE_PRESSURE
+L4C_INPUT_DATASET_T2M_M09_AVG       = T2M_M09_AVG
+L4C_INPUT_DATASET_T2M_M09_MAX       = T2M_M09_MAX
+L4C_INPUT_DATASET_T2M_M09_MIN       = T2M_M09_MIN
+
+# Note VPD in future will be built into SMAP_L4_C_MET.h5 but for now
+# it is calculated in the pre-processor phase
+# L4C_INPUT_DATASET_VPD_AVG  = VPD
+
+# ------------- Dataset properties enabled here
+
+# will deprecate soon
+# ------------------------------------------------------------
+# HDF5 groups are: /NEE, /GPP, /NPP, /SOC, /RH, /EC, /GEO
+L4C_OUTPUT_DATASET_NEE_MEAN     = NEE/nee_mean
+L4C_OUTPUT_DATASET_NEE_STD_DEV      = NEE/nee_std_dev
+L4C_OUTPUT_DATASET_NEE_PFT1_MEAN    = NEE/nee_pft1_mean
+L4C_OUTPUT_DATASET_NEE_PFT2_MEAN    = NEE/nee_pft2_mean
+L4C_OUTPUT_DATASET_NEE_PFT3_MEAN    = NEE/nee_pft3_mean
+L4C_OUTPUT_DATASET_NEE_PFT4_MEAN    = NEE/nee_pft4_mean
+L4C_OUTPUT_DATASET_NEE_PFT5_MEAN    = NEE/nee_pft5_mean
+L4C_OUTPUT_DATASET_NEE_PFT6_MEAN    = NEE/nee_pft6_mean
+L4C_OUTPUT_DATASET_NEE_PFT7_MEAN    = NEE/nee_pft7_mean
+L4C_OUTPUT_DATASET_NEE_PFT8_MEAN    = NEE/nee_pft8_mean
+
+L4C_OUTPUT_DATASET_GPP_MEAN     = GPP/gpp_mean
+L4C_OUTPUT_DATASET_GPP_STD_DEV      = GPP/gpp_std_dev
+L4C_OUTPUT_DATASET_GPP_PFT1_MEAN    = GPP/gpp_pft1_mean
+L4C_OUTPUT_DATASET_GPP_PFT2_MEAN    = GPP/gpp_pft2_mean
+L4C_OUTPUT_DATASET_GPP_PFT3_MEAN    = GPP/gpp_pft3_mean
+L4C_OUTPUT_DATASET_GPP_PFT4_MEAN    = GPP/gpp_pft4_mean
+L4C_OUTPUT_DATASET_GPP_PFT5_MEAN    = GPP/gpp_pft5_mean
+L4C_OUTPUT_DATASET_GPP_PFT6_MEAN    = GPP/gpp_pft6_mean
+L4C_OUTPUT_DATASET_GPP_PFT7_MEAN    = GPP/gpp_pft7_mean
+L4C_OUTPUT_DATASET_GPP_PFT8_MEAN    = GPP/gpp_pft8_mean
+
+L4C_OUTPUT_DATASET_RH_MEAN      = RH/rh_mean
+L4C_OUTPUT_DATASET_RH_STD_DEV       = RH/rh_std_dev
+L4C_OUTPUT_DATASET_RH_MEAN_PFT1     = RH/rh_pft1_mean
+L4C_OUTPUT_DATASET_RH_MEAN_PFT2     = RH/rh_pft2_mean
+L4C_OUTPUT_DATASET_RH_MEAN_PFT3     = RH/rh_pft3_mean
+L4C_OUTPUT_DATASET_RH_MEAN_PFT4     = RH/rh_pft4_mean
+L4C_OUTPUT_DATASET_RH_MEAN_PFT5     = RH/rh_pft5_mean
+L4C_OUTPUT_DATASET_RH_MEAN_PFT6     = RH/rh_pft6_mean
+L4C_OUTPUT_DATASET_RH_MEAN_PFT7     = RH/rh_pft7_mean
+L4C_OUTPUT_DATASET_RH_MEAN_PFT8     = RH/rh_pft8_mean
+
+L4C_OUTPUT_DATASET_SOC_MEAN         = SOC/soc_mean
+L4C_OUTPUT_DATASET_SOC_STD_DEV      = SOC/soc_std_dev
+L4C_OUTPUT_DATASET_SOC_MEAN_PFT1    = SOC/soc_pft1_mean
+L4C_OUTPUT_DATASET_SOC_MEAN_PFT2    = SOC/soc_pft2_mean
+L4C_OUTPUT_DATASET_SOC_MEAN_PFT3    = SOC/soc_pft3_mean
+L4C_OUTPUT_DATASET_SOC_MEAN_PFT4    = SOC/soc_pft4_mean
+L4C_OUTPUT_DATASET_SOC_MEAN_PFT5    = SOC/soc_pft5_mean
+L4C_OUTPUT_DATASET_SOC_MEAN_PFT6    = SOC/soc_pft6_mean
+L4C_OUTPUT_DATASET_SOC_MEAN_PFT7    = SOC/soc_pft7_mean
+L4C_OUTPUT_DATASET_SOC_MEAN_PFT8    = SOC/soc_pft8_mean
+
+L4C_OUTPUT_DATASET_EC_FROZEN_AREA   = EC/frozen_area
+L4C_OUTPUT_DATASET_EC_EMULT_AV      = EC/emult_av
+L4C_OUTPUT_DATASET_EC_TMULT_AV      = EC/tmult_av
+L4C_OUTPUT_DATASET_EC_WMULT_AV      = EC/wmult_av
+
+L4C_OUTPUT_DATASET_GEO_LATITUDE     = GEO/latitude
+L4C_OUTPUT_DATASET_GEO_LONGITUDE    = GEO/longitude
+
+# enum:(IsPropertyName,IsPropertyDatatype,IsPropertyUnits,IsPropertyFillvalue,IsPropertyValidMin,IsPropertyValidMax,IsPropertyLongname)
+#              0                1                 2                3                   4                 5                  6
+# MDL output variable properties all use prefix: L4C_OUTPUT_VARIABLE_{UpperCaseName}
+# and where the {UpperCaseName} like "NEE_MEAN" below needs to exactly match the lower case name "nee_mean"
+#
+L4C_OUTPUT_VARIABLE_NEE_MEAN        = NEE/nee_mean,float32,gCm^2day^1,-9999.0,-30.0,20.0,Global daily 9km Net Ecosystem Exchange (mean).
+L4C_OUTPUT_VARIABLE_NEE_STD_DEV     = NEE/nee_std_dev,float32,gCm^2day^1,-9999.0,-30.0,20.0,Global daily 9km Net Ecosystem Exchange standard deviation.
+L4C_OUTPUT_VARIABLE_NEE_PFT1_MEAN   = NEE/nee_pft1_mean,float32,gCm^2day^1,-9999.0,-30.0,20.0,Global daily 9km Net ecosystem exchange mean for PFT 1.
+L4C_OUTPUT_VARIABLE_NEE_PFT2_MEAN   = NEE/nee_pft2_mean,float32,gCm^2day^1,-9999.0,-30.0,20.0,Global daily 9km Net ecosystem exchange mean for PFT 2.
+L4C_OUTPUT_VARIABLE_NEE_PFT3_MEAN   = NEE/nee_pft3_mean,float32,gCm^2day^1,-9999.0,-30.0,20.0,Global daily 9km Net ecosystem exchange mean for PFT 3.
+L4C_OUTPUT_VARIABLE_NEE_PFT4_MEAN   = NEE/nee_pft4_mean,float32,gCm^2day^1,-9999.0,-30.0,20.0,Global daily 9km Net ecosystem exchange mean for PFT 4.
+L4C_OUTPUT_VARIABLE_NEE_PFT5_MEAN   = NEE/nee_pft5_mean,float32,gCm^2day^1,-9999.0,-30.0,20.0,Global daily 9km Net ecosystem exchange mean for PFT 5.
+L4C_OUTPUT_VARIABLE_NEE_PFT6_MEAN   = NEE/nee_pft6_mean,float32,gCm^2day^1,-9999.0,-30.0,20.0,Global daily 9km Net ecosystem exchange mean for PFT 6.
+L4C_OUTPUT_VARIABLE_NEE_PFT7_MEAN   = NEE/nee_pft7_mean,float32,gCm^2day^1,-9999.0,-30.0,20.0,Global daily 9km Net ecosystem exchange mean for PFT 7.
+L4C_OUTPUT_VARIABLE_NEE_PFT8_MEAN   = NEE/nee_pft8_mean,float32,gCm^2day^1,-9999.0,-30.0,20.0,Global daily 9km Net ecosystem exchange mean for PFT 8.
+
+L4C_OUTPUT_VARIABLE_GPP_MEAN        = GPP/gpp_mean,float32,gCm^2day^1,-9999.0,0.0,30.0,Global daily 9km Gross Primary Productivity (GPP) mean.
+L4C_OUTPUT_VARIABLE_GPP_STD_DEV     = GPP/gpp_std_dev,float32,gCm^2day^1,-9999.0,0.0,30.0,Global daily 9km Gross Primary Productivity (GPP) standard deviation.
+L4C_OUTPUT_VARIABLE_GPP_PFT1_MEAN   = GPP/gpp_pft1_mean,float32,gCm^2day^1,-9999.0,0.0,30.0,Global daily 9km Gross Primary Productivity (GPP) mean for PFT 1.
+L4C_OUTPUT_VARIABLE_GPP_PFT2_MEAN   = GPP/gpp_pft2_mean,float32,gCm^2day^1,-9999.0,0.0,30.0,Global daily 9km Gross Primary Productivity (GPP) mean for PFT 2.
+L4C_OUTPUT_VARIABLE_GPP_PFT3_MEAN   = GPP/gpp_pft3_mean,float32,gCm^2day^1,-9999.0,0.0,30.0,Global daily 9km Gross Primary Productivity (GPP) mean for PFT 3.
+L4C_OUTPUT_VARIABLE_GPP_PFT4_MEAN   = GPP/gpp_pft4_mean,float32,gCm^2day^1,-9999.0,0.0,30.0,Global daily 9km Gross Primary Productivity (GPP) mean for PFT 4.
+L4C_OUTPUT_VARIABLE_GPP_PFT5_MEAN   = GPP/gpp_pft5_mean,float32,gCm^2day^1,-9999.0,0.0,30.0,Global daily 9km Gross Primary Productivity (GPP) mean for PFT 5.
+L4C_OUTPUT_VARIABLE_GPP_PFT6_MEAN   = GPP/gpp_pft6_mean,float32,gCm^2day^1,-9999.0,0.0,30.0,Global daily 9km Gross Primary Productivity (GPP) mean for PFT 6.
+L4C_OUTPUT_VARIABLE_GPP_PFT7_MEAN   = GPP/gpp_pft7_mean,float32,gCm^2day^1,-9999.0,0.0,30.0,Global daily 9km Gross Primary Productivity (GPP) mean for PFT 7.
+L4C_OUTPUT_VARIABLE_GPP_PFT8_MEAN   = GPP/gpp_pft8_mean,float32,gCm^2day^1,-9999.0,0.0,30.0,Global daily 9km Gross Primary Productivity (GPP) mean for PFT 8.
+
+L4C_OUTPUT_VARIABLE_RH_MEAN         = RH/rh_mean,float32,gCm^2day^1,-9999.0,0.0,20.0,Global daily 9km heterotrophic respiration mean.
+L4C_OUTPUT_VARIABLE_RH_STD_DEV      = RH/rh_std_dev,float32,gCm^2day^1,-9999.0,0.0,20.0,Global daily 9km heterotrophic respiration standard deviation.
+L4C_OUTPUT_VARIABLE_RH_PFT1_MEAN    = RH/rh_pft1_mean,float32,gCm^2day^1,-9999.0,0.0,20.0,Global daily 9km heterotrophic respiration mean for PFT 1.
+L4C_OUTPUT_VARIABLE_RH_PFT2_MEAN    = RH/rh_pft2_mean,float32,gCm^2day^1,-9999.0,0.0,20.0,Global daily 9km heterotrophic respiration mean for PFT 2.
+L4C_OUTPUT_VARIABLE_RH_PFT3_MEAN    = RH/rh_pft3_mean,float32,gCm^2day^1,-9999.0,0.0,20.0,Global daily 9km heterotrophic respiration mean for PFT 3.
+L4C_OUTPUT_VARIABLE_RH_PFT4_MEAN    = RH/rh_pft4_mean,float32,gCm^2day^1,-9999.0,0.0,20.0,Global daily 9km heterotrophic respiration mean for PFT 4.
+L4C_OUTPUT_VARIABLE_RH_PFT5_MEAN    = RH/rh_pft5_mean,float32,gCm^2day^1,-9999.0,0.0,20.0,Global daily 9km heterotrophic respiration mean for PFT 5.
+L4C_OUTPUT_VARIABLE_RH_PFT6_MEAN    = RH/rh_pft6_mean,float32,gCm^2day^1,-9999.0,0.0,20.0,Global daily 9km heterotrophic respiration mean for PFT 6.
+L4C_OUTPUT_VARIABLE_RH_PFT7_MEAN    = RH/rh_pft7_mean,float32,gCm^2day^1,-9999.0,0.0,20.0,Global daily 9km heterotrophic respiration mean for PFT 7.
+L4C_OUTPUT_VARIABLE_RH_PFT8_MEAN    = RH/rh_pft8_mean,float32,gCm^2day^1,-9999.0,0.0,20.0,Global daily 9km heterotrophic respiration mean for PFT 8.
+
+L4C_OUTPUT_VARIABLE_SOC_MEAN        = SOC/soc_mean,float32,gCm^2day^1,-9999.0,0.0,25000.0,Global daily 9km soil organic carbon mean.
+L4C_OUTPUT_VARIABLE_SOC_STD_DEV     = SOC/soc_std_dev,float32,gCm^2day^1,-9999.0,0.0,25000.0,Global daily 9km soil organic carbon standard deviation.
+L4C_OUTPUT_VARIABLE_SOC_PFT1_MEAN   = SOC/soc_pft1_mean,float32,gCm^2day^1,-9999.0,0.0,25000.0,Global daily 9km soil organic carbon mean for PFT 1.
+L4C_OUTPUT_VARIABLE_SOC_PFT2_MEAN   = SOC/soc_pft2_mean,float32,gCm^2day^1,-9999.0,0.0,25000.0,Global daily 9km soil organic carbon mean for PFT 2.
+L4C_OUTPUT_VARIABLE_SOC_PFT3_MEAN   = SOC/soc_pft3_mean,float32,gCm^2day^1,-9999.0,0.0,25000.0,Global daily 9km soil organic carbon mean for PFT 3.
+L4C_OUTPUT_VARIABLE_SOC_PFT4_MEAN   = SOC/soc_pft4_mean,float32,gCm^2day^1,-9999.0,0.0,25000.0,Global daily 9km soil organic carbon mean for PFT 4.
+L4C_OUTPUT_VARIABLE_SOC_PFT5_MEAN   = SOC/soc_pft5_mean,float32,gCm^2day^1,-9999.0,0.0,25000.0,Global daily 9km soil organic carbon mean for PFT 5.
+L4C_OUTPUT_VARIABLE_SOC_PFT6_MEAN   = SOC/soc_pft6_mean,float32,gCm^2day^1,-9999.0,0.0,25000.0,Global daily 9km soil organic carbon mean for PFT 6.
+L4C_OUTPUT_VARIABLE_SOC_PFT7_MEAN   = SOC/soc_pft7_mean,float32,gCm^2day^1,-9999.0,0.0,25000.0,Global daily 9km soil organic carbon mean for PFT 7.
+L4C_OUTPUT_VARIABLE_SOC_PFT8_MEAN   = SOC/soc_pft8_mean,float32,gCm^2day^1,-9999.0,0.0,25000.0,Global daily 9km soil organic carbon mean for PFT 8.
+
+L4C_OUTPUT_VARIABLE_FROZEN_AREA = EC/frozen_area,float32,percentage,-9999.0,0.0,100.0,Frozen area percentage (environmental-constraint).
+L4C_OUTPUT_VARIABLE_EMULT_AV    = EC/emult_av,float32,percentage,-9999.0,0.0,100.0,Environmental-constraint multiplier.
+L4C_OUTPUT_VARIABLE_TMULT_AV    = EC/tmult_av,float32,percentage,-9999.0,0.0,100.0,Environmental-constraint on temperature.
+L4C_OUTPUT_VARIABLE_WMULT_AV    = EC/wmult_av,float32,percentage,-9999.0,0.0,100.0,Environmental-constraint on moisture.
+
+# Store in MAIN L4_C HDF5 file, in its own /GEO/ HDF5 group
+L4C_OUTPUT_VARIABLE_LATITUDE    = GEO/latitude,float32,degrees_north,-9999.0,-89.999,89.999,Latitude (north..south) coordinates in decimal degrees.
+# TEMPORARY TEST: evaluate what happens with mistaken embedded spaces
+L4C_OUTPUT_VARIABLE_LONGITUDE   = GEO/longitude,float32,degrees_east,-9999.0,-179.99,179.99,Longitude (west..east) coordinates in decimal degrees.
+
+# ------------------------------------------------------------
+# QA: All these next are stored under HDF5 group /QA
+
+L4C_OUTPUT_VARIABLE_CARBON_MODEL_BITFLAG = carbon_model_bitflag,uint16,dimensionless,65534,0,65534,carbon model quality bitflags.
+# summarize the (10) fields embedded within the carbon model bitflags uuint16 word
+L4C_OUTPUT_VARIABLE_CARBON_MODEL_FLAG_MEANING = "1,2,3,4,5,6,7,8,9,10"
+
+# ft_state_um_m03 is read. verify if written back
+L4C_OUTPUT_VARIABLE_FT_STATE_UM_M03 = ft_state_um_m03,uint8,dimensionless,254,0,254,Freeze Thaw State stores 4 inherited bitflags from L3_SM_A surface_flag
+
+# QA properties all use prefix: L4C_OUTPUT_VARIABLE_QA_{name}
+L4C_OUTPUT_VARIABLE_CARBON_MODEL_QUAL_PFT1 = QA/carbon_model_qual_pft1,uint8,dimensionless,254,0,254,carbon model quality score (0 best,1,2,3 worst) for PFT 1
+L4C_OUTPUT_VARIABLE_CARBON_MODEL_QUAL_PFT2 = QA/carbon_model_qual_pft2,uint8,dimensionless,254,0,254,carbon model quality score (0 best,1,2,3 worst) for PFT 2
+L4C_OUTPUT_VARIABLE_CARBON_MODEL_QUAL_PFT3 = QA/carbon_model_qual_pft3,uint8,dimensionless,254,0,254,carbon model quality score (0 best,1,2,3 worst) for PFT 3
+L4C_OUTPUT_VARIABLE_CARBON_MODEL_QUAL_PFT4 = QA/carbon_model_qual_pft4,uint8,dimensionless,254,0,254,carbon model quality score (0 best,1,2,3 worst) for PFT 4
+L4C_OUTPUT_VARIABLE_CARBON_MODEL_QUAL_PFT5 = QA/carbon_model_qual_pft5,uint8,dimensionless,254,0,254,carbon model quality score (0 best,1,2,3 worst) for PFT 5
+L4C_OUTPUT_VARIABLE_CARBON_MODEL_QUAL_PFT6 = QA/carbon_model_qual_pft6,uint8,dimensionless,254,0,254,carbon model quality score (0 best,1,2,3 worst) for PFT 6
+L4C_OUTPUT_VARIABLE_CARBON_MODEL_QUAL_PFT7 = QA/carbon_model_qual_pft7,uint8,dimensionless,254,0,254,carbon model quality score (0 best,1,2,3 worst) for PFT 7
+L4C_OUTPUT_VARIABLE_CARBON_MODEL_QUAL_PFT8 = QA/carbon_model_qual_pft8,uint8,dimensionless,254,0,254,carbon model quality score (0 best,1,2,3 worst) for PFT 8
+
+# PSD v1.7+ 09/11/2014, updated QA properties
+L4C_OUTPUT_VARIABLE_QA_COUNT        = QA/qa_count,uint8,dimensionless,254,0,81,carbon model QA count 0 to 81 (overall).
+L4C_OUTPUT_VARIABLE_QA_COUNT_PFT1   = QA/qa_count_pft1,uint8,dimensionless,254,0,81,QA count for PFT 1.
+L4C_OUTPUT_VARIABLE_QA_COUNT_PFT2   = QA/qa_count_pft2,uint8,dimensionless,254,0,81,QA count for PFT 2.
+L4C_OUTPUT_VARIABLE_QA_COUNT_PFT3   = QA/qa_count_pft3,uint8,dimensionless,254,0,81,QA count for PFT 3.
+L4C_OUTPUT_VARIABLE_QA_COUNT_PFT4   = QA/qa_count_pft4,uint8,dimensionless,254,0,81,QA count for PFT 4.
+L4C_OUTPUT_VARIABLE_QA_COUNT_PFT5   = QA/qa_count_pft5,uint8,dimensionless,254,0,81,QA count for PFT 5.
+L4C_OUTPUT_VARIABLE_QA_COUNT_PFT6   = QA/qa_count_pft6,uint8,dimensionless,254,0,81,QA count for PFT 6.
+L4C_OUTPUT_VARIABLE_QA_COUNT_PFT7   = QA/qa_count_pft7,uint8,dimensionless,254,0,81,QA count for PFT 7.
+L4C_OUTPUT_VARIABLE_QA_COUNT_PFT8   = QA/qa_count_pft8,uint8,dimensionless,254,0,81,QA count for PFT 8.
+
+
+# ------------- STANZA: TCF SPIN specific RELATED INPUTS HERE ----------
+# ASSERT: all the "PATH" related variables here below are ignored as superceded
+# by the actual path related input, output name value pairs above. These are included
+# here as a temporary integration step that will soon be deprecated.
+#
+# PRIOR: this stanza was stored in glob_grid_params:
+# NOW   : stored in RunParamAdt --> runParamObj_p ...
+# Note that all "paths" below are being migrated out of RunParamAdt
+# and referenced via SesCtl instead
+Subset_name               = none
+Nsites                    = 0
+fpar_qa_year              = 2005
+# These next parameters ARE still stored in RunParamAdt
+prog_cnt_div              = 10
+spinup_max_iter           = 50
+spinup_stop_tol           = 1.0
+fparGain                  = 0.01
+fparOffset                = 0.0
+# define but use dummy values when not using NDVI
+ndviGain   = -9999.0
+ndviOffset = -9999.0
+#
+# ------------- STANZA: (Future) METADATA RELATED INPUTS --------------
+# TBD - this block is a placeholder in case we need to inherit any
+#     other relevant metadata from upstream products
+
+# ---------------------------------------------------------------------
+# GMAO Dynamically appended parameters go here at end of static section
+#
+# Define the current model day of year index {1..366} inclusive
+# April 13 is yead 103
+L4C_MODEL_YEARDAY       =  %j
+L4C_MODEL_PERIOD        =  <L4C_MODEL_PERIOD>
+L4C_MODEL_YEAR      = %Y
+# done

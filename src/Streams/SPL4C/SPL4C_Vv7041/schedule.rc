@@ -1,0 +1,8 @@
+
+20231101 * -rf 3600 -export
+
+20240601 20240608 -clim -f
+
+20240609 * -define L4_C_MODIS_version=VNP15A2H.002 -define L4_C_MODIS_changeLog="VIIRS FPAR Version Changed to VNP15A2H.002"
+
+20240625 20240702 -f

@@ -1,0 +1,135 @@
+
+! driver inputs for SMAP L4_SM Version 3 system
+!
+! reichle, 9 Feb 2017
+!
+! --------------------------------------------------------------------
+
+&driver_inputs			
+
+out_collection_ID = 6
+
+! integer time steps for output [seconds]
+
+out_dtstep%rstrt   =  86400    
+out_dtstep%xhourly =  10800 
+out_dtstep%inst    =  0
+
+! ensemble average output choices
+
+out_select_ensavg%tile%inst    = .false.
+out_select_ensavg%tile%xhourly = .true.
+out_select_ensavg%tile%daily   = .false.
+out_select_ensavg%tile%pentad  = .false.
+out_select_ensavg%tile%monthly = .false.
+
+out_select_ensavg%grid%inst    = .false.
+out_select_ensavg%grid%xhourly = .false.
+out_select_ensavg%grid%daily   = .false.
+out_select_ensavg%grid%pentad  = .false.
+out_select_ensavg%grid%monthly = .false.
+
+! ensemble spread output choices
+
+out_select_ensstd%tile%inst    = .false.
+out_select_ensstd%tile%xhourly = .false.
+out_select_ensstd%tile%daily   = .false.
+out_select_ensstd%tile%pentad  = .false.
+out_select_ensstd%tile%monthly = .false.
+
+out_select_ensstd%grid%inst    = .false.
+out_select_ensstd%grid%xhourly = .false.
+out_select_ensstd%grid%daily   = .false.
+out_select_ensstd%grid%pentad  = .false.
+out_select_ensstd%grid%monthly = .false.
+
+! "ensall" output choices
+! (output individual files for all ensemble members, formerly known as "plume")
+
+out_select_ensall%tile%inst    = .false.
+out_select_ensall%tile%xhourly = .false.
+out_select_ensall%tile%daily   = .false.
+out_select_ensall%tile%pentad  = .false.
+out_select_ensall%tile%monthly = .false.
+
+out_select_ensall%grid%inst    = .false.
+out_select_ensall%grid%xhourly = .false.
+out_select_ensall%grid%daily   = .false.
+out_select_ensall%grid%pentad  = .false.
+out_select_ensall%grid%monthly = .false.
+
+
+! ------------------------------------------------------------------
+!
+! spatial (horizontal) interpolation method for surface meteorological forcing data
+!		
+!   met_hinterp:   0 = nearest-neighbor
+!                  1 = bilinear           (*only* for GEOS-5, incl. MERRA[-Land]) 
+
+met_hinterp = 1
+
+
+! Use SWnet forcing to back out albedo instead of using MODIS-based albedo?
+! - Only works with GEOS forcing (e.g., MERRA, FP, FP-IT).
+! - Recommended setting is .false.  Set to .true. when LDASsa should replay land 
+!    within AGCM as closely as possible.  In the AGCM, the albedo is computed
+!    based on radiation bands (IR, VIS, UV).  LDASsa does not have this 
+!    breakdown and can therefore not reproduce the albedo components.  Using
+!    SWnet to back out the albedo ensures that the SWnet going into subroutine
+!    catchment() in LDASsa matches that in the AGCM (or DAS) run from which the
+!    forcing data were obtained. 
+! - NOTE: MERRA had a snow albedo bug in sibalb.  Earlier versions of LDASsa
+!         included a variable "ignore_SWnet_for_snow" which was meant to address 
+!         this bug but never worked as intended because of a bug in the LDASsa MPI 
+!         parallel implementation.
+
+alb_from_SWnet       = .false.
+
+
+! ------------------------------------------------------------------
+
+file_format_veg      = 1
+file_format_alb      = 1
+
+veg_path             = '<L4_SM_VEG_PATH>'
+alb_path             = '<L4_SM_ALB_PATH>'
+soil_path            = '<L4_SM_SOIL_PATH>'
+top_path             = '<L4_SM_TOP_PATH>'
+tile_coord_path      = '<L4_SM_TILE_PATH>'
+catchment_def_path   = '<L4_SM_CATCH_PATH>'
+
+mwRTM_param_path     = '<L4_SM_MWRTM_PARAM_PATH>'
+
+tile_coord_file      = 'SMAP_EASEv2_M09_3856x1624.til'
+catchment_def_file   = 'catchment.def'
+
+! ------------------------------------------------------------------
+
+! rectangular extremities of domain [lon=-180:180, lat=-90:90]
+
+minlon        = -180.           ! min longitude
+maxlon        =  180.           ! max longitude
+minlat        =  -90.           ! min latitude
+maxlat        =   90.           ! max latitude
+
+! black- and whitelist path and file names
+!
+! blacklist is kept in global file, whitelists in domain files
+
+black_path    = ''
+black_file    = ''
+		
+white_path    = ''
+white_file    = ''
+
+/
+
+! =============== EOF ===================================================
+
+      
+
+
+
+
+
+

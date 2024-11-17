@@ -1,0 +1,116 @@
+# ----------------------------------------------------------------------
+# file         : l4c_MODIS_New500m.rip
+# purpose      : Provides runtime inputs for a 8-day MODIS preprocessor run
+# revised      : v7.1.0-2017-03-20T17:26:00 add support for 500m res (2400x2400) and test on Yearday 337
+#                MODIS Collection 6 500m resolution FPAR tiles.
+# history      : Currently on v7.1 where Collection 6 500m is now supported
+# release_mode : production
+# platform     : NTSG stout.ntsg.umt.edu
+# author       : joe glassy, Lupine Logic Inc.
+# notes        : n/a
+# ------------- STANZA: ALL Baseline Run (Daily) RELATED INPUTS --------
+
+# Univ Montana L4C subsystem release (cert of interoperability) identifier
+L4C_SUBSYSTEM_RELEASE       = L4C_SUBSYSTEM-v7.3.0-2017-05-27T14:50:00
+L4C_SCIENCE_VERSION_ID      = <L4_C_VersionID>
+L4C_CRID                    = <L4_C_CompositeReleaseID>
+L4C_MODIS_SOFTWARE_VERSION  = 7.3.0
+L4C_SW_VERSION  = 7.3.0
+L4C_DATASET_VERSION   = 7.3.0
+
+# Define ATBD and Product Spec Document governing this run
+# which are written into /Metadata/Config group
+L4C_ATBD_VERSION  = "<L4_C_ATBDVersion>"
+L4C_ATBD_DATE     = "<L4_C_ATBDDate>"
+# L4_SM uses 'edition' for version and 'publication date' for date
+L4C_PSD_EDITION   = "<L4_C_PSDEdition>"
+L4C_PSD_PUBDATE   = "<L4_C_PSDPublicationDate>"
+
+L4C_MODIS_TASK_LABEL  = L4CMOD-v7.2.3-2017-05-27T14:50:00
+L4C_MODIS_TASK_UUID   = f382ec1e-10bc-11e7-b8f3-17a9d9ffce1c
+
+# DOI for L4CMDL is all we have for now if and until another is issued
+L4_C_MOD_DOI = <L4_C_identifier_product_DOI>
+
+# Run mode key to be supported in future, with values:{development|production}
+L4C_RUN_MODE  = delivery_cert
+
+# Choices are: FPAR|NDVI. If FPAR, gppMethodCode=1, or if NDVI, is 0
+#  and if NDVI must specify a collection of (286) L4C_INPUT_VIIRS_NDVI_GRANULE
+#  nvps below instead of the FPAR's 
+L4C_GPP_SOURCE  = <L4C_GPP_SOURCE>
+L4C_MODEL_YEAR  = %Y
+# Define the current model day of year index {1..366} inclusive
+L4C_MODEL_YEARDAY	= %j
+L4C_MODEL_PERIOD	= <L4C_MODEL_PERIOD>
+
+# Compression level used for datasets in HDF5 output file 
+L4C_COMPRESSION_LEVEL = 3
+
+# WARNING: this MUST be changed for 1km vs. 500
+L4C_FPAR_RESOLUTION_METERS = 500
+L4C_MODIS_GRID_NAME = MOD_Grid_MOD15A2H
+
+L4C_INPUT_MODIS_ANCILLARY_ROOTDIR = <L4C_INPUT_MODIS_ANCILLARY_ROOTDIR>
+L4C_INPUT_MODIS_ANCILLARY_PATH = <L4C_INPUT_MODIS_ANCILLARY_PATH>
+
+L4C_INPUT_MODIS_ROOTDIR = <L4C_INPUT_MODIS_ROOTDIR>
+
+# Remember: Fpar output is an INPUT for l4c_DAILY so put it there..
+L4C_OUTPUT_MODIS_ROOTDIR = <L4C_OUTPUT_MODIS_ROOTDIR>
+L4C_OUTPUT_LOG_ROOTDIR   = <L4C_OUTPUT_LOG_ROOTDIR>
+
+
+# Define l4c_MODIS.ex's primary OUTPUT file. Note that if 
+#   L4C_OUTPUT_MODIS_ROOTDIR is defined, it is prepended
+#   ahead of L4C_OUTPUT_MODIS_PATH. Also note that if requested, the code 
+#   will append a dayofyear {DDD=1..366} or a composite period index
+#   {PP=1..46} to this path name, just ahead of the .h5 extension.
+L4C_OUTPUT_MODIS_PATH    = <L4C_OUTPUT_MODIS_PATH>
+
+# <JMG> 2017-02-13T15:12:00
+# INPUT (scalar) input dataset names vary by resolution 1km vs 500
+L4C_INPUT_DATASET_MODIS_FPAR          = Fpar_500m
+L4C_INPUT_DATASET_MODIS_FPAR_QC       = FparLai_QC
+L4C_INPUT_DATASET_MODIS_FPAR_QC_EXTRA = FparExtra_QC
+
+# Alternative VARLIST method for listing a collection of INPUT variable names...
+L4C_INPUT_MODIS_VARLIST_FPAR = Fpar_500m
+L4C_INPUT_MODIS_VARLIST_FPAR = FparLai_QC
+L4C_INPUT_MODIS_VARLIST_NDVI = ndvi_1km
+L4C_INPUT_MODIS_VARLIST_NDVI = ndvi_qc
+
+# Known issue: embedded blanks in these NVPs not yet parsed correctl
+# so these are overriden inside the code as a temporary workaround
+L4C_INPUT_DATASET_VIIRS_NDVI     = 1km 16 days NDVI
+L4C_INPUT_DATASET_VIIRS_NDVI_QC  = 1km 16 days pixel reliability
+
+# Equivalent OUTPUT EASEGRID 1k global mosaic output dataset names
+L4C_OUTPUT_DATASET_MODIS_FPAR          = fpar_M01
+L4C_OUTPUT_DATASET_MODIS_FPAR_QC       = fpar_qc_M01
+# L4C_OUTPUT_DATASET_MODIS_FPAR_QC_EXTRA = fpar_extra_qc_M01
+L4C_OUTPUT_DATASET_VIIRS_NDVI          = ndvi_M01
+L4C_OUTPUT_DATASET_VIIRS_NDVI_QC       = ndvi_qc_M01
+
+# ANCILLARY -- standard set of ancillary symbols
+#  PFT mask 9km image and friends
+
+L4C_ANC_DATASET_PFT_M09_MASK =  MCD12Q1_M09_lc_mask_uint8
+
+L4C_ANC_DATASET_LATITUDE_1KM_COORD  = SMAP_L4_C_LAT_14616_x_34704_M01_flt32
+L4C_ANC_DATASET_LONGITUDE_1KM_COORD = SMAP_L4_C_LON_14616_x_34704_M01_flt32
+
+L4C_ANC_DATASET_TILE_ROW_M01     = tile_r_M01_1km_ease2_template_int16
+L4C_ANC_DATASET_TILE_COL_M01     = tile_c_M01_1km_ease2_template_int16
+L4C_ANC_DATASET_TILE_HORI_HH_M01 = tile_h_M01_1km_ease2_template_uint8
+L4C_ANC_DATASET_TILE_VERT_VV_M01 = tile_v_M01_1km_ease2_template_uint8
+
+# 1D indirection indices for 9km row,col
+L4C_ANC_DATASET_M09LAND_ROW_INDEX = MCD12Q1_M09land_col_uint16
+L4C_ANC_DATASET_M09LAND_COL_INDEX = MCD12Q1_M09land_row_uint16
+
+# Define the 286 (or n. available) Sinusoidal FPAR 8-day tiles 
+#   corresponding to this model year and model day-of-year
+L4C_INPUT_MODIS_FPAR_GRANULE = <L4C_INPUT_MODIS_FPAR_GRANULE>
+ 
+# done

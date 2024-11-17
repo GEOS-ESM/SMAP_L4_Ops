@@ -1,0 +1,18 @@
+<GranuleMetaDataFile>
+    <GranuleURMetaData>
+        <CollectionMetaData>
+            <ShortName>SMAP_L4_C_ANC_FPAR_CLIM</ShortName>
+            <VersionID>1</VersionID>
+        </CollectionMetaData>
+        <ECSDataGranule>
+            <LocalGranuleID>SPL4C_Vv5022_SMAP_L4_C.FparClimatology.h5</LocalGranuleID>
+            <ProductionDateTime>2017-06-26 19:22:39.000</ProductionDateTime>
+        </ECSDataGranule>
+        <RangeDateTime>
+            <RangeEndingTime>23:59:59.999999</RangeEndingTime>
+            <RangeEndingDate>2017-06-30</RangeEndingDate>
+            <RangeBeginningTime>00:00:00.000000</RangeBeginningTime>
+            <RangeBeginningDate>2015-03-31</RangeBeginningDate>
+        </RangeDateTime>
+    </GranuleURMetaData>
+</GranuleMetaDataFile>

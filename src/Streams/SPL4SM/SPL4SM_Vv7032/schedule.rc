@@ -1,0 +1,7 @@
+20150331 * -rf 3600 -define MIN_CRID=R17000
+
+20210930 20220508 -define L4_SM_PRECIP_version=CPCUFLK_IMERGLateV06b_fp_v1 -define L4_SM_PRECIP_changeLog="Precipitation correction changed to first-look mode."
+
+20220509 * -define L4_SM_PRECIP_version=CPCUFLK_IMERGLateV06c_fp_v1 -define L4_SM_PRECIP_changeLog="IMERG Late Version Changed to V06C"
+
+20220806 20220814 -f

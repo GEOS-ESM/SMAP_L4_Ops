@@ -1,0 +1,659 @@
+ &meta
+   name = 'Metadata/DataQuality/L4_C/Scope'
+   value = 'nee' /
+
+ &meta
+   name = 'Metadata/DataQuality/L4_C/CompletenessOmission/evaluationMethodType'
+   value = 'directInternal' /
+
+ &meta
+   name = 'Metadata/DataQuality/L4_C/CompletenessOmission/measureDescription'
+   value = 'Percent of land grid cells (excluding inland water and permanent ice) that lack geophysical data relative to the total number of land grid cells that fall within the global domain (excluding inland water and permanent ice). Metadata values are computed by pooling data from all elements listed in scope.' /
+
+ &meta
+   name = 'Metadata/DataQuality/L4_C/CompletenessOmission/nameOfMeasure'
+   value = 'Percent of Missing Data' /
+
+ &meta
+   name = 'Metadata/DataQuality/L4_C/CompletenessOmission/value'
+   value = '<NEE_COMPLETENESS_OMISSION>' /
+
+ &meta
+   name = 'Metadata/DataQuality/L4_C/CompletenessOmission/unitOfMeasure'
+   value = 'Percent' /
+
+ &meta
+   name = 'Metadata/DataQuality/L4_C/DomainConsistency/evaluationMethodType'
+   value = 'directInternal' /
+
+ &meta
+   name = 'Metadata/DataQuality/L4_C/DomainConsistency/measureDescription'
+   value = 'Percent of L4_C modeled data that fall within a predefined acceptable range of measure.' /
+
+ &meta
+   name = 'Metadata/DataQuality/L4_C/DomainConsistency/nameOfMeasure'
+   value = 'Percent of L4_C modeled data that are within the acceptable range.' /
+
+ &meta
+   name = 'Metadata/DataQuality/L4_C/DomainConsistency/value'
+   value = '<NEE_DOMAIN_CONSISTENCY>' /
+
+ &meta
+   name = 'Metadata/DataQuality/L4_C/DomainConsistency/unitOfMeasure'
+   value = 'Percent' /
+
+ &meta
+   name = 'Metadata/Extent/description'
+   value = 'Global land excluding inland water and permanent ice.' /
+
+ &meta
+   name = 'Metadata/Extent/westBoundLongitude'
+   real_size = 32
+   value  = '-180' /
+
+ &meta
+   name = 'Metadata/Extent/eastBoundLongitude'
+   real_size = 32
+   value  = '180' /
+
+ &meta
+   name = 'Metadata/Extent/southBoundLatitude'
+   real_size = 32
+   value  = '-85.0445664' /
+
+ &meta
+   name = 'Metadata/Extent/northBoundLatitude'
+   real_size = 32
+   value  = '85.0445664' /
+
+ &meta
+   name = 'Metadata/Extent/rangeBeginningDateTime'
+   value = '<SPL4CMDL_rangeBeginningDateTime>' /
+
+ &meta
+   name = 'Metadata/Extent/rangeEndingDateTime'
+   value = '<SPL4CMDL_rangeEndingDateTime>' /
+
+ &meta
+   name = 'Metadata/ProcessStep/processor'
+   value = 'Soil Moisture Active Passive (SMAP) Mission Science Data System (SDS) Operations Facility' /
+
+ &meta
+   name = 'Metadata/ProcessStep/stepDateTime'
+   value = '<SPL4CMDL_stepDateTime>' /
+
+ &meta
+   name = 'Metadata/ProcessStep/processDescription'
+   value = 'L4_C models FPAR 8-DAY composite, GEOS5-FP, and SMAP L4_SM and L3_SM_A data within a global carbon model to generate spatially complete and temporally continuous estimates of NEE (net ecosystem exchange), GPP, Rh, SOC and associated ecosystem variables at 9km.' /
+
+ &meta
+   name = 'Metadata/ProcessStep/documentation'
+   value = '<L4_C_documentation>' /
+
+ &meta
+   name = 'Metadata/ProcessStep/identifier'
+   value = 'L4_C_SPS' /
+
+ &meta
+   name = 'Metadata/ProcessStep/runTimeParameters'
+   value = '<L4_C_runTimeParameters>' /
+
+ &meta
+   name = 'Metadata/ProcessStep/SWVersionID'
+   value = '<L4_C_SWVersionID>' /
+
+ &meta
+   name = 'Metadata/ProcessStep/softwareDate'
+   value = '<L4_C_softwareDate>' /
+
+ &meta
+   name = 'Metadata/ProcessStep/softwareTitle'
+   value = 'Level 4 Carbon Flux SPS' /
+
+ &meta
+   name = 'Metadata/ProcessStep/timeVariableEpoch'
+   value = 'J2000' /
+
+ &meta
+   name = 'Metadata/ProcessStep/epochJulianDate'
+   real_size = 32
+   value  = '2451545.00' /
+
+ &meta
+   name = 'Metadata/ProcessStep/epochUTCDate'
+   value = '2000-01-01T11:58:55.816Z' /
+
+ &meta
+   name = 'Metadata/ProcessStep/ATBDTitle'
+   value = 'Soil Moisture Active Passive (SMAP) Level 4 Carbon (L4_C) Algorithm Theoretical Basis Document (ATBD)' /
+
+ &meta
+   name = 'Metadata/ProcessStep/ATBDDate'
+   value = '<L4_C_ATBDDate>' /
+
+ &meta
+   name = 'Metadata/ProcessStep/ATBDVersion'
+   value = '<L4_C_ATBDVersion>' /
+
+ &meta
+   name = 'Metadata/ProcessStep/algorithmDescription'
+   value = 'The SMAP L4_C global daily algorithm provides spatially and temporally complete net ecosystem exchange (NEE), gross primary productivity (GPP), heterotrophic respiration (Rh), Soil Organic Carbon (SOC), and related variables at 9km for science and applications users.' /
+
+ &meta
+   name = 'Metadata/ProcessStep/algorithmVersionID'
+   value = '<L4_C_algorithmVersionID>' /
+
+ &meta
+   name = 'Metadata/Source/GEOS5_lfo/description'
+   value = 'The observation-corrected surface meteorological data from the NASA GEOS-5 system. Precipitation corrected using the gauge-based NOAA Climate Prediction Center Unified precipitation product.' /
+
+ &meta
+   name = 'Metadata/Source/GEOS5_lfo/fileName'
+   value = '<GEOS5LFO_fileName>' /
+
+ &meta
+   name = 'Metadata/Source/GEOS5_lfo/creationDate'
+   value = '<GEOS5LFO_creationDate>' /
+
+ &meta
+   name = 'Metadata/Source/GEOS5_lfo/version'
+   value = '<GEOS5LFO_version>' /
+
+ &meta
+   name = 'Metadata/Source/GEOS5_lfo/identifier'
+   value = 'GEOS5LFO' /
+
+ &meta
+   name = 'Metadata/Source/GEOS5_lfo/DOI'
+   value = '<GEOS5LFO_DOI>' /
+
+ &meta
+   name = 'Metadata/Source/L4_SM_GPH/description'
+   value = 'The SMAP Level 4 Soil Moisture Geophysical product, which contains soil moisture and temperature fields derived from the assimilation of SMAP Level 1 and 2 products.' /
+
+ &meta
+   name = 'Metadata/Source/L4_SM_GPH/fileName'
+   value = '<SPL4SMGP_fileName>' /
+
+ &meta
+   name = 'Metadata/Source/L4_SM_GPH/creationDate'
+   value = '<SPL4SMGP_creationDate>' /
+
+ &meta
+   name = 'Metadata/Source/L4_SM_GPH/version'
+   value = '<SPL4SMGP_version>' /
+
+ &meta
+   name = 'Metadata/Source/L4_SM_GPH/identifier'
+   value = 'SPL4SMGP' /
+
+ &meta
+   name = 'Metadata/Source/L4_SM_GPH/DOI'
+   value = '<SPL4SMGP_DOI>' /
+
+ &meta
+   name = 'Metadata/Source/L3_SM_A/description'
+   value = 'The SMAP L3_SM_A product provides a daily composite of soil moisture estimates based on radar backscatter measurements acquired by the SMAP radar during descending half-orbits at approximately 6 AM local solar time.' /
+
+ &meta
+   name = 'Metadata/Source/L3_SM_A/fileName'
+   value = '<SPL3SMA_fileName>' /
+
+ &meta
+   name = 'Metadata/Source/L3_SM_A/creationDate'
+   value = '<SPL3SMA_creationDate>' /
+
+ &meta
+   name = 'Metadata/Source/L3_SM_A/version'
+   value = '<SPL3SMA_version>' /
+
+ &meta
+   name = 'Metadata/Source/L3_SM_A/identifier'
+   value = 'SPL3SMA' /
+
+ &meta
+   name = 'Metadata/Source/L3_SM_A/DOI'
+   value = '<SPL3SMA_DOI>' /
+
+ &meta
+   name = 'Metadata/Source/MODIS_FPAR/description'
+   value = 'MODIS FPAR 8-day (MOD15A2)' /
+
+ &meta
+   name = 'Metadata/Source/MODIS_FPAR/fileName'
+   value = '<MODFPAR_fileName>' /
+
+ &meta
+   name = 'Metadata/Source/MODIS_FPAR/creationDate'
+   value = '<MODFPAR_creationDate>' /
+
+ &meta
+   name = 'Metadata/Source/MODIS_FPAR/version'
+   value = '<MODFPAR_version>' /
+
+ &meta
+   name = 'Metadata/Source/MODIS_FPAR/identifier'
+   value = 'MODFPAR' /
+
+ &meta
+   name = 'Metadata/Source/MODIS_FPAR/DOI'
+   value = '<MODFPAR_DOI>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_MDL/description'
+   value = 'The carbon model (l4c_daily) native output granule.' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_MDL/fileName'
+   value = '<L4CMDL_fileName>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_MDL/creationDate'
+   value = '<L4CMDL_creationDate>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_MDL/version'
+   value = '<L4CMDL_version>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_MDL/identifier'
+   value = 'L4CMDL' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_MDL/DOI'
+   value = '<L4CMDL_DOI>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_MET/description'
+   value = 'The ancillary input file generated by the L4_C Meteorology preprocessor.' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_MET/fileName'
+   value = '<L4CMET_fileName>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_MET/creationDate'
+   value = '<L4CMET_creationDate>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_MET/version'
+   value = '<L4CMET_version>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_MET/identifier'
+   value = 'L4CMET' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_MET/DOI'
+   value = '<L4CMET_DOI>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_MOD/description'
+   value = 'The ancillary input file generated by the L4_C MODIS preprocessor.' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_MOD/fileName'
+   value = '<L4CMOD_fileName>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_MOD/creationDate'
+   value = '<L4CMOD_creationDate>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_MOD/version'
+   value = '<L4CMOD_version>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_MOD/identifier'
+   value = 'L4CMOD' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_MOD/DOI'
+   value = '<L4CMOD_DOI>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_SOC/description'
+   value = 'The carbon model restart file containing soil organic carbon.' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_SOC/fileName'
+   value = '<L4CSOC_fileName>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_SOC/creationDate'
+   value = '<L4CSOC_creationDate>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_SOC/version'
+   value = '<L4CSOC_version>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_SOC/identifier'
+   value = 'L4CSOC' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_SOC/DOI'
+   value = '<L4CSOC_DOI>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_ANC/description'
+   value = 'The carbon model ancillary input.' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_ANC/fileName'
+   value = '<L4CANC_fileName>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_ANC/creationDate'
+   value = '<L4CANC_creationDate>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_ANC/version'
+   value = '<L4CANC_version>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_ANC/identifier'
+   value = 'L4CANC' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_ANC/DOI'
+   value = '<L4CANC_DOI>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_CLIM/description'
+   value = 'The carbon model FPAR climatology.' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_CLIM/fileName'
+   value = '<L4CCLIM_fileName>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_CLIM/creationDate'
+   value = '<L4CCLIM_creationDate>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_CLIM/version'
+   value = '<L4CCLIM_version>' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_CLIM/identifier'
+   value = 'L4CCLIM' /
+
+ &meta
+   name = 'Metadata/Source/L4_C_CLIM/DOI'
+   value = '<L4CCLIM_DOI>' /
+
+ &meta
+   name = 'Metadata/DatasetIdentification/VersionID'
+   value = '<VersionID>' /
+
+ &meta
+   name = 'Metadata/DatasetIdentification/CompositeReleaseID'
+   value = '<CompositeReleaseID>' /
+
+ &meta
+   name = 'Metadata/DatasetIdentification/UUID'
+   value = '<UUID>' /
+
+ &meta
+   name = 'Metadata/DatasetIdentification/ECSVersionID'
+   value = '<L4_C_ECSVersionID>' /
+
+ &meta
+   name = 'Metadata/DatasetIdentification/ECSVersionDescription'
+   value = 'Three-character string that identifies the type of ECS data stream and reflects the major science version of the product.' /
+
+ &meta
+   name = 'Metadata/DatasetIdentification/fileName'
+   value = '<SPL4CMDL_fileName>' /
+
+ &meta
+   name = 'Metadata/DatasetIdentification/originatorOrganizationName'
+   value = 'NASA Global Modeling and Assimilation Office, Goddard Space Flight Center, Greenbelt, Maryland, USA' /
+
+ &meta
+   name = 'Metadata/DatasetIdentification/longName'
+   value = 'SMAP L4 Global Daily 9 km Carbon Net Ecosystem Exchange' /
+
+ &meta
+   name = 'Metadata/DatasetIdentification/shortName'
+   value = 'SPL4CMDL' /
+
+ &meta
+   name = 'Metadata/DatasetIdentification/SMAPShortName'
+   value = 'L4_C MDL Collection' /
+
+ &meta
+   name = 'Metadata/DatasetIdentification/abstract'
+   value = 'The SMAP L4_C data product provides global, daily net ecosystem exchange, GPP and related variables 9 km resolution. The L4_CM data product consists of one Collection of data granules (or files): the model (MDL) data Collection (shortName=SPL4SMDL).' /
+
+ &meta
+   name = 'Metadata/DatasetIdentification/characterSet'
+   value = 'utf8' /
+
+ &meta
+   name = 'Metadata/DatasetIdentification/credit'
+   value = 'The software that generates the L4_C data product is the property of the University of Montana Numerical Terradynamic Simulation Group (NTSG) and was transferred to the NASA Global Modeling and Assimilation Office (GMAO), Goddard Space Flight Center, Greenbelt, Maryland, USA. The data system that automates its production was designed and implemented at the GMAO.' /
+
+ &meta
+   name = 'Metadata/DatasetIdentification/language'
+   value = 'eng' /
+
+ &meta
+   name = 'Metadata/DatasetIdentification/purpose'
+   value = 'The SMAP L4_C data product provides spatially and temporally complete net ecosystem exchange, GPP, Rh, Soil Organic Carbon and related variables for science and applications users.' /
+
+ &meta
+   name = 'Metadata/DatasetIdentification/status'
+   value = 'onGoing' /
+
+ &meta
+   name = 'Metadata/DatasetIdentification/topicCategoryCode'
+   value = 'geoscientificInformation' /
+
+ &meta
+   name = 'Metadata/DatasetIdentification/QACreationDate'
+   value = '<SPL4CMDL_QACreationDate>' /
+
+ &meta
+   name = 'Metadata/DatasetIdentification/QAFileName'
+   value = '<SPL4CMDL_QAFileName>' /
+
+ &meta
+   name = 'Metadata/DatasetIdentification/QAAbstract'
+   value = 'An HDF5 product that contains statistical information on data product results. These statistics enable data producers and users to assess the quality of the data in the data product granule.' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/revisionDate'
+   value = '<L4_C_revisionDate>' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/VersionID'
+   value = '<VersionID>' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/CompositeReleaseID'
+   value = '<CompositeReleaseID>' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/ECSVersionID'
+   value = '<L4_C_ECSVersionID>' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/ECSVersionDescription'
+   value = 'Three-character string that identifies the type of ECS data stream and reflects the major science version of the product.' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/longName'
+   value = 'SMAP L4 Global Daily 9 km Carbon Net Ecosystem Exchange' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/shortName'
+   value = 'SPL4CMDL' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/identifier_product_DOI'
+   value = '<L4_C_identifier_product_DOI>' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/resourceProviderOrganizationName'
+   value = 'National Aeronautics and Space Administration' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/abstract'
+   value = 'The SMAP L4_C data product provides global, daily net ecosystem exchange, GPP and related variables 9 km resolution. The L4_CM data product consists of one Collection of data granules (or files): the model (MDL) data Collection (shortName=SPL4SMDL).' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/characterSet'
+   value = 'utf8' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/credit'
+   value = 'The software that generates the L4_C data product is the property of the University of Montana Numerical Terradynamic Simulation Group (NTSG) and was transferred to the NASA Global Modeling and Assimilation Office (GMAO), Goddard Space Flight Center, Greenbelt, Maryland, USA. The data system that automates its production was designed and implemented at the GMAO.' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/language'
+   value = 'eng' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/purpose'
+   value = 'The SMAP L4_C data product provides spatially and temporally complete net ecosystem exchange, GPP, Rh, Soil Organic Carbon and related variables for science and applications users.' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/status'
+   value = 'onGoing' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/topicCategoryCode'
+   value = 'geoscientificInformation' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/pointOfContact'
+   value = 'National Snow and Ice Data Center, Boulder, Colorado, USA.' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/PSDPublicationDate'
+   value = '<L4_C_PSDPublicationDate>' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/PSDEdition'
+   value = '<L4_C_PSDEdition>' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/PSDTitle'
+   value = 'Soil Moisture Active Passive Mission Level 4 Carbon (L4_C) Product Specification Document' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/SMAPShortName'
+   value = 'L4_C' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/mission'
+   value = 'SMAP' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/maintenanceAndUpdateFrequency'
+   value = 'As Needed' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/maintenanceDate'
+   value = '<L4_C_maintenanceDate>' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/format'
+   value = 'HDF5' /
+
+ &meta
+   name = 'Metadata/SeriesIdentification/formatVersion'
+   value = '<HDF5_formatVersion>' /
+
+ &meta
+   name = 'Metadata/GridSpatialRepresentation/Latitude/dimensionSize'
+   uint_size = 32
+   value = '1624' /
+
+ &meta
+   name = 'Metadata/GridSpatialRepresentation/Latitude/resolution'
+   value = '9 km on average' /
+
+ &meta
+   name = 'Metadata/GridSpatialRepresentation/Longitude/dimensionSize'
+   uint_size = 32
+   value = '3856' /
+
+ &meta
+   name = 'Metadata/GridSpatialRepresentation/Longitude/resolution'
+   value = '9 km on average' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/platform/antennaRotationRate'
+   real_size = 32
+   value = '13' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/platform/description'
+   value = 'The SMAP observatory houses an L-band radiometer that operates at 1.4 GHz and an L-band radar that operates at 1.26-1.29 GHz. The instruments share a rotating reflector antenna with a 6 meter aperture that scans over a 1000 km swath. The bus is a 3 axis stabilized spacecraft that provides momentum compensation for the rotating antenna.' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/platform/identifier'
+   value = 'SMAP' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/platformDocument/publicationDate'
+   value = '<SMAP_platformDocument_publicationDate>' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/platformDocument/edition'
+   value = '<SMAP_platformDocument_edition>' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/platformDocument/title'
+   value = '<SMAP_platformDocument_title>' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radar/description'
+   value = 'The SMAP radar instrument employs an L-band conically scanned system and SAR processing techniques to achieve moderate resolution (1 km) backscatter measurements over a very wide 1000 km swath.' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radar/identifier'
+   value = 'SMAP SAR' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radar/type'
+   value = 'L-band Synthetic Aperture Radar' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radarDocument/publicationDate'
+   value = '<SMAP_radarDocument_publicationDate>' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radarDocument/edition'
+   value = '<SMAP_radarDocument_edition>' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radarDocument/title'
+   value = '<SMAP_radarDocument_title>' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radiometer/description'
+   value = 'The SMAP L-band Radiometer records V-pol, H-pol, 3rd and 4th Stokes brightness temperatures at 40 km resolution at 4.3 Megatbits per second with accuracies of 1.3 Kelvin or better.' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radiometer/identifier'
+   value = 'SMAP RAD' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radiometer/type'
+   value = 'L-band Radiometer' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radiometerDocument/publicationDate'
+   value = '<SMAP_radiometerDocument_publicationDate>' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radiometerDocument/edition'
+   value = '<SMAP_radiometerDocument_edition>' /
+
+ &meta
+   name = 'Metadata/AcquisitionInformation/radiometerDocument/title'
+   value = '<SMAP_radiometerDocument_title>' /

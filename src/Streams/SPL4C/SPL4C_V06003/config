@@ -1,0 +1,113 @@
+
+# Dataset Identification Metadata
+# ===============================
+
+  L4_C_VersionID = V06003
+  L4_C_ECSVersionID = 001
+  L4_C_CompositeReleaseID = <L4_C_VersionID>0001
+
+  L4_C_STREAM_version      = SPL4C_<L4_C_VersionID>
+  L4_C_STREAM_description  = ORT
+  L4_C_STREAM_directoryID  = <L4_OPS_directoryID>/SPL4C/<L4_C_STREAM_version>
+
+# Series Identification Metadata
+# ==============================
+
+  L4_C_revisionDate = 2014-02-22
+  L4_C_maintenanceDate = 2015-01-01
+  L4_C_PSDPublicationDate = 2014-07-28
+  L4_C_PSDEdition = 1.7
+  L4_C_identifier_product_DOI = 10.5067/22TFAUSNLO9R
+
+# Process Step Lineage Metadata
+# =============================
+
+  L4_C_SWVersionID = 001
+  L4_C_softwareDate = 2014-03-06
+  L4_C_algorithmVersionID = 001
+  L4_C_ATBDDate = 2014-08-10
+  L4_C_ATBDVersion = 2.0
+  L4_C_documentation = TBD
+  L4_C_runTimeParameters = TBD
+
+# GEOS-5 Land Forcing Data
+# ========================
+
+  L4_C_LFO_version = e5130_fp
+  L4_C_LFO_description = GEOS-5 Forward Processing
+  L4_C_LFO_directoryID = <L4_DATA_directoryID>/GEOS-5/FP
+  L4_C_LFO_changeLog = Initial version
+
+# L4 Soil Moisture Data
+# =====================
+
+  L4_C_SPL4SMGP_version = V06005
+  L4_C_SPL4SMGP_description = SMAP Level-4 Soil Moisture (GPH)
+  L4_C_SPL4SMGP_directoryID = <L4_DATA_directoryID>/L4_SM/<L4_C_SPL4SMGP_version>/gph
+  L4_C_SPL4SMGP_changeLog = Initial version
+
+# SMAP Data
+# =========
+
+# L4_C_SPL3SMA_version = T05090
+  L4_C_SPL3SMA_version = R11160
+  L4_C_SPL3SMA_description = SMAP L3 Soil Moisture Active
+# L4_C_SPL3SMA_directoryID = <L4_DATA_directoryID>/SMAP/ORT-2/L3_SM_A
+  L4_C_SPL3SMA_directoryID = <L4_DATA_directoryID>/SMAP/ORT-2/SMAP_L3_SM_A
+  L4_C_SPL3SMA_changeLog = Initial version
+
+# L4_C MODIS Data
+# ===============
+
+  L4_C_MODIS_version = MOD15A2.005
+  L4_C_MODIS_description = TBD
+  L4_C_MODIS_directoryID = <L4_DATA_directoryID>/MODIS/FPAR/<L4_C_MODIS_version>
+  L4_C_MODIS_changeLog = Initial version
+
+# L4_C VIIRS Data
+# ===============
+
+  L4_C_VIIRS_version = 3001
+  L4_C_VIIRS_description = TBD
+  L4_C_VIIRS_directoryID = <L4_DATA_directoryID>/VIIRS/VI/<L4_C_VIIRS_version>
+  L4_C_VIIRS_changeLog = Initial version
+
+# L4_C Plant Function Type
+# ========================
+
+  L4_C_PFT_version = 1.0
+  L4_C_PFT_description = TBD
+  L4_C_PFT_directoryID = <L4_DATA_directoryID>/L4_C/ancillary
+  L4_C_PFT_changeLog = Initial version
+
+# L4_C Ancillary Data
+# ===================
+
+  L4_C_ANC_version = 5.0.1
+  L4_C_ANC_description = TBD
+  L4_C_ANC_directoryID = <L4_DATA_directoryID>/L4_C/ancillary
+  L4_C_ANC_changeLog = Initial version
+
+# L4_C FPAR Climatology Data
+# ==========================
+
+  L4_C_FPAR_CLIMATE_version = 1.0
+  L4_C_FPAR_CLIMATE_description = TBD
+  L4_C_FPAR_CLIMATE_directoryID = <L4_DATA_directoryID>/L4_C/ancillary
+  L4_C_FPAR_CLIMATE_changeLog = Initial version
+
+# L4_C BPLUT Climatology Data
+# ===========================
+
+  L4_C_BPLUT_version = 2014-08-06
+  L4_C_BPLUT_description = TBD
+  L4_C_BPLUT_directoryID = <L4_DATA_directoryID>/L4_C/ancillary
+  L4_C_BPLUT_changeLog = Initial version
+
+# L4_C SOC Data
+# =============
+
+  L4_C_SOC_version = 5.0.1
+  L4_C_SOC_description = TBD
+  L4_C_SOC_directoryID = <L4_DATA_directoryID>/L4_C/restart/soc
+  L4_C_SOC_changeLog = Initial version

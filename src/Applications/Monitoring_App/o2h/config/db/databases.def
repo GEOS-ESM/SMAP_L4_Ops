@@ -1,0 +1,12 @@
+[ldas_ops]
+host = edb1
+database = gmao_stats
+schema = schema/ob_schema.def
+recordtype = obsstat
+userw = gmao_ops
+userr = gmao_user
+password=hemperUI9#
+grantr = gmao_user
+engine = psql
+buffer = 2000
+comment = operational database for LDAS observation statistics

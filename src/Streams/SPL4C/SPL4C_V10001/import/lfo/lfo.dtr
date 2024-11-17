@@ -1,0 +1,28 @@
+PDR_NAME       = LFO.%Y%m%dT%H%M%S.PDR
+PDR_SHORT_NAME = LFO;
+PDR_LONG_NAME  = GEOS-5 Meteorological Forward Processing Stream;
+
+CLOCK_METHOD   = iso_time;
+START_TIME     = 1800;
+END_TIME       = 84600
+INC_SEC        = 3600;
+MIN_FILE_COUNT = 24;
+WAIT_TIME      = 259200;
+
+L4_C_LFO_IN_DIR   = <L4_C_LFO_directoryID>/diag/Y%Y/M%m/D%d;
+L4_C_LFO_OUT_DIR  = <DTR_DIR_ID>/data/Y%Y/M%m/D%d;
+L4_C_LFO_IN_NAME  = GEOS.fp.asm.tavg1_2d_slv_Nx.%Y%m%d_%H%M.V01.nc4;
+
+OBJECT = FILE_GROUP;
+
+  DATA_TYPE = GEOS5LFO;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_C_LFO_IN_DIR>;
+    FILE_ID = <L4_C_LFO_IN_NAME>;
+    FILE_TYPE = SCIENCE;
+    FILE_SIZE =
+#   FILE_LOCAL_DIR = <L4_C_LFO_OUT_DIR>;
+  END_OBJECT = FILE_SPEC;
+
+END_OBJECT = FILE_GROUP;

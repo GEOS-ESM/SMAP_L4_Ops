@@ -1,0 +1,28 @@
+VersionID = <L4_SM_VersionID>
+CompositeReleaseID = h5dump -a Metadata/DatasetIdentification/CompositeReleaseID <SPL4SM_FILE> | <L4_SM_CompositeReleaseID>
+ 
+L4_OPERATING_SYSTEM     = uname -o 
+L4_KERNEL_NAME          = uname -s 
+L4_KERNEL_RELEASE       = uname -r 
+L4_KERNEL_VERSION       = uname -v 
+L4_KERNEL_PROCESSOR     = uname -m 
+L4_MATH_KERNEL_LIBRARY  = module -list lib
+L4_COMPILER_VERSION     = module -list comp
+L4_MPI_VERSION          = module -list mpi
+
+L4_SM_SWVersionID = <L4_SM_SWVersionID>
+L4_SM_algorithmVersionID = <L4_SM_algorithmVersionID>
+
+L4_SM_BCS_CLSM_version  = <L4_SM_BCS_CLSM_version>
+L4_SM_BCS_RTM_version   = <L4_SM_BCS_RTM_version>
+L4_SM_SCALING_SPL1CTB_version  = <L4_SM_SCALING_SPL1CTB_version>
+L4_SM_SCALING_SPL2SMAP_version = <L4_SM_SCALING_SPL2SMAP_version>
+L4_SM_DRIVER_version = <L4_SM_DRIVER_version>
+L4_SM_ENSPROP_version = <L4_SM_ENSPROP_version>
+L4_SM_ENSUPD_version = <L4_SM_ENSUPD_version>
+L4_SM_CATBIAS_version = <L4_SM_CATBIAS_version>
+L4_SM_BATCH_JOB_version = <L4_SM_BATCH_JOB_version>
+
+HDF5_formatVersion = h5dump -V;
+
+L4_OPERATIONAL_version = <L4_OPERATIONAL_version>;

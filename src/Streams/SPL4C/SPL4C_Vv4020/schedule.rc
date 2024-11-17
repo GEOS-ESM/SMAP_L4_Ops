@@ -1,0 +1,4 @@
+
+20180605 * -rf 3600 -export
+
+20180712 *  -define L4_C_LFO_version=f521_fp -define L4_C_LFO_changeLog="GEOS-5 FP stream changed to f521_fp"

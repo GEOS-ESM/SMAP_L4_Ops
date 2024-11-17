@@ -1,0 +1,39 @@
+ &VarInfoNamelist
+
+   varInfo(1)%vname = 'PRECTOT'
+   varInfo(1)%vTitle = 'total_precipitation'
+   varInfo(1)%standardName = 'total_precipitation'
+   varInfo(1)%vUnits = 'kg m-2 s-1'
+   varInfo(1)%amiss = 1.0e+15
+   varInfo(1)%scaleFactor = 1.0
+   varInfo(1)%addOffSet = 0.0
+   varInfo(1)%validRange = -1.0e+15,1.0e+15
+
+   varInfo(2)%vname = 'PRECSNO'
+   varInfo(2)%vTitle = 'snowfall'
+   varInfo(2)%standardName = 'snowfall'
+   varInfo(2)%vUnits = 'kg m-2 s-1'
+   varInfo(2)%amiss = 1.0e+15
+   varInfo(2)%scaleFactor = 1.0
+   varInfo(2)%addOffSet = 0.0
+   varInfo(2)%validRange = -1.0e+15,1.0e+15
+
+   varInfo(3)%vname = 'PRECCON'
+   varInfo(3)%vTitle = 'Surface Conv. rain flux needed by land'
+   varInfo(3)%standardName = 'Surface Conv. rain flux needed by land'
+   varInfo(3)%vUnits = 'kg m-2 s-1'
+   varInfo(3)%amiss = 1.0e+15
+   varInfo(3)%scaleFactor = 1.0
+   varInfo(3)%addOffSet = 0.0
+   varInfo(3)%validRange = -1.0e+15,1.0e+15 /
+
+ &GlobalAttrNamelist
+
+   globalAttr%title = 'GEOS5,2d,1-Hourly,Time-Averaged,Single-Level'
+   globalAttr%history = 'File written in Fortran 90'
+   globalAttr%convention = 'COARDS'
+   globalAttr%institution = 'NASA Global Modeling and Assimilation Office'
+   globalAttr%contact = 'Rolf Reichle/Qing Liu'
+   globalAttr%references = 'unknown'
+   globalAttr%source = 'unknown'
+   globalAttr%comment = 'Corrected Fields based on CPC Global Unified Daily analysis V1.0 product' /

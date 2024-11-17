@@ -1,0 +1,20 @@
+CompositeStreamID = fp
+PRODUCT_COUNTER = 001
+L4_C_ECSVersionID = 001
+
+TEMPLATE_XML = <L4_C_STREAM_directoryID>/export_ancillary/ecs_template.xml
+
+PDR_EXPORT_DIR = <L4_EXPORT_directoryID>/smapnsid/data_out/<CompositeStreamID>/PDR;
+PAN_EXPORT_DIR = <L4_EXPORT_directoryID>/smapnsid/a/data_in/<CompositeStreamID>/PAN;
+PDRD_EXPORT_DIR = <L4_EXPORT_directoryID>/smapnsid/a/data_in/<CompositeStreamID>/PDRD;
+
+CLIENT_DIR = data_out/<CompositeStreamID>/data;
+NODE_NAME = datastage.nccs.nasa.gov;
+
+#CLIENT_DIR = /pub/data/SMAP/export/nsidc/test/data;
+#NODE_NAME = gmaoftp.gsfc.nasa.gov;
+
+REPORT_directoryID = <L4_EXPORT_directoryID>/smapnsid/data_out/<CompositeStreamID>/report;
+REPORT_fileID = SMAP_GMAO_NSIDC_SDATE_EDATE.txt;
+
+REPORT_title = GMAO SMAP Report to NSIDC;

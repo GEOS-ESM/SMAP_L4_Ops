@@ -1,0 +1,7 @@
+PAN_EXPORT_DIR = <L4_EXPORT_directoryID>/smapnsid/a/data_in/fpp/PAN;
+PDRD_EXPORT_DIR = <L4_EXPORT_directoryID>/smapnsid/a/data_in/fpp/PDRD;
+
+REPORT_directoryID = <L4_EXPORT_directoryID>/smapnsid/data_out/fpp/report;
+REPORT_fileID = SMAP_GMAO_NSIDC_SDATE_EDATE.txt;
+
+REPORT_title = GMAO SMAP Report to NSIDC;

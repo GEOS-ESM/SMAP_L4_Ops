@@ -1,0 +1,365 @@
+
+! LDASsa DEFAULT namelist of driver inputs
+!
+! reichle, 12 Jun 2003
+! reichle, 10 May 2005 
+!
+! --------------------------------------------------------------------
+				      				      	
+&driver_inputs			
+      					
+! ------------------------------------------------------------------
+!
+! start and end date/time
+
+start_time%year      =  2002        ! 4-digit year
+start_time%month     =     6        ! month in year
+start_time%day       =     1        ! day in month
+start_time%hour      =     0        ! hour of day
+start_time%min       =     0        ! minute of hour
+start_time%sec       =     0        ! seconds of minute
+start_time%pentad    = -9999        ! pentad of year     (computed by LDASsa)
+start_time%dofyr     = -9999        ! day of year        (computed by LDASsa)
+
+end_time%year        =  2005        ! 4-digit year
+end_time%month       =     5        ! month in year
+end_time%day         =     1        ! day in month
+end_time%hour        =     0        ! hour of day
+end_time%min         =     0        ! minute of hour
+end_time%sec         =     0        ! seconds of minute
+end_time%pentad      = -9999        ! pentad of year     (computed by LDASsa)
+end_time%dofyr       = -9999        ! day of year        (computed by LDASsa)
+
+! ------------------------------------------------------------------
+!
+! restart options
+!
+! rstrt:
+! ------
+!     rstrt     = .true.    => regular simulation using restart file
+!                              NOTE: *ensemble* integrations are restarted
+!                                    from "ens0000.rstrt" if "ensXXXX.rstrt"
+!                                    is not available! 
+!                                    (see subroutine initialize_model())
+!     rstrt     = .false.   => spin-up from "poor initialization" 
+!                               (no restart file necessary)	       
+! spin:	
+! -----		   
+!     spin      = .true.    => spin-up mode: 
+!                               - "poor" initialization whenever spin_loop=0,
+!                                  restart file required otherwise
+!                               - remove all snow in mid-summer
+!                               - requires N_ens=1 and no perturbations  
+!     spin      = .false.   => regular (ensemble) simulation      
+!
+! spin_loop:
+! ----------
+!     spin_loop = (integer) => number of spin-up loops already
+!                                completed (when spin=.true.), 
+!                                useful when restart is needed during spin-up
+
+restart              = .true.       ! have restart file 
+
+spin                 = .false.      ! spin up mode (see above)
+spin_loop            =  0     	    ! number of spin loops already completed
+
+! ------------------------------------------------------------------
+!
+! all time steps in *seconds*
+!
+! all time steps MUST obey MOD(86400,dtstep)=0 and 0<=dtstep<=86400
+!
+!  1200 = 20 min
+!  3600 =  1 h
+!  7200 =  2 h
+! 10800 =  3 h
+! 14400 =  4 h
+! 21600 =  6 h
+! 43200 = 12 h
+! 86400 = 24 h
+
+model_dtstep         =   450        ! land model time step in seconds
+
+force_dtstep         = 10800        ! forcing time step in seconds
+
+! ------------------------------------------------------------------
+!
+! output choices for standard subset of forcing, prognostic, and diagnostic 
+!  variables (see subroutine output_calcs())
+!
+! select output for: 
+!   - instantaneous and/or time average output files
+!   - tile space or gridded output
+!   - ensemble average, ensemble std, and/or individual ensemble members
+
+
+! output file collection
+!
+!  select *one* output collection from a pre-defined set 
+!  - for details see subroutines output_calcs() and read_driver_inputs()
+!  - does NOT use the MAPL_HistoryGridComp.F90 and the HISTORY.rc.tmpl file
+!
+!                                         inst|tavg
+! out_collection_ID =  1 :  N_out_fields =  44|44 :  legacy LDASsa output
+! out_collection_ID =  2 :  N_out_fields =   6| 6 :  SMAP Nature v02
+! out_collection_ID =  3 :  N_out_fields =   8| 8 :  mwRTM calibration (before Dec 2013), SMOS DA
+! out_collection_ID =  4 :  N_out_fields =  50|50 :  MERRA-Land
+! out_collection_ID =  5 :  N_out_fields =  59|59 :  MERRA-Land (with additional files)
+! out_collection_ID =  6 :  N_out_fields =  40|40 :  SMAP L4_SM gph collection (EXCL. sm in pctl units!)
+! out_collection_ID =  7*:  N_out_fields =   4| 4 :  SMAP Nature v03 (2001-2009)
+! out_collection_ID =  8*:  N_out_fields =   5| 6 :  SMAP Nature v03 (2010-201?)
+! out_collection_ID =  9*:  N_out_fields =   6| 2 :  mwRTM calibration (Dec 2013)
+! out_collection_ID = 10 :  N_out_fields =  46|46 :  legacy LDASsa output + t2m, q2m 
+! out_collection_ID = 11 :  N_out_fields =   5| 5 :  SMOS pre-processing
+!
+! *NOTE: out_collection_ID=7,8,9 write *different* variables for "tavg" and "inst" output!
+
+out_collection_ID = 6
+
+
+! integer time steps for output [seconds]
+	  
+out_dtstep%rstrt     = 0            ! use out_rstrt_dtstep=0 for *monthly* restart output
+out_dtstep%xhourly   = 10800
+out_dtstep%inst      = 10800
+
+! ensemble average output choices
+
+out_select_ensavg%tile%inst    = .false. 
+out_select_ensavg%tile%xhourly = .false.
+out_select_ensavg%tile%daily   = .false.
+out_select_ensavg%tile%pentad  = .false.	
+out_select_ensavg%tile%monthly = .true. 
+
+out_select_ensavg%grid%inst    = .false. 
+out_select_ensavg%grid%xhourly = .false.
+out_select_ensavg%grid%daily   = .false.
+out_select_ensavg%grid%pentad  = .false.	
+out_select_ensavg%grid%monthly = .true. 
+
+! ensemble spread output choices
+
+out_select_ensstd%tile%inst    = .true. 
+out_select_ensstd%tile%xhourly = .false.
+out_select_ensstd%tile%daily   = .false.
+out_select_ensstd%tile%pentad  = .false.	
+out_select_ensstd%tile%monthly = .false. 
+
+out_select_ensstd%grid%inst    = .true. 
+out_select_ensstd%grid%xhourly = .false.
+out_select_ensstd%grid%daily   = .false.
+out_select_ensstd%grid%pentad  = .false.	
+out_select_ensstd%grid%monthly = .false. 
+
+! "ensall" output choices 
+! (output individual files for all ensemble members, formerly known as "plume")
+
+out_select_ensall%tile%inst    = .false. 
+out_select_ensall%tile%xhourly = .false.
+out_select_ensall%tile%daily   = .false.
+out_select_ensall%tile%pentad  = .false.	
+out_select_ensall%tile%monthly = .true. 
+
+out_select_ensall%grid%inst    = .false. 
+out_select_ensall%grid%xhourly = .false.
+out_select_ensall%grid%daily   = .false.
+out_select_ensall%grid%pentad  = .false.	
+out_select_ensall%grid%monthly = .true. 
+
+
+! ------------------------------------------------------------------
+!
+! depth of surface layer for soil moisture [mm]
+!
+!  options: 20., 50.  (see input file "tau_param.dat" in "soil_path" dir)
+
+dzsf                 = 50.
+
+
+! ==================================================================
+!
+! input and output path and file names 
+!
+!
+! experiment output and restart input
+!
+! - for details see README.LDASsa_input, README.LDAssa_output
+
+work_path            = '/discover/nobackup/rreichle/output/'
+exp_domain           = 'GLOBAL_144x91_DC'
+exp_id               = 'run1tmp'
+
+restart_path         = '/discover/nobackup/rreichle/output/'
+restart_domain       = 'GLOBAL_144x90_DC'
+restart_id           = 'run2tmp'
+
+
+! ------------------------------------------------------------------
+!
+! surface meteorological forcing data
+!
+! "met_path" and "met_tag" must be consistent:
+!
+!  - "met_path" is the full path to the forcing data set
+!
+!  - "met_tag" is an identifier for the forcing data set
+!
+!  - available non-MERRA and non-GEOS-5 forcing data sets are pre-defined 
+!     in subroutine get_forcing()
+!
+!  - for MERRA and other GEOS-5 forcing datasets see special "met_tag" 
+!     parsing conventions in subroutines parse_MERRA_met_tag() and
+!     parse_G5DAS_met_tag()
+!
+!  - for details on corrected precipitation data see also Reichle and Liu (2014), 
+!     Observation-Corrected Precipitation Estimates in GEOS-5, 
+!     NASA Technical Report Series on Global Modeling and Data Assimilation, 
+!     NASA/TM-2014-104606, Vol. 35, National Aeronautics and Space Administration, 
+!     Goddard Space Flight Center, Greenbelt, Maryland, USA, 18pp.
+!     https://gmao.gsfc.nasa.gov/pubs/     
+
+!met_path            = '[XXX]/l_data/ECMWF/GRID/CORRECTED/netcdf/'
+!met_path            = '[XXX]/l_data/GLDAS/netcdf/'
+!met_path            = '[XXX]/l_data/GSWP-2/Baseline_Forcings/'
+!met_path            = '[XXX]/l_data/RedArk/RedArk_subbasin_forcing/red_ark_forc/'
+!
+! path MERRA forcing (including precip-corrected MERRA forcing)
+!met_path            = '/discover/nobackup/projects/gmao/merra/iau/merra_land/MERRA_land_forcing/' 
+!
+! path to GEOS-5 forcing (including FP, FP-IT/RP-IT, and precip-corrected GEOS-5 forcing)
+!met_path            = '/discover/nobackup/projects/gmao/merra/iau/merra_land/GEOS5_land_forcing/'
+
+met_path             = './'
+
+
+!met_tag             = 'Berg_netcdf'
+!met_tag             = 'GLDAS_2x2_5_netcdf'
+!met_tag             = 'GSWP2_1x1_netcdf'
+!met_tag             = 'RedArk_ASCII'
+
+! MERRA
+!met_tag             = 'd5_merra_cross__GEOSdas-2_1_4'
+
+! MERRA-Land
+!met_tag             = 'd5_merra_cross__GEOSdas-2_1_4__precCPCU'
+
+! RP-IT/FP-IT
+!met_tag             = 'd591_fpit'
+!met_tag             = 'd591_rpit1_jan00'
+!met_tag             = 'd591_rpit2_jun06'
+!met_tag             = 'd591_rpit3_jan11'
+!met_tag             = 'cross_RPFPIT'
+
+! FP
+!met_tag             = 'e5110_fp'
+!met_tag             = 'e5130_fp'
+!met_tag             = 'e5131_fp'
+!met_tag             = 'cross_FP'
+
+! FP with precip corrections as in pre-beta SMAP L4_SM products
+!met_tag             = 'cross_FP__precCPCUG5FPv2'
+
+met_tag              = ''
+
+
+! spatial (horizontal) interpolation method for surface meteorological forcing data
+!		
+!   met_hinterp:   0 = nearest-neighbor
+!                  1 = bilinear           (*only* for GEOS-5, incl. MERRA[-Land]) 
+
+met_hinterp = 0
+
+
+! Use SWnet forcing to back out albedo instead of using MODIS-based albedo?
+! - Only works with GEOS forcing (e.g., MERRA, FP, FP-IT).
+! - Recommended setting is .false.  Set to .true. when LDASsa should replay land 
+!    within AGCM as closely as possible.  In the AGCM, the albedo is computed
+!    based on radiation bands (IR, VIS, UV).  LDASsa does not have this 
+!    breakdown and can therefore not reproduce the albedo components.  Using
+!    SWnet to back out the albedo ensures that the SWnet going into subroutine
+!    catchment() in LDASsa matches that in the AGCM (or DAS) run from which the
+!    forcing data were obtained. 
+! - NOTE: MERRA had a snow albedo bug in sibalb.  Earlier versions of LDASsa
+!         included a variable "ignore_SWnet_for_snow" which was meant to address 
+!         this bug but never worked as intended because of a bug in the LDASsa MPI 
+!         parallel implementation.
+
+alb_from_SWnet       = .false.  ! use .true. for SMAP_Nature_v04 and L4_SM (for now)
+
+! ------------------------------------------------------------------
+!
+! horizontal discretization of land model 
+!
+! - for details see subroutines read_land_parameters(), get_land_tile_info(), 
+!    and domain_setup() 
+
+! "resolution" = dir name where Catchment model params are stored, eg. "144x91"
+! (may need to pre-face with "FV_" for dir names prior to Fortuna-2_1)
+
+resolution           = '144x91'
+
+! parameter file formats
+!
+!  file_format=0: legacy format (monthly data, flat binaries, no date/time info)
+!                    (e.g. MERRA-Land, Fortuna)
+!  file_format=1: compatible with MAPL_readforcing()
+!                    (e.g. Ganymed, MERRA-2)
+
+file_format_veg      = 1
+file_format_alb      = 1
+
+! parameter paths - "resolution" will be appended by LDASsa
+
+veg_path             = ''
+alb_path             = ''
+soil_path            = ''
+top_path             = ''
+
+mwRTM_param_path     = ''
+
+tile_coord_path      = ''
+catchment_def_path   = ''
+
+tile_coord_file      = 'FV_360x180_DE_360x180_DE.til'
+catchment_def_file   = 'catchment.def'
+
+
+! ------------------------------------------------------------------
+!
+! domain definition - for details see subroutine domain_setup() 
+!
+! rectangular extremities of domain [lon=-180:180, lat=-90:90]
+
+minlon               =   180.       ! min longitude
+maxlon               =  -180.	    ! max longitude
+minlat               =    90.	    ! min latitude
+maxlat               =   -90.	    ! max latitude
+	
+! black- and whitelist path and file names
+!
+! blacklist is kept in global file, whitelists in domain files
+
+black_path           = '.'
+
+black_file           = ''
+!black_file          = 'blacklist_no_berg.dat'
+!black_file          = 'blacklist_no_gswp2.dat'
+!black_file          = 'blacklist_no_gldas.dat'
+		
+!white_path          = '.'
+white_path           = '.'
+
+!white_file          = ''
+white_file           = 'whitelist.dat'
+
+/
+
+! =============== EOF ===================================================
+
+      
+
+
+
+
+
+

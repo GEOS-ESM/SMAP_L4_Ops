@@ -1,0 +1,113 @@
+				      				      	
+&ens_prop_inputs			
+
+progn_pert_dtstep = 10800   ! time step for prognostics perturbations in seconds
+
+force_pert_dtstep = 10800   ! time step for forcing perturbations in seconds
+
+! additive:                     typ = 0.
+! multiplicative and lognormal: typ = 1.
+  
+typ_force_pert%pcp   = 1.
+typ_force_pert%sw    = 1.
+typ_force_pert%lw    = 0.
+
+! (default) homogeneous standard deviation for perturbations (used unless 
+! heterogeneous standard deviations are read from file)
+
+std_force_pert%pcp       =  0.5   ! [mm] per time step
+std_force_pert%sw        =  0.3   ! [W/m^2]
+std_force_pert%lw        = 20.    ! [W/m^2]
+
+! allow perturbations to be computed on coarsened grid?
+
+coarsen_force_pert%pcp   = .true.
+coarsen_force_pert%sw    = .true.
+coarsen_force_pert%lw    = .true.
+
+! spatial correlation of forcing perturbations
+
+xcorr_force_pert%pcp    = 0.5          ! [deg]
+xcorr_force_pert%sw     = 0.5          ! [deg]
+xcorr_force_pert%lw     = 0.5          ! [deg]
+
+ycorr_force_pert%pcp    = 0.5          ! [deg]
+ycorr_force_pert%sw     = 0.5          ! [deg]
+ycorr_force_pert%lw     = 0.5          ! [deg]
+   
+! temporal correlation of forcing perturbations
+  
+tcorr_force_pert%pcp   = 86400.    ! [s]
+tcorr_force_pert%sw    = 86400.    ! [s]
+tcorr_force_pert%lw    = 86400.    ! [s]
+  
+! correlation coefficients -1 <= rho <= 1     
+!
+! specify only essential information, the other side of off-diagonals and
+! the diagonal will be filled in later (subroutines read_ens_prop_inputs
+! and get_force_pert_inputs)
+ 
+ccorr_force_pert%pcp%sw      = -0.8 
+ccorr_force_pert%pcp%lw      =  0.5 
+
+ccorr_force_pert%sw%lw       = -0.5   
+ 
+! ---------------------------------------------------------------------
+
+! additive:                     typ = 0.
+! multiplicative and lognormal: typ = 1.
+  
+typ_progn_pert%catdef   = 0.
+typ_progn_pert%srfexc   = 0.
+typ_progn_pert%tc       = 0.    
+typ_progn_pert%ght(1)   = 0.
+
+! (default) homogeneous standard deviation for perturbations (used unless 
+! heterogeneous standard deviations are read from file)
+
+std_progn_pert%catdef   =     0.07
+std_progn_pert%srfexc   =     0.04
+std_progn_pert%tc       =     0.2   
+std_progn_pert%ght(1)   = 50000.    
+
+! allow perturbations to be computed on coarsened grid?
+
+coarsen_progn_pert%catdef   = .true.    
+coarsen_progn_pert%srfexc   = .true.    
+coarsen_progn_pert%tc       = .true.    
+coarsen_progn_pert%ght(1)   = .true.    
+
+! model error spatial correlation [deg]
+! (x runs east-west, y runs north-south)
+
+xcorr_progn_pert%catdef   = 0.5
+xcorr_progn_pert%srfexc   = 0.5
+xcorr_progn_pert%tc       = 0.5
+xcorr_progn_pert%ght(1)   = 0.5
+
+ycorr_progn_pert%catdef   = 0.5
+ycorr_progn_pert%srfexc   = 0.5
+ycorr_progn_pert%tc       = 0.5
+ycorr_progn_pert%ght(1)   = 0.5
+
+! model error temporal correlation [s]
+
+tcorr_progn_pert%catdef    = 10800.    
+tcorr_progn_pert%srfexc    = 10800.    
+tcorr_progn_pert%tc        = 10800.
+tcorr_progn_pert%ght(1)    = 10800.
+
+! correlation coefficients -1 <= rho <= 1     
+
+ccorr_progn_pert%catdef%srfexc  =  0.0
+ccorr_progn_pert%catdef%ght(1)  =  0.3
+ccorr_progn_pert%catdef%tc      =  0.5
+
+ccorr_progn_pert%srfexc%ght(1)  = -0.2
+ccorr_progn_pert%srfexc%tc      = -0.3
+
+ccorr_progn_pert%ght(1)%tc      =  0.6
+
+/
+
+! =========================== EOF =======================================

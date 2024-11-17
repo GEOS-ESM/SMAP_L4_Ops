@@ -1,0 +1,209 @@
+PDR_NAME       = VEGDYN_RESTART.PDR
+PDR_SHORT_NAME = VEGDYN;
+PDR_LONG_NAME  = Land Data Assimilation System (Restart);
+
+CLOCK_METHOD   = timeless;
+START_TIME     = 0;
+END_TIME       = 0;
+INC_SEC        = 86400;
+
+ORIGINATING_SYSTEM = SMAP_L4;
+TOTAL_FILE_COUNT = 24;
+
+OBJECT = FILE_GROUP;
+
+  DATA_TYPE = LDASVEGDYN;
+
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0000;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0000;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0001;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0001;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0002;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0002;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0003;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0003;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0004;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0004;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0005;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0005;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0006;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0006;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0007;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0007;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0008;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0008;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0009;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0009;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0010;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0010;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0011;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0011;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0012;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0012;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0013;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0013;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0014;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0014;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0015;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0015;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0016;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0016;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0017;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0017;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0018;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0018;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0019;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0019;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0020;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0020;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0021;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0021;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0022;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0022;
+  END_OBJECT = FILE_SPEC;
+  
+  OBJECT = FILE_SPEC;
+    DIRECTORY_ID = <L4_SM_RST_DIR>/ens0023;
+    FILE_ID = <L4_SM_STREAM_version>.vegdyn_internal_rst;
+    FILE_TYPE = BINARY;
+    FILE_SIZE =
+    FILE_LOCAL_DIR = <L4_DATA_directoryID>/L4_SM/<L4_SM_VersionID>/rs/ens0023;
+  END_OBJECT = FILE_SPEC;
+  
+END_OBJECT = FILE_GROUP;

@@ -1,0 +1,17 @@
+# Level-4 root directories for
+# local, archive and public (export)
+# access.
+# ==================================
+
+  L4_DATA_directoryID    = /discover/nobackup/projects/gmao/smap/SMAP_L4
+  L4_OPS_directoryID     = /discover/nobackup/projects/gmao/smap/Operations
+  L4_EXPORT_directoryID  = /datastage/smaplevel4
+  L4_ARCHIVE_directoryID = /archive/u/dao_ops/SMAP_L4
+
+  L4_LOCAL_ROOT   = /archive/u/jardizzo/SMAP_L4
+  L4_ARCHIVE_ROOT = /archive/u/jardizzo/SMAP_L4
+  L4_EXPORT_ROOT  = /discover/nobackup/jardizzo/datastage
+
+  L4_OPERATIONAL_version = jardizzo-SMAP_L4_OPS-R11g
+  L4_OPERATIONAL_description = SMAP Level-4 Operational System
+  L4_OPERATIONAL_changeLog = Initial Version

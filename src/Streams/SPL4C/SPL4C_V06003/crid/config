@@ -1,0 +1,14 @@
+VersionID = <L4_C_VersionID>
+CompositeReleaseID = h5dump -a Metadata/DatasetIdentification/CompositeReleaseID <SPL4C_FILE> | <L4_C_CompositeReleaseID>
+ 
+L4_OPERATING_SYSTEM     = uname -o 
+L4_KERNEL_NAME          = uname -s 
+L4_KERNEL_RELEASE       = uname -r 
+L4_KERNEL_VERSION       = uname -v 
+L4_KERNEL_PROCESSOR     = uname -m 
+L4_MATH_KERNEL_LIBRARY  = module -list lib
+L4_COMPILER_VERSION     = module -list comp
+L4_MPI_VERSION          = module -list mpi
+HDF5_formatVersion      = h5dump -V;
+
+L4_OPERATIONAL_version = <L4_OPERATIONAL_version>;
