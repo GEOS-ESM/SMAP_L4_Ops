@@ -7,18 +7,14 @@ FFLAGS = -extend-source -assume byterecl
 BUILD=/discover/nobackup/dao_ops/jardizzo/SMAP/software/GEOSldas/install
 BASE=$(BASEDIR)/Linux
 
-#BASE=/discover/swdev/gmao_SIteam/Baselibs/ESMA-Baselibs-6.0.4-SLES12/x86_64-unknown-linux-gnu/ifort_18.0.5.274-intelmpi_19.1.0.166/Linux
-#BUILD=/home/dao_ops/SMAP/GEOSldas-SLES12/install
-MPI_ROOT=/usr/local/intel/2020/compilers_and_libraries_2020.0.166/linux/mpi
-
 FC=mpiifort
 CC=mpiicc
 
 INC_ESMF = -I$(BASE)/include/esmf
 LIB_ESMF = -L$(BASE)/lib -lesmf_fullylinked
 
-INC_BASE = -I$(BUILD)/include/MAPL_Base
-LIB_BASE = -L$(BUILD)/lib -lMAPL_Base
+INC_BASE = -I$(BUILD)/include/MAPL.base
+LIB_BASE = -L$(BUILD)/lib -lMAPL.base
 
 INC_MAPL = -I$(BUILD)/include/MAPL_cfio_r4
 LIB_MAPL = -L$(BUILD)/lib -lMAPL_cfio_r4
@@ -41,9 +37,6 @@ INC_SZ  = -I$(BASE)/include/szlib
 
 LIB_CURL  = -L$(BASE)/lib -lcurl
 INC_CURL  = -I$(BASE)/include/curl
-
-#LIB_MPI = -L$(MPI_ROOT)/lib -lmpi
-#INC_MPI = -I$(MPI_ROOT)/include
 
 LIBS    = $(LIB_ESMF) $(LIB_MPI) $(LIB_BASE) $(LIB_LDAS) $(LIB_MAPL) \
           $(LIB_MPEU) $(LIB_NETCDF) $(LIB_HDF5) $(LIB_SZ) $(LIB_CURL) -lgpfs
