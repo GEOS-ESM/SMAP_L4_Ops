@@ -7,8 +7,8 @@ FFLAGS = -extend-source -assume byterecl
 BUILD=/discover/nobackup/dao_ops/jardizzo/SMAP/software/GEOSldas/install
 BASE=$(BASEDIR)/Linux
 
-FC=mpiifort
-CC=mpiicc
+#FC=mpiifort
+#CC=mpiicc
 
 INC_ESMF = -I$(BASE)/include/esmf
 LIB_ESMF = -L$(BASE)/lib -lesmf_fullylinked
