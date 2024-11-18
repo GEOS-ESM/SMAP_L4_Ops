@@ -2,9 +2,9 @@
 
 SHELL = /bin/sh
 
-FFLAGS = -extend_source -assume byterecl
+FFLAGS = -extend-source -assume byterecl
 
-BUILD=/home/dao_ops/SMAP/GEOSldas-SLES12/install
+BUILD=/discover/nobackup/dao_ops/jardizzo/SMAP/software/GEOSldas/install
 BASE=$(BASEDIR)/Linux
 
 #BASE=/discover/swdev/gmao_SIteam/Baselibs/ESMA-Baselibs-6.0.4-SLES12/x86_64-unknown-linux-gnu/ifort_18.0.5.274-intelmpi_19.1.0.166/Linux
