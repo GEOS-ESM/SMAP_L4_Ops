@@ -565,6 +565,7 @@
         correction%residual = max((cpcu%data*CF) - (precip%data*LF),0.0)
       end where
 
+      correction%factor = min(correction%factor, 10.)
       correction%residual = correction%residual / LF
 
       end subroutine computeCorrection
