@@ -7,7 +7,7 @@
 #    * provide single location for BASEDIR and module values
 #    * initialize the following:
 #      - set BASEDIR
-#      - update LD_LIBRARY_PATH with BASEDIR lib
+#      - update LD_LIBRARY_PATH with BASEDIR lib (if useldlibs is set)
 #      - load library modules
 #    * echo expected BASEDIR and library module values when queried
 #
@@ -41,7 +41,7 @@
 #  21Jul2008  Takacs   New modules and BASEDIR on discover after OS upgrade
 #  13Apr2009  Stassi   Updated for pleiades
 #  22Apr2010  Kokron   Updated for Fortuna-2.1 on pleiades
-#  21Jul2011  Kokron   Overlay older MKL module as on discover to gain reproducible results from dgeev in GSI 
+#  21Jul2011  Kokron   Overlay older MKL module as on discover to gain reproducible results from dgeev in GSI
 #  24Aug2012  Stassi   Added sh option to write bash source-able file
 #  03Nov2016  Thompson Remove JIBB
 ########################################################################
@@ -74,19 +74,15 @@ if (($node =~ discover*) || ($node =~ borg*)  || \
 
    set site = "NCCS"
 
-else if (($node =~ pfe*)  || ($node =~ p4fe*) || \
-         ($node =~ r[0-9]*i[0-9]*n[0-9]*)     || \
-         ($node =~ bridge*) || ($node =~ maia*)) then
+   # NCCS now has both SLES15 and SLES12 machines
+   set OS_VERSION=`grep VERSION_ID /etc/os-release | cut -d= -f2 | cut -d. -f1 | sed 's/"//g'`
+
+else if (($node =~ pfe*) || ($node =~ afe*) || \
+         ($node =~ r[0-9]*i[0-9]*n[0-9]*) || \
+         ($node =~ r[0-9]*c[0-9]*t[0-9]*n[0-9]*)) then
+
+   # We are on NAS...
    set site = "NAS"
-
-else if ($node =~ janus*) then
-   set site = "GMAO.janus"
-
-else if ( $node =~ bender* ) then
-   set site = "ACDL.bender"
-
-else if ( $node =~ *niteroi* ) then
-   set site = "GMAO.niteroi"
 
 else if ( -d /ford1/share/gmao_SIteam/ && -d /ford1/local/ && $arch == Linux ) then
    set site = "GMAO.desktop"
@@ -101,6 +97,7 @@ alias echo2  "echo \!* > /dev/stderr"
 # get values
 #-----------
 if ($mach == x86_64) goto X86_64
+if ($mach == arm64)  goto ARM64
 
 # ERROR -- unknown architecture/machine
 #--------------------------------------
@@ -119,161 +116,111 @@ X86_64:
 
 set modinit = DUMMY
 
-set loadmodules = 0
 set usemodules = 0
+set useldlibs = 0
 
 #========#
 #  NCCS  #
 #========#
 if ( $site == NCCS ) then
 
-   # Are we on SLES12...
-   if ( -e /etc/os-release ) then
+   set mod1 = GEOSenv
 
-      set mod1 = GEOSenv
+   if ( $OS_VERSION == 12 ) then
 
-      set mod2 = comp/gcc/6.5.0
-      set mod3 = comp/intel/19.1.0.166
-
-      set mod4 = mpi/impi/19.1.0.166
-
-      set mod5 = python/GEOSpyD/Ana2019.10_py2.7
-
-      set basedir = /discover/swdev/gmao_SIteam/Baselibs/ESMA-Baselibs-6.0.11-SLES12/x86_64-unknown-linux-gnu/ifort_19.1.0.166-intelmpi_19.1.0.166
-
-      set mods = ( $mod1 $mod2 $mod3 $mod4 $mod5 )
-
+      set mod2 = comp/gcc/11.2.0
+      set mod3 = comp/intel/2021.6.0
+      set mod4 = mpi/impi/2021.6.0
+      set mod5 = python/GEOSpyD/Min23.5.2-0_py3.11_AND_Min4.8.3_py2.7
+      set basedir = /discover/swdev/gmao_SIteam/Baselibs/ESMA-Baselibs-7.24.0/x86_64-pc-linux-gnu/ifort_2021.6.0-intelmpi_2021.6.0-SLES12
       set usemod1 = /discover/swdev/gmao_SIteam/modulefiles-SLES12
 
-   # or SLES 11?
    else
 
-      set mod1 = GEOSenv
-
-      set mod2 = other/comp/gcc-6.3
-      set mod3 = comp/intel-18.0.5.274
-
-      set mod4 = mpi/impi-18.0.5.274
-
-      set mod5 = lib/mkl-18.0.5.274
-      set mod6 = other/python/GEOSpyD/Ana2019.10_py2.7
-
-      set basedir = /discover/swdev/gmao_SIteam/Baselibs/ESMA-Baselibs-6.0.11-SLES11/x86_64-unknown-linux-gnu/ifort_18.0.5.274-intelmpi_18.0.5.274
-
-      set mods = ( $mod1 $mod2 $mod3 $mod4 $mod5 $mod6 )
-
-      set usemod1 = /discover/swdev/gmao_SIteam/modulefiles-SLES11
+      set mod2 = comp/gcc/11.4.0
+      set mod3 = comp/intel/2021.6.0
+      set mod4 = mpi/impi/2021.13
+      set mod5 = python/GEOSpyD/Min23.5.2-0_py3.11
+      set basedir = /discover/swdev/gmao_SIteam/Baselibs/ESMA-Baselibs-7.24.0/x86_64-pc-linux-gnu/ifort_2021.6.0-intelmpi_2021.13.0-SLES15
+      set usemod1 = /discover/swdev/gmao_SIteam/modulefiles-SLES15
 
    endif
 
+   set mods = ( $mod1 $mod2 $mod3 $mod4 $mod5 )
    set modinit = /usr/share/modules/init/csh
-   set loadmodules = 0
 
    set usemods = ( $usemod1 )
    set usemodules = 1
+
+   set useldlibs = 1
 
 #=======#
 #  NAS  #
 #=======#
 else if ( $site == NAS ) then
 
-   set basedir = /nobackup/gmao_SIteam/Baselibs/ESMA-Baselibs-6.0.11/x86_64-unknown-linux-gnu/ifort_2018.5.274-mpt_2.17r13-gcc_6.3.0
-
    set mod1 = GEOSenv
 
-   set mod2 = comp-gcc/6.3.0
-   set mod3 = 2018.5.274.modulefile
-   set mod4 = mpi-hpe/mpt.2.17r13
-   set mod5 = math-mkl/2018.5.274
-   set mod6 = python/GEOSpyD/Ana2019.10_py2.7
+   set basedir = /nobackup/gmao_SIteam/Baselibs/ESMA-Baselibs-7.24.0/x86_64-pc-linux-gnu/ifort_2022.1.0-mpt_2.28_25Apr23_rhel87
+   set mod2 = comp-gcc/11.2.0-TOSS4
+   set mod3 = comp-intel/2022.1.0
+   set mod4 = mpi-hpe/mpt
 
-   set mods = ( $mod1 $mod2 $mod3 $mod4 $mod5 $mod6 )
+   set mod5 = python/GEOSpyD/Min23.5.2-0_py3.11_AND_Min4.8.3_py2.7
+
+   set mods = ( $mod1 $mod2 $mod3 $mod4 $mod5 )
    set modinit = /usr/share/modules/init/tcsh
-   set loadmodules = 0
 
    set usemod1 = /u/scicon/tools/modulefiles
    set usemod2 = /nobackup/gmao_SIteam/modulefiles
-   set usemod3 = /nasa/intel/Compiler/2018.5.274
+   set usemod3 = /nasa/modulefiles/testing
    set usemods = ( $usemod1 $usemod2 $usemod3 )
    set usemodules = 1
 
-#=========#
-#  JANUS  #
-#=========#
-else if ( $site == GMAO.janus ) then
-   set basedir=/ford1/share/gmao_SIteam/Baselibs/ESMA-Baselibs-6.0.11/x86_64-unknown-linux-gnu/pgfortran_17.10-openmpi_3.0.0-gcc_6.3.0
-   set mod1 = comp/gcc/6.3.0
-   set mod2 = comp/pgi/17.10-gcc_6.3.0
-   set mod3 = mpi/openmpi/3.0.0/pgi-17.10_gcc-6.3.0
-   set mod4 = lib/mkl/17.0.4.196
-   set mod5 = other/python/canopy
-
-   set mod6 = other/git/latest
-   set mod7 = other/cmake/latest
-
-   setenv ESMA_FC pgfortran
-   setenv GPU_CC_REV cc20
-   setenv PGI_LOCALRC /ford1/share/gmao_SIteam/PGILocalRC/linux86-64/17.10/bin/localrc.60300
-
-   set mods = ( $mod1 $mod2 $mod3 $mod4 $mod5 $mod6 $mod7 )
-   set modinit = /usr/share/Modules/init/tcsh
-   set loadmodules = 0
-   set usemodules = 1
-
-#===========#
-#  Bender   #
-#===========#
-else if ( $site == ACDL.bender ) then
-    set basedir=/ford1/share/gmao_SIteam/Baselibs/GMAO-Baselibs-5_0_0/x86_64-unknown-linux-gnu/ifort_13.1.1.163-openmpi_1.8.1    
-    set BASEBIN=$basedir/$arch/bin
-    set PYBIN = /share/dasilva/epd/epd-7.3-2-rh5-x86_64/bin
-    set IFCBIN = /opt/intel/composer_xe_2013.5.192/bin
-    set MPIBIN = /ford1/share/gmao_SIteam/MPI/openmpi-1.8.1-ifort-13.1.1.163/bin 
-    source $IFCBIN/ifortvars.csh intel64
-    setenv MKLPATH $MKLROOT/lib
-    set path = ( $BASEBIN $MPIBIN $PYBIN $path )
-    set loadmodules = 0
-    set usemodules = 0
-
-#===========#
-#  Niteroi  #
-#===========#
-else if ( $site == GMAO.niteroi ) then
-    set basedir = /Users/mathomp4/Baselibs/GMAO-Baselibs-5_0_0/x86_64-apple-darwin14.0.0/ifort_15.0.1.108-openmpi_1.8.3
-    set BASEBIN = $basedir/$arch/bin
-    set PYBIN   = /Library/Frameworks/EPD64.framework/Versions/7.3/bin
-    set IFCPATH = /opt/intel/composer_xe_2015.1.108
-    set MPIBIN  = /Users/mathomp4/MPI/openmpi/1.8.3/ifort-15.0.1.108
-    source $IFCPATH/bin/compilervars.csh intel64
-    setenv MKLPATH $MKLROOT/lib
-    set path = ( $BASEBIN $MPIBIN $PYBIN $path )
-    set loadmodules = 0
-    set usemodules = 0
+   set useldlibs = 1
 
 #=================#
 #  GMAO DESKTOP   #
 #=================#
 else if ( $site == GMAO.desktop ) then
 
-   set basedir=/ford1/share/gmao_SIteam/Baselibs/ESMA-Baselibs-6.0.11/x86_64-unknown-linux-gnu/ifort_18.0.5.274-openmpi_4.0.0-gcc_6.3.0
+   set basedir=/ford1/share/gmao_SIteam/Baselibs/ESMA-Baselibs-7.24.0/x86_64-pc-linux-gnu/ifort_2022.1.0-intelmpi_2022.1.0
 
    set mod1 = GEOSenv
 
-   set mod2 = comp/gcc/6.3.0
-   set mod3 = comp/intel/18.0.5.274
-   set mod4 = mpi/openmpi/4.0.0/intel-18.0.5.274_gcc-6.3.0
-   set mod5 = lib/mkl/18.0.5.274
-   set mod6 = other/python/GEOSpyD/Ana2019.10_py2.7
+   set mod2 = comp/gcc/11.2.0
+   set mod3 = comp/intel/2022.1.0
+   set mod4 = mpi/impi/2022.1.0
+   set mod5 = other/python/GEOSpyD/Min23.5.2-0_py3.11_AND_Min4.8.3_py2.7
 
-   set mods = ( $mod1 $mod2 $mod3 $mod4 $mod5 $mod6 )
+   set mods = ( $mod1 $mod2 $mod3 $mod4 $mod5 )
    set modinit = /usr/share/Modules/init/tcsh
-   set loadmodules = 0
 
    set usemod1 = /ford1/share/gmao_SIteam/modulefiles
    set usemods = ( $usemod1 )
    set usemodules = 1
 
+   # Testing shows adding BASEDIR lib to LD_LIBRARY_PATH
+   # causes issues with the TCL modules on the GMAO machines
+   set useldlibs = 0
+
 endif
+
+goto ACTION
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#                     ARM64 values
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+ARM64:
+
+#=================#
+#  ARM64 default  #
+#=================#
+
+set modinit = DUMMY
+
+set usemodules = 0
+set useldlibs = 0
 
 goto ACTION
 
@@ -297,11 +244,11 @@ if ( $#argv > 0 ) then
    else if ( $1 == modinit ) then
       echo $modinit
 
-   else if ( $1 == loadmodules ) then
-      echo $loadmodules
-
    else if ( $1 == usemodules ) then
       echo $usemods
+
+   else if ( $1 == useldlibs ) then
+      echo $useldlibs
 
    else if ( $1 == ESMA_FC ) then
       echo $ESMA_FC
@@ -349,31 +296,38 @@ endif
 
 # add BASEDIR lib to LD_LIBRARY_PATH, if not already there
 #---------------------------------------------------------
-if ($?LD_LIBRARY_PATH) then
-   echo $LD_LIBRARY_PATH | grep $BASEDIR/$arch/lib > /dev/null
-   if ($status) then  #  == 1, if not found
-      setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:$BASEDIR/$arch/lib
+
+if ($useldlibs) then
+   if ($?LD_LIBRARY_PATH) then
+      echo $LD_LIBRARY_PATH | grep $BASEDIR/$arch/lib > /dev/null
+      if ($status) then  #  == 1, if not found
+         setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:$BASEDIR/$arch/lib
+      endif
+   else
+      setenv LD_LIBRARY_PATH $BASEDIR/$arch/lib
    endif
-else
-   setenv LD_LIBRARY_PATH $BASEDIR/$arch/lib
-endif
 
 # add individual $ld_libraries to LD_LIBRARY_PATH, if not already there
 #----------------------------------------------------------------------
-if ($?ld_libraries) then
-   foreach lib ( $ld_libraries )
-      if ($LD_LIBRARY_PATH !~ *$lib*) then
-         setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:$lib
-      endif
-   end
-endif
+   if ($?ld_libraries) then
+      foreach lib ( $ld_libraries )
+         if ($LD_LIBRARY_PATH !~ *$lib*) then
+            setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:$lib
+         endif
+      end
+   endif
 
-if ($?LD_LIBRARY64_PATH) then
-   echo $LD_LIBRARY64_PATH | grep $BASEDIR/$arch/lib > /dev/null
-   if ($status) then  #  == 1, if not found
-      setenv LD_LIBRARY64_PATH ${LD_LIBRARY64_PATH}:$BASEDIR/$arch/lib
+   if ($?LD_LIBRARY64_PATH) then
+      echo $LD_LIBRARY64_PATH | grep $BASEDIR/$arch/lib > /dev/null
+      if ($status) then  #  == 1, if not found
+         setenv LD_LIBRARY64_PATH ${LD_LIBRARY64_PATH}:$BASEDIR/$arch/lib
+      endif
    endif
 endif
+
+# Set UDUNITS2_XML_PATH
+# ---------------------
+setenv UDUNITS2_XML_PATH $BASEDIR/$arch/share/udunits/udunits2.xml
 
 # load library modules
 #---------------------
@@ -382,8 +336,6 @@ if (-e $modinit) then
    if (! $wrapper) echo -n " and modules"
    source $modinit
    module purge
-
-   if ($loadmodules) module load modules
 
    if ($usemodules) then
       foreach usemod ( $usemods )
@@ -394,6 +346,13 @@ if (-e $modinit) then
    foreach mod ( $mods )
       module load $mod
    end
+
+   if ($?XTRAMODS2LOAD) then
+      set xmods = (`echo $XTRAMODS2LOAD | cut -d: -f1- --output-delimiter=" "`)
+      foreach mod ( $xmods )
+         module load $mod
+      end
+   endif
 
 endif
 if (! $wrapper) echo " for $node"
@@ -412,6 +371,9 @@ if ($wrapper) then
    if ($?LD_LIBRARY64_PATH) then
       echo "export LD_LIBRARY64_PATH=$LD_LIBRARY64_PATH" >> $outfil
    endif
+   if ($?UDUNITS2_XML_PATH) then
+      echo "export UDUNITS2_XML_PATH=$UDUNITS2_XML_PATH" >> $outfil
+   endif
 
    set modulecmd = `which modulecmd`
    if ($status) set modulecmd = "/usr/bin/modulecmd"
@@ -422,9 +384,6 @@ if ($wrapper) then
          echo 'source '$modinit_sh                       >> $outfil
       endif
       echo 'eval `'$modulecmd sh purge'`'                >> $outfil
-      if ($loadmodules) then
-         echo 'eval `'$modulecmd sh load modules'`'      >> $outfil
-      endif
       foreach mod ($mods)
          echo 'eval `'$modulecmd sh load $mod'`'         >> $outfil
       end
@@ -453,12 +412,9 @@ DESCRIPTION
      add the BASEDIR lib directory to LD_LIBRARY_PATH (if necessary), and will
      load library modules when sourced.
 
-     If the script is called with "basedir", "modules", "modinit", or 
-     "loadmodules", then it will echo the values to standard output without
+     If the script is called with "basedir", "modules", "modinit", or
+     "useldlibs", then it will echo the values to standard output without
      modifying the environment.
-
-     The "modinit" and "loadmodules" options are primarily for use with
-     the g5_modules_perl_wrapper script.
 
 SYNOPSIS
 
@@ -474,8 +430,8 @@ OPTIONS
      basedir             echo expected value for BASEDIR environment variable
      modules             echo expected list of modules
      modinit             echo location of csh module initialization script
-     loadmodules         echo logical indicating whether "module load modules"
-                              is needed prior to loading other modules
+     useldlibs           echo logical indicating whether BASEDIR lib should be
+                              added to LD_LIBRARY_PATH
      usemodules          echo logical indicating whether "module use directory(s)"
                               is needed prior to loading other modules
      ESMA_FC             echo value of ESMA_FC if set

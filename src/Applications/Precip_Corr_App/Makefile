@@ -14,25 +14,23 @@ CPCU_A_FP:
 merge:
 	make corrector CORRECTOR=merge FORCING=CorrFile
 
-FFLAGS = -extend_source -assume byterecl -real-size 64
+FFLAGS = -extend-source -assume byterecl -real-size 64
 
 CORRECTOR=CPCU_B
 FORCING=GEOS
 
-BUILD=/home/dao_ops/SMAP/GEOSldas-SLES12/install
-#BASE=/discover/swdev/gmao_SIteam/Baselibs/ESMA-Baselibs-6.0.4-SLES12/x86_64-unknown-linux-gnu/ifort_18.0.5.274-intelmpi_19.1.0.166/Linux
-#BASE=$(shell cat $(BUILD)/etc/BASEDIR.rc | awk '{print $$2}')/Linux
+BUILD=/discover/nobackup/dao_ops/jardizzo/software/SLES15/GEOSldas/install-SLES15
 BASE=$(BASEDIR)/Linux
-MPI_ROOT=/usr/local/intel/2020/compilers_and_libraries_2020.0.166/linux/mpi
 
-FC=mpiifort
-CC=mpiicc
+FC=$(shell $(BASE)/bin/nf-config --fc)
+CC=$(shell $(BASE)/bin/nf-config --cc)
 
 INC_ESMF = -I$(BASE)/include/esmf
-LIB_ESMF = -L$(BASE)/lib -lesmf_fullylinked
+#LIB_ESMF = -L$(BASE)/lib -lesmf_fullylinked
+LIB_ESMF = -L$(BASE)/lib -lesmf
 
-INC_BASE = -I$(BUILD)/include/MAPL_Base
-LIB_BASE = -L$(BUILD)/lib -lMAPL_Base
+INC_BASE = -I$(BUILD)/include/MAPL.base
+LIB_BASE = -L$(BUILD)/lib -lMAPL.base
 
 INC_MAPL = -I$(BUILD)/include/MAPL_cfio_r4
 LIB_MAPL = -L$(BUILD)/lib -lMAPL_cfio_r4

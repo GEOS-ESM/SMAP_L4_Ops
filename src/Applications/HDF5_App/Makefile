@@ -4,14 +4,18 @@ SHELL = /bin/sh
 
 FFLAGS = -extend-source -assume byterecl
 
-BUILD=/discover/nobackup/dao_ops/jardizzo/SMAP/software/GEOSldas/install
+BUILD=/discover/nobackup/dao_ops/jardizzo/software/SLES15/GEOSldas/install-SLES15
 BASE=$(BASEDIR)/Linux
 
 #FC=mpiifort
 #CC=mpiicc
 
+FC=$(shell $(BASE)/bin/nf-config --fc)
+CC=$(shell $(BASE)/bin/nf-config --cc)
+
 INC_ESMF = -I$(BASE)/include/esmf
-LIB_ESMF = -L$(BASE)/lib -lesmf_fullylinked
+#LIB_ESMF = -L$(BASE)/lib -lesmf_fullylinked
+LIB_ESMF = -L$(BASE)/lib -lesmf
 
 INC_BASE = -I$(BUILD)/include/MAPL.base
 LIB_BASE = -L$(BUILD)/lib -lMAPL.base
