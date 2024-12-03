@@ -26,8 +26,8 @@
 # Series Identification Metadata
 # ==============================
 
-  L4_SM_revisionDate = 2024-07-15
-  L4_SM_maintenanceDate = 2025-07-15
+  L4_SM_revisionDate = 2024-09-26
+  L4_SM_maintenanceDate = 2025-09-26
   L4_SM_PSDPublicationDate = 2018-05-31
   L4_SM_PSDEdition = 1.5
   L4_SM_gph_identifier_product_DOI = 10.5067/9LNYIYOBNBR5
@@ -61,7 +61,7 @@
   L4_SM_LFO_DOI         = TBD
   L4_SM_LFO_changeLog   = Initial version
 
-  L4_SM_PRECIP_version  = IMGv7BFnCPCUcorrv2
+  L4_SM_PRECIP_version  = IMGv7BFnCPCUcorrv3
   L4_SM_PRECIP_description = CPCU/IMERG Corrected Precipitation
   L4_SM_PRECIP_directoryID = <L4_DATA_directoryID>/GEOS/FP/precip_corr_<L4_SM_PRECIP_version>/<L4_SM_LFO_version>/diag
   L4_SM_PRECIP_DOI         = TBD

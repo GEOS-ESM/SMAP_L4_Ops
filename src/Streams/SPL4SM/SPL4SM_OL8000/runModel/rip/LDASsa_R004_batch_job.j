@@ -4,30 +4,52 @@
 #SBATCH --account=s1321
 #SBATCH --time=00:30:00
 #SBATCH --qos=daohi
-#SBATCH --ntasks=120
-#SBATCH --export=NONE
-#SBATCH --constraint=cas
+#SBATCH --nodes=2 --ntasks-per-node=126
+#SBATCH --constraint=mil
 #SBATCH --output=<L4_SM_MODEL_OUTPUT_DIR>/rc_out/Y%Y/M%m/<L4_SM_STREAM_version>.ldas_log.%Y%m%d_0000z.txt
 #SBATCH --error=<L4_SM_MODEL_OUTPUT_DIR>/rc_out/Y%Y/M%m/<L4_SM_STREAM_version>.ldas_out.%Y%m%d_0000z.txt
 
 limit stacksize unlimited
 setenv ARCH `uname`
-setenv ESMADIR  <L4_SM_STREAM_directoryID>/bin/GEOSldas/install
+#setenv ESMADIR  <L4_SM_STREAM_directoryID>/bin/GEOSldas/install
+setenv ESMADIR  /discover/nobackup/dao_ops/jardizzo/SMAP/software/GEOSldas/install
+#setenv ESMADIR  /home/qliu/smap/SMAP_Nature/SMAP_Nature_v11/OLv8_spin/build
+#setenv ESMADIR  /discover/swdev/mathomp4/Models/GEOSldas-v18.0.3-IntelMPI/install-Aggressive-SLES15
 setenv GEOSBIN  $ESMADIR/bin
 
 unsetenv LD_LIBRARY_PATH
 source $GEOSBIN/g5_modules
 
-setenv MKL_CBWR "AUTO"
-setenv I_MPI_DAPL_UD enable
+# OPENMPI flags
+# Turn off warning about TMPDIR on NFS
+setenv OMPI_MCA_shmem_mmap_enable_nfs_warning 0
+# pre-connect MPI procs on mpi_init
+setenv OMPI_MCA_mpi_preconnect_all 1
+setenv OMPI_MCA_coll_tuned_bcast_algorithm 7
+setenv OMPI_MCA_coll_tuned_scatter_algorithm 2
+setenv OMPI_MCA_coll_tuned_reduce_scatter_algorithm 3
+setenv OMPI_MCA_coll_tuned_allreduce_algorithm 3
+setenv OMPI_MCA_coll_tuned_allgather_algorithm 4
+setenv OMPI_MCA_coll_tuned_allgatherv_algorithm 3
+setenv OMPI_MCA_coll_tuned_gather_algorithm 1
+setenv OMPI_MCA_coll_tuned_barrier_algorithm 0
+# required for a tuned flag to be effective
+setenv OMPI_MCA_coll_tuned_use_dynamic_rules 1
+# disable file locks
+setenv OMPI_MCA_sharedfp "^lockedfile,individual"
+
+# By default, ensure 0-diff across processor architecture by limiting MKL's freedom to pick algorithms.
+# As of June 2021, MKL_CBWR=AVX2 is fastest setting that works for both haswell and skylake at NCCS.
+# Change to MKL_CBWR=AUTO for fastest execution at the expense of results becoming processor-dependent.
+#setenv MKL_CBWR "COMPATIBLE"
+#setenv MKL_CBWR "AUTO"
+setenv MKL_CBWR "AVX2"
 
 setenv LD_LIBRARY_PATH ${BASEDIR}/${ARCH}/lib:${ESMADIR}/lib:${LD_LIBRARY_PATH}
 
-if ( -e /etc/os-release ) then
-module load nco/4.8.1
-else
-module load other/nco-4.6.8-gcc-5.3-sp3
-endif
+module load nco
+
+setenv RUN_CMD "$GEOSBIN/esma_mpirun -np "
 
 # Initialize rc_out
 
@@ -74,24 +96,36 @@ mv LDASsa_<L4_SM_CATBIAS_version>_inputs_catbias.nml LDASsa_SPECIAL_inputs_catbi
 
 # Execute GEOSldas
 
-if( $?PBS_NODEFILE ) then
-   sleep 10
-   set nodes = `cat $PBS_NODEFILE | uniq`
+$GEOSBIN/RmShmKeys_sshmpi.csh
 
-   foreach node ($nodes)
-     sshmpi $node $GEOSBIN/rmshmkeyhere.sh &
-   end
+set npes_nx = `grep NX: LDAS.rc | cut -d':' -f2 `
+set npes_ny = `grep NY: LDAS.rc | cut -d':' -f2 `
+@ numprocs = $npes_nx * $npes_ny
 
-   wait
+@ oserver_nodes = 0
+@ writers = 0
 
-endif   
+if (! $?SLURM_NTASKS) then
+  set total_npes = `wc -l $PBS_NODEFILE | awk '{print $1}'` 
+else
+  set total_npes = $SLURM_NTASKS
+endif
 
-$GEOSBIN/esma_mpirun -np 120 $GEOSBIN/GEOSldas.x
+if ($oserver_nodes == 0) then
+  set oserver_options = ""
+else
+  set oserver_options = "--oserver_type multigroup --nodes_output_server $oserver_nodes  --npes_backend_pernode $writers"
+endif
 
+$RUN_CMD $total_npes $GEOSBIN/GEOSldas.x --npes_model $numprocs $oserver_options 
 if( -e EGRESS.ldas ) then
    set rc = 0
+   echo GEOSldas Run Status: $rc
 else
    set rc = -1
+   echo GEOSldas Run Status: $rc
+   echo "ERROR: GEOSldas run FAILED, exit without post-processing"
+   exit
 endif
 
 echo GEOSldas Run Status: $rc
