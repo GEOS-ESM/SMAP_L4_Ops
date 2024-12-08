@@ -554,18 +554,19 @@
 
       undef  = cpcu%grid%undef
       correction%factor = 1.0
+      correction%residual = 0.0
 
       where (precip%data*LF .gt. zeroThreshold .and. cpcu%data .ne. undef)
         correction%factor   = (cpcu%data*CF) / (precip%data*LF)
+        correction%factor = min(correction%factor, 10.)
+        ! the following equestion catpures missing precip due to factor capping
+        correction%residual = max((cpcu%data*CF) - (precip%data*LF)*correction%factor,0.0)
       end where
-
-      correction%residual = 0.0
 
       where (precip%data*LF .le. zeroThreshold .and. cpcu%data .ne. undef)
         correction%residual = max((cpcu%data*CF) - (precip%data*LF),0.0)
       end where
 
-      correction%factor = min(correction%factor, 10.)
       correction%residual = correction%residual / LF
 
       end subroutine computeCorrection
