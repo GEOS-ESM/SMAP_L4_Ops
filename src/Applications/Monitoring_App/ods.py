@@ -47,17 +47,17 @@ def parse_args(args):
         print('File does not exist.')
         sys.exit()
     if not os.path.exists(args.path):
-        os.makedirs(args.path, 0777)
+        os.makedirs(args.path, 0o777)
     return args
 
 ###############################################################################
 def read_obsparam(file):
     '''reads binary data from obsparam file(s)'''
     data = []
-    print ('\nread_obsparam: Reading from: '+os.path.basename(file))
+    print(('\nread_obsparam: Reading from: '+os.path.basename(file)))
     with open(file) as f:
         N_obs = int(f.readline())
-        print ('N_obs: '+str(N_obs)+'\n')
+        print(('N_obs: '+str(N_obs)+'\n'))
 
         for i in range(N_obs):
             obs = {}
@@ -70,10 +70,12 @@ def read_obsparam(file):
             obs['ang'] = [float(f.readline()) for i in range(int(obs['N_ang']))]
 
             obs['freq'] = float(f.readline())
-            obs['FOB'] = float(f.readline())
+            obs['FOV'] = float(f.readline())
+            obs['FOV_units'] = f.readline().strip()[1:-1]
             obs['assim'] = f.readline().strip()
             obs['scale'] = f.readline().strip()
             obs['getinnov'] = f.readline().strip()
+            obs['RTM_ID'] = float(f.readline())
             obs['bias_Npar'] = float(f.readline())
             obs['bias_trel'] = float(f.readline())
             obs['bias_tcut'] = float(f.readline())
@@ -82,8 +84,12 @@ def read_obsparam(file):
             obs['units'] = f.readline().strip()[1:-1]
             obs['path'] = f.readline().strip()[1:-1]
             obs['name'] = f.readline().strip()[1:-1]
+            obs['maskpath'] = f.readline().strip()[1:-1]
+            obs['maskname'] = f.readline().strip()[1:-1]
             obs['scalepath'] = f.readline().strip()[1:-1]
             obs['scalename'] = f.readline().strip()[1:-1]
+            obs['flistpath'] = f.readline().strip()[1:-1]
+            obs['flistname'] = f.readline().strip()[1:-1]
             obs['errstd'] = float(f.readline())
             obs['std_normal_max'] = float(f.readline())
             obs['zeromean'] = f.readline().strip()
@@ -98,10 +104,10 @@ def read_obsparam(file):
 def read_obsparam_new_1(file):
     '''reads binary data from obsparam file(s)'''
     data = []
-    print ('\nread_obsparam_new_1: Reading from: '+os.path.basename(file))
+    print(('\nread_obsparam_new_1: Reading from: '+os.path.basename(file)))
     with open(file) as f:
         N_obs = int(f.readline())
-        print ('N_obs: '+str(N_obs)+'\n')
+        print(('N_obs: '+str(N_obs)+'\n'))
 
         for i in range(N_obs):
             obs = {}
@@ -144,10 +150,10 @@ def read_obsparam_new_1(file):
 def read_obsparam_new_2(file):
     '''reads binary data from obsparam file(s)'''
     data = []
-    print ('\nread_obsparam_new_2: Reading from: '+os.path.basename(file))
+    print(('\nread_obsparam_new_2: Reading from: '+os.path.basename(file)))
     with open(file) as f:
         N_obs = int(f.readline())
-        print ('N_obs: '+str(N_obs)+'\n')
+        print(('N_obs: '+str(N_obs)+'\n'))
 
         for i in range(N_obs):
             obs = {}
@@ -192,15 +198,15 @@ def read_obsparam_new_2(file):
 def read_ObsFcstAna(file):
     '''reads binary data from ObsFcstAna file(s)'''
     fdata = {}
-    print ('\nReading from: '+os.path.basename(file))
+    print(('\nReading from: '+os.path.basename(file)))
     with open(file, 'rb') as f:
         f = f.read()
 
         # read N_obs and time stamp entry
         ftag, N_obs = struct.unpack('<2i',f[:8])
-        print ('N_obs: '+str(N_obs))
+        print(('N_obs: '+str(N_obs)))
         date_time = ['year', 'month', 'day', 'hour', 'min', 'sec', 'dofyr', 'pentad']
-        date_time = dict(zip(date_time, struct.unpack('<8i', f[8:40])))
+        date_time = dict(list(zip(date_time, struct.unpack('<8i', f[8:40]))))
 
         f = f[44:]
         # since precision is int32 and float32, N_obs*4bytes is my chunk size
