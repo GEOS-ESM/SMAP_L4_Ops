@@ -16,7 +16,7 @@ import numpy as np
 try:
     import h5py as h5
 except ImportError as err:
-    print err
+    print(err)
     try:
         import netCDF4 as nc4
     except ImportError as err:
@@ -243,7 +243,7 @@ def main():
 
     d = base.split('_')[4].split('T')[0]
     h = base.split('_')[4].split('T')[1]
-    print base
+    print(base)
 
     try:
         z = h5.File(f, 'r')
@@ -254,7 +254,7 @@ def main():
     ###########################################################################
     rc()
 
-    for field in sorted(field for field in fields.keys() if field in z):
+    for field in sorted(field for field in list(fields.keys()) if field in z):
         dims = z[field].shape
         coords = z[field].attrs['coordinates'].split(' ')
         if 'lat' in coords[0]:
@@ -278,7 +278,7 @@ def main():
             if type(mi) is np.ndarray:
                 mi = mi[0]
                 ma = ma[0]
-        print(' {0:50} {1:s}'.format(field, [mi, ma]))
+        print((' {0:50} {1:s}'.format(field, [mi, ma])))
 
         # data-specific steps
         try:
@@ -310,13 +310,13 @@ def main():
         # setup dirs
         path = os.path.join(args.path, 'Y'+d[:4]+'/M'+d[4:6]+'/D'+d[6:8])
         if not os.path.exists(path):
-            os.makedirs(path, 0777)
+            os.makedirs(path, 0o777)
 
         #############
         # Range Check
         #############
         if data[((data > ma) | (data < mi))].any():
-            print('  Range Check failed: %02d:%02d'%(int(h[:2]), int(h[2:4])))
+            print(('  Range Check failed: %02d:%02d'%(int(h[:2]), int(h[2:4]))))
 
             ran = np.ma.masked_inside(data, mi, ma, copy=1)
             chk = check('Range', ran, z, data, field, d, h, path, base, args, lat, lon, mi, ma)
@@ -325,7 +325,7 @@ def main():
         # NaN Check
         ###########
         if np.isnan(data).any():
-            print('  NaN Check failed: %02d:%02d'%(int(h[:2]), int(h[2:4])))
+            print(('  NaN Check failed: %02d:%02d'%(int(h[:2]), int(h[2:4]))))
 
             chk = check('NaN', data, z, data, field, d, h, path, base, args, lat, lon, mi, ma)
     z.close()

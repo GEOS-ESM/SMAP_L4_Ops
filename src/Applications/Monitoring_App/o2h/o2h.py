@@ -75,10 +75,10 @@ if __name__ == '__main__':
         else:
             dates = [date]
     else:
-        print 'Date argument incorrect input.'
+        print('Date argument incorrect input.')
 
     if not os.path.exists(args.output_path):
-        print 'Output path does not exist.'
+        print('Output path does not exist.')
         sys.exit()
     args.output_path = os.path.abspath(args.output_path)
 
@@ -86,7 +86,7 @@ if __name__ == '__main__':
     try:
         compute.insert_db(expver=args.exp, dates=dates, filename=args.file)
     except Exception as e:
-        print e
+        print(e)
         rc = 1
 
     # make output structure
@@ -122,6 +122,6 @@ if __name__ == '__main__':
     try:
         web.make(expver=args.exp, dates=dates, output=path, template=args.template_path)
     except Exception as e:
-        print e
+        print(e)
         rc = 1
     permissions(args.output_path)
