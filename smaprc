@@ -15,7 +15,8 @@ cd $cwd
 
 setenv PATH $PATH':.:'$SMAP_HOME/src/Applications/L4_App':'$SMAP_HOME/src/Applications/DTR_App:$SMAP_HOME/src/Applications/L4_SM_App:$SMAP_HOME/src/Applications/L4_SM_NR_App:$SMAP_HOME/src/Applications/L4_C_App:$SMAP_HOME/src/Applications/Precip_Corr_App:$SMAP_HOME/src/Applications/Tools_App:$SMAP_HOME/src/Applications/HDF5_App:$SMAP_HOME/src/Applications/Monitoring_App:/home/dao_ops/GEOSadas-5_17/GEOSadas/src/GMAO_Shared/GMAO_ods
 
-setenv PERL5LIB $SMAP_HOME/src/SMAP_Shared/SMAP_perllib/lib/perl5/site_perl/5.18.2:$SMAP_HOME/src/SMAP_Shared/SMAP_perllib/lib/perl5/site_perl:$SMAP_HOME/src/SMAP_Shared/SMAP_perllib
+#setenv PERL5LIB $SMAP_HOME/src/SMAP_Shared/SMAP_perllib/lib/perl5/site_perl/5.18.2:$SMAP_HOME/src/SMAP_Shared/SMAP_perllib/lib/perl5/site_perl:$SMAP_HOME/src/SMAP_Shared/SMAP_perllib
+setenv PERL5LIB /discover/nobackup/dao_ops/jardizzo/software/SLES15/usr/lib/perl5/site_perl:$SMAP_HOME/src/SMAP_Shared/SMAP_perllib
 
 setenv CVSROOT ':ext:cvsacldirect:/cvsroot/esma'
 setenv SMAP_REPOSITORY esma/src/Applications/SMAP_L4_Ops
