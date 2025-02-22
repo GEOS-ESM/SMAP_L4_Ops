@@ -199,8 +199,8 @@ def get_land_info(lmc_in):
     # compute number of 36km tiles
     (nRows9km, nCols9km) = dzsf.shape
     num_tiles_36km = 0
-    for iR in xrange(0,nRows9km,4):
-        for jC in xrange(0,nCols9km,4):
+    for iR in range(0,nRows9km,4):
+        for jC in range(0,nCols9km,4):
             # here, var[iR:iR+4,jC:jC+4] is the 4x4 block
             mask_isdata_block = mask_isdata[iR:iR+4,jC:jC+4]
             if np.where(mask_isdata_block==True)[0].size > 0:
@@ -232,7 +232,7 @@ def get_var_info(fid, H5GroupName, land_frac, land_frac_isdata, skipped=[]):
     VarStat = OrderedDict()
 
     # list of variables in the group h5group
-    VariableList = fid[H5GroupName].keys()
+    VariableList = list(fid[H5GroupName].keys())
 
     # iterate over all variables
     for variable in VariableList:
@@ -357,7 +357,7 @@ def get_aup_tb_var_info(aup_id, land_frac, land_frac_isdata):
             ]
         }
     
-    for tb_key in tb.keys():
+    for tb_key in list(tb.keys()):
         tb_p = tb[tb_key] # p for polarization (h/v)
         # the resolution and orbit flags
         res_value = aup_id[tb_p['var_res']].value # uint32
@@ -418,8 +418,8 @@ def get_aup_tb_var_info(aup_id, land_frac, land_frac_isdata):
                     # it is easier to append to lists
                     v_value_masked_l = list()
                     v_weight_l = list()
-                    for iR in xrange(0,nRows9km,4):
-                        for jC in xrange(0,nCols9km,4):
+                    for iR in range(0,nRows9km,4):
+                        for jC in range(0,nCols9km,4):
                             # here, var[iR:iR+4,jC:jC+4] is the 4x4 block
                             mask_block = mask_rb_isdata[mask_key][iR:iR+4,jC:jC+4]
                             WT = np.where(mask_block==True) # WT = (W)here (T)rue
@@ -449,7 +449,7 @@ def get_aup_tb_var_info(aup_id, land_frac, land_frac_isdata):
                     }
         
         # compute mean, std etc. and store in VarStat
-        for svar in stored_vars.keys():
+        for svar in list(stored_vars.keys()):
             sname = svar
             svalue = stored_vars[svar]['value']
             sweight = stored_vars[svar]['weight']
@@ -672,7 +672,7 @@ def write_qa(fid, filename, stats, header, footer, num_tiles_9km=None, num_tiles
     fid.write(header)
 
     # variable info
-    for var in stats.keys():
+    for var in list(stats.keys()):
         v_N = stats[var]['N']
         v_units = stats[var]['units']
         v_mean = stats[var]['mean']
