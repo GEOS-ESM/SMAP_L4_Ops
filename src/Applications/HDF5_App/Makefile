@@ -4,7 +4,7 @@ SHELL = /bin/sh
 
 FFLAGS = -extend-source -assume byterecl
 
-BUILD=/discover/nobackup/dao_ops/jardizzo/software/SLES15/GEOSldas/install-SLES15
+BUILD=/discover/nobackup/dao_ops/jardizzo/software/SLES15/GEOSldas_develop/install-SLES15
 BASE=$(BASEDIR)/Linux
 
 #FC=mpiifort

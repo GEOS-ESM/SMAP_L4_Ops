@@ -141,8 +141,8 @@
 
       call h5pcreate_f(H5P_FILE_ACCESS_F, fapl_id, rc)
       if (rc .ne. 0) stop 1
-      call h5pset_libver_bounds_f(fapl_id, H5F_LIBVER_LATEST_F, &
-                                               H5F_LIBVER_LATEST_F, rc)
+      call h5pset_libver_bounds_f(fapl_id, H5F_LIBVER_EARLIEST_F, &
+                                               H5F_LIBVER_V18_F, rc)
       if (rc .ne. 0) stop 2
 
       call h5fcreate_f(filename,H5F_ACC_TRUNC_F,fid,rc, &
@@ -264,8 +264,9 @@
 !     ==============
 
       call h5pcreate_f(H5P_FILE_ACCESS_F, fapl_id, rc)
-      call h5pset_libver_bounds_f(fapl_id, H5F_LIBVER_LATEST_F, &
-                                               H5F_LIBVER_LATEST_F, rc)
+      call h5pset_libver_bounds_f(fapl_id, H5F_LIBVER_EARLIEST_F, &
+                                               H5F_LIBVER_V18_F, rc)
+      if (rc .ne. 0) stop 2
 
       call h5fopen_f(filename,H5F_ACC_RDWR_F,fid,rc, &
                               access_prp=fapl_id)
