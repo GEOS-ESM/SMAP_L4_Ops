@@ -2319,8 +2319,11 @@ sub compressHDF { CLOCK:  my $time = shift;
                              and return $eh->error(2);
 
   move ($hdf_file . ".tmp", $hdf_file);
-
   system "h5format_convert $hdf_file" and return $eh->error(4);
+  system "h5fixref.py $hdf_file" and return $eh->error(4);
+
+# system "h5convert.py --input " . $hdf_file . ".tmp --output " . $hdf_file and return $eh->error(4);
+# unlink($hdf_file . ".tmp") or die "Can't unlink " . $hdf_file . ".tmp: $!";
 
   return 1;
 }
