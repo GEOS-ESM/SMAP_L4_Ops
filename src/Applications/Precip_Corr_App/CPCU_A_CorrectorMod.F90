@@ -559,7 +559,7 @@
       where (precip%data*LF .gt. zeroThreshold .and. cpcu%data .ne. undef)
         correction%factor   = (cpcu%data*CF) / (precip%data*LF)
         correction%factor = min(correction%factor, 10.)
-        ! the following equestion catpures missing precip due to factor capping
+        ! the following equation captures missing precip due to factor capping
         correction%residual = max((cpcu%data*CF) - (precip%data*LF)*correction%factor,0.0)
       end where
 
