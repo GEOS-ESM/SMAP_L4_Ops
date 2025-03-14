@@ -184,12 +184,12 @@ def get_land_info(lmc_in):
     """
 
     # land fraction and number of tiles
-    land_frac = np.float64(lmc_in['Land-Model-Constants_Data/cell_land_fraction'].value)
+    land_frac = np.float64(lmc_in['Land-Model-Constants_Data/cell_land_fraction'][:])
     land_frac_fillval = np.float64(lmc_in['Land-Model-Constants_Data/cell_land_fraction'].attrs.get('_FillValue'))
     land_frac_isdata = np.abs(land_frac-land_frac_fillval)>tol_float64
 
     # number of 9km tiles (it is important to store data in a float64 container)
-    dzsf = np.float64(lmc_in['Land-Model-Constants_Data/clsm_dzsf'].value)
+    dzsf = np.float64(lmc_in['Land-Model-Constants_Data/clsm_dzsf'][:])
     FillValue = np.float64(lmc_in['Land-Model-Constants_Data/clsm_dzsf'].attrs.get('_FillValue'))
     mask_isdata = np.abs(dzsf-FillValue)>tol_float64
     num_tiles_9km = dzsf[mask_isdata].shape[0] # 9km tiles  
@@ -240,10 +240,11 @@ def get_var_info(fid, H5GroupName, land_frac, land_frac_isdata, skipped=[]):
         #VarStat[var] = dict() # a nested dict (not ordered)
         # units
         v_unit = fid[H5GroupName][variable].attrs.get('units').strip()
+        v_unit = v_unit.decode('utf-8')
         if v_unit=='1': v_unit='dimensionless'
         # VERY IMPORTANT: use dtype=np.float64 or higher
         #       to prevent loss of precision
-        v_value = np.float64(fid[H5GroupName][variable].value)
+        v_value = np.float64(fid[H5GroupName][variable][:])
         v_fillvalue = np.float64(fid[H5GroupName][variable].attrs.get('_FillValue'))
         mask_isdata = np.abs(v_value-v_fillvalue)>tol_float64
         v_value_isdata = v_value[mask_isdata]
@@ -360,8 +361,8 @@ def get_aup_tb_var_info(aup_id, land_frac, land_frac_isdata):
     for tb_key in list(tb.keys()):
         tb_p = tb[tb_key] # p for polarization (h/v)
         # the resolution and orbit flags
-        res_value = aup_id[tb_p['var_res']].value # uint32
-        orb_value = aup_id[tb_p['var_orb']].value # uint32
+        res_value = aup_id[tb_p['var_res']][:] # uint32
+        orb_value = aup_id[tb_p['var_orb']][:] # uint32
 
         # resolution/orbit dimensions
         (nRows9km, nCols9km) = res_value.shape
@@ -389,17 +390,18 @@ def get_aup_tb_var_info(aup_id, land_frac, land_frac_isdata):
         # is assumed to be consistent in the assim and forecast fields.
 
         mask = dict()
-        mask['h'] = np.float64(aup_id['Observations_Data/tb_h_obs_assim'].value)
-        mask['v'] = np.float64(aup_id['Observations_Data/tb_v_obs_assim'].value)
+        mask['h'] = np.float64(aup_id['Observations_Data/tb_h_obs_assim'][:])
+        mask['v'] = np.float64(aup_id['Observations_Data/tb_v_obs_assim'][:])
 
         for variable in tb_p['var_list']:
             # get variable info
             v_name = variable.split('/')[-1]
             v_name_type = v_name.split('_')[-1]
             v_unit = aup_id[variable].attrs.get('units').strip()
+            v_unit = v_unit.decode('utf-8')
             if v_unit=='1': v_unit='dimensionless'
             v_fillval = np.float64(aup_id[variable].attrs.get('_FillValue'))
-            v_value = np.float64(aup_id[variable].value) # store in 64 bit arrays
+            v_value = np.float64(aup_id[variable][:]) # store in 64 bit arrays
 
             if (v_name.find('forecast') >= 0):
                 v_isdata = np.abs(mask[tb_key]-v_fillval)>tol_float64
@@ -552,7 +554,7 @@ def get_aup_gph_var_info(aup_id, land_frac, land_frac_isdata):
 
     # read variables in aupgph_var_list
     # from the h5 file and store them
-    shape9km = aup_id['Forecast_Data/surface_temp_forecast'].value.shape
+    shape9km = aup_id['Forecast_Data/surface_temp_forecast'][:].shape
     stored_vars = {
         'analysis': OrderedDict(),
         'forecast': OrderedDict(),
@@ -562,10 +564,11 @@ def get_aup_gph_var_info(aup_id, land_frac, land_frac_isdata):
     for variable in aupgph_var_list:
         v_name = variable.split('/')[-1]
         v_unit = aup_id[variable].attrs.get('units').strip()
+        v_unit = v_unit.decode('utf-8')
         if v_unit=='1': v_unit='dimensionless'
         # VERY IMPORTANT: use dtype=np.float64 or higher
         #       to prevent loss of precision
-        v_value = np.float64(aup_id[variable].value)
+        v_value = np.float64(aup_id[variable][:])
         v_fillvalue = np.float64(aup_id[variable].attrs.get('_FillValue'))
         v_isdata = np.abs(v_value-v_fillvalue)>tol_float64
         tmp_dict = {
