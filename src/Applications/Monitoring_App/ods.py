@@ -17,7 +17,8 @@ import numpy as np
 from pprint import pprint
 try:
 #   sys.path.append('/gpfsm/dhome/dao_ops/GEOSadas-CURRENT/GEOSadas/src/GMAO_Shared/GMAO_ods')
-    sys.path.append('/discover/nobackup/jstassi/GEOSadas/5260p3/src/GMAO_Shared/GMAO_ods')
+#   sys.path.append('/discover/nobackup/jstassi/GEOSadas/5260p3/src/GMAO_Shared/GMAO_ods')
+    sys.path.append('/home/dao_ops/GEOSadas-CURRENT/GEOSadas/install-SLES15/lib/Python')
     import pyods
 except ImportError as err:
     print('Import Error: GMAO pyods package not found, please locate in ADAS.')
