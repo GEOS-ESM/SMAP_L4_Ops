@@ -19,7 +19,7 @@ FFLAGS = -extend-source -assume byterecl -real-size 64
 CORRECTOR=CPCU_B
 FORCING=GEOS
 
-BUILD=/discover/nobackup/dao_ops/jardizzo/software/SLES15/GEOSldas/install-SLES15
+BUILD=/discover/nobackup/dao_ops/jardizzo/software/SLES15/GEOSldas_develop/install-SLES15
 BASE=$(BASEDIR)/Linux
 
 FC=$(shell $(BASE)/bin/nf-config --fc)
