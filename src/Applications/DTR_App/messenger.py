@@ -1,7 +1,13 @@
 import os
+import json
+import boto3
 import datetime as dt
 
 URI_DEFAULT = 'https://portal.nccs.nasa.gov/datastage/data'
+KINESIS_REGION_NAME = ''
+KINESIS_STREAM_NAME = ''
+KINESIS_PARTITION_KEY = ''
+CNM_CACHE_DIR = '/datastage/smaplevel4/smapnsid/data_out'
 
 class PDR(object):
 
@@ -65,9 +71,16 @@ class PDR(object):
 
 class CNM(object):
 
-    def __init__(self, pdr, uri=URI_DEFAULT):
+    def __init__(self, pdr, uri=URI_DEFAULT,
+                 region_name=KINESIS_REGION_NAME,
+                 stream_name=KINESIS_STREAM_NAME,
+                 partition_key=KINESIS_PARTITION_KEY):
 
         self.uri = uri
+        self.pdr_name = pdr.filename
+        self.region_name = region_name
+        self.stream_name = stream_name
+        self.partition_key = partition_key
 
         self.message = {}
         self.message['submissionTime'] = pdr.submissionTime
@@ -98,3 +111,27 @@ class CNM(object):
                 name = d['name'].split('.')[0]
                 product['dataVersion'] = name.split('_')[-1]
                 product['name'] = name
+
+    def write_kinesis(self):
+
+        kinesis_client = boto3.client('kinesis', region_name=self.region_name)
+
+        try:
+            response = kinesis_client.put_record(
+                StreamName=self.stream_name,
+                Data=json.dumps(self.message),
+                PartitionKey=self.partition_key
+            )
+            print(f"Record sent successfully: {response}")
+        except Exception as e:
+            print(f"Error sending record: {e}")
+
+    def write_file(self):
+
+        name, ext = os.path.splitext(os.path.basename(self.pdr_name))
+        path = os.path.join(CNM_CACHE_DIR, 'CNM-S')
+        pathname = os.path.join(path, name) + '.CNM-S'
+        os.makedirs(path, mode=0o755, exist_ok=True)
+
+        with open(pathname, 'w') as f:
+            json.dump(self.message, f, indent=4)
