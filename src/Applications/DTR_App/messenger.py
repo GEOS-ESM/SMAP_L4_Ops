@@ -112,7 +112,7 @@ class CNM(object):
                 product['dataVersion'] = name.split('_')[-1]
                 product['name'] = name
 
-    def write_kinesis(self):
+    def send(self):
 
         kinesis_client = boto3.client('kinesis', region_name=self.region_name)
 
@@ -126,7 +126,7 @@ class CNM(object):
         except Exception as e:
             print(f"Error sending record: {e}")
 
-    def write_file(self):
+    def write(self):
 
         name, ext = os.path.splitext(os.path.basename(self.pdr_name))
         path = os.path.join(CNM_CACHE_DIR, 'CNM-S')
@@ -135,3 +135,50 @@ class CNM(object):
 
         with open(pathname, 'w') as f:
             json.dump(self.message, f, indent=4)
+
+class CNMReceiver(object):
+
+    def __init__(self, region_name=KINESIS_REGION_NAME,
+                 stream_name=KINESIS_STREAM_NAME,
+                 partition_key=KINESIS_PARTITION_KEY):
+        
+        self.region_name = region_name
+        self.stream_name = stream_name
+        self.partition_key = partition_key
+
+#   def __init__(self, *args, **kwargs):
+#       super().__init__(*args, **kwargs)
+
+    def receive(self):
+
+        response = kinesis_client.describe_stream(StreamName=self.stream_name)
+        shards = response['StreamDescription']['Shards']
+
+        shard_id = shards[0]['ShardId']
+        response = kinesis_client.get_shard_iterator(
+            StreamName=stream_name,
+            ShardId=shard_id,
+            ShardIteratorType='TRIM_HORIZON'
+        )
+        shard_iterator = response['ShardIterator']
+
+        while True:
+            response = kinesis_client.get_records(
+                ShardIterator=shard_iterator,
+                Limit=100
+            )
+            records = response['Records']
+            for record in records:
+                # The data in Kinesis records is Base64 encoded
+                decoded_data = record['Data'].decode('utf-8')
+                print(f"Received record: {decoded_data}")
+
+            shard_iterator = response['NextShardIterator']
+            if not shard_iterator:
+                # Shard has been closed or no more data is available
+                break
+
+            # Implement a delay to avoid exceeding API limits
+            # (e.g., 5 transactions per second per shard for GetRecords)
+            import time
+            time.sleep(1)

@@ -22,7 +22,7 @@ for fname in args.input:
     pdr = PDR(fname)
     cnm = CNM(pdr)
 
-    cnm.write_file()
+    cnm.write()
 
 #   with open('test.cnm', 'w') as f:
 #       json.dump(cnm.message, f, indent=4) # indent=4 for pretty-printing
