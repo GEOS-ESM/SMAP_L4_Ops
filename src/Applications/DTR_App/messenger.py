@@ -1,13 +1,20 @@
 import os
 import json
+import time
 import boto3
 import datetime as dt
 
 URI_DEFAULT = 'https://portal.nccs.nasa.gov/datastage/data'
-KINESIS_REGION_NAME = ''
-KINESIS_STREAM_NAME = ''
-KINESIS_PARTITION_KEY = ''
+
+KINESIS_REGION_NAME = 'us-west-2'
+KINESIS_SEND_STREAM = 'smap-cnm-send'
+KINESIS_RECEIVE_STREAM = 'smap-cnm-receive'
+KINESIS_PARTITION_KEY = 'SMAPL4toNSIDC'
+
 CNM_CACHE_DIR = '/datastage/smaplevel4/smapnsid/data_out'
+CNM_SCHEMA_VERSION = '1.4'
+
+FILE_TYPES = { 'science': 'data' }
 
 class PDR(object):
 
@@ -71,18 +78,27 @@ class PDR(object):
 
 class CNM(object):
 
-    def __init__(self, pdr, uri=URI_DEFAULT,
+    def __init__(self, uri=URI_DEFAULT,
                  region_name=KINESIS_REGION_NAME,
-                 stream_name=KINESIS_STREAM_NAME,
+                 stream_name=KINESIS_SEND_STREAM,
                  partition_key=KINESIS_PARTITION_KEY):
 
         self.uri = uri
-        self.pdr_name = pdr.filename
         self.region_name = region_name
         self.stream_name = stream_name
         self.partition_key = partition_key
 
+class CNMSender(CNM):
+
+    def __init__(self, pdr, **kwargs):
+
+        kwargs['stream_name'] = kwargs.get('stream_name', KINESIS_SEND_STREAM)
+        super().__init__(**kwargs)
+
+        self.pdr_name = pdr.filename
+
         self.message = {}
+        self.message['version'] = CNM_SCHEMA_VERSION
         self.message['submissionTime'] = pdr.submissionTime
         self.message['identifier'] = pdr.identifier
         self.message['collection'] = pdr.collection
@@ -96,6 +112,8 @@ class CNM(object):
 
         for group in pdr.GROUPS:
 
+            product['dataVersion'] = group['DATA_VERSION']
+
             for file in group['FILES']:
 
                 d = {}
@@ -103,13 +121,20 @@ class CNM(object):
 
                 d['name'] = file['FILE_ID']
                 d['uri'] = os.path.join(self.uri, file['FILE_ID'])
-                d['type'] = file['FILE_TYPE']
+
+                ftype = file['FILE_TYPE'].lower()
+                d['type'] = FILE_TYPES.get(ftype, file['FILE_TYPE'])
                 d['size'] = int(file['FILE_SIZE'])
-                d['checksumType'] = file.get('FILE_CKSUM_TYPE', None)
-                d['checksum'] = file.get('FILE_CKSUM_VALUE', None)
+
+                checksumType = file.get('FILE_CKSUM_TYPE', None)
+                if checksumType:
+                    d['checksumType'] = checksumType
+
+                checksum = file.get('FILE_CKSUM_VALUE', None)
+                if checksum:
+                    d['checksum'] = checksum
 
                 name = d['name'].split('.')[0]
-                product['dataVersion'] = name.split('_')[-1]
                 product['name'] = name
 
     def send(self):
@@ -136,19 +161,13 @@ class CNM(object):
         with open(pathname, 'w') as f:
             json.dump(self.message, f, indent=4)
 
-class CNMReceiver(object):
+class CNMReceiver(CNM):
 
-    def __init__(self, region_name=KINESIS_REGION_NAME,
-                 stream_name=KINESIS_STREAM_NAME,
-                 partition_key=KINESIS_PARTITION_KEY):
+    def __init__(self, **kwargs):
+
+        kwargs['stream_name'] = kwargs.get('stream_name', KINESIS_RECEIVE_STREAM)
+        super().__init__(**kwargs)
         
-        self.region_name = region_name
-        self.stream_name = stream_name
-        self.partition_key = partition_key
-
-#   def __init__(self, *args, **kwargs):
-#       super().__init__(*args, **kwargs)
-
     def receive(self):
 
         response = kinesis_client.describe_stream(StreamName=self.stream_name)
@@ -180,5 +199,4 @@ class CNMReceiver(object):
 
             # Implement a delay to avoid exceeding API limits
             # (e.g., 5 transactions per second per shard for GetRecords)
-            import time
             time.sleep(1)
