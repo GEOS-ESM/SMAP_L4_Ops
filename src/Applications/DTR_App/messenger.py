@@ -170,6 +170,8 @@ class CNMReceiver(CNM):
         
     def receive(self):
 
+        kinesis_client = boto3.client('kinesis', region_name=self.region_name)
+
         response = kinesis_client.describe_stream(StreamName=self.stream_name)
         shards = response['StreamDescription']['Shards']
 
@@ -191,6 +193,7 @@ class CNMReceiver(CNM):
                 # The data in Kinesis records is Base64 encoded
                 decoded_data = record['Data'].decode('utf-8')
                 print(f"Received record: {decoded_data}")
+                yield decoded_data
 
             shard_iterator = response['NextShardIterator']
             if not shard_iterator:
@@ -200,3 +203,5 @@ class CNMReceiver(CNM):
             # Implement a delay to avoid exceeding API limits
             # (e.g., 5 transactions per second per shard for GetRecords)
             time.sleep(1)
+
+    __iter__ = receive
