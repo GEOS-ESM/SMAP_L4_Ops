@@ -25,7 +25,7 @@ $dtr = DTR->new($fname,%config);
 =item new()
 
 Constructor for instantiating a data transaction object. Returned objects
-are derived from sub-classes of DTR::TRANSACTION. Available types are: DTR::FTP, DTR::SCP, DTR::CP, DTR::DMF and DTR::NULL.
+are derived from sub-classes of DTR::TRANSACTION. Available types are: DTR::FTP, DTR::SFTP, DTR::SCP, DTR::CP, DTR::DMF and DTR::NULL.
 
 =item $dtr
 
@@ -51,7 +51,7 @@ file and additional parameters required for implementation (see note-4).
 
 =head1 SEE ALSO
 
-DTR::TRANSACTION, DTR::SCP, DTR::FTP, DTR::CP, DTR::DMF, DTR::NULL, CONFIG.pm
+DTR::TRANSACTION, DTR::SCP, DTR::SFTP, DTR::FTP, DTR::CP, DTR::DMF, DTR::NULL, CONFIG.pm
 
 =head1 NOTES
 
@@ -119,8 +119,8 @@ Technologist.
 # Language: Perl
 # ---------
 #
-# See Also: DTR::TRANSACTION, DTR::SCP, DTR::FTP, DTR::CP, DTR::NULL, CONFIG.pm
-# ---------
+# See Also: DTR::TRANSACTION, DTR::SCP, DTR::SFTP, DTR::FTP, DTR::CP,
+# --------- DTR::NULL, CONFIG.pm
 #
 # Usage: $dtr = DTR->new($fname,%config)
 # ------
@@ -208,6 +208,7 @@ use File::Spec;
 use DTR::CP;
 use DTR::SCP;
 use DTR::FTP;
+use DTR::SFTP;
 use DTR::NULL;
 use DTR::DMF;
 use DTR::DMF::Handler;
@@ -414,6 +415,7 @@ sub getProtocol
 #
 #                                        SCP://  - Secure Copy
 #                                        FTP://  - File Transfer Protocol
+#                                        SFTP:// - Secure File Transfer Protocol
 #                                        CP://   - Unix Copy
 #                                        DMF://  - Data Migration Facility
 #                                        NULL:// - undefined (deactivated)
@@ -477,6 +479,7 @@ sub getProtocol
     /^CP$/i      &&  do { return DTR::CP->new(%config) };
     /^SCP$/i     &&  do { return DTR::SCP->new(%config) };
     /^FTP$/i     &&  do { return DTR::FTP->new(%config) };
+    /^SFTP$/i    &&  do { return DTR::SFTP->new(%config) };
     /^DMF$/i     &&  do { return DTR::DMF->new(%config) };
     /^NULL$/i    &&  do { return DTR::NULL->new(%config) };
 
