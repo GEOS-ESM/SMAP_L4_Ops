@@ -1,13 +1,15 @@
 import glob
 import os
 
+CHANNELS_DEFAULT = ['fp', 'fpp', 'rproc', 'test']
+
 class Pollster(object):
 
     def __init__(self, port, channels=None):
 
         self.channels = channels
         if not channels:
-            self.channels = ['fp', 'fpp', 'rproc', 'test']
+            self.channels = CHANNELS_DEFAULT
 
         self.port = port
 
@@ -23,9 +25,9 @@ class Pollster(object):
             cnmr_dir = os.path.join(port, 'a', 'data_in', channel, 'CNM-R')
 
             pdr_listing = glob.glob(os.path.join(pdr_dir, '*.PDR'))
-            for pdr in pdr_listing:
+            for pdr_file in pdr_listing:
 
-                name, ext  = os.path.splitext(os.path.basename(pdr))
+                name, ext  = os.path.splitext(os.path.basename(pdr_file))
                 pan_file = os.path.join(pan_dir, name) + '.PAN'
 
                 if os.path.exists(pan_file):
