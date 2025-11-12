@@ -2,46 +2,28 @@ import os
 import json
 import boto3
 
-KINESIS_REGION_NAME = 'us-west-2'
-KINESIS_SEND_STREAM = 'smap-cnm-send'
-KINESIS_RECEIVE_STREAM = 'smap-cnm-receive'
-KINESIS_PARTITION_KEY = 'SMAPL4toNSIDC'
 CNM_SCHEMA_VERSION = '1.4'
 FILE_TYPES = { 'science': 'data' }
 
-class CNMSendType(object):
-
-    def __init__(self, **kwargs):
-
-        self.stream = kwargs.get('stream', KINESIS_SEND_STREAM)
-        self.region = kwargs.get('region', KINESIS_REGION_NAME)
-        self.partition = kwargs.get('partition', KINESIS_PARTITION_KEY)
-        self.schema = kwargs.get('schema', CNM_SCHEMA_VERSION)
-
-class CNMReceiveType(object):
-
-    def __init__(self, **kwargs):
-
-        self.stream = kwargs.get('stream', KINESIS_RECEIVE_STREAM)
-        self.region = kwargs.get('region', KINESIS_REGION_NAME)
-        self.partition = kwargs.get('partition', KINESIS_PARTITION_KEY)
-        self.schema = kwargs.get('schema', CNM_SCHEMA_VERSION)
-
 class CNM(object):
 
-    def __init__(self, handle):
+    def __init__(self, stream=None, region=None, partition=None):
 
-        self.stream = handle.stream
-        self.region = handle.region
-        self.partition = handle.partition
-        self.schema = handle.schema
+        self.stream = stream
+        self.region = region
+        self.partition = partition
+        self.schema = CNM_SCHEMA_VERSION
         self.kinesis_client = boto3.client('kinesis',region_name=self.region)
+
+    def close(self):
+
+        self.kinesis_client.close()
 
 class CNMSender(CNM):
 
-    def __init__(self, handle):
+    def __init__(self, **kwargs):
 
-        super().__init__(handle)
+        super().__init__(**kwargs)
 
     def send(self, message):
 
@@ -57,9 +39,9 @@ class CNMSender(CNM):
 
 class CNMReceiver(CNM):
 
-    def __init__(self, handle):
+    def __init__(self, **kwargs):
 
-        super().__init__(handle)
+        super().__init__(**kwargs)
         
     def receive(self):
 

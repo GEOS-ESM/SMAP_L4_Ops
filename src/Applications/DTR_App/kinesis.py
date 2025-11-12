@@ -2,16 +2,17 @@ from cnm import *
 
 class kinesis_open(object):
 
-    def __init__(self, handle):
+    def __init__(self, handle, mode):
 
         self.handle = handle
+        self.mode = mode
 
     def __enter__(self):
 
-        if isinstance(self.handle, CNMSendType):
-            self.resource = CNMSender(self.handle)
-        elif isinstance(self.handle, CNMReceiveType):
-            self.resource = CNMReceiver(self.handle)
+        if self.mode == 's':
+            self.resource = CNMSender(**self.handle.send)
+        elif self.mode == 'r':
+            self.resource = CNMReceiver(**self.handle.receive)
         else:
             self.resource = None
 
@@ -23,3 +24,5 @@ class kinesis_open(object):
             print(f"An exception occurred: {exc_val}")
         # Clean up the resource here
         self.resource = None
+        if self.resource:
+            self.resource.close()

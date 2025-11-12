@@ -7,7 +7,8 @@ import argparse
 
 from nesdis import PDR
 from kinesis import kinesis_open
-from cnm import PDRconvert, CNMSendType, CNMReceiveType
+from cnm import PDRconvert
+from cnmtypes import *
 
 URI_DEFAULT = 'https://portal.nccs.nasa.gov/datastage/fp/'
 
@@ -22,11 +23,9 @@ parser.add_argument('-i', '--input', metavar='PDRs', nargs='+',
 
 args = parser.parse_args()
 
-cnms = CNMSendType()
-
 for fname in args.input:
     pdr = PDR(fname)
     message = PDRconvert(pdr, URI_DEFAULT)
 
-    with kinesis_open(cnms) as f:
+    with kinesis_open(SMAPL4Type, mode='s') as f:
         f.send(message)
