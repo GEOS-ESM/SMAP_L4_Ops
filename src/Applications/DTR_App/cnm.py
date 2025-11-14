@@ -64,7 +64,8 @@ class CNMReceiver(CNM):
         for record in records:
             # The data in Kinesis records is Base64 encoded
             decoded_data = record['Data'].decode('utf-8')
-            yield decoded_data
+            message = json.loads(decoded_data)
+            yield message
 
     __iter__ = receive
 
@@ -111,3 +112,28 @@ def PDRconvert(pdr, uri):
             product['name'] = name
 
     return message
+
+def PANconvert(message);
+
+    message = json.loads(message)
+
+    stream, fname = message['collection'].split('/')
+
+    tnode = message['processCompleteTime'].split(':')
+    sec = round(float(tnode[-1]))
+    sec = f"{sec:02d}"
+    time_stamp = ':'.join(tnode[0:-1] + [sec])
+
+    response = self.message['response']
+    disposition = response['status']
+
+    with open(fname, 'w'):
+
+        f.write('MESSAGE_TYPE = SHORTPAN;')
+
+        if response['status'] == 'SUCCESS':
+            f.write('DISPOSITION = SUCCESSFUL;')
+        else:
+            f.write('DISPOSITION = FTP/KFTP FAILURE;')
+
+        f.write(f'TIME_STAMP = {time_stamp};')
