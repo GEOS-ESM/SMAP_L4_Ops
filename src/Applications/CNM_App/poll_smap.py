@@ -14,65 +14,169 @@ EXPORT_DIR = '/datastage/smaplevel4/smapnsid'
 CHANNELS_DEFAULT = ['fp', 'fpp', 'rproc', 'test']
 URI_DEFAULT = 'https://portal.nccs.nasa.gov/datastage'
 
-# Retrieve command-line arguments.
+def send(channels):
+    """
+    Send CNM-S messages.
 
-parser = argparse.ArgumentParser(description='SMAP-L4 CNM Polling App')
+    This method sends CNM-S messages for unexecuted PDR files located
+    in the export directory for the specified channels. 
 
-parser.add_argument('-c', '--channels', metavar='channels', nargs='+',
-    default=CHANNELS_DEFAULT,
-    help='SMAP-L4 export channels to poll')
+    Parameters
+    ----------
+    channels : list|string
+        Export channel name(s) to query (e.g. 'fp','fpp','rproc','test')
 
-args = parser.parse_args()
-export_dir = EXPORT_DIR
+    Returns
+    -------
+    No explicit return value
 
-for channel in args.channels:
+    """
 
-    pdr_dir = os.path.join(export_dir, 'data_out', channel, 'PDR')
-    cnms_dir = os.path.join(export_dir, 'data_out', channel, 'CNM-S')
-    pan_dir = os.path.join(export_dir, 'a', 'data_in', channel, 'PAN')
-    uri = os.path.join(URI_DEFAULT, channel)
+    if not isinstance(channels, list):
+        channels = [channels]
 
-    # Transmit new PDRs
+#   Create and broadcast CNM-S messages for unexecuted PDRs.
 
-    pdr_listing = glob.glob(os.path.join(pdr_dir, '*.PDR'))
+    for channel in channels:
+    
+        pdr_dir = os.path.join(EXPORT_DIR, 'data_out', channel, 'PDR')
+        cnms_dir = os.path.join(EXPORT_DIR, 'data_out', channel, 'CNM-S')
+        pan_dir = os.path.join(EXPORT_DIR, 'a', 'data_in', channel, 'PAN')
+        uri = os.path.join(URI_DEFAULT, channel)
+    
+        pdr_listing = glob.glob(os.path.join(pdr_dir, '*.PDR'))
+    
+        with kinesis_open(SMAPL4Type, 's') as f:
+    
+            for pdr_file in pdr_listing:
+    
+                name, ext  = os.path.splitext(os.path.basename(pdr_file))
+                pan_file = os.path.join(pan_dir, name) + '.PAN'
+                cnms_file = os.path.join(cnms_dir, name) + '.CNM-S'
+    
+                if os.path.exists(pan_file) or os.path.exists(cnms_file):
+                    continue
+    
+                os.makedirs(cnms_dir, mode=0o755, exist_ok=True)
+    
+                pdr = PDR(pdr_file)
+                message = PDRconvert(pdr, uri)
+    
+                print(f'Exporting: {pdr_file}')
+                f.send(message)
+                f.save(message, cnms_file)
 
-    with kinesis_open(SMAPL4Type, 's') as f:
+def receive(channels):
 
-        for pdr_file in pdr_listing:
+    """
+    Receive CNM-R messages.
 
-            print(pdr_file)
-            name, ext  = os.path.splitext(os.path.basename(pdr_file))
+    This method will query CNM-R messages and create PAN files for PDRs
+    that have not been finalized.
+
+    Parameters
+    ----------
+    channels : list|string
+        Export channel name(s) to query (e.g. 'fp','fpp','rproc','test')
+
+    Returns
+    -------
+    No explicit return value
+
+    """
+
+    if not isinstance(channels, list):
+        channels = [channels]
+
+    # Acquire PDR receipts and create PAN files.
+    
+    with kinesis_open(SMAPL4Type, 'r') as f:
+    
+        for message in f.receive():
+    
+            try:
+                channel, name = message['collection'].split('/')
+            except:
+                channel = 'unknown'
+    
+            if channel not in channels:
+                print(f'Skipping message: "{message["collection"]}"')
+                continue
+    
+            pdr_dir = os.path.join(EXPORT_DIR, 'data_out', channel, 'PDR')
+            pdr_file = os.path.join(pdr_dir, name) + '.PDR'
+            pan_dir = os.path.join(EXPORT_DIR, 'a', 'data_in', channel, 'PAN')
             pan_file = os.path.join(pan_dir, name) + '.PAN'
-            cnms_file = os.path.join(cnms_dir, name) + '.CNM-S'
+            cnmr_dir = os.path.join(EXPORT_DIR, 'a', 'data_in',
+                                    channel, 'CNM-R')
+            cnmr_file = os.path.join(cnmr_dir, name) + '.CNM-R'
+    
+            if os.path.exists(pan_file) or os.path.exists(cnmr_file):
+                continue
+    
+            os.makedirs(pan_dir, mode=0o755, exist_ok=True)
+            os.makedirs(cnmr_dir, mode=0o755, exist_ok=True)
+    
+            pan = PAN(message)
+            pan.write(pan_file)
+            f.save(message, cnmr_file)
+    
+            if pan.is_success():
+                print(f'{pdr_file} is a success')
+            else:
+                print(f'{pdr_file} failed to ingest')
 
-         #  if os.path.exists(pan_file):
-         #      continue
+if __name__ == "__main__":
 
-            os.makedirs(cnms_dir, mode=0o755, exist_ok=True)
+    """     
+    Driver for executing SMAP L4 PDRs.
+            
+    This application is used to convert SMAP L4 PDRs into CNM-S messages and
+    broadcast to the NSIDC Kinesis stream. It provides end-to-end functionality
+    for modeling the PDR/PAN transfer protocol as a CNM messaging scheme.
+            
+    Parameters
+    ----------
+    channels : list
+        Export channel name(s) to query (e.g. 'fp','fpp','rproc','test'). The
+        default is to query all channels (see CHANNELS_DEFAULT).
 
-            pdr = PDR(pdr_file)
-            message = PDRconvert(pdr, uri)
-         #  f.send(message)
-            f.save(message, cnms_file)
-            print(cnms_file)
+    send : boolean
+        Query and send unexecuted PDRs as CNM-S messages. This is the default
+        if the send/receive options are unspecified.
 
-# Acquire PDR receipts and create PAN files.
+    receive : boolean
+        Query and receive CNM-R messages for open PDRs. This is the default
+        if the send/receive options are unspecified.
+            
+    Returns
+    ------- 
+    value : integer
+        0: normal
+        non-zero: error occurred
+            
+    """         
+        
+    # Retrieve command-line arguments.
+        
+    parser = argparse.ArgumentParser(description='SMAP-L4 CNM Polling App')
+        
+    parser.add_argument('-c', '--channels', metavar='channels', nargs='+',
+                        default=CHANNELS_DEFAULT,
+                        help='SMAP-L4 export channels to poll')
+        
+    parser.add_argument('--send', action='store_true',
+                        help='Send CNM-S messages')
+    parser.add_argument('--receive', action='store_true',
+                        help='Retrieve CNM-R messages')
+    
+    args = parser.parse_args()
+    args.noargs = not (args.send or args.receive)
 
-with kinesis_open(SMAPL4Type, 'r') as f:
+    if args.send or args.noargs:
+        send(args.channels)
 
-    for message in f.receive():
+    if args.receive or args.noargs:
+        receive(args.channels)
 
-        print(message)
-        channel, name = message['collection'].split('/')
-        print(channel, name)
-        pan_dir = os.path.join(export_dir, 'a', 'data_in', channel, 'PAN')
-        pan_file = os.path.join(pan_dir, name) + '.PAN'
-        cnmr_dir = os.path.join(export_dir, 'a', 'data_in', channel, 'CNM-R')
-        cnmr_file = os.path.join(cnmr_dir, name) + '.CNM-R'
-
-        os.makedirs(pan_dir, mode=0o755, exist_ok=True)
-        os.makedirs(cnmr_dir, mode=0o755, exist_ok=True)
-
-        pan = PAN(message)
-        pan.write(pan_file)
-        f.save(message, cnmr_file)
+    sys.exit(0)

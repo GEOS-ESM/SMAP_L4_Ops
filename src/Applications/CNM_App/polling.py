@@ -92,3 +92,9 @@ class PAN(object):
             f.write(f'MESSAGE_TYPE = {self.MESSAGE_TYPE};\n')
             f.write(f'DISPOSITION = {self.DISPOSITION};\n')
             f.write(f'TIME_STAMP = {self.TIME_STAMP};\n')
+
+    def is_success(self):
+        if self.DISPOSITION == 'SUCCESSFUL':
+            return True
+        else:
+            return False
