@@ -6,6 +6,20 @@ CNM_SCHEMA_VERSION = '1.4'
 FILE_TYPES = { 'science': 'data' }
 
 class CNM(object):
+    """
+    Base class for Cloud Network Messaging (CNM). Provides common methods for
+    send and receive messaging.
+
+    Methods
+    --------
+    __init__ :
+        Initializes kinesis stream parameters and opens client connection.
+    close:
+        Closes kinesis stream.
+    save:
+        Saves CNM messages to a file.
+
+    """
 
     def __init__(self, stream=None, region=None, partition=None):
 
@@ -26,6 +40,16 @@ class CNM(object):
 
 class CNMSender(CNM):
 
+    """
+    Provides methods for sending Cloud Network Messages (CNM-S).
+
+    Methods
+    --------
+    send :
+        Sends CNM-S message.
+
+    """
+
     def __init__(self, **kwargs):
 
         super().__init__(**kwargs)
@@ -43,6 +67,16 @@ class CNMSender(CNM):
             print(f"Error sending record: {e}")
 
 class CNMReceiver(CNM):
+
+    """
+    Provides methods for receiving Cloud Network Messages (CNM-R).
+
+    Methods
+    --------
+    receive :
+        Receives CNM-R messages.
+
+    """
 
     def __init__(self, **kwargs):
 
@@ -75,6 +109,24 @@ class CNMReceiver(CNM):
     __iter__ = receive
 
 def PDRconvert(pdr, uri):
+    """
+    Converts a PDR object into a CNM-S message.
+
+    Parameters
+    ----------
+    pdr : PDR object
+        PDR object containing definitions to be converted to CNM-S.
+    uri : string
+        This is the URI that will be included in the CNM-S message. It must
+        be the actual location of the data files in the message to be retrieved
+        using HTTPS.
+
+    Returns
+    -------
+    message : dict
+        CNM-S message parameters stored as a dictionary.
+
+    """
 
     message = {}
     message['version'] = CNM_SCHEMA_VERSION
