@@ -134,7 +134,19 @@ if __name__ == "__main__":
     This application is used to convert SMAP L4 PDRs into CNM-S messages and
     broadcast to the NSIDC Kinesis stream. It provides end-to-end functionality
     for modeling the PDR/PAN transfer protocol as a CNM messaging scheme.
-            
+
+    Notes
+    -----
+    Note-1 :
+        See cnmtypes module for a list of configured CNM types. This application
+        can be further abstracted to be fully driven by the content in the 
+        cnmtypes module. 
+
+    Note-2 :
+        This application can be instantiated as multiple polling deamons using
+        the command-line options. Polling can be stratified by polling channel,
+        send operations, receive operations or any combination thereof.
+
     Parameters
     ----------
     channels : list

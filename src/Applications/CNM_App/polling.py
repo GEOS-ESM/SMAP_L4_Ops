@@ -5,6 +5,16 @@ import boto3
 import datetime as dt
 
 class PDR(object):
+    """
+    Provides methods for creating a PDR object from a PDR file.
+
+    Methods
+    --------
+    __init__ :
+        Initializes a PDR object using the content from a PDR file. The PDR
+        file content is recursively parsed into a dictionary of attributes.
+       
+    """
 
     def __init__(self, fname):
 
@@ -65,6 +75,22 @@ class PDR(object):
         return True
 
 class PAN(object):
+    """
+    Provides methods for creating a PAN object from a CNM-R message.
+                
+    Methods
+    --------
+    __init__ : None 
+        Initializes a PAN object using information from a CNM-R message.
+
+    write : None
+        Writes a PAN message to the specified file.
+
+    is_success : boolean
+        Returns True/False for success/failure status as reflected in the
+        PAN message.
+                
+    """
 
     def __init__(self, message):
 
