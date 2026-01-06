@@ -95,12 +95,12 @@ def receive(channels):
         for message in f.receive():
     
             try:
-                channel, name = message['collection'].split('/')
+                channel, name = message['identifier'].split('/')
             except:
                 channel = 'unknown'
     
             if channel not in channels:
-                print(f'Skipping message: "{message["collection"]}"')
+                print(f'Skipping message: "{message["identifier"]}"')
                 continue
     
             pdr_dir = os.path.join(EXPORT_DIR, 'data_out', channel, 'PDR')
