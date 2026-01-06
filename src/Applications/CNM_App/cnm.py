@@ -95,16 +95,28 @@ class CNMReceiver(CNM):
         )
         shard_iterator = response['ShardIterator']
 
-        response = self.kinesis_client.get_records(
-            ShardIterator=shard_iterator,
-            Limit=100
-        )
-        records = response['Records']
-        for record in records:
-            # The data in Kinesis records is Base64 encoded
-            decoded_data = record['Data'].decode('utf-8')
-            message = json.loads(decoded_data)
-            yield message
+        while True:
+
+            response = self.kinesis_client.get_records(
+                ShardIterator=shard_iterator,
+                Limit=10000
+            )
+            records = response['Records']
+            if not records:
+                break;
+
+            for record in records:
+                # The data in Kinesis records is Base64 encoded
+                try:
+                    decoded_data = record['Data'].decode('utf-8')
+                except:
+                    decoded_data = None
+
+                if decoded_data:
+                    message = json.loads(decoded_data)
+                    yield message
+
+            shard_iterator = response['NextShardIterator']
 
     __iter__ = receive
 
@@ -166,6 +178,6 @@ def PDRconvert(pdr, uri):
                 d['checksum'] = checksum
 
             name = d['name'].split('.')[0]
-            product['name'] = name
+            product['name'] = name + '.h5'
 
     return message
