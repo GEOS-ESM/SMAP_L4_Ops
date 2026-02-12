@@ -15,7 +15,7 @@ def make(expver=None, dates=None, output=None, template=None):
 
     # monthly
     for ym in yrmon:
-        print ym,' monthly files'
+        print(ym,' monthly files')
         y = str(ym)[:4]
         m = str(ym)[4:6]
         path = os.path.join(output, 'Y'+y)
@@ -54,7 +54,7 @@ def make(expver=None, dates=None, output=None, template=None):
         for k in cov:
             lines = []
             for d in this_month:
-                print d,' coverage'
+                print(d,' coverage')
                 year = int(d[:4])
                 month = int(d[4:6])
                 day = int(d[6:8])

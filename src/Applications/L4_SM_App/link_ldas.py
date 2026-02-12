@@ -20,7 +20,7 @@ def movefile(src,dst):
 # ===========
 
 if len(sys.argv)-1 != 3:
-    print "Usage: ", sys.argv[0], "[input fname] [output fname] [outdir]"
+    print("Usage: ", sys.argv[0], "[input fname] [output fname] [outdir]")
     sys.exit(1)
 
 infile  = sys.argv[1]
@@ -32,7 +32,7 @@ OBSPERT = 'LANDASSIM_OBSPERTRSEED_RESTART_FILE'
 # Make output directory
 # =====================
 
-if not os.path.isdir(dir): os.mkdir(dir, 0755)
+if not os.path.isdir(dir): os.mkdir(dir, 0o755)
 
 # Clean output directory
 # ======================
@@ -75,7 +75,7 @@ with open(outfile, 'w') as f:
                         ens = '%04d'%(i,)
                         
                         dst     = os.path.join(dir,name)
-                        dst     = dst.replace('%s',ens)
+                        dst     = dst.replace('%s','_e'+ens)
                         src     = srcfile.replace('%s',ens)
                         if os.path.islink(dst): os.remove(dst)
                         if os.path.isfile(src): os.symlink(src,dst)

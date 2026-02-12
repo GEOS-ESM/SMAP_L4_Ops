@@ -50,8 +50,8 @@ def main():
     assert os.path.isfile(tilecoord_file)
     # check for 8 binary gph files
     if len(gph_file_list)!=8:
-        print('WARNING: [%d] gph bin files found '
-              'instead of 8' % len(gph_file_list))
+        print(('WARNING: [%d] gph bin files found '
+              'instead of 8' % len(gph_file_list)))
     for gph_file in gph_file_list:
         assert os.path.isfile(gph_file)
         # input gph file should contain 40 records
@@ -72,8 +72,8 @@ def main():
     gph_tile_id = get_tileid(tilecoord_file)
     tend = time.time()
     nTiles = len(gph_tile_id)
-    print 'nTiles:', nTiles
-    print 'get_tileid: %.2f s' % (tend-tstart)
+    print('nTiles:', nTiles)
+    print('get_tileid: %.2f s' % (tend-tstart))
     sys.stdout.flush()
 
     # Step 2: open cli file for reading
@@ -81,10 +81,10 @@ def main():
     tstart = time.time()
     nc4_fid = nc4.Dataset(cli_file, 'r')
     tend = time.time()
-    print 'nc4.Dataset(cli_file): %.2f s' % (tend-tstart)
+    print('nc4.Dataset(cli_file): %.2f s' % (tend-tstart))
     sys.stdout.flush()
     cli_tile_id = nc4_fid.variables['tile_id'][:]
-    print cli_tile_id
+    print(cli_tile_id)
     assert np.all(cli_tile_id==gph_tile_id), \
         'Order of tile_id in tilecoord file does ' \
         'NOT match that of tile_id in cli file'
@@ -93,13 +93,13 @@ def main():
     cache = dict()
 
     for gph_file in gph_file_list:
-        print '\ngph file:', gph_file.split('/')[-1]
+        print('\ngph file:', gph_file.split('/')[-1])
         # Step 3a: read gph file
         tstart = time.time()
         [prc_dt, gph_data] = get_gph(gph_file, nTiles)
         tend = time.time()
-        print 'get_gph: %.2f s' % (tend-tstart)
-        print 'date:', prc_dt.strftime('%Y/%m/%d, %H:%M')
+        print('get_gph: %.2f s' % (tend-tstart))
+        print('date:', prc_dt.strftime('%Y/%m/%d, %H:%M'))
         sys.stdout.flush()
 
         # Step 3b: Find two pentads on either side of processing date
@@ -116,15 +116,15 @@ def main():
 
         delta_t = (p2c_dt - p1c_dt).total_seconds()
 
-        print 'pentads: %d, %d (0-based)' % (p1, p2)
+        print('pentads: %d, %d (0-based)' % (p1, p2))
         # weights
         w1 = (p2c_dt-prc_dt).total_seconds()/delta_t
         w2 = (prc_dt-p1c_dt).total_seconds()/delta_t
         assert abs(w1 - (1-w2))<1.0e-4, 'Weights add up to %f, not 1' % (w1+w2)
-        print 'weights: %f, %f' % (w1, w2)
+        print('weights: %f, %f' % (w1, w2))
 
         for field in gph_fields:
-            print 'field:', field
+            print('field:', field)
             sys.stdout.flush()
 
             # Step 3ci: get weighted cli data for the current field
@@ -140,28 +140,28 @@ def main():
                 cache
                 )
             tend = time.time()
-            print '  get_weighted_cli: %.2f s' % (tend-tstart)
+            print('  get_weighted_cli: %.2f s' % (tend-tstart))
             sys.stdout.flush()
 
             # Step 3cii: calculate percentile output
             tstart = time.time()
             prcntl = calc_prcntl(cli_data, gph_data[field])
             tend = time.time()
-            print '  calc_prcntl: %.2f s' % (tend-tstart)
+            print('  calc_prcntl: %.2f s' % (tend-tstart))
             sys.stdout.flush()
 
             # Step 3ciii: append percentile data to gph bin file
             tstart = time.time()
             append2gph(gph_file, prcntl)
             tend = time.time()
-            print '  append2gph: %.2f s' % (tend-tstart)
+            print('  append2gph: %.2f s' % (tend-tstart))
             sys.stdout.flush()
 
     # close cli file
     nc4_fid.close()
 
     # total time
-    print '-----\nTOTAL time taken:', time.time()-t_total_start
+    print('-----\nTOTAL time taken:', time.time()-t_total_start)
         
 
 def calc_prcntl(cli_data, gph_field_data):
@@ -182,7 +182,7 @@ def calc_prcntl(cli_data, gph_field_data):
     """
     nTiles = len(gph_field_data)
     prcntl = np.zeros(nTiles)
-    for tile in xrange(nTiles):
+    for tile in range(nTiles):
         ## cli data for the current tile
         ## (cdf and its mean, stdv, min, max)
         cdf = cli_data['cdf'][tile,:] # array of length n_cdf
@@ -217,13 +217,13 @@ def calc_prcntl(cli_data, gph_field_data):
                 #### neqs is odd, pick the middle one
                 #### +1 shift since eqndxs is 0-based
                 #### +1 shift to account for the missing 1st elt (0) in cdf
-                prcntl[gph_tile_id] = eqndxs[neqs/2] + 2
+                prcntl[gph_tile_id] = eqndxs[neqs//2] + 2
             else:
                 #### neqs is even
                 #### +1 shift since eqndxs is 0-based
                 #### +1 shift to account for the missing 1st elt (0) in cdf
                 #### => +1+1-0.5 = 1.5
-                prcntl[gph_tile_id] = eqndxs[neqs/2-1] + 1.5
+                prcntl[gph_tile_id] = eqndxs[neqs//2-1] + 1.5
         else:
             ### no cdf value equal to tile_data
             ndxs = np.where(cdf<tile_data)[0]
@@ -383,7 +383,7 @@ def get_gph(gph_file, nTiles):
     fin = open(gph_file, 'rb')
     data = dict()
 
-    for ifield in xrange(1,7): # NOTE: 1-indexed
+    for ifield in range(1,7): # NOTE: 1-indexed
         struct.unpack('<i', fin.read(4)) # fortran padding
         fmt = '<%df' % nTiles
         tmpData = struct.unpack(fmt, fin.read(4*nTiles))
@@ -426,7 +426,7 @@ def get_tileid(tilecoord_file):
 
     fin.close()
 
-    print tile_id
+    print(tile_id)
     return tile_id
 
 

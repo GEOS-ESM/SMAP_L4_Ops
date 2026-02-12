@@ -84,7 +84,7 @@ def parse_args(args):
         '-s', '--smos', action='store_true', help='remove use of SMOS color table'
     )
     parser.add_argument(
-        '-n', '--name', default=fields.keys(), nargs='*',
+        '-n', '--name', default=list(fields.keys()), nargs='*',
         help='field(s) to plot\n(default field are ops fields)'
     )
     args = parser.parse_args(args)
@@ -110,7 +110,7 @@ def main(f, field, ct, path):
     try:
         data = dt[field][:]
     except:
-        print('Field not in granule: '+field)
+        print(('Field not in granule: '+field))
         return
     if ct not in 'jet':
         if 'gpp' in field:
@@ -156,7 +156,7 @@ def main(f, field, ct, path):
 
     cax = plt.axes([0.05, 0.15, 0.9, 0.02])
     cbar = plt.colorbar(m, orientation='horizontal', cax=cax)
-    cbar.set_label('[ '+dt[field].attrs.get('units')+' ]')
+    cbar.set_label('[ '+str(dt[field].attrs.get('units'))+' ]')
     try:
         os.makedirs(path)
     except OSError:
@@ -164,7 +164,7 @@ def main(f, field, ct, path):
             raise
     plt.savefig(os.path.join(path, os.path.basename(f)[:-3]+'_'+field.split('/')[-1]+'.png'), bbox_inches='tight', dpi=150)
     plt.close()
-    print os.path.basename(f)+': '+field.split('/')[-1]
+    print(os.path.basename(f)+': '+field.split('/')[-1])
     sys.stdout.flush()
 
 ###############################################################################

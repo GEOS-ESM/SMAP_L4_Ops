@@ -975,15 +975,15 @@ sub monitor { CONFIG: my $config = shift;
 # Generate QuADS Imagery
 # ======================
 
-  $hasHDF and do {
+# $hasHDF and do {
 
-  $outdir = $config->{L4_SM_QUADS_directoryID};
-  $output = File::Spec->catdir($outdir, "Y%Y", "M%m", "D%d");
+# $outdir = $config->{L4_SM_QUADS_directoryID};
+# $output = File::Spec->catdir($outdir, "Y%Y", "M%m", "D%d");
 
-  system("L4.pl -quads -st $stream_type -sn $stream_name -date $date " .
-     "-pc $pc -auto") and return $eh->error(1,TYPE=>"QuADS") if $outdir;
+# system("L4.pl -quads -st $stream_type -sn $stream_name -date $date " .
+#    "-pc $pc -auto") and return $eh->error(1,TYPE=>"QuADS") if $outdir;
 
-  };
+# };
 
   return 1;
 }

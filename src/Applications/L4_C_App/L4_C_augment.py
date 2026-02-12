@@ -16,7 +16,7 @@ revision: 2018-08-03T0738, Modified to work with NTSG systems and differences be
    	  hdf group/attribute structue
 '''
 import shutil
-from path import Path
+from pathlib import Path
 
 import sys
 import h5py
@@ -25,7 +25,7 @@ from toolz import first
 from cartopy.crs import Projection, sgeom
 
 if len(sys.argv[1:]) != 2:
-    print 'Usage: ' + sys.argv[0] + ' [input fname] [output fname]'
+    print('Usage: ' + sys.argv[0] + ' [input fname] [output fname]')
     sys.exit(1)
 
 GRANULE_FILEPATH = sys.argv[1]

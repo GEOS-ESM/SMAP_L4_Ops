@@ -1,3 +1,4 @@
-20150331 * -f -rf 300 --noHDF -define MIN_CRID=R19000
+20150331 * -f -rf 300 -noPost -define MIN_CRID=R19000
 
-20240701 * -define L4_SM_PRECIP_version=CPCUFLK_IMERGLateV07b_fp_v1 -define L4_SM_PRECIP_changeLog="Precipitation correction changed to first-look mode."
+20240630 * -pause
+

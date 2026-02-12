@@ -26,7 +26,7 @@ class FileHook(DataHook):
         text.append("filehook usage:")
         text.append(' ')
         text.append("arg1, arg2, ..., argn: names of the columns to display")
-        for k,i in self.defaults_.items():
+        for k,i in list(self.defaults_.items()):
             text.append('   ' + self.usage_[k] % (k,i))
         text.append(' ')
         text.append("example:")
@@ -37,7 +37,7 @@ class FileHook(DataHook):
     def __init__(self,*args,**kwargs):
         self.keywords_ = args
         options = dict(self.defaults_,**kwargs)
-        for k,i in options.items():
+        for k,i in list(options.items()):
             setattr(self,k,i)
         if self.formatter is None:
             self.formatter = self.output

@@ -24,7 +24,7 @@ def plot(expver=None, dates=None, filename=None, output=None):
             yrmon.append(ym)
 
     for i in yrmon:
-        print 'plotting for date:',i
+        print('plotting for date:',i)
         mon = i[4:6]
         y = int(i[:4])
         m = int(i[4:6])
@@ -35,25 +35,25 @@ def plot(expver=None, dates=None, filename=None, output=None):
         path = os.path.join(output, 'Y%02d' % y)
         path = os.path.join(path, 'M%02d' % m)
 
-        print 'plotting monthly obs stats',i
+        print('plotting monthly obs stats',i)
         stats(expver=expver, dates=month, filename=filename, output=path)
-        print ''
-        print 'plotting monthly obs time series',i
+        print('')
+        print('plotting monthly obs time series',i)
         ts(expver=expver, dates=month, filename=filename, output=path)
-        print ''
+        print('')
         
     for d in dates:
         try:
-            print 'plotting obs coverage',d
+            print('plotting obs coverage',d)
             yr = 'Y%02d' % int(str(d)[:4])
             mn = 'M%02d' % int(str(d)[4:6])
             p = os.path.join(output, yr)
             p = os.path.join(p, mn)
             coverage(expver=expver, dates=d, filename=filename, output=p)
             check(expver=expver, dates=d, filename=filename, output=p)
-            print ''
+            print('')
         except Exception as e:
-            print e
+            print(e)
             continue
 
 
@@ -336,7 +336,7 @@ def coverage(expver=None, dates=None, filename=None, output=None):
     names = [x for x in names if x]+['']*4
     c = ['blue','cyan','gold','red','k','k','k','k']
 
-    kx_all = [range(640,648,1)]
+    kx_all = [list(range(640,648,1))]
     for i in range(640,644,1):
         kx_all.append(i)
     for i,kx in enumerate(kx_all):
@@ -518,10 +518,10 @@ def check(expver=None, dates=None, filename=None, output=None):
     count = float(count.strip().split(',')[-1])
     rms = float(rms.strip().split(',')[-1])
     mean = float(mean.strip().split(',')[-1])
-    print 'count >= 1000: ',count
-    print 'rms > 20: ', rms
-    print 'mean > 10: ',abs(mean)
-    print ''
+    print('count >= 1000: ',count)
+    print('rms > 20: ', rms)
+    print('mean > 10: ',abs(mean))
+    print('')
 
     if ((count >= 1000.) and (rms > 20. or abs(mean) > 10.)):
         with open(os.path.join(output, str(dates)+'_errs.txt'),'w') as f:
@@ -555,11 +555,11 @@ def check(expver=None, dates=None, filename=None, output=None):
 #                'cat '+os.path.join(output, str(dates)+'_errs.txt')+' | /usr/bin/Mail -s "'+title+'" brent.smith@nasa.gov',
 #                stderr=subprocess.STDOUT, shell=True
 #            )
-        except subprocess.CalledProcessError, e:
-            print 'mail check_output stdout: ',e.output
+        except subprocess.CalledProcessError as e:
+            print('mail check_output stdout: ',e.output)
     try:
         os.remove(os.path.join(output, str(dates)+'_check.txt'))
         os.remove(os.path.join(output, str(dates)+'_chk.png'))
     except Exception as e:
-        print 'Error cleaning up files for SMAP O-F check.'
-        print e
+        print('Error cleaning up files for SMAP O-F check.')
+        print(e)

@@ -1,11 +1,11 @@
 GEOSldas.GRID_TYPE:                 LatLon
-GEOSldas.GRIDNAME:                  SMAP-EASEv2-M09
+GEOSldas.GRIDNAME:                  EASEv2_M09
 GEOSldas.LM:                        1
 GEOSldas.POLE:                      PE
 GEOSldas.DATELINE:                  DE
 GEOSldas.IM_WORLD:                  3856
 GEOSldas.JM_WORLD:                  1624
-NX:                                 120
+NX:                                 252
 NY:                                 1
 GEOSldas.IMS_FILE:                  IMS.rc
 DYCORE:                             none
@@ -30,7 +30,6 @@ CO2:                                350.e-6
 PRESCRIBE_DVG:                      0
 SCALE_ALBFPAR:                      0
 CATCHMENT_OFFLINE:                  1
-N_CONST_LAND4SNWALB:                0
 PERTURBATIONS:                      1
 LDAS_logit:                         YES
 SURFRC:                             LDAS.rc
@@ -40,9 +39,9 @@ LAND_PARAMS:                        NRv7.2
 MET_TAG:                            <L4_SM_MET_TAG>
 MET_PATH:                           <L4_SM_MET_PATH>
 FORCE_DTSTEP:                       3600
-ENS_ID_WIDTH:                       4
+ENS_ID_WIDTH:                       6
 ENSEMBLE_FORCING:                   NO
-CO2_YEAR:                           -9999
+CO2_YEAR:                           -9998
 FWETC:                              0.02
 FWETL:                              0.02
 IRRIG_METHOD:                       0
@@ -59,20 +58,20 @@ VISDF_FILE: visdf.data <L4_SM_BCS_CLSM_OUT_DIR>/visdf_3856x1624_DE.dat
 VEGOPACITY_FILE: <L4_SM_BCS_RTM_OUT_DIR>/vegopacity.bin
 LANDASSIM_INTERNAL_RESTART_FILE:    <L4_SM_BCS_RTM_OUT_DIR>/mwRTM_param.nc4
 LANDASSIM_INTERNAL_RESTART_TYPE:    pnc4
-CATCH_INTERNAL_RESTART_FILE:  catch_internal_rst.ens%%%%s.%Y%m%d_0000 <L4_SM_RST_DIR>/ens%%%%s/Y%Y/M%m/<L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000
+CATCH_INTERNAL_RESTART_FILE:  catch%%%%s_internal_rst.%Y%m%d_0000 <L4_SM_RST_DIR>/ens%%%%s/Y%Y/M%m/<L4_SM_STREAM_version>.catch_internal_rst.%Y%m%d_0000
 CATCH_INTERNAL_RESTART_TYPE:        pnc4
-VEGDYN_INTERNAL_RESTART_FILE: vegdyn_internal_rst.ens%%%%s.%Y%m%d_0000 <L4_SM_RST_DIR>/ens%%%%s/<L4_SM_STREAM_version>.vegdyn_internal_rst
+VEGDYN_INTERNAL_RESTART_FILE: vegdyn%%%%s_internal_rst.%Y%m%d_0000 <L4_SM_RST_DIR>/ens%%%%s/<L4_SM_STREAM_version>.vegdyn_internal_rst
 VEGDYN_INTERNAL_RESTART_TYPE:       binary
-LANDPERT_INTERNAL_RESTART_FILE: landpert_internal_rst.ens%%%%s.%Y%m%d_0000 <L4_SM_RST_DIR>/ens%%%%s/Y%Y/M%m/<L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000
+LANDPERT_INTERNAL_RESTART_FILE: landpert%%%%s_internal_rst.%Y%m%d_0000 <L4_SM_RST_DIR>/ens%%%%s/Y%Y/M%m/<L4_SM_STREAM_version>.landpert_internal_rst.%Y%m%d_0000
 LANDPERT_INTERNAL_RESTART_TYPE: pnc4
-CATCH_INTERNAL_CHECKPOINT_FILE:  catch_internal_rst.ens%%%%s.%%Y%%m%%d_0000  <L4_SM_RST_DIR>/ens%%%%s/Y%%Y/M%%m/<L4_SM_STREAM_version>.catch_internal_rst.%%Y%%m%%d_0000
-CATCH_INTERNAL_CHECKPOINT_TYPE:    pnc4
-LANDPERT_INTERNAL_CHECKPOINT_FILE: landpert_internal_rst.ens%%%%s.%%Y%%m%%d_0000 <L4_SM_RST_DIR>/ens%%%%s/Y%%Y/M%%m/<L4_SM_STREAM_version>.landpert_internal_rst.%%Y%%m%%d_0000
 LANDASSIM_OBSPERTRSEED_RESTART_TYPE: pnc4
-LANDASSIM_OBSPERTRSEED_RESTART_FILE: landassim_obspertrseed_rst.ens%%%%s.%Y%m%d_0000 <L4_SM_RST_DIR>/ens%%%%s/Y%Y/M%m/<L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000
+LANDASSIM_OBSPERTRSEED_RESTART_FILE: landassim%%%%s_obspertrseed_rst.%Y%m%d_0000 <L4_SM_RST_DIR>/ens%%%%s/Y%Y/M%m/<L4_SM_STREAM_version>.landassim_obspertrseed_rst.%Y%m%d_0000
+CATCH_INTERNAL_CHECKPOINT_FILE:  catch%%%%s_internal_rst.%%Y%%m%%d_0000  <L4_SM_RST_DIR>/ens%%%%s/Y%%Y/M%%m/<L4_SM_STREAM_version>.catch_internal_rst.%%Y%%m%%d_0000
+CATCH_INTERNAL_CHECKPOINT_TYPE:    pnc4
+LANDPERT_INTERNAL_CHECKPOINT_FILE: landpert%%%%s_internal_rst.%%Y%%m%%d_0000 <L4_SM_RST_DIR>/ens%%%%s/Y%%Y/M%%m/<L4_SM_STREAM_version>.landpert_internal_rst.%%Y%%m%%d_0000
 LANDASSIM_OBSPERTRSEED_CHECKPOINT_TYPE: pnc4
-LANDASSIM_OBSPERTRSEED_CHECKPOINT_FILE: landassim_obspertrseed_rst.ens%%%%s.%%Y%%m%%d_0000 <L4_SM_RST_DIR>/ens%%%%s/Y%%Y/M%%m/<L4_SM_STREAM_version>.landassim_obspertrseed_rst.%%Y%%m%%d_0000
+LANDASSIM_OBSPERTRSEED_CHECKPOINT_FILE: landassim%%%%s_obspertrseed_rst.%%Y%%m%%d_0000 <L4_SM_RST_DIR>/ens%%%%s/Y%%Y/M%%m/<L4_SM_STREAM_version>.landassim_obspertrseed_rst.%%Y%%m%%d_0000
 NUM_LDAS_ENSEMBLE:                  24
 OUT_PATH:                           <L4_SM_MODEL_OUTPUT_DIR>
 EXP_ID:                             SPL4SM_<L4_SM_VersionID>
-TILING_FILE:                        <L4_SM_BCS_CLSM_OUT_DIR>/MAPL_SMAP_EASEv2_M09_3856x1624.til
+TILING_FILE:                        <L4_SM_BCS_CLSM_OUT_DIR>/EASEv2_M09_3856x1624.til
